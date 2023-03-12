@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mark Zhandry</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body onclick="openMarked()">
+  	<div id="container">
+      <nav>
+  <ul class="nav">
+    <li class="nav"><a href="index.html" class="home">Mark Zhandry</a></li>
+    <li class="nav"><a href="pubs.all.html" class="other">Publications</a></li>
+    <li class="nav"><a href="talks.html" class="other">Talks</a></li>
+    <li class="nav"><a href="teaching.html" class="other">Teaching</a></li>
+    <li class="nav"><a href="personal.html" class="other">Personal</a></li>
+  </ul>
+</nav>
+      <table>
+<tr><td style="vertical-align: top; text-align: justify;">
+I am a Senior Scientist at <a href="https://ntt-research.com">NTT Research</a> in the <a href="https://ntt-research.com/cis/">Cryptography & Information Security Lab</a>. 
+My primary research focus is cryptography, though I am broadly interested in all aspects of 
+computer science theory. Previously, I was an Assistant Professor at 
+<a href="http://www.princeton.edu/">Princeton University</a>, before going on leave to help
+launch NTT's new industry research lab in California and ultimately making the move permanent.<br><br>
+ I completed a postdoc at 
+<a href="https://mit.edu">MIT</a>, my PhD at 
+<a href="https://stanford.edu">Stanford University</a> and my bachelor's degree with 
+Highest Honors at <a href="https://www.berkeley.edu">UC Berkeley</a>. I am a recipient 
+of the NSF CAREER Award and the Sloan Fellowship, as well as three Best Paper Awards, 
+given every year to the top paper at each of the flagship cryptography conferences.
+        
+<!--Previously, I was a postdoc at <a href="https://mit.edu">MIT</a>, hosted by 
+<a href="http://people.csail.mit.edu/vinodv/">Vinod Vaikuntanathan</a>.  I earned my PhD in 2015 
+from <a href="https://stanford.edu">Stanford University</a>, where I was advised by 
+<a href="https://crypto.stanford.edu/~dabo/">Dan Boneh</a>.  In 2010, I graduated with Highest 
+Honors from <a href="https://www.berkeley.edu">UC Berkeley</a> where I majored in electrical engineering, 
+computer science, and physics, and minored in mathematics.-->
+<br><br><br>
+<b>Email:</b> <img src="assets/images/other.png" style="vertical-align:middle;" height=22px></td>
+<td style="padding: 0px 20px 0px 30px;"><img src="assets/images/mark pic.jpg" width=150px></td></tr></table>
+
+
+
+<h3><a href="pubs.all.html">Research Interests</a></h3>
+<table style="border-spacing: 0px 20px; padding: 0px 50px 0px 50px;">
+<tr><td><img src="assets/images/bsm.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.bsm.html">Bounded Storage Model</a></b></span><br>Cryptography typically models adversaries as time-bounded, but what about adversaries
+that are <i>space</i>-bounded? The space-bounded model allows for unconditional
+and everlasting protocols, sometimes far simpler than their time-bounded counterparts.
+If we bound time <i>and</i> space, we can also achieve never-before-possible 
+functionalities, such as ciphertexts that effectively disappear after transmission.
+</td></tr><tr><td><img src="assets/images/math.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.math.html">Crypto Math</a></b></span><br>Intractible mathematical problems are the heart of modern cryptography. Unfortunately,
+until someone proves that P&ne;NP, the intractability of such problems cannot be 
+proven unconditionally and can only be conjectured. Then how do we discover novel 
+mathematical structures, figure out how to use them, and gain confidence in their 
+security? Through extensive study, devising new applications, attacks, and 
+mitigations.
+</td></tr><tr><td><img src="assets/images/idealized.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.idealized.html">Idealized Models</a></b></span><br>Many of the most practical cryptosystems lack a full security proof in the standard 
+model. Nevertheless, we can gain confidence in their security by heuristically 
+treating one or more of the building blocks as an "ideal" object implemented as an 
+oracle. Prominent examples include random oracles, ideal ciphers, generic groups, etc.
+Proofs in idealized models are often very different from standard crypto proofs, 
+requiring both reductions and query complexity arguments.
+</td></tr><tr><td><img src="assets/images/obfuscation.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.obfuscation.html">Obfuscation</a></b></span><br>Can you hide secrets in software code? Program obfuscation aims to do exactly that. In
+addition to direct applications such as protecting intellectual property in software,
+obfuscation also has numerous applications in cryptography. In fact, it is now widely
+considered to be "Crypto Complete." Yet numerous quesitons still remain: can 
+obfuscation be made practical? Can it be based on "standard" computational 
+assumptions? 
+</td></tr><tr><td><img src="assets/images/ppe.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.ppe.html">Property Preserving Encryption</a></b></span><br>Property Preserving Encryption (PPE) deliberately preserves certain relations on the 
+plaintext data (e.g. equalities in the case of deterministic encryption, or order in 
+the case of order revealing encryption). In addition to applications 
+such as encrypted databases, PPE also has other interesting connections, such as 
+security under bad randomness and differential privacy. The question 
+is then: how to reveal such information without revealing other sensitive data, and 
+what security, if any, remains.
+</td></tr><tr><td><img src="assets/images/quantum.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.quantum.html">Quantum</a></b></span><br>Quantum computers harnesses the strange features of quantum mechanics, such as
+superpositions, entanglement, etc. <b>Post-Quantum Cryptography</b> aims 
+to secure cryptosystems against the enhanced power of such computers. On the other 
+hand, <b>Quantum Cryptography</b> uses quantum computing to achieve 
+never-before-possible cryptographic functionalities, such as programs that cannot be 
+copied.
+</td></tr><tr><td><img src="assets/images/traitor.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.traitor.html">Traitor Tracing</a></b></span><br>Traitor tracing systems seek to deter piracy by enabling content distributors to 
+identify the origin of pirate decryption boxes. The "usual" goal in traitor 
+tracing is to achieve the shortest ciphertexts, secret keys, and public keys possible.
+But there is also a rich set of questions beyond parameter sizes: how to embed 
+arbitrary information into a secret key? How to keep honest users' information 
+private, while exposing traitors'? What happens when the decoder uses a quantum 
+computer?
+</td></tr>
+</table>
+
+
+<span style="display:inline-block;width:100%; padding: 0px 0px 0px 0px;">
+	<span style="float:left;"><h3>Advising</h3>
+
+<b>Postdoc</b><br>
+  
+  <a href="http://justinholmgren.com">Justin Holgren</a> &rarr; Scientist at <a href="https://ntt-research.com">NTT Research</a><br>
+  <a href="https://cs-people.bu.edu/mbun/">Mark Bun</a> &rarr; Asst Prof at <a href="https://www.bu.edu">Boston University</a><br>
+  <br>
+
+<b>PhD</b><br>
+  
+  <a href="https://www.cs.princeton.edu/~bnehoran/">Barak Nehoran</a><br>
+  <a href="https://www.cs.princeton.edu/~brk/">Benjamin Kuykendall</a> &rarr; Hudson River Trading<br>
+  <a href="https://www.guan.io">Jiaxin Guan</a><br>
+  <a href="http://fermima.com">Fermi Ma</a> &rarr; Postdoc at <a href="https://www.berkeley.edu">UC Berkeley</a><br>
+  <a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a> &rarr; Postdoc at <a href="https://www.berkeley.edu">UC Berkeley</a><br>
+  <br>
+
+<b>Masters</b><br>
+  
+  <a href="http://people.eecs.berkeley.edu/~bhaskarr/">Bhaskar Roberts</a> &rarr; PhD at <a href="https://www.berkeley.edu">UC Berkeley</a><br>
+  <a href="https://sites.google.com/view/jamesbartusek">James Bartusek</a> &rarr; PhD at <a href="https://www.berkeley.edu">UC Berkeley</a><br>
+  <br>
+
+<b>Intern</b><br>
+  
+  <a href="https://damianoabram.github.io">Damiano Abram</a><br>
+  <br>
+</span>
+	<span style="float:right;padding: 0px 0px 0px 0px;">
+		<h3>Program Committees</h3>
+		
+		
+		
+		
+		<span style="display:inline-block; vertical-align: top; padding: 0px 30px 0px 0px;"><a href="https://tcc.iacr.org/2023/">TCC 2023</a><br><a href="https://focs.computer.org/2023/">FOCS 2023</a><br><a href="https://pkc.iacr.org/2023/">PKC 2023</a><br><a href="https://qcw2022.github.io/quantum-cryptography-workshop-2022/">QCW 2022</a><br><a href="https://www.cfail.org/cfail2022">CFail 2022</a><br><a href="https://tcc.iacr.org/2022/">TCC 2022</a><br><a href="https://eurocrypt.iacr.org/2022/">EUROCRYPT 2022</a><br><a href="https://pkc.iacr.org/2022/">PKC 2022</a><br><a href="https://tcc.iacr.org/2021/">TCC 2021</a><br></span>
+		<span style="display:inline-block; vertical-align: top; padding: 0px 0px 0px 0px;"><a href="http://itcs-conf.org/itcs21/program.html">ITCS 2021</a><br><a href="https://asiacrypt.iacr.org/2020/">ASIACRYPT 2020</a><br><a href="https://itcrypto.github.io/2020/2020.html">ITC 2020</a><br><a href="https://asiacrypt.iacr.org/2019/">ASIACRYPT 2019</a><br><a href="https://crypto.iacr.org/2018/">CRYPTO 2018</a><br><a href="https://www.iacr.org/workshops/tcc2017/">TCC 2017</a><br><a href="https://eurocrypt.iacr.org/2017/">EUROCRYPT 2017</a><br><a href="https://link.springer.com/book/10.1007/978-3-319-49175-2">ICITS 2016</a><br><a href="https://link.springer.com/book/10.1007/978-3-319-17470-9">ICITS 2015</a><br></span>
+	</span>
+</span>
+    </div>
+  </body>
+</html>
