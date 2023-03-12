@@ -1,0 +1,105 @@
+<html>
+
+<head>
+	<base target='_blank' />
+	<link rel="stylesheet" href="../style.css" type="text/css">
+	<title>COS 597A - Fall 2018</title>
+</head>
+
+<body>
+<div id="container">
+	<h1>COS 597A - Quantum Cryptography (Fall 2018)</h1>
+
+	<h2> Course Information </h2>
+	
+	<table style="border:none"  cellpadding="10">
+	<tr><td style="border:none"><b>Instructor: </b></td><td style="border:none"><a href="https://www.cs.princeton.edu/~mzhandry/">Mark Zhandry</a></td></tr>
+	<tr><td style="border:none"><b>Time: </b></td><td style="border:none"> MW 1:30pm - 2:50pm</td></tr>
+	<tr><td style="border:none"><b>Location: </b></td><td style="border:none"> TBA </td></tr>
+	<tr><td style="border:none"><b>Office Hours: </b></td><td style="border:none"> By appointment </td></tr>
+	<tr><td style="border:none"><b>Grading: </b></td><td style="border:none"> Based on homeworks every 2-3 weeks, scribing some lectures, final project </td></tr>
+	</table>
+
+
+	<h2> Course Description </h2>
+	
+	Quantum computers, harnessing the power of quantum physics, are poised to deliver significant and far-reaching
+	impacts to cryptography.  Substantial progress is being made in developing these devices, indicating that 
+	quantum computing may be viable in the next couple decades.
+	
+	This course will discuss the important role quantum computing will play in cryptography, covering topics such as:
+	<ol start="1">
+		<li> Quantum attacks on cryptography </li>
+		<li> Cryptosystems resilient to quantum attacks </li>
+		<li> Protocols using quantum physics, such as quantum key distribution, quantum money, and more</li>
+	</ol>
+	
+	Prerequisites: Basic familiarity with computability and complexity theory, such as that covered in COS 340 (Turing Machines, P vs NP, NP-completeness, etc).   Familiarity with
+	basic notions in cryptography (encryption, authentication, security definitions) will be a plus, but not required.  <b> No prior 
+	knowledge of quantum mechanics or physics is assumed</b>.
+
+
+	<h2> Tentative Schedule (subject to change) </h2>
+	
+	<table class="schedule">
+	<tr><td class="top" width="15%"> Lecture </td> <td class="top"> Topic </td> <td class="top"> Readings </td> <td class="top"> Scribe Notes </td></tr>
+	<tr><td> 1 - W, 9/12   </td> <td> Course introduction </td> <td></td> <td align="center"><a href="ln/LN1.pdf">[1]</a></td></tr>
+	<tr><td> 2 - M, 9/17   </td> <td> A Mathematical Model for Quantum Mechanics </td> <td></td> <td align="center"><a href="ln/LN2.pdf">[2]</a></td></tr>
+	<tr><td> 3 - W, 9/19   </td> <td> Quantum Gates and Quantum Computing </td> <td></td> <td align="center"><a href="ln/LN3.pdf">[3]</a></td></tr>
+	<tr><td> 4 - M, 9/24   </td> <td> Quantum Algorithms </td> <td></td> <td align="center"><a href="ln/LN4.pdf">[4]</a></td></tr>
+	<tr><td> 5 - W, 9/26   </td> <td> Quantum Fourier Transform, Grover's Algorithm </td> <td></td> <td align="center"><a href="ln/LN5.pdf">[5]</a></td></tr>
+	<tr><td> 6 - M, 10/1   </td> <td> Shor's Algorithm </td> <td></td> <td align="center"><a href="ln/LN6.pdf">[6]</a></td></tr>
+	<tr><td> 7 - W, 10/3   </td> <td> Shor's Algorithm </td> <td></td> <td align="center"><a href="ln/LN7.pdf">[7]</a></td></tr>
+	<tr><td> 8 - M, 10/8   </td> <td> Lattice Cryptography </td> <td></td> <td align="center"><a href="ln/LN8.pdf">[8]</a></td></tr>
+	<tr><td> 9 - W, 10/10   </td> <td> Lattice Cryptography </td> <td></td> <td align="center"><a href="ln/LN9.pdf">[9]</a></td></tr>
+	<tr><td> 10 - M, 10/15   </td> <td> Dihedral Hidden Subgroup Problem </td> <td></td> <td align="center"><a href="ln/LN10.pdf">[10]</a></td></tr>
+	<tr><td> 11 - W, 10/17   </td> <td> Other Post-quantum Cryptosystems </td> <td></td> <td align="center"></td></tr>
+	<tr><td> 12 - M, 10/22   </td> <td> Quantum Random Oracle Model </td> <td align="center"><a href="https://eprint.iacr.org/2010/428/">[1]</a>, <a href="https://eprint.iacr.org/2012/076/">[2]</a>, <a href="https://eprint.iacr.org/2012/182/">[3]</a></td> <td align="center"><a href="ln/LN12.pdf">[12]</a></td></tr>
+	<tr><td> 13 - W, 10/24   </td> <td> Quantum Rewinding </td> <td align="center"><a href="https://eprint.iacr.org/2015/361/">[4]</a>, <a href="https://eprint.iacr.org/2016/508/">[5]</a></td> <td align="center"><a href="ln/LN13.pdf">[13]</a></td></tr>
+	<tr style="color:lightblue"><td> M, 10/29 </td> <td colspan="3" rowspan = "2"> No Class - Fall recess </td></tr>
+	<tr style="color:lightblue"><td> W, 10/31 </td> </tr>
+	<tr><td> 14 - M, 11/5   </td> <td> More attacks on Post-Quantum Crypto </td> <td align="center"><a href="https://eprint.iacr.org/2012/182">[6]</a>, <a href="https://eprint.iacr.org/2012/606">[7]</a></td> <td align="center"><a href="ln/LN14.pdf">[14]</a></td></tr>
+	<tr><td> 15 - W, 11/7   </td> <td> No Cloning, Quantum Money </td> <td></td> <td align="center"><a href="ln/LN15.pdf">[15]</a></td></tr>
+	<tr><td> 16 - M, 11/12   </td> <td> No Cloning, Quantum Money </td> <td></td> <td align="center"></td></tr>
+	<tr><td> 17 - W, 11/14   </td> <td> No Cloning, Quantum Money </td> <td></td> <td align="center"><a href="ln/LN17.pdf">[17]</a></td></tr>
+	<tr><td> 18 - M, 11/19   </td> <td> Certifiable Randomness </td> <td></td> <td align="center"><a href="ln/LN18.pdf">[18]</a></td></tr>
+	<tr style="color:lightblue"><td> W, 11/21 </td> <td colspan="3"> No Class - Thanksgiving </td></tr>
+	<tr><td> 19 - M, 11/26   </td> <td> Encrypting Quantum States </td> <td></td> <td align="center"></td></tr>
+	<tr><td> 20 - W, 11/28   </td> <td> Authenticating Quantum States </td> <td></td> <td align="center"><a href="ln/LN20.pdf">[20]</a></td></tr>
+	<tr><td> 21 - M, 12/3   </td> <td> Key Recycling </td> <td></td> <td align="center"><a href="ln/LN21.pdf">[21]</a></td></tr>
+	<tr><td> 22 - W, 12/5   </td> <td> Quantum Key Distribution </td> <td></td> <td align="center"><a href="ln/LN22.pdf">[22]</a></td></tr>
+	<tr><td> 23 - M, 12/10 </td> <td> Student Presentations </td> <td></td> <td align="center"></td></tr>
+	<tr><td> 24 - W, 12/12 </td> <td> Student Presentations </td> <td></td> <td align="center"></td></tr></table>
+	
+	
+	<h2> Homework Assignments </h2>
+	
+	<b>Homework 0:</b> Please sign up for scribing lectures <a href="https://docs.google.com/spreadsheets/d/1dbZDPF3Fn2uo3hP8vHxy6CMKg6SF-ijqDgRaBm7Y9L8/edit?usp=sharing">here</a>.  For now, sign up for two lectures.  <br><br>
+	<b>Homework 1:</b> <a href="hw/HW1.pdf">[HW1]</a> Due October 10<br><br>
+	<b>Homework 2:</b> <a href="hw/HW2.pdf">[HW2]</a> Due October 24<br><br>
+	<b>Homework 3:</b> <a href="hw/HW3.pdf">[HW3]</a> Due December 5<br><br>
+	
+	<br>
+	
+	<b>Instructions for Homeworks:</b> Please type up your solutions (LaTeX preferred).  Either email your solutions to  <img src="other.png" width = "183" style="vertical-align:bottom"> (preferred) or print them out and hand them in during class by the due date.
+	
+	
+	<h2> Templates for Scribing </h2>
+	
+	<a href="template.tex">template.tex</a><br>
+	<a href="LN1.tex">LN1.tex</a>
+	
+	
+	<h2> Final Project </h2>
+	
+	<a href="hw/PR.pdf">[PR]</a><br><br>
+	
+	Due Dates:
+	<ul>
+		<li> Project Proposal: Monday, November 12, 11:59pm
+		<li> Presentation: In class during the last week of class.
+		<li> Project Report: Dean's Date, Tuesday, January 15, 11:59pm.
+	</ul>
+	
+</div></body>
+</html>

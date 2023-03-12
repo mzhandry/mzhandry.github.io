@@ -1,0 +1,110 @@
+<html>
+
+<head>
+	<base target='_blank' />
+	<link rel="stylesheet" href="../style.css" type="text/css">
+	<title>COS 533 - Fall 2017</title>
+</head>
+
+<body>
+<div id="container">
+	<h1>COS 533 - Advanced Cryptography (Fall 2017)</h1>
+
+	<h2> Course Information </h2>
+	
+	<table style="border:none"  cellpadding="10">
+	<tr><td style="border:none"><b>Instructor: </b></td><td style="border:none"><a href="https://www.cs.princeton.edu/~mzhandry/">Mark Zhandry (<img src="other.png" width = "183" style="vertical-align:middle">) </a></td></tr>
+	<tr><td style="border:none"></td><td style="border:none">&nbsp&nbsp&nbsp&nbsp <b>Office Hours: </b> By appointment </td></tr>
+	<tr><td style="border:none"><b>TA: </b></td><td style="border:none"><a href="../">Fermi Ma (<img src="other2.png" width = "160" style="vertical-align:middle">)</a></td></tr>
+	<tr><td style="border:none"></td><td style="border:none">&nbsp&nbsp&nbsp&nbsp <b>Office Hours: </b> By appointment </td></tr>
+	<tr><td style="border:none"><b>Time: </b></td><td style="border:none"> MW 11:00am - 12:20pm</td></tr>
+	<tr><td style="border:none"><b>Location: </b></td><td style="border:none"> Friend Center 009 </td></tr>
+
+	<tr><td style="border:none"><b>Grading: </b></td><td style="border:none"> Based on homeworks every 2 weeks, scribing some lectures </td></tr>
+	<tr><td style="border:none"><b>Piazza: </b></td><td style="border:none"> <a href="https://piazza.com/class/j7jaibu4qfjrd">https://piazza.com/class/j7jaibu4qfjrd</a> </td></tr>
+	</table>
+
+
+	<h2> Course Description </h2>
+	
+	This course will cover a selection of advanced topics in cryptography, including some or all of the following: 
+	<ul>
+		<li> Lattice-based cryptography
+		<li> Elliptic curve-based cryptography 
+		<li> Quantum Cryptography
+		<li> Cryptanalysis techniques
+		<li> Fully homomorphic encryption - Computing on encrypted data
+		<li> Zero knowledge proofs - Proving a theorem without revealing the proof
+		<li> Traitor tracing - Finding the source of leaked keys
+		<li> Identity-based encryption - Encryption where your public key is simply your email address
+		<li> Private information retrieval - Retrieving a database record without the database knowing which record
+		<li> Secret sharing - Splitting a secret into pieces so that only qualified sets of users can reconstruct the secret
+		<li> Multiparty computation - Several mutually distrusting users computing joint function over their private inputs
+
+	</ul>
+	
+	This course is intended to be a natural follow-up to COS 433.  That said, I will try to make the course as self-contained as possible, and will try to cover any cryptographic background as needed (though topics covered in COS 433 will be given only basic treatment).  If you are interested in taking this course, but have not previously taken COS 433 or equivalent, please contact me.
+	
+	<br><br><b>Prerequisites:</b> Familiarity with computability and complexity theory, such as that covered in COS 340 (Turing Machines, P vs NP, NP-completeness, etc).   Basic number theory (arithmetic modulo primes, composites).  Familiarity with crypto concepts (one-way functions, encryption, digital signatures, public key vs secret key 
+	cryptography, etc) is recommended, though not strictly required.
+
+
+	<h2> Example Schedule (subject to change based on student interest) </h2>
+	
+	<table class="schedule">
+	<tr><td class="top" width="15%"> Lecture </td> <td class="top"> Topic </td> 							<td class="top"> Scribe Notes </td></tr>
+	<tr><td> 1 - W, 9/13   </td> <td> Course introduction, review of basic crypto concepts </td> 			<td align="center"><a href="./ln/ln1.pdf">[1]</a></td></tr>
+	<tr><td> 2 - M, 9/18   </td> <td> Cryptography from one-way functions </td> 							<td align="center"><a href="./ln/ln2.pdf">[2]</a></td></tr>
+	<tr><td> 3 - W, 9/20   </td> <td> Cryptography from one-way functions, cont. </td> 						<td align="center"><a href="./ln/ln3.pdf">[3]</a></td></tr>
+	<tr><td> 4 - M, 9/25   </td> <td> Cryptography from one-way functions, cont. </td> 						<td align="center"><a href="./ln/ln4.pdf">[4]</a></td></tr>
+	<tr><td> 5 - W, 9/27   </td> <td> Multiparty Computation </td>											<td align="center"><a href="./ln/ln5.pdf">[5]</a></td></tr>	
+	<tr><td> 6 - M, 10/2   </td> <td> Multiparty Computation, cont. </td> 									<td align="center"><a href="./ln/ln6.pdf">[6]</a></td></tr>
+	<tr><td> 7 - W, 10/4   </td> <td> Multiparty Computation, cont. </td> 									<td align="center"><a href="./ln/ln7.pdf">[7]</a></td></tr>
+	<tr><td> 8 - M, 10/9   </td> <td> Zero Knowledge Proofs </td> 											<td align="center"><a href="./ln/ln8.pdf">[8]</a></td></tr>
+	<tr><td> 9 - W, 10/11  </td> <td> Zero Knowledge Proofs, cont. </td> 									<td align="center"><a href="./ln/ln9.pdf">[9]</a></td></tr>
+	<tr><td> 10 - M, 10/16 </td> <td> Elliptic curve cryptography</td> 										<td align="center"><a href="./ln/ln10.pdf">[10]</a></td></tr>
+	<tr><td> 11 - W, 10/18 </td> <td> Elliptic curve cryptography, cont. </td>								<td align="center"><a href="./ln/ln11.pdf">[11]</a></td></tr>
+	<tr><td> 12 - M, 10/23 </td> <td> Elliptic curve cryptography, cont. </td> 								<td align="center"><a href="./ln/ln12.pdf">[12]</a></td></tr>
+	<tr><td> 13 - W, 10/25 </td> <td> Bitcoin (Guest lecture by Arvind Narayanan) </td>						<td align="center"></td></tr>
+	<tr style="color:lightblue"><td> M, 10/30 </td> <td colspan="2" rowspan = "2"> No Class - Fall recess </td></tr>
+	<tr style="color:lightblue"><td> W, 11/1 </td> </tr>
+	<tr><td> 14 - M, 11/6  </td> <td> Elliptic curve cryptography, cont. </td>								<td align="center"><a href="./ln/ln14.pdf">[14]</a></td></tr>
+	<tr><td> 15 - W, 11/8  </td> <td> Lattice-based cryptography </td> 										<td align="center"><a href="./ln/ln15.pdf">[15]</a></td></tr>
+	<tr><td> 16 - M, 11/13 </td> <td> Lattice-based cryptography, cont. </td> 								<td align="center"><a href="./ln/ln16.pdf">[16]</a></td></tr>
+	<tr><td> 17 - W, 11/15 </td> <td> Lattice-based cryptography, cont. </td>								<td align="center"><a href="./ln/ln17.pdf">[17]</a></td></tr>
+	<tr><td> 18 - M, 11/20 </td> <td> Lattice-based cryptography, cont. </td>								<td align="center"><a href="./ln/ln18.pdf">[18]</a></td></tr>
+	<tr style="color:lightblue"><td> W, 11/22 </td> <td colspan="2"> No Class - Thanksgiving </td></tr>
+	<tr><td> 19 - M, 11/27 </td> <td> Cryptanalysis </td> 													<td align="center"><a href="./ln/ln19.pdf">[19]</a></td></tr>
+	<tr><td> 20 - W, 11/29 </td> <td> Cryptanalysis </td>													<td align="center"><a href="./ln/ln20.pdf">[20]</a></td></tr>
+	<tr><td> 21 - M, 12/4  </td> <td> Quantum cryptography </td>											<td align="center"><a href="./ln/ln21.pdf">[21]</a></td></tr>
+	<tr><td> 22 - W, 12/6  </td> <td> Quantum cryptography, cont. </td> 									<td align="center"><a href="./ln/ln22.pdf">[22]</a></td></tr>
+	<tr><td> 23 - M, 12/11 </td> <td> Quantum cryptography, cont. </td> 									<td align="center"><a href="./ln/ln23.pdf">[23]</a></td></tr>
+	<tr><td> 24 - W, 12/13 </td> <td> Quantum cryptography, cont. </td> 									<td align="center"><a href="./ln/ln24.pdf">[24]</a></td></tr></table>
+	
+	
+	<h2> Homework Assignments </h2>
+	
+	<a href="./hw/hw0.pdf">Homework 0</a>.  Due September 18<br>
+	<a href="./hw/hw1.pdf">Homework 1</a>.  Due October 11<br>
+	<a href="./hw/hw2.pdf">Homework 2</a>.  Due October 27<br>
+	<a href="./hw/hw3.pdf">Homework 3</a>.  Due December 6<br>
+	<a href="./hw/hw4.pdf">Homework 4</a>.  Due January 16<br>
+	
+	<br>
+	
+	<b>Instructions for Homeworks:</b> Please type up your solutions (LaTeX preferred).  Either email your solutions to  <img src="other2.png" width = "160" style="vertical-align:bottom"> (preferred) or print them out and hand them in during class by the due date.
+
+
+	<h2> Templates for Scribe Notes </h2>
+	
+	<a href="./ln.tex">ln.tex</a><br>
+	<a href="./template.tex">template.tex</a><br><br>
+	
+	<b>Latex source files for first two lectures</b><br>
+	<a href="./ln1.tex">ln1.tex</a><br>
+	<a href="./ln2.tex">ln2.tex</a><br>
+
+	<br><br><br>
+	
+</div></body>
+</html>

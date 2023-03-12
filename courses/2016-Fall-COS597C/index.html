@@ -1,0 +1,116 @@
+<html>
+
+<head>
+	<base target='_blank' />
+	<link rel="stylesheet" href="../style.css" type="text/css">
+	<title>COS 597C - Fall 2016</title>
+</head>
+
+<body>
+<div id="container">
+	<h1>COS 597C - Recent Developments in Program Obfuscation (Fall 2016)</h1>
+
+	<h2> Course Information </h2>
+	
+	<table style="border:none"  cellpadding="10">
+	<tr><td style="border:none"><b>Instructor: </b></td><td style="border:none"><a href="https://www.cs.princeton.edu/~mzhandry/">Mark Zhandry</a></td></tr>
+	<tr><td style="border:none"><b>Time: </b></td><td style="border:none"> TuTh 11:00am - 12:20pm</td></tr>
+	<tr><td style="border:none"><b>Location: </b></td><td style="border:none"> Friend Center 111 </td></tr>
+	<tr><td style="border:none"><b>Office Hours: </b></td><td style="border:none"> By appointment </td></tr>
+	<tr><td style="border:none"><b>Grading: </b></td><td style="border:none"> Based on homeworks every 2-3 weeks, scribing some lectures, final project </td></tr>
+	</table>
+
+
+	<h2> Course Description </h2>
+	
+	A program obfuscator is a compiler that scrambles a program to make it unintelligible.  Recently breakthroughs have lead to the development of obfuscators with 
+	very strong security properties, which have yielded numerous applications to cryptography and compter science theory in general.  This course will cover a selection 
+	of these recent developments, including:
+	<ol start="0">
+		<li> Formal definitions of obfuscation </li>
+		<li> Applications to cryptography</li>
+		<li> Current obfuscators and attacks on them</li>
+		<li> Obfuscation in the complexity landscape - P vs NP, PPAD hardness, relation to basic crypto primitives, etc.</li>
+	</ol>
+	
+	Prerequisites: Basic familiarity with computability and complexity theory, such as that covered in COS 340 (Turing Machines, P vs NP, NP-completeness, etc).   <b> No prior 
+	knowledge of cryptography is assumed</b>, though basic familiarity with crypto concepts (one-way functions, encryption, digital signatures, public key vs secret key 
+	cryptography, etc) is recommended.
+
+
+	<h2> Tentative Schedule (subject to change) </h2>
+	
+	<table class="schedule">
+	<tr><td class="top" width="15%"> Lecture </td> <td class="top"> Topic </td> <td class="top"> Readings </td> <td class="top"> Scribe Notes </td></tr>
+	<tr><td> 1 - Th, 9/15   </td> <td> Course introduction, definitions of obfuscation: indistinguishability obfuscation (iO), virtual black box obfuscation (VBB), and more </td> <td rowspan="2" align="center"><a href="http://www.wisdom.weizmann.ac.il/~oded/PS/obf4.pdf">[BGIRSVY'01]</a></td> <td align="center"><a href="./ln/ln1.pdf">LN1</a></td></tr>
+	<tr><td> 2 - Tu, 9/20   </td> <td> Impossibility for VBB obfuscation </td> <td align="center"><a href="./ln/ln2.pdf">LN2</a></td></tr>
+	<tr><td colspan="4" style="border-right-style:hidden;border-left-style:hidden;" align="center"> <b>Part I: Applications of Obfuscation</b> </td></tr>
+	<tr><td> 3 - Th, 9/22   </td> <td> iO ==> digital signatures</td> <td rowspan="2" align="center"><a href="https://eprint.iacr.org/2013/454.pdf">[SW'13]</a></td> <td align="center"><a href="./ln/ln3.pdf">LN3</a></td></tr>
+	<tr><td> 4 - Tu, 9/27   </td> <td> iO ==> public key encryption</td>  <td align="center"><a href="./ln/ln4.pdf">LN4</a></td></tr>
+	<tr><td> 5 - Th, 9/29   </td> <td> iO ==> multiparty key agreement</td> <td rowspan="2" align="center"><a href="http://eprint.iacr.org/2013/642.pdf">[BZ'14]</a></td> <td align="center"><a href="./ln/ln5.pdf">LN5</a></td></tr>	
+	<tr><td> 6 - Tu, 10/4   </td> <td> iO ==> broadcast encryption</td> <td align="center"><a href="./ln/ln6.pdf">LN6</a></td></tr>
+	<tr><td> 7 - Th, 10/6   </td> <td> iO ==> fully homomorphic encryption</td> <td align="center"><a href="https://eprint.iacr.org/2014/882.pdf">[CLTV'14]</a></td> <td align="center"><a href="./ln/ln7.pdf">LN7</a></td></tr>
+	<tr><td> 8 - Tu, 10/11  </td> <td> iO ==> order revealing encryption</td> <td></td> <td align="center"><a href="./ln/ln8.pdf">LN8</a></td></tr>
+	<tr><td> 9 - Th, 10/13  </td> <td> iO ==> zero knowledge</td> <td align="center"><a href="https://eprint.iacr.org/2014/295.pdf">[BP'14]</a></td> <td align="center"><a href="./ln/ln9.pdf">LN9</a></td></tr>
+	<tr><td colspan="4" style="border-right-style:hidden;border-left-style:hidden;" align="center"> <b>Part II: Constructions and Attacks</b> </td></tr>
+	<tr><td> 10 - Tu, 10/18 </td> <td rowspan="2"> Tools for building obfuscation: multilinear maps</td><td rowspan="2" align="center"><a href="https://eprint.iacr.org/2012/610.pdf">[GGH'13]</a></td> <td align="center"><a href="./ln/ln10.pdf">LN10</a></td></tr>
+	<tr><td> 11 - Th, 10/20 </td> <td align="center"><a href="./ln/ln11.pdf">LN11</a></td></tr>
+	<tr><td> 12 - Tu, 10/25 </td> <td rowspan="2"> Obfuscation in the "generic multilinear map model"</td> <td rowspan="2" align="center"><a href="http://eprint.iacr.org/2015/167.pdf">[BMSZ'16]</a></td> <td align="center"><a href="./ln/ln12.pdf">LN12</a></td></tr>
+	<tr><td> 13 - Th, 10/27 </td> <td align="center"><a href="./ln/ln13.pdf">LN13</a></td></tr>
+	<tr style="color:lightblue"><td> Tu, 11/1 </td> <td colspan="3" rowspan = "2"> No Class - Fall recess </td></tr>
+	<tr style="color:lightblue"><td> Th, 11/3 </td> </tr>
+	<tr style="color:red">><td> 14 - Tu, 11/8  </td> <td colspan=3> Class Cancelled </td></tr>
+	<tr><td> 15 - Th, 11/10 </td> <td>Attacks on multilinear maps, iO </td> <td align="center"><a href="https://eprint.iacr.org/2016/147.pdf">[MSZ'16a]</a></td> <td></td></tr>
+	<tr><td> 16 - Tu, 11/15 </td> <td rowspan="2">Defending iO from attacks </td> <td rowspan="2" align="center"><a href="https://eprint.iacr.org/2016/390.pdf">[GMS'16]</a> <a href="https://eprint.iacr.org/2016/588">[MSZ'16b]</a></td> <td></td></tr>
+	<tr><td> 17 - Th, 11/17 </td><td align="center"><a href="./ln/ln17.pdf">LN17</a></td></tr>
+	<tr><td colspan="4" style="border-right-style:hidden;border-left-style:hidden;" align="center"> <b>Part III: Obfuscation in the Complexity Landscape</b> </td></tr>
+	<tr><td> 18 - Tu, 11/22 </td> <td> iO vs OWF</td><td align="center"><a href="https://eprint.iacr.org/2014/347.pdf">[KMNPRY'14]</a></td> <td align="center"><a href="./ln/ln18.pdf">LN18</a></td></tr>
+	<tr style="color:lightblue"><td> Th, 11/24 </td> <td colspan="3"> No Class - Thanksgiving </td></tr>
+	<tr><td> 19 - Tu, 11/29 </td> <td> iO ==> PPAD hardness </td> <td align="center"><a href="https://eprint.iacr.org/2014/1029.pdf">[BPR'14]</a></td> <td></td></tr>
+	<tr><td> 20 - Th, 12/1  </td> <td> Limits of iO </td><td></td> <td align="center"><a href="./ln/ln20.pdf">LN20</a></td></tr>
+	<tr><td> 21 - Tu, 12/6  </td> <td> Barriers to building iO from traditional tools</td><td></td> <td align="center"><a href="./ln/ln21.pdf">LN21</a></td></tr>
+	<tr><td> 22 - Th, 12/8  </td> <td> The plausibility of diO </td> <td></td><td align="center"><a href="./ln/ln22.pdf">LN22</a></td></tr>
+	<tr><td> 23 - Tu, 12/13 </td> <td rowspan="2"> Student Presentations </td> <td></td> <td></td></tr>
+	<tr><td> 24 - Th, 12/15 </td> <td></td> <td></td></tr></table>
+	
+	
+	<h2> Homework Assignments </h2>
+	
+	<a href="./hw/hw0.pdf">Homework 0</a>.  Due September 19<br>
+	<a href="./hw/hw1.pdf">Homework 1</a> (Updated Oct 3).  Due October 6<br>
+	<a href="./hw/hw2.pdf">Homework 2</a>.  <b>New Due Date: Due November 15</b><br>
+	<a href="./hw/hw3.pdf">Homework 3</a>.  Due December 6<br>
+	
+	<br>
+	
+	<b>Instructions for Homeworks:</b> Please type up your solutions (LaTeX preferred).  Either email your solutions to  <img src="other.png" width = "183" style="vertical-align:bottom"> (preferred) or print them out and hand them in during class by the due date.
+	
+	
+	<h2> Final Project </h2>
+	
+	<a href="./project.pdf">Final Project Assignment</a><br><br>
+	
+	Due Dates:
+	<ul>
+		<li> Project Proposal: Monday, November 14, 11:59pm
+		<li> Presentation: In class during the last week of class.
+		<li> Project Report: Dean's Date, Tuesday, January 17, 11:59pm.
+	</ul>
+	
+	<h2> Some Open Problems </h2>
+	
+	Here are some open problems that could be the basis for a final project:
+	
+	<ul>
+		<li> Devise a plausible security definition for obfuscation that captures the goal of preventing reverse engineering of software.
+		<li> New applications of iO/improved constructions of existing applications.  Concrete ideas will be given throughout Part I of the course.
+		<li> Devise an attack on iO candidates over CLT'13 multilinear maps or GGH'15 multilinear maps.  For CLT'13 attacks, see <a href="https://eprint.iacr.org/2014/906">here</a> and <a href="https://eprint.iacr.org/2015/596">here</a>.  For GGH'15 attacks, see <a href="https://eprint.iacr.org/2015/1037">here</a>.
+		<li> Devise a classical polynomial-time attack on GGH13 multilinear maps that does not fit within the "refined generic multilinear map model."
+		<li> Construct diO for a wider class of circuits than just those that differ on a polynomial number of points, assuming just iO and possibly other basic crypto tools.
+		<li> Prove that diO for general circuits does not exist.  See <a href="https://eprint.iacr.org/2013/860">here</a> and <a href="http://eprint.iacr.org/2016/162">here</a> for a start.
+		<li> Construct iO for Turing Machines with unbounded inputs, or prove it is impossible. 
+		<li> Formalize the intuition that reducing iO to a single "simple" assumption requires an exponential loss in the reduction.
+	</ul>
+	
+</div></body>
+</html>
