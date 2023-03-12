@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage
+[pdftex,pagebackref,colorlinks=true,pdfpagemode=UseNone,urlcolor=blue,linkcolor=blue,citecolor=blue,pdfstartview=FitH]{hyperref}
+
+\usepackage{amsmath,amsfonts}
+\usepackage{amsthm} 
+\usepackage{ amssymb }
+\usepackage{graphicx}
+\usepackage{array}
+
+\bibliographystyle{alpha}
+
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\textwidth}{6.0in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{5px}
+
+
+
+
+%%%%%%%%% Macros
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{construction}[theorem]{Construction}
+
+
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\G}{{\mathbb{G}}}
+
+\newcommand{\Ks}{{\mathcal{K}}}
+
+%%%%%%%%% Crypto Primitives
+\newcommand{\owf}{{\sf{OWF}}}
+\newcommand{\prg}{{\sf{PRG}}}
+\newcommand{\prf}{{\sf{PRF}}}
+\newcommand{\prp}{{\sf{PRP}}}
+\newcommand{\gen}{{\sf{Gen}}}
+\newcommand{\enc}{{\sf{Enc}}}
+\newcommand{\dec}{{\sf{Dec}}}
+\newcommand{\mac}{{\sf MAC}}
+\newcommand{\sign}{{\sf{Sign}}}
+\newcommand{\ver}{{\sf{Ver}}}
+\newcommand{\extract}{{\sf{Extract}}}
+\newcommand{\keygen}{{\sf{KeyGen}}}
+\newcommand{\comm}{{\sf{Com}}}
+\newcommand{\punct}{{\sf{Punct}}}
+
+%%%%%%%%% Extra Algorithms (added by Fermi)
+\newcommand{\params}{{\sf{params}}}
+\newcommand{\publish}{{\sf{Publish}}}
+\newcommand{\setup}{{\sf{Setup}}}
+\newcommand{\init}{{\sf{Init}}}
+
+
+%%%%%%%%% Keys
+\newcommand{\dk}{{\sf dk}}
+\newcommand{\ek}{{\sf ek}}
+\newcommand{\sk}{{\sf sk}}
+\newcommand{\vk}{{\sf vk}}
+\newcommand{\mpk}{{\sf mpk}}
+\newcommand{\msk}{{\sf msk}}
+\newcommand{\id}{{\sf id}}
+\newcommand{\hk}{{\sf hk}}
+
+\newcommand{\pk}{{\sf pk}}
+
+
+
+%%%%%%%%% Functions
+\newcommand{\polylog}{{\sf polylog}}
+\newcommand{\poly}{{\sf poly}}
+\newcommand{\negl}{{\sf negl}}
+
+\newcommand{\grgen}{{\sf GrGen}}
+
+
+
+\newcommand{\GCD}{{\sf GCD}}
+
+
+%%%%%%%%% To typeset the header
+
+\def\lecturer{Mark Zhandry}
+\def\coursenum{COS 433}
+\def\coursename{Cryptography}
+
+\newlength{\tpush}
+\setlength{\tpush}{2\headheight}
+\addtolength{\tpush}{\headsep}
+
+
+\newcommand{\lecturenotes}[3]{\noindent\vspace*{-\tpush}\newline\parbox{\textwidth}
+	{\coursenum : \coursename \hfill Princeton University \newline
+		Lecture #1 (#2) \newline
+		Lecturer: \lecturer \hfill Scribe: #3 \newline
+		\mbox{}\hrulefill\mbox{}}\vspace*{1ex}\mbox{}\newline
+	\bigskip
+	\begin{center}{\Large\bf  Notes for Lecture #1}\end{center}
+	\bigskip}
+
+
+\newcommand{\homeworks}[2]{\noindent\vspace*{-\tpush}\newline\parbox{\textwidth}
+	{\coursenum : \coursename \hfill Princeton University \newline
+		Homework #1 \hfill Due: #2 \newline
+		\mbox{}\hrulefill\mbox{}}\vspace*{1ex}\mbox{}\newline
+	\bigskip
+	\begin{center}{\Large\bf  Homework #1}\end{center}
+	\bigskip}
+
+\newcommand{\midterm}[1]{\noindent\vspace*{-\tpush}\newline\parbox{\textwidth}
+	{\coursenum : \coursename \hfill Princeton University \newline
+		Midterm \hfill Due: #1 \newline
+		\mbox{}\hrulefill\mbox{}}\vspace*{1ex}\mbox{}\newline
+	\bigskip
+	\begin{center}{\Large\bf  Midterm}\end{center}
+	\bigskip}
+
+\newcommand{\final}[1]{\noindent\vspace*{-\tpush}\newline\parbox{\textwidth}
+	{\coursenum : \coursename \hfill Princeton University \newline
+		Final Exam \hfill  \newline
+		\mbox{}\hrulefill\mbox{}}\vspace*{1ex}\mbox{}\newline
+	\bigskip
+	\begin{center}{\Large\bf  Final Exam}\end{center}
+	\bigskip}
+
+
+\newcommand{\handouts}[2]{\noindent\vspace*{-\tpush}\newline\parbox{\textwidth}
+	{\coursenum : \coursename \hfill Princeton University \newline
+		Handout: #1 \hfill Date: #2 \newline
+		\mbox{}\hrulefill\mbox{}}\vspace*{1ex}\mbox{}\newline
+	\bigskip
+	\begin{center}{\Large\bf #1}\end{center}
+	\bigskip}
+
+
+
+
+
+
+
+

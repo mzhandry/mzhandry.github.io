@@ -1,0 +1,175 @@
+
+	</table><html>
+
+<head>
+	<base target='_blank' />
+	<link rel="stylesheet" href="../style.css" type="text/css">
+	<title>COS 433 - Fall 2020</title>
+</head>
+
+<body>
+<div id="container">
+	<h1>COS 433 - Cryptography (Fall 2020)</h1>
+
+	<h2> Course Information </h2>
+	
+	<table style="border:none"  cellpadding="10">
+	<tr><td style="border:none"><b>Instructor: </b></td><td style="border:none">Mark Zhandry (<img src="other.png" width = "183" style="vertical-align:middle">) </td></tr>
+	<tr><td style="border:none"></td><td style="border:none"> <b>&nbsp&nbsp&nbsp&nbsp Office Hours:</b> Monday 10am (EST)</td></tr>
+	<tr><td style="border:none"><b>TA: </b></td><td style="border:none">Udaya Gai</td></tr>
+	<tr><td style="border:none"></td><td style="border:none"> <b>&nbsp&nbsp&nbsp&nbsp Office Hours:</b> Tuesday 7-8pm (EST) </td></tr>
+	<tr><td style="border:none"><b>TA: </b></td><td style="border:none">Anunay Kulshrestha</td></tr>
+	<tr><td style="border:none"></td><td style="border:none"> <b>&nbsp&nbsp&nbsp&nbsp Office Hours:</b> Wednesday 1:30-2:30pm (EST) </td></tr>
+	<tr><td style="border:none"><b>Lecture: </b></td><td style="border:none"> TuTh 11:00am - 12:20pm, Zoom</td></tr>
+	<tr><td style="border:none"><b>Grading: </b></td><td style="border:none"> 40% Homeworks, 30% Projects, 30% take-home final </td></tr>
+	<tr><td style="border:none"><b>Textbook: </b></td><td style="border:none"> There is no official text for this course, 
+	however <a href="http://www.cs.umd.edu/~jkatz/imc.html">Introduction to Modern Cryptography</a> by Katz and Lindell (KL) 
+	is a good resource.  Each lecture will have pointers to the appropriate sections of KL for those following along with 
+	the book.</td></tr>
+	</table>
+
+
+
+	<h2> Course Description </h2>
+	
+	Cryptography is an ancient practice dating back almost 4000 years.  However, cryptography practiced today is very different than the cryptography 
+	used as recently as a few decades ago.  For one, traditional cryptography was mostly synonymous with encryption: translating data into secret codes.  Today, however, 
+	cryptography extends far beyond basic codes to encompass concepts such as authentication and integrity, and can be used to solve seemingly impossible tasks such as 
+	public key encryption (exchanging secret messages without ever having met in person to share a secret key) and zero knowledge proofs (proving theorems without revealing the proof).
+	<br><br>
+	
+	Another new feature in modern cryptography is its foundations.  Until recently, cryptography was largely an art form based on intuition and ad hoc tweaks to block vulnerabilities.  
+	Modern crytpography is instead more of a science, characterized by rigorous mathematical definitions and theorems that guide the design of new systems.
+	<br><br>
+	
+	This course is an introduction to modern cryptography, focusing on the theoretical foundations, with some attention to practical considerations.  We will cover a variety of 
+	topics, including secret key and public key encryption, authentication, commitments, pseudorandom generators, and zero knowledge proofs.  
+	<br><br>
+	
+	<b>Prerequisites:</b> Basic probability theory.  Basic complexity theory (as in COS340) recommended.  The course projects will involve programming, but no specific programming language is required.
+	
+
+
+	<h2> Tentative Schedule (subject to change) </h2>
+	
+	<table class="schedule">
+	<tr><td class="top" width="15%"> Lecture </td> <td class="top"> Topic </td> 					<td class="top" width="12%"> KL Section </td> <td class="top"> Notes </td></tr>
+	<tr><td> 1 - Tu, 9/1    </td> <td> Course introduction, Pre-modern Crypto Part I </td> 	<td> 1.3 </td> 		<td align="center"><a href="LN/LN1.pdf">[1]</a></td></tr>
+	<tr><td> 2 - Th, 9/3    </td> <td> Pre-modern Crypto Part II </td> 			<td> 1.4-2.2 </td> 	<td align="center"><a href="LN/LN2.pdf">[2]</a></td></tr>
+	<tr><td> 3 - Tu, 9/8   </td> <td> Definitions in Cryptography, Randomized Encryption</td> <td> </td> 	<td align="center"><a href="LN/LN3.pdf">[3]</a></td></tr>
+	<tr><td> 4 - Th, 9/10   </td> <td> Limitations of Information-Theoretic Security, Stream Ciphers,
+									  PRGs, and Computational Assumptions</td>                      <td> 2.3-3.3 </td> 	<td align="center"><a href="LN/LN4.pdf">[4]</a></td></tr>
+	<tr><td> 5 - Tu, 9/15   </td> <td> Constructing PRGs </td> 										<td> 6.1 </td> 	<td align="center"><a href="LN/LN5.pdf">[5]</a></td></tr>	
+	<tr><td> 6 - Th, 9/17   </td> <td> CPA security and PRFs </td> 									<td> 3.4-3.5  </td> <td align="center"><a href="LN/LN6.pdf">[6]</a></td></tr>
+	<tr><td> 7 - Tu, 9/22   </td> <td> PRPs, Block Ciphers, Modes of Operation </td> 				<td> 3.6, 6.2 </td> <td align="center"><a href="LN/LN7.pdf">[7]</a></td></tr>
+	<tr><td> 8 - Th, 9/24    </td> <td> Constructing Block Ciphers </td> 								<td> 6.2 </td> 	<td align="center"><a href="LN/LN8.pdf">[8]</a></td></tr>
+	<tr><td> 9 - Tu, 9/29    </td> <td> Attacks on Block Ciphers </td> 								<td> 6.2 </td> <td align="center"></td><a href="LN/LN9.pdf">[9]</a></td></tr>
+	<tr><td> 10 - Th, 10/1   </td> <td> Message Integrity, MACs </td>									<td> 4.1-4.4, 4.6 </td> <td align="center"><a href="LN/LN10.pdf">[10]</a></td></td></tr>
+	<tr><td> 11 - Tu, 10/6  </td> <td> Authenticated Encryption, CCA Security </td>                  <td> 4.5 </td> <td align="center"><a href="LN/LN11.pdf">[11]</a></td></tr>
+	<tr><td> 12 - Th, 10/8   </td> <td > Collision Resistant Hashing </td>                      	<td> 5.1-5.4, 6.3 </td> <td align="center"><a href="LN/LN12.pdf">[12]</a></td></tr>
+	<tr style="color:lightblue"><td> Tu, 10/13 </td> <td colspan="3" rowspan = "1"> No Class - Fall Break </td></tr>
+	<tr><td> 13 - Th, 10/15  </td> <td> Commitment Schemes <td>  									</td> <td align="center"><a href="LN/LN13.pdf">[13]</a></td></tr>
+	<tr><td> 14 - Tu, 10/20  </td> <td> Number-theoretic constructions of symmetric primitives	 	</td> 	<td> 8.3-8.4 </td> <td align="center"><a href="LN/LN14.pdf">[14]</a></td></tr>
+	<tr><td> 15 - Th, 10/22  </td> <td> Number-theoretic constructions of symmetric primitives		</td> 	<td>  8.3-8.4 </td> <td align="center"><a href="LN/LN15.pdf">[15]</a></td></tr>
+	<tr><td> 16 - Tu, 10/27   </td> <td> Relationships between Symmetric Primitives </td>				<td> 7.2 </td> <td align="center"><a href="LN/LN16.pdf">[16]</a></td></tr>
+	<tr><td> 17 - Th, 10/29  </td> <td> Diffie Hellman Key Exchange </td> 							<td> 10.3 </td> <td align="center"><a href="LN/LN17.pdf">[17]</a></td></tr>
+	<tr><td> 18 - Tu, 11/3  </td> <td> Public Key Encryption </td>			                      	<td> 11.1-11.4 </td> <td align="center"><a href="LN/LN18.pdf">[18]</a></td></tr>
+	<tr><td> 19 - Th, 11/5  </td> <td> RSA, Trapdoor Permutations </td>						 		<td> 11.5, 13.1 </td> <td align="center"><a href="LN/LN19.pdf">[19]</a></td></tr>
+	<tr><td> 20 - Tu, 11/10  </td> <td> Digital Signatures</td>										<td> 12.1-12.4 </td> <td align="center"><a href="LN/LN20.pdf">[20]</a></td></tr>
+	<tr><td> 21 - Th, 11/12  </td> <td> Digital Signatures, Identification Protocols</td>			<td> 12.5 </td> <td align="center"><a href="LN/LN21.pdf">[21]</a></td></tr>
+	<tr><td> 22 - Tu, 11/17  </td> <td> Identification Protocols </td>								<td> 12.5 </td> <td align="center"><a href="LN/LN22.pdf">[22]</a></td></tr>
+	<tr style="color:red"><td> Th, 11/19 </td> <td colspan="3" rowspan = "1"> Class Cancelled </td><td></td> <td align="center"></td></tr>
+	<tr><td> 24 - Tu, 11/24   </td> <td> Wrap up </td>	<td></td> <td align="center"><a href="LN/LN23.pdf">[23]</a></td></tr>
+	</table>
+	
+	<h2> Handouts </h2>
+	
+	<a href="Notes/numbertheory.pdf">Basic Number Theory</a>
+	
+	<h2> Homework Assignments </h2>
+	
+	<a href="HW/HW6.pdf">Homework 6</a>. Due November 24. <br>
+	<a href="HW/HW5.pdf">Homework 5</a>. Due November 10. <br>
+	<a href="HW/HW4.pdf">Homework 4</a>. Due October 27. <br>
+	<a href="HW/HW3.pdf">Homework 3</a>. Due October 20. <br>
+	<a href="HW/HW2.pdf">Homework 2</a>. Due September 29. <br>
+	<a href="HW/HW1.pdf">Homework 1</a>. Due September 15. 
+	
+	<br><br>
+	
+	<h2> Homework Instructions: </h2>
+	
+	Homeworks will be assigned roughly every two weeks, with <b>six</b> homework assignments in total.<br><br>
+	
+	<b>Format:</b> Typed solutions are strongly preferred. For hand-written submissions, please make sure the writing is legible. If we can't read it, we can't grade it, and we will not be entertaining regrade requests for illegible solutions.
+	
+	We encourage typesetting your solutions in LaTeX.  Learning LaTex will require a learning curve, but will pay off in the long run.  Once you are accustomed to LaTex, you will be able to typeset technical material 
+	such as equations very quickly.
+	<br><br>
+	
+	<b>Submission:</b> Assignments will be due at 11:59pm <a href="https://time.is/Anywhere_on_Earth">Anywhere on Earth</a> on the due date of the assignment.  The due date will typically be Tuesday. Submission instructions TBA.
+	<br><br>
+	
+	<b>Collaboration Policy:</b> You are encouraged to discuss homework assignments with other students in the class.  However, students must write up solutions individually, 
+	and must not share their written solutions with classmates.  Please identify your collaborators on your homework submissions. <br><br>
+	
+	<b>Internet Policy:</b> If you find an answer to an exercise online, you may base your solution on what you found, but the solutions must be clearly in your own words in order to demonstrate your understanding of the answer. Additionally, please cite any
+	source. On the other hand, you <i>may not</i> post homework questions hoping for other people to solve them.
+	<br><br>
+	
+	<b>Formalism:</b> You must always show all of your work.  Unless otherwise stated, any cryptosystem derived in the homework assignment must analyzed for both correctness and security.  That is, you
+	must <i>prove</i> both the correctness and security of the scheme.  When asked to prove a statement (correctness/security or otherwise), the proof needs to be well 
+	written and rigorous.  Your proofs do not need to be overly formal, but should not contain any logical gaps or errors.  Any statements proved in lecture can be used in the 
+	solutions without proof, but any other statement should be proved as a part of the solution.
+	<br><br>
+	
+	<b>Extra Credit:</b> There may be an occasional extra credit problem on the homework assignments.  You are not required to attempt these problems, and will not be 
+	penalized for skipping them. Extra credit will be applied only after deciding the curve.<br><br>
+	
+	<b>Flexibility:</b> We will automatically <b>drop your single lowest homework</b> score. 
+	
+	Additionally, we will accept any homework assignment <b>up to 48 hours late</b>. There will be no penalty for turning in homeworks late as long as they are received within 
+	the 48 hour window. However, to encourage you to turn in assignments on time, we will give <b>2 bonus points</b> for each homework assignment that you submit on time.
+	
+	After the 48 hour grace period, we will not be able to accept any submissions. This is so that we can start grading promptly once the 48 hour window has closed, in order to 
+	give feedback in a timely fashion.
+	
+
+	
+	
+	<br><br>
+	
+	<b>Latex source files for first homework:</b><br>
+	<a href="./HW1.tex">HW1.tex</a><br>
+	<a href="./template.tex">template.tex</a><br>
+	
+
+	<h2> Projects </h2>
+	
+	
+	Project 2: <a href="PR/PR2.pdf">[Instructions]</a>, Hash function example inputs: <a href="PR/examples.txt">[examples.txt]</a>.  Due Dec 5.
+	Project 1: <a href="PR/PR1.pdf">[Instructions]</a>, <a href="PR/ctxts.zip">[files]</a>. Due October 6.
+	
+	There will be <b>two</b> projects. Projects will follow the same 48 hour grace period as homeworks (including bonus points). You may not drop a project.
+	
+	<h2> Take Home Final </h2>
+	
+	TBA<br><br>
+	
+	Old exams: <a href="Notes/final2017.pdf">Spring 2017</a> <a href="Notes/final2018.pdf">Spring 2018</a> <a href="Notes/final2020.pdf">Spring 2020</a>
+	
+	
+	<h2> Grading </h2>
+	
+	h = total homework points (out of 400)<br>
+	p = total project points (out of 300)<br>
+	f = final points (out of 300)<br><br>
+	
+	Numerical grade = (h+p+f)/10<br><br>
+	
+	There is no set curve or grading scale for the course (so for example a 90% may or may not end up being an A).  However, expect the grade distribution to be roughly consistent with upper-level COS courses.
+	
+	<br><br>
+	
+</div></body>
+</html>

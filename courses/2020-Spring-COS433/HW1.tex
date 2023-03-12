@@ -1,0 +1,80 @@
+\input{template}
+
+
+\begin{document}
+
+\homeworks{1}{February 20, 2020, 11:59pm}
+
+\section{Problem 1 (12 points)}
+
+\begin{itemize}
+	\item[(a)] Show that a Homophonic substitution cipher that encrypts a single character at a time can \emph{never} have perfect secrecy, even for two-character messages, no matter how large the output alphabet is.  That is, provide two different two-character messages such that the distributions of encryptions of those two messages are different.  
+	\item[(b)] Show that the Vigen\`ere cipher does \emph{not} have perfect secrecy if the message length is even one character longer than the key length. 
+	\item[(c)] Show that the Vigen\`ere cipher does \emph{not} have perfect secrecy if the keyspace is grammatically correct English, even if the message length is smaller than the key length.
+	\item[(d)] Show that the following cipher has perfect secrecy.  Messages are $\ell$ bit strings.  The key is a random permutation $P$ on $2\ell$ items.  To encrypt a message $m$, write down $m$, followed by $\overline{m}$, the bitwise complement of $m$.  Then permute the bits of the resulting $2\ell$-bit string $m||\overline{m}$ according to the permutation described by the key.
+\end{itemize}
+
+
+
+\section{Problem 2 (12 points)}
+
+\begin{itemize}
+	\item[(a)] Devise an encryption scheme such that (1) given an encryption of any message, an adversary can figure out 90\% of the secret key, but (2) the scheme is still perfectly secure, despite 90\% of the key being revealed.  Do not forget to prove that the scheme is secure and that it is correct.
+	\item[(b)] Devise an encryption scheme such that (1) given an encryption of any message, an adversary learns \emph{nothing} about the secret key, but (2) the scheme is completely broken (as in, given the ciphertext, an adversary can completely recover the plaintext).
+\end{itemize}
+
+
+\section{Problem 3 (10 points)}
+
+Suppose we say that two messages are \emph{adjacent} if they differ by at most a single bit.
+
+\begin{definition}\label{def:1}An encryption scheme $(\enc,\dec)$ for $\ell$-bit messages has \emph{adjacent-message perfect secrecy} if, for any two $\ell$-bit \emph{adjacent} messages $m_0,m_1$, the distributions $\enc(k,m_0)$ and $\enc(k,m_1)$ are identical.  
+\end{definition}
+
+This is the same definition as perfect secrecy seen in class, except for the restriction that it only applies to $m_0,m_1$ that are adjacent.  Therefore, it is a seemingly weaker definition.
+
+Prove that any encryption scheme that has \emph{adjacent-message perfect} secrecy must in fact have \emph{perfect} secrecy.  \\
+{\it Hint: suppose $m_0,m_1$ differed in just 2 bits.  How would you prove that the distributions of their encryptions are identical?  Generalize this to arbitrary messages.}
+
+
+\section{Problem 4 (16 points)}
+
+Consider the following encryption scheme. The key will be a table such as
+{
+
+\makeatletter
+\newcommand{\thickhline}{%
+	\noalign {\ifnum 0=`}\fi \hrule height 1pt
+	\futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+
+\begin{table}[h]\centering
+	\begin{tabular}{|c"c|c|c|c|c|c|c|c|c|c|}\hline
+		& 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\\thickhline
+		& g & z & a &   & t & k & f & w &   & s \\\hline
+	  3 & c & m & e & . & b & x & p & u & h & y  \\\hline
+	  8 & i & d & v & r & \textunderscore & q & j & l & n & o\\\hline
+	\end{tabular}
+\end{table}
+}
+
+The plaintext alphabet will consist of the 26 letters, plus spaces (represented by \textunderscore) and periods. In general, the table will consist of 4 rows. The numbers 0-9 are always written in the first row, in increasing order. We will call these the column indices. Then 8 plaintext characters are placed in the first row, leaving two black spaces. The numbers from the first row corresponding to those spaces (in our example, 3 and 8) are then written in the third and forth row of the first column, again in increasing order. These will be called the row indices. The remaining 20 characters fill out the rest of the third and fourth row.
+
+Encryption is character by character. For each character, find the character in the table. There are two cases:
+\begin{itemize}
+	\item If the character is in the second row (the first row of non-numbers), that character is encrypted by its column index. So, for example, ``a'' becomes ``2''.
+	\item If the character is in the third or fourth row, that character is encrypted by its row index followed by its column index. So ``x'' gets encrypted as ``35''.
+\end{itemize}
+The overall ciphertext is just the concatenation of the encryptions of each letter. So for example, ``attack.'' is encrypted to ``2\enspace 4\enspace 4\enspace 2\enspace 30 \enspace 5 \enspace 33''. The spaces between the numbers are just to show how the various letters map to numbers; in reality the actually ciphertext would be ``244230533'' with no spaces.
+
+\begin{itemize}
+	\item[(a)] Explain how to decrypt. Explain for general keys, not just the key given above.
+	\item[(b)] What is the size of the key space?
+	\item[(c)] Suppose that we changed how we encrypt characters in the third and fourth row to be column index followed by row index. So for example now ``x'' becomes ``53''. Demonstrate that decryption would then be impossible: there will be two plaintexts that map to the same ciphertext. You may use the concrete example above to generate your ciphertexts.
+	\item[(d)] A friend suggests putting characters such as ``a'', ``e'', ``i'', ``o'', ``r'', ``t'' and maybe ``\textunderscore'' in the second row. What non-security reasons might your friend have for this suggestion? What are some security trade-offs, compared to a random placement of characters.
+\end{itemize}
+
+
+\end{document}

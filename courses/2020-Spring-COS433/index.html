@@ -1,0 +1,178 @@
+
+	</table><html>
+
+<head>
+	<base target='_blank' />
+	<link rel="stylesheet" href="../style.css" type="text/css">
+	<title>COS 433 - Spring 2020</title>
+</head>
+
+<body>
+<div id="container">
+	<h1>COS 433 - Cryptography (Spring 2020)</h1>
+
+	<h2> Course Information </h2>
+	
+	<table style="border:none"  cellpadding="10">
+	<tr><td style="border:none"><b>Instructor: </b></td><td style="border:none">Mark Zhandry (<img src="other.png" width = "183" style="vertical-align:middle">) </td></tr>
+	<tr><td style="border:none"></td><td style="border:none"> <b>&nbsp&nbsp&nbsp&nbsp Office Hours:</b> Fridays 11am (Zoom) </td></tr>
+	<tr><td style="border:none"><b>TA: </b></td><td style="border:none">Ben Kuykendall</td></tr>
+	<tr><td style="border:none"></td><td style="border:none"> <b>&nbsp&nbsp&nbsp&nbsp Office Hours:</b> Mondays 3pm (Zoom) </td></tr>
+	<tr><td style="border:none"><b>TA: </b></td><td style="border:none">Jiaxin Guan</td></tr>
+	<tr><td style="border:none"></td><td style="border:none"> <b>&nbsp&nbsp&nbsp&nbsp Office Hours:</b> Wednesdays 1pm (Zoom) </td></tr>
+	<tr><td style="border:none"><b>Lecture: </b></td><td style="border:none"> TuTh 11:00am - 12:20pm, Zoom</td></tr>
+	<tr><td style="border:none"><b>Grading: </b></td><td style="border:none"> 40% for roughly weekly homeworks, 30% Projects, 30% take-home final </td></tr>
+	<tr><td style="border:none"><b>Piazza: </b></td><td style="border:none">  <a href="https://piazza.com/class/k62c87yjhgl51n">https://piazza.com/class/k62c87yjhgl51n</a> </td></tr>
+	<tr><td style="border:none"><b>Textbook: </b></td><td style="border:none"> There is no official text for this course, 
+	however <a href="http://www.cs.umd.edu/~jkatz/imc.html">Introduction to Modern Cryptography</a> by Katz and Lindell (KL) 
+	is a good resource.  Each lecture will have pointers to the appropriate sections of KL for those following along with 
+	the book.</td></tr>
+	</table>
+
+
+
+	<h2> Course Description </h2>
+	
+	Cryptography is an ancient practice dating back almost 4000 years.  However, cryptography practiced today is very different than the cryptography 
+	used as recently as a few decades ago.  For one, traditional cryptography was mostly synonymous with encryption: translating data into secret codes.  Today, however, 
+	cryptography extends far beyond basic codes to encompass concepts such as authentication and integrity, and can be used to solve seemingly impossible tasks such as 
+	public key encryption (exchanging secret messages without ever having met in person to share a secret key) and zero knowledge proofs (proving theorems without revealing the proof).
+	<br><br>
+	
+	Another new feature in modern cryptography is its foundations.  Until recently, cryptography was largely an art form based on intuition and ad hoc tweaks to block vulnerabilities.  
+	Modern crytpography is instead more of a science, characterized by rigorous mathematical definitions and theorems that guide the design of new systems.
+	<br><br>
+	
+	This course is an introduction to modern cryptography, focusing on the theoretical foundations, with some attention to practical considerations.  We will cover a variety of 
+	topics, including secret key and public key encryption, authentication, commitments, pseudorandom generators, and zero knowledge proofs.  
+	<br><br>
+	
+	<b>Prerequisites:</b> Basic probability theory.  Basic complexity theory (as in COS340) recommended.  No programming knowledge is required, though there may be an occasional 
+	extra credit exercise that will involve minimal programming (in a language of your choice).  
+
+
+	<h2> Tentative Schedule (subject to change) </h2>
+	
+	<table class="schedule">
+	<tr><td class="top" width="15%"> Lecture </td> <td class="top"> Topic </td> 					<td class="top" width="12%"> KL Section </td> <td class="top"> Notes </td></tr>
+	<tr><td> 1 - Tu, 2/4    </td> <td> Course introduction, Pre-modern Crypto Part I </td> 	<td> 1.3 </td> 		<td align="center"><a href="./LN/LN1.pdf">[1]</a></td></tr>
+	<tr><td> 2 - Th, 2/6    </td> <td> Pre-modern Crypto Part II </td> 			<td> 1.4-2.2 </td> 	<td align="center"><a href="./LN/LN2.pdf">[2]</a></td></tr>
+	<tr><td> 3 - Tu, 2/11   </td> <td> Definitions in Cryptography, Randomized Encryption</td> <td> </td> 	<td align="center"><a href="./LN/LN3.pdf">[3]</a></td></tr>
+	<tr><td> 4 - Th, 2/13   </td> <td> Limitations of Information-Theoretic Security, Stream Ciphers,
+									  PRGs, and Computational Assumptions</td>                      <td> 2.3-3.3 </td> 	<td align="center"><a href="./LN/LN4.pdf">[4]</a></td></tr>
+	<tr><td> 5 - Tu, 2/18   </td> <td> Constructing PRGs </td> 										<td> 6.1 </td> 	<td align="center"><a href="./LN/LN5.pdf">[5]</a></td></tr>	
+	<tr><td> 6 - Th, 2/20   </td> <td> CPA security and PRFs </td> 									<td> 3.4-3.5  </td> <td align="center"><a href="./LN/LN6.pdf">[6]</a></td></tr>
+	<tr><td> 7 - Tu, 2/25   </td> <td> PRPs, Block Ciphers, Modes of Operation </td> 				<td> 3.6, 6.2 </td> <td align="center"><a href="./LN/LN7.pdf">[7]</a></td></tr>
+	<tr><td> 8 - Th, 2/27    </td> <td> Constructing Block Ciphers </td> 								<td> 6.2 </td> 	<td align="center"><a href="./LN/LN8.pdf">[8]</a></td></tr>
+	<tr><td> 9 - Tu, 3/3    </td> <td> Attacks on Block Ciphers </td> 								<td> 6.2 </td> <td align="center"><a href="./LN/LN9.pdf">[9]</a></td></tr>
+	<tr><td> 10 - Th, 3/5   </td> <td> Message Integrity, MACs </td>									<td> 4.1-4.4, 4.6 </td> <td align="center"><a href="./LN/LN10.pdf">[10]</a></td></tr>
+	<tr><td> 11 - Tu, 3/10  </td> <td> Message Integrity, MACs, continued </td>                  <td> 4.1-4.4, 4.6 </td> <td align="center"><a href="./LN/LN11.pdf">[11]</a></td></tr>
+	<tr style="color:red"><td> 12 - Th, 3/12   </td> <td colspan=3> Class Cancelled </td></tr> 
+	<tr style="color:lightblue"><td> M, 3/20 </td> <td colspan="3" rowspan = "2"> No Class - Spring Break </td></tr>
+	<tr style="color:lightblue"><td> W, 3/22 </td> </tr>
+	<tr><td> 13 - Tu, 3/24  </td> <td> Authenticated Encryption, CCA Security <td> 4.5 </td> <td align="center"><a href="./LN/LN12.pdf">[12]</a></td></tr>
+	<tr><td> 14 - Th, 3/26  </td> <td> 	Collision Resistant Hashing </td> 	<td> 5.1-5.4, 6.3 </td> <td align="center"><a href="./LN/LN13.pdf">[13]</a></td></tr>
+	<tr><td> 15 - Tu, 3/31   </td> <td> Commitment Schemes </td> 					<td>  </td> <td align="center"><a href="./LN/LN14.pdf">[14]</a></td></tr>
+	
+	
+    <tr><td> 16 - Th, 4/2  </td> <td> Number-theoretic constructions of symmetric primitives </td>	<td> 8.3-8.4 </td><td align="center"><a href="./LN/LN15.pdf">[15]</a></td></tr>
+	<tr><td> 17 - Tu, 4/7   </td> <td> Number-theoretic constructions of symmetric primitives </td>	<td> 8.3-8.4 </td> <td align="center"><a href="./LN/LN16.pdf">[16]</a></td></tr>-->
+	<!-- <tr><td> 16 - Th, 4/2   </td> <td> Relationships between Symmetric Primitives </td>				<td> 7.2 </td> <td align="center"></td></tr>
+	<tr><td> 17 - Tu, 4/7  </td> <td> Diffie Hellman Key Exchange </td> 							<td> 10.3 </td> <td align="center"></td></tr>-->
+	<tr><td> 18 - Th, 4/9  </td> <td> Public Key Encryption </td>			                      	<td> 11.1-11.4 </td> <td align="center"><a href="./LN/LN17.pdf">[17]</a></td></tr>
+	<tr><td> 19 - Tu, 4/14  </td> <td> RSA, Trapdoor Permutations </td>						 		<td> 11.5, 13.1 </td> <td align="center"><a href="./LN/LN18.pdf">[18]</a></td></tr>
+	<tr><td> 20 - Th, 4/16  </td> <td> Digital Signatures</td>										<td> 12.1-12.4 </td> <td align="center"><a href="./LN/LN19.pdf">[19]</a></td></tr>
+	<tr><td> 21 - Tu, 4/21  </td> <td> Digital Signatures, Identification Protocols</td>			<td> 12.5 </td> <td align="center"><a href="./LN/LN20.pdf">[20]</a></td></tr>
+	<tr><td> 22 - Th, 4/23  </td> <td> Identification Protocols </td>								<td> 12.5 </td> <td align="center"><a href="./LN/LN21.pdf">[21]</a></td></tr>
+	<tr><td> 23 - Tu, 4/28   </td> <td> Zero Knowledge</td>											<td></td> <td align="center"><a href="./LN/LN22.pdf">[22]</a></td></tr>
+	<tr><td> 24 - Th, 4/30   </td> <td> Wrap up </td>	<td></td> <td align="center"><a href="./LN/LN23.pdf">[23]</a></td></tr>
+	</table>
+	
+	<h2> Handouts </h2>
+	
+	<a href="Notes/numbertheory.pdf">Basic Number Theory</a>
+	
+	<h2> Homework Assignments </h2>
+	
+	<b> Homework 7:</b>  <a href="HW/HW7.pdf">[HW7]</a>.  Due Sunday May 3, 11:59pm. <a href="https://tigerfile.cs.princeton.edu/COS433_S2020/HW7">[Submission Link]</a><br><br>
+	
+	<b> Homework 6:</b>  <a href="HW/HW6.pdf">[HW6]</a>.  Due Sunday April 26, 11:59pm. <a href="https://tigerfile.cs.princeton.edu/COS433_S2020/HW6">[Submission Link]</a><br><br>
+	
+	<b> Homework 5:</b>  <a href="HW/HW5.pdf">[HW5]</a>.  Due Thursday April 9, 11:59pm. <a href="https://tigerfile.cs.princeton.edu/COS433_S2020/HW5">[Submission Link]</a><br><br>
+	
+	<b> Homework 4:</b>  <a href="HW/HW4.pdf">[HW4]</a>.  Due Thursday April 2, 11:59pm. <a href="https://tigerfile.cs.princeton.edu/COS433_S2020/HW4">[Submission Link]</a><br><br>
+	
+	<b> Homework 3:</b>  <a href="HW/HW3.pdf">[HW3]</a>.  Due Thursday March 5, 11:59pm. <a href="https://tigerfile.cs.princeton.edu/COS433_S2020/HW3">[Submission Link]</a><br><br>
+	
+	<b> Homework 2:</b>  <a href="HW/HW2.pdf">[HW2]</a>.  Due Thursday February 27, 11:59pm. <a href="https://tigerfile.cs.princeton.edu/COS433_S2020/HW2">[Submission Link]</a><br><br>
+	
+	<b> Homework 1:</b>  <a href="HW/HW1.pdf">[HW1]</a>.  Due Thursday February 20, 11:59pm. <a href="https://tigerfile.cs.princeton.edu/COS433_S2020/HW1">[Submission Link]</a><br><br>
+	
+	<b> Homework 0: </b> Due Friday February 7, 11:59pm.  Please fill out the following poll to indicate your availability for office hours.   Please fill out your general availability for days of the week/times during the Spring semester.  Once everyone has filled out the poll, the teaching staff will decide on office hours.
+	<br><br> <a href="https://www.when2meet.com/?8678874-HzQIA">https://www.when2meet.com/?8678874-HzQIA</a>
+	
+	<br><br>
+	
+	<h2> Homework Instructions: </h2>
+	
+	Homeworks will be assigned roughly every week.  Homework assignments will be posted on the course webpage early in the week (hopefully by
+	Monday, definitely by Tuesday) and will be due the following Thursday.  Expect there to be a homework assignment <i>due</i> every week except the first two weeks of class, 
+	midterm week, and the week following Spring Recess (for a total of 8 assignments).<br><br>
+	
+	<b>Format:</b> Please type up your solutions.  Please let the teaching staff know if this will be a problem.  LaTeX is strongly preferred.  Learning 
+	LaTex will require a learning curve, but will pay off in the long run.  Once you are accustomed to LaTex, you will be able to typeset technical material 
+	such as equations very quickly.
+	<br><br>
+	
+	<b>Submission:</b> Assignments will be due at 11:59pm on the due date of the assignment.  Submission  instructions TBA.
+	<br><br>
+	
+	<b>Collaboration Policy:</b> You are encouraged to discuss homework assignments with other students in the class.  However, students must write up solutions individually, 
+	and must not share their written solutions with classmates.  Please identify your collaborators on your homework submissions.
+	<br><br>
+	
+	<b>Formalism:</b> You must always show all of your work.  Unless otherwise stated, any cryptosystem derived in the homework assignment must analyzed for both correctness and security.  That is, you
+	must <i>prove</i> both the correctness and security of the scheme.  When asked to prove a statement (correctness/security or otherwise), the proof needs to be well 
+	written and rigorous.  Your proofs do not need to be overly formal, but should not contain any logical gaps or errors.  Any statements proved in lecture can be used in the 
+	solutions without proof, but any other statement should be proved as a part of the solution.
+	<br><br>
+	
+	<b>Extra Credit:</b> There may be an occasional extra credit problem on the homework assignments.  You are not required to attempt these problems, and will not be 
+	penalized for skipping them. Extra credit will be applied only after deciding the curve.<br><br>
+	
+	<b>Flexibility:</b> You will be given <b>four</b> late days for assignments for the semester. These late days can be used in 24-hour increments; any number of late days can be used on a given assignment. Late days will be assessed automatically. No additional late days will be given, except for medical or personal emergencies; such emergencies must be documented in a note from a Dean or Director of Studies.
+	<br><br>
+	
+	<b>Latex source files for first homework:</b><br>
+	<a href="./HW1.tex">HW1.tex</a><br>
+	<a href="./template.tex">template.tex</a><br>
+	
+
+	<h2> Take Home Final </h2>
+	
+	TBA<br><br>
+	
+	Old exams: <a href="Notes/final2017.pdf">Spring 2017</a> <a href="Notes/final2018.pdf">Spring 2018</a>
+	
+	<h2> Projects </h2>
+	
+	<b> Project 3/Homework 8:</b> Instructions: <a href="PR/PR3.pdf">[PR3]</a>.  Due Date: May 12, 11:59pm. <a href="https://tigerfile.cs.princeton.edu/COS433_S2020/PR3">[Submission Link]</a><br><br>
+	
+	<b> Project 2:</b> Instructions: <a href="PR/PR2.pdf">[PR2]</a>.  Hash function example inputs: <a href="PR/examples.txt">[examples.txt]</a>.  Due Date: Sunday, April 19, 11:59pm. <a href="https://tigerfile.cs.princeton.edu/COS433_S2020/PR2">[Submission Link]</a><br><br>
+	
+	<b> Project 1:</b> Instructions: <a href="PR/PR1.pdf">[PR1]</a>.  Ciphertexts: <a href="PR/ctxts.zip">[ctxts]</a>.  Due Date: Thursday, March 12, 11:59pm. <a href="https://tigerfile.cs.princeton.edu/COS433_S2020/PR1">[Submission Link]</a><br><br>
+	
+	<h2> Grading </h2>
+	
+	h = min(total homework points, 400)<br>
+	p = total project points (out of 300)<br>
+	f = final points (out of 300)<br><br>
+	
+	Numerical grade = (h+p+f)/10<br><br>
+	
+	There is no set curve or grading scale for the course (so for example a 90% may or may not end up being an A).  However, expect the grade distribution to be roughly consistent with upper-level COS courses.
+	
+	<br><br>
+	
+</div></body>
+</html>

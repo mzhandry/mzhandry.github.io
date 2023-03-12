@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage
+[pdftex,pagebackref,colorlinks=true,pdfpagemode=UseNone,urlcolor=blue,linkcolor=blue,citecolor=blue,pdfstartview=FitH]{hyperref}
+
+\usepackage{amsmath,amsfonts}
+\usepackage{graphicx}
+
+\bibliographystyle{alpha}
+
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\textwidth}{6.0in}
+\setlength{\topmargin}{0in}
+\setlength{\textheight}{8.5in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{5px}
+
+
+
+
+%%%%%%%%% Macros
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{construction}[theorem]{Construction}
+
+
+%%%%%%%%% Crypto Primitives
+
+\newcommand{\obf}{{\sf Obf}}
+\newcommand{\iO}{{\sf iO}}
+\newcommand{\VBBO}{{\sf VBBO}}
+\newcommand{\diO}{{\sf diO}}
+\newcommand{\owf}{{\sf OWF}}
+\newcommand{\prg}{{\sf PRG}}
+\newcommand{\prf}{{\sf PRF}}
+\newcommand{\gen}{{\sf Gen}}
+\newcommand{\enc}{{\sf Enc}}
+\newcommand{\dec}{{\sf Dec}}
+
+%%%%%%%%% Keys
+\newcommand{\pk}{{\sf pk}}
+\newcommand{\ek}{{\sf ek}}
+\newcommand{\sk}{{\sf sk}}
+\newcommand{\vk}{{\sf vk}}
+\newcommand{\mpk}{{\sf mpk}}
+\newcommand{\msk}{{\sf msk}}
+\newcommand{\id}{{\sf id}}
+
+
+
+%%%%%%%%% Functions
+\newcommand{\polylog}{{\sf polylog}}
+\newcommand{\poly}{{\sf poly}}
+\newcommand{\negl}{{\sf negl}}
+
+
+%%%%%%%%% To typeset the header
+
+\def\lecturer{Mark Zhandry}
+\def\coursenum{COS 533}
+\def\coursename{Advanced Cryptography}
+
+\newlength{\tpush}
+\setlength{\tpush}{2\headheight}
+\addtolength{\tpush}{\headsep}
+
+
+\newcommand{\lecturenotes}[3]{\noindent\vspace*{-\tpush}\newline\parbox{\textwidth}
+	{\coursenum : \coursename \hfill Princeton University \newline
+		Lecture #1 (#2) \newline
+		Lecturer: \lecturer \hfill Scribe: #3 \newline
+		\mbox{}\hrulefill\mbox{}}\vspace*{1ex}\mbox{}\newline
+	\bigskip
+	\begin{center}{\Large\bf  Notes for Lecture #1}\end{center}
+	\bigskip}
+
+
+\newcommand{\homeworks}[2]{\noindent\vspace*{-\tpush}\newline\parbox{\textwidth}
+	{\coursenum : \coursename \hfill Princeton University \newline
+		Homework #1 \hfill Due: #2 \newline
+		\mbox{}\hrulefill\mbox{}}\vspace*{1ex}\mbox{}\newline
+	\bigskip
+	\begin{center}{\Large\bf  Homework #1}\end{center}
+	\bigskip}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
