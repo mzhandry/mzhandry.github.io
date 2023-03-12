@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Publications - Property Preserving Encryption</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body onclick="openMarked()">
+  	<div id="container">
+      <nav>
+  <ul class="nav">
+    <li class="nav"><a href="index.html" class="home">Mark Zhandry</a></li>
+    <li class="nav"><a href="pubs.all.html" class="other">Publications</a></li>
+    <li class="nav"><a href="talks.html" class="other">Talks</a></li>
+    <li class="nav"><a href="teaching.html" class="other">Teaching</a></li>
+    <li class="nav"><a href="personal.html" class="other">Personal</a></li>
+  </ul>
+</nav>
+      <nav>
+  <ul class="navpub">
+    <li class="navpub">
+    <a href="pubs.all.html" style="white-space:nowrap">All</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.bsm.html" style="white-space:nowrap">Bounded Storage Model</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.math.html" style="white-space:nowrap">Crypto Math</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.idealized.html" style="white-space:nowrap">Idealized Models</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.obfuscation.html" style="white-space:nowrap">Obfuscation</a>
+   </li>
+    <li class="navpub">
+    Property Preserving Encryption
+   </li>
+    <li class="navpub">
+    <a href="pubs.quantum.html" style="white-space:nowrap">Quantum</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.traitor.html" style="white-space:nowrap">Traitor Tracing</a>
+   </li>
+  </ul>
+</nav>
+<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><img src="assets/images/ppe.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;">Property Preserving Encryption (PPE) deliberately preserves certain relations on the 
+plaintext data (e.g. equalities in the case of deterministic encryption, or order in 
+the case of order revealing encryption). In addition to applications 
+such as encrypted databases, PPE also has other interesting connections, such as 
+security under bad randomness and differential privacy. The question 
+is then: how to reveal such information without revealing other sensitive data, and 
+what security, if any, remains.
+</td></tr></table><br>
+
+
+
+
+<table style="border-spacing: 0px; width: 100%;">
+
+<tr><td style="width: 100%">On ELFs, Deterministic Encryption, and Correlated-Input Security<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2019/">EUROCRYPT 2019</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2019/213.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z19a.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=KOMZohEuOcs"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-1" onclick="doOpen=true;">
+We construct deterministic public key encryption secure for any <i>constant</i> number 
+of <i>arbitrarily correlated computationally unpredictable</i> messages.  Prior works 
+required either random oracles or non-standard knowledge assumptions.  In contrast, 
+our constructions are based on the exponential hardness of DDH, which is plausible in 
+elliptic curve groups.  Our central tool is a new <i>trapdoored extremely lossy 
+function</i>, which modifies extremely lossy functions by adding a trapdoor.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
+@inproceedings{EC:Zhandry19a,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2019,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yuval&nbsp;Ishai&nbsp;and&nbsp;Vincent&nbsp;Rijmen},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{3--32},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{On&nbsp;{ELFs},&nbsp;Deterministic&nbsp;Encryption,&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Correlated-Input&nbsp;Security},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11478},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Parameter-Hiding Order Revealing Encryption<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://people.cs.uchicago.edu/~davidcash/">David Cash</a></span>, <span style="white-space:nowrap"><a href="https://faculty.eng.fau.edu/fenghao/research/">Feng-Hao Liu</a></span>, <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?hl=en&pli=1&user=SIFRrBIAAAAJ">Adam O'Neill</a></span>, <span style="white-space:nowrap">Mark Zhandry</span> and <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=Aa7WCBkAAAAJ&hl=zh-CN">Cong Zhang</a></span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://asiacrypt.iacr.org/2018/">ASIACRYPT 2018</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2018/698.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
+Order-revealing encryption (ORE) is a popular primitive for outsourcing encrypted 
+databases, as it allows for efficiently performing range queries over encrypted data. 
+Unfortunately, a series of works, starting with Naveed et al. (CCS 2015), have shown 
+that when the adversary has a good estimate of the distribution of the data, ORE 
+provides little protection. In this work, we consider the case that the database 
+entries are drawn identically and independently from a distribution of known shape, 
+but for which the mean and variance are not (and thus the attacks of Naveed et al. do 
+not apply). We define a new notion of security for ORE, called parameter-hiding ORE, 
+which maintains the secrecy of these parameters. We give a construction of ORE 
+satisfying our new definition from bilinear maps.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
+@inproceedings{AC:CLOZZ18,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{David&nbsp;Cash&nbsp;and&nbsp;Feng-Hao&nbsp;Liu&nbsp;and&nbsp;Adam&nbsp;O'Neill&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry&nbsp;and&nbsp;Cong&nbsp;Zhang},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ASIACRYPT~2018,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Thomas&nbsp;Peyrin&nbsp;and&nbsp;Steven&nbsp;Galbraith},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{181--210},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Parameter-Hiding&nbsp;Order&nbsp;Revealing&nbsp;Encryption},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11272},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2018}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Impossibility of Order-Revealing Encryption in Idealized Models<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span> and <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=Aa7WCBkAAAAJ&hl=zh-CN">Cong Zhang</a></span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2018/">TCC 2018</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2017/1001.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
+An Order-Revealing Encryption (ORE) scheme gives a public procedure by which two 
+ciphertext can be compared to reveal the order of their underlying plaintexts. The 
+ideal security notion for ORE is that only the order is revealed &#8212; anything 
+else, such as the distance between plaintexts, is hidden. The only known constructions 
+of ORE achieving such ideal security are based on cryptographic multilinear maps, and 
+are currently too impractical for real-world applications. In this work, we give 
+evidence that building ORE from weaker tools may be hard. Indeed, we show black-box 
+separations between ORE and most symmetric-key primitives, as well as public key 
+encryption and anything else implied by generic groups in a black-box way. Thus, any 
+construction of ORE must either (1) achieve weaker notions of security, (2) be based 
+on more complicated cryptographic tools, or (3) require non-black-box techniques. This 
+suggests that any ORE achieving ideal security will likely be somewhat inefficient.
+<br><br>
+Central to our proof is an proof of impossibility for something we call information 
+theoretic ORE, which has connections to tournament graphs and a theorem by Erd&#337;s. 
+This impossibility proof will be useful for proving other black box separations for 
+ORE.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+@inproceedings{TCC:ZhaZha18,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry&nbsp;and&nbsp;Cong&nbsp;Zhang},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2018,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Amos&nbsp;Beimel&nbsp;and&nbsp;Stefan&nbsp;Dziembowski},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{129--158},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Impossibility&nbsp;of&nbsp;Order-Revealing&nbsp;Encryption&nbsp;in<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Idealized&nbsp;Models},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11240},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2018}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Order-Revealing Encryption and the Hardness of Private Learning<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://cs-people.bu.edu/mbun/">Mark Bun</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/workshops/tcc2016a/">TCC 2016-A</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://arxiv.org/pdf/1505.00388.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
+An order-revealing encryption scheme gives a public procedure by which two ciphertexts 
+can be compared to reveal the ordering of their underlying plaintexts. We show how to 
+use order-revealing encryption to separate computationally efficient PAC learning from 
+efficient (&epsilon;,&delta;)-differentially private PAC learning. That is, we 
+construct a concept class that is efficiently PAC learnable, but for which every 
+efficient learner fails to be differentially private. This answers a question of 
+Kasiviswanathan et al. (FOCS '08, SIAM J. Comput. '11).<br><br>
+To prove our result, we give a generic transformation from an order-revealing 
+encryption scheme into one with strongly correct comparison, which enables the 
+consistent comparison of ciphertexts that are not obtained as the valid encryption of 
+any message. We believe this construction may be of independent interest.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
+@inproceedings{TCC:BunZha16,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Bun&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2016-A,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Eyal&nbsp;Kushilevitz&nbsp;and&nbsp;Tal&nbsp;Malkin},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jan,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{176--206},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Order-Revealing&nbsp;Encryption&nbsp;and&nbsp;the&nbsp;Hardness&nbsp;of<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;Learning},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9562},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Semantically Secure Order-Revealing Encryption: Multi-Input Functional Encryption Without Obfuscation<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://crypto.stanford.edu/~dabo/">Dan Boneh</a></span>, <span style="white-space:nowrap"><a href="https://klewi.com">Kevin Lewi</a></span>, <span style="white-space:nowrap"><a href="https://marianapr.github.io">Mariana Raykova</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span>, <span style="white-space:nowrap">Mark Zhandry</span> and <span style="white-space:nowrap"><a href="https://research.protocol.ai/authors/joe-zimmerman/">Joe Zimmerman</a></span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.cosic.esat.kuleuven.be/eurocrypt_2015/">EUROCRYPT 2015</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="http://eprint.iacr.org/2014/834.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-5" onclick="doOpen=true;">
+Deciding "greater-than" relations among data items just given their encryptions is at 
+the heart of search algorithms on encrypted data, most notably, non-interactive binary 
+search on encrypted data. Order-preserving encryption provides one solution, but 
+provably provides only limited security guarantees. Two-input functional encryption is 
+another approach, but requires the full power of obfuscation machinery and is 
+currently not implementable.<br><br>
+We construct the first implementable encryption system supporting greater-than 
+comparisons on encrypted data that provides the "best-possible" semantic security. In 
+our scheme there is a public algorithm that given two ciphertexts as input, reveals 
+the order of the corresponding plaintexts and nothing else. Our constructions are 
+inspired by obfuscation techniques, but do not use obfuscation. For example, to 
+compare two 16-bit encrypted values (e.g., salaries or age) we only need a 9-way 
+multilinear map. More generally, comparing k-bit values requires only a (k/2+1)-way 
+multilinear map. The required degree of multilinearity can be further reduced, but at 
+the cost of increasing ciphertext size. Beyond comparisons, our results give an 
+implementable secret-key multi-input functional encryption scheme for functionalities 
+that can be expressed as (generalized) branching programs of polynomial length and 
+width. Comparisons are a special case of this class, where for k-bit inputs the 
+branching program is of length k+1 and width 4.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-5" onclick="doOpen=true;">
+@inproceedings{EC:BLRSZZ15,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dan&nbsp;Boneh&nbsp;and&nbsp;Kevin&nbsp;Lewi&nbsp;and&nbsp;Mariana&nbsp;Raykova&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry&nbsp;and&nbsp;Joe&nbsp;Zimmerman},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2015,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Elisabeth&nbsp;Oswald&nbsp;and&nbsp;Marc&nbsp;Fischlin},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apr,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{563--594},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Semantically&nbsp;Secure&nbsp;Order-Revealing&nbsp;Encryption:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multi-input&nbsp;Functional&nbsp;Encryption&nbsp;Without&nbsp;Obfuscation},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9057},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2015}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+</table>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Publications - Bounded Storage Model</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body onclick="openMarked()">
+  	<div id="container">
+      <nav>
+  <ul class="nav">
+    <li class="nav"><a href="index.html" class="home">Mark Zhandry</a></li>
+    <li class="nav"><a href="pubs.all.html" class="other">Publications</a></li>
+    <li class="nav"><a href="talks.html" class="other">Talks</a></li>
+    <li class="nav"><a href="teaching.html" class="other">Teaching</a></li>
+    <li class="nav"><a href="personal.html" class="other">Personal</a></li>
+  </ul>
+</nav>
+      <nav>
+  <ul class="navpub">
+    <li class="navpub">
+    <a href="pubs.all.html" style="white-space:nowrap">All</a>
+   </li>
+    <li class="navpub">
+    Bounded Storage Model
+   </li>
+    <li class="navpub">
+    <a href="pubs.math.html" style="white-space:nowrap">Crypto Math</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.idealized.html" style="white-space:nowrap">Idealized Models</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.obfuscation.html" style="white-space:nowrap">Obfuscation</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.ppe.html" style="white-space:nowrap">Property Preserving Encryption</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.quantum.html" style="white-space:nowrap">Quantum</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.traitor.html" style="white-space:nowrap">Traitor Tracing</a>
+   </li>
+  </ul>
+</nav>
+<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><img src="assets/images/bsm.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;">Cryptography typically models adversaries as time-bounded, but what about adversaries
+that are <i>space</i>-bounded? The space-bounded model allows for unconditional
+and everlasting protocols, sometimes far simpler than their time-bounded counterparts.
+If we bound time <i>and</i> space, we can also achieve never-before-possible 
+functionalities, such as ciphertexts that effectively disappear after transmission.
+</td></tr></table><br>
+
+
+
+
+<table style="border-spacing: 0px; width: 100%;">
+
+<tr><td style="width: 100%">Incompressible Cryptography<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.guan.io">Jiaxin Guan</a></span>, <span style="white-space:nowrap"><a href="http://www.ccs.neu.edu/home/wichs/">Daniel Wichs</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2022/">EUROCRYPT 2022</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2021/1679.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-1" onclick="doOpen=true;">
+Incompressible encryption allows us to make the ciphertext size flexibly large and 
+ensures that an adversary learns nothing about the encrypted data, even if the 
+decryption key later leaks, unless she stores essentially the entire ciphertext. 
+Incompressible signatures can be made arbitrarily large and ensure that an adversary 
+cannot produce a signature on any message, even one she has seen signed before, unless 
+she stores one of the signatures essentially in its entirety.<br><br>
+In this work, we give simple constructions of both incompressible public-key 
+encryption and signatures under minimal assumptions. Furthermore, large incompressible 
+ciphertexts (resp. signatures) can be decrypted (resp. verified) in a streaming manner 
+with low storage. In particular, these notions strengthen the related concepts of 
+disappearing encryption and signatures, recently introduced by Guan and Zhandry (TCC 
+2021), whose previous constructions relied on sophisticated techniques and strong, 
+non-standard assumptions. We extend our constructions to achieve an optimal "rate", 
+meaning the large ciphertexts (resp. signatures) can contain almost equally large 
+messages, at the cost of stronger assumptions.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
+@inproceedings{EC:GuaWicZha22,<br />
+&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiaxin&nbsp;Guan&nbsp;and&nbsp;Daniel&nbsp;Wichs&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2022,&nbsp;Part~I},<br />
+&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Orr&nbsp;Dunkelman&nbsp;and&nbsp;Stefan&nbsp;Dziembowski},<br />
+&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may&nbsp;#&nbsp;{~/~}&nbsp;#&nbsp;jun,<br />
+&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{700--730},<br />
+&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Incompressible&nbsp;Cryptography},<br />
+&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13275},<br />
+&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022},<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Disappearing Cryptography in the Bounded Storage Model<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.guan.io">Jiaxin Guan</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2021/">TCC 2021</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2021/406.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
+In this work, we study disappearing cryptography in the bounded storage model. Here, a 
+component of the transmission, say a ciphertext, a digital signature, or even a 
+program, is streamed bit by bit. The stream is so large for anyone to store in its 
+entirety, meaning the transmission effectively disappears once the stream stops.
+<br><br>
+We first propose the notion of online obfuscation, capturing the goal of disappearing 
+programs in the bounded storage model. We give a negative result for VBB security in 
+this model, but propose candidate constructions for a weaker security goal, namely VGB 
+security. We then demonstrate the utility of VGB online obfuscation, showing that it 
+can be used to generate disappearing ciphertexts and signatures. All of our 
+applications are <i>not</i> possible in the standard model of cryptography, regardless 
+of computational assumptions used.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
+@inproceedings{TCC:GuaZha21,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiaxin&nbsp;Guan&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2021,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Kobbi&nbsp;Nissim&nbsp;and&nbsp;Brent&nbsp;Waters},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Disappearing&nbsp;Cryptography&nbsp;in&nbsp;the&nbsp;Bounded&nbsp;Storage&nbsp;Model},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{365--396},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13043},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Disappearing&nbsp;Cryptography&nbsp;in&nbsp;the&nbsp;Bounded&nbsp;Storage&nbsp;Model},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2021}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Simple Schemes in the Bounded Storage Model<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.guan.io">Jiaxin Guan</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2019/">EUROCRYPT 2019</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2019/507.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
+The bounded storage model promises unconditional security proofs against 
+computationally unbounded adversaries, so long as the adversary's space is bounded.  
+In this work, we develop simple new constructions of two-party key agreement, bit 
+commitment, and oblivious transfer in this model.  In addition to simplicity, our 
+constructions have several advantages over prior work, including an improved number of 
+rounds and enhanced correctness.  Our schemes are based on Raz's lower bound for 
+learning parities.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+@inproceedings{EC:GuaZha19,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiaxin&nbsp;Guan&nbsp;and&nbsp;Mark&nbsp;Zhandary},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2019,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yuval&nbsp;Ishai&nbsp;and&nbsp;Vincent&nbsp;Rijmen},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{500--524},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Simple&nbsp;Schemes&nbsp;in&nbsp;the&nbsp;Bounded&nbsp;Storage&nbsp;Model},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11478},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+</table>
+
+    </div>
+  </body>
+</html>

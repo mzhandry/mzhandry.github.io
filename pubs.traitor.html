@@ -1,0 +1,408 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Publications - Traitor Tracing</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body onclick="openMarked()">
+  	<div id="container">
+      <nav>
+  <ul class="nav">
+    <li class="nav"><a href="index.html" class="home">Mark Zhandry</a></li>
+    <li class="nav"><a href="pubs.all.html" class="other">Publications</a></li>
+    <li class="nav"><a href="talks.html" class="other">Talks</a></li>
+    <li class="nav"><a href="teaching.html" class="other">Teaching</a></li>
+    <li class="nav"><a href="personal.html" class="other">Personal</a></li>
+  </ul>
+</nav>
+      <nav>
+  <ul class="navpub">
+    <li class="navpub">
+    <a href="pubs.all.html" style="white-space:nowrap">All</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.bsm.html" style="white-space:nowrap">Bounded Storage Model</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.math.html" style="white-space:nowrap">Crypto Math</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.idealized.html" style="white-space:nowrap">Idealized Models</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.obfuscation.html" style="white-space:nowrap">Obfuscation</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.ppe.html" style="white-space:nowrap">Property Preserving Encryption</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.quantum.html" style="white-space:nowrap">Quantum</a>
+   </li>
+    <li class="navpub">
+    Traitor Tracing
+   </li>
+  </ul>
+</nav>
+<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><img src="assets/images/traitor.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;">Traitor tracing systems seek to deter piracy by enabling content distributors to 
+identify the origin of pirate decryption boxes. The "usual" goal in traitor 
+tracing is to achieve the shortest ciphertexts, secret keys, and public keys possible.
+But there is also a rich set of questions beyond parameter sizes: how to embed 
+arbitrary information into a secret key? How to keep honest users' information 
+private, while exposing traitors'? What happens when the decoder uses a quantum 
+computer?
+</td></tr></table><br>
+
+
+
+
+<table style="border-spacing: 0px; width: 100%;">
+
+<tr><td style="width: 100%">White Box Traitor Tracing<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2021/">CRYPTO 2021</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2021/891.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z21a.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=YpV5gD19rnk"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-1" onclick="doOpen=true;">
+Traitor tracing aims to identify the source of leaked decryption keys. Since the 
+"traitor" can try to hide their key within obfuscated code in order to evade tracing, 
+the tracing algorithm should work for general, potentially obfuscated, decoder 
+<i>programs</i>. In the setting of such general decoder programs, prior work uses 
+<i>black box</i> tracing: the tracing algorithm ignores the implementation of the 
+decoder, and instead traces just by making queries to the decoder and observing the 
+outputs.<br><br>We observe that, in some settings, such black box tracing leads to 
+consistency and user privacy issues. On the other hand, these issues do not appear 
+inherent to <i>white box</i> tracing, where the tracing algorithm actually inspects 
+the decoder implementation. We therefore develop new white box traitor tracing schemes 
+providing consistency and/or privacy. Our schemes can be instantiated under various 
+assumptions ranging from public key encryption and NIZKs to indistinguishability 
+obfuscation, with different trade-offs. To the best of our knowledge, ours is the 
+first work to consider white box tracing in the general decoder setting.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
+@inproceedings{C:Zhandry21,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2021,&nbsp;Part~IV},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Tal&nbsp;Malkin&nbsp;and&nbsp;Chris&nbsp;Peikert},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{303--333},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{White&nbsp;Box&nbsp;Traitor&nbsp;Tracing},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{12828},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2021}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Schr&ouml;dinger's Pirate: How To Trace a Quantum Decoder<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2020/">TCC 2020</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2020/1191.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z20b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=rwPm8YGQcf0"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
+We explore the problem of traitor tracing where the pirate decoder can contain a 
+quantum state. Our main results include:<br><br>
+&bull;  We show how to overcome numerous definitional challenges to give a meaningful 
+notion of tracing for quantum decoders<br><br>
+&bull;  We give negative results, demonstrating barriers to adapting classical tracing 
+algorithms to the quantum decoder setting.<br><br>
+&bull;  On the other hand, we show how to trace quantum decoders in the setting of 
+(public key) private linear broadcast encryption, capturing a common approach to 
+traitor tracing.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
+@inproceedings{TCC:Zhandry20,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2020,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Rafael&nbsp;Pass&nbsp;and&nbsp;Krzysztof&nbsp;Pietrzak},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{61--91},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{Schr{\"o}dinger}'s&nbsp;Pirate:&nbsp;How&nbsp;to&nbsp;Trace&nbsp;a&nbsp;Quantum<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Decoder},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{12552},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2020}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">New Techniques for Traitor Tracing: Size N<sup>&frac13;</sup> and More from Pairings<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2020/">CRYPTO 2020</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2020/954.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z20a.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=L-jeL_qDohQ"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
+The best existing pairing-based traitor tracing schemes have O(&#8730;N)-sized 
+parameters, which has stood since 2006. This intuitively seems to be consistent with 
+the fact that pairings allow for degree-2 computations, yielding a quadratic 
+compression.<br><br>
+In this work, we show that this intuition is false by building a tracing scheme from 
+pairings with O(&#8731;N)-sized parameters. We additionally give schemes with a 
+variety of parameter size trade-offs, including a scheme with constant-size 
+ciphertexts and public keys (but linear-sized secret keys). All of our schemes make 
+black-box use of the pairings. We obtain our schemes by developing a number of new 
+traitor tracing techniques, giving the first significant parameter improvements in 
+pairings-based traitor tracing in over a decade.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+@inproceedings{C:Zhandry20,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2020,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Daniele&nbsp;Micciancio&nbsp;and&nbsp;Thomas&nbsp;Ristenpart},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{652--682},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{New&nbsp;Techniques&nbsp;for&nbsp;Traitor&nbsp;Tracing:&nbsp;Size&nbsp;{$N^{1/3}$}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;More&nbsp;from&nbsp;Pairings},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{12170},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2020}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Strong Hardness of Privacy from Weak Traitor Tracing<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.cs.columbia.edu/~luke/">Lucas Kowalczyk</a></span>, <span style="white-space:nowrap"><a href="http://www.cs.columbia.edu/~tal/">Tal Malkin</a></span>, <span style="white-space:nowrap"><a href="https://www.ccs.neu.edu/home/jullman/">Jonathan Ullman</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/workshops/tcc2016b/">TCC 2016-B</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2016/721"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
+Despite much study, the computational complexity of differential privacy remains 
+poorly understood.  In this paper we consider the computational complexity of 
+accurately answering a family Q of <em>statistical queries</em> over a <em>data 
+universe</em> X under differential privacy.  A statistical query on a dataset 
+D&isin;X<sup>n</sup> asks "what fraction of the elements of D satisfy a given 
+predicate p on X?"  Dwork et al. (STOC'09) and Boneh and Zhandry (CRYPTO'14) showed 
+that if both Q and X are of polynomial size, then there is an efficient differentially 
+private algorithm that accurately answers all the queries, and if both Q and X are 
+exponential size, then under a plausible assumption, no efficient algorithm exists. 
+<br><br>
+We show that, under the same assumption, if <em>either</em> the number of queries 
+<em>or</em> the data universe is of exponential size, then there is no differentially 
+private algorithm that answers all the queries.  Specifically, we prove that if 
+one-way functions and indistinguishability obfuscation exist, then:<br><br>
+&bull; For every n, there is a family Q of O(n<sup>7</sup>) queries on a data universe 
+X of size 2<sup>d</sup> such that no poly(n,d) time differentially private algorithm 
+takes a dataset D&isin;X<sup>n</sup> and outputs accurate answers to every query in Q.
+<br><br>
+&bull;For every n, there is a family Q of 2<sup>d</sup> queries on a data universe 
+X of size O(n<sup>7</sup>) such that no poly(n,d) time differentially private 
+algorithm takes a dataset D&isin;X<sup>n</sup> and outputs accurate answers to every 
+query in Q.<br><br>
+In both cases, the result is nearly quantitatively tight, since 
+there is an efficient differentially private algorithm that answers 
+&Omega;(n<sup>2</sup>) queries on an exponential size data universe, and one that 
+answers exponentially many queries on a data universe of size &Omega;(n<sup>2</sup>). 
+<br><br>
+Our proofs build on the connection between hardness results in differential privacy 
+and traitor-tracing schemes (Dwork et al., STOC'09; Ullman, STOC'13).  We prove our 
+hardness result for a polynomial size query set (resp., data universe) by showing that 
+they follow from the existence of a special type of traitor-tracing scheme with very 
+short ciphertexts (resp., secret keys), but very weak security guarantees, and then 
+constructing such a scheme. 
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
+@inproceedings{TCC:KMUZ16,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Lucas&nbsp;Kowalczyk&nbsp;and&nbsp;Tal&nbsp;Malkin&nbsp;and&nbsp;Jonathan&nbsp;Ullman&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2016-B,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Martin&nbsp;Hirt&nbsp;and&nbsp;Adam&nbsp;D.&nbsp;Smith},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oct&nbsp;#&nbsp;{~/~}&nbsp;#&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{659--689},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Strong&nbsp;Hardness&nbsp;of&nbsp;Privacy&nbsp;from&nbsp;Weak&nbsp;Traitor&nbsp;Tracing},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9985},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Anonymous Traitor Tracing: How to Embed Arbitrary Information in a Key<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.nishimaki.info">Ryo Nishimaki</a></span>, <span style="white-space:nowrap"><a href="http://www.ccs.neu.edu/home/wichs/">Daniel Wichs</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/eurocrypt2016/">EUROCRYPT 2016</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="http://eprint.iacr.org/2015/750.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-5" onclick="doOpen=true;">
+In a traitor tracing scheme, each user is given a different decryption key. A content 
+distributor can encrypt digital content using a public encryption key and each user in 
+the system can decrypt it using her decryption key. Even if a coalition of users 
+combines their decryption keys and constructs some "pirate decoder" that is capable of 
+decrypting the content, there is a public tracing algorithm that is guaranteed to 
+recover the identity of at least one of the users in the coalition given black-box 
+access to such decoder.<br><br>
+In prior solutions, the users are indexed by numbers 1,&hellip;,N and the tracing 
+algorithm recovers the index i of a user in a coalition. Such solutions implicitly 
+require the content distributor to keep a record that associates each index i with the 
+actual identifying information for the corresponding user (e.g., name, address, etc.) 
+in order to ensure accountability. In this work, we construct traitor tracing schemes 
+where all of the identifying information about the user can be embedded directly into 
+the user's key and recovered by the tracing algorithm. In particular, the content 
+distributor does not need to separately store any records about the users of the 
+system, and honest users can even remain anonymous to the content distributor.<br><br>
+The main technical difficulty comes in designing tracing algorithms that can handle an 
+exponentially large universe of possible identities, rather than just a polynomial set 
+of indices i&#8712;[N]. We solve this by abstracting out an interesting algorithmic 
+problem that has surprising connections with seemingly unrelated areas in 
+cryptography. We also extend our solution to a full "broadcast-trace-and-revoke" 
+scheme in which the traced users can subsequently be revoked from the system. 
+Depending on parameters, some of our schemes can be based only on the existence of 
+public-key encryption while others rely on indistinguishability obfuscation.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-5" onclick="doOpen=true;">
+@inproceedings{EC:NisWicZha16,<br />
+&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Ryo&nbsp;Nishimaki&nbsp;and&nbsp;Daniel&nbsp;Wichs&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2016,&nbsp;Part~II},<br />
+&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Marc&nbsp;Fischlin&nbsp;and&nbsp;Jean-S{\'{e}}bastien&nbsp;Coron},<br />
+&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may,<br />
+&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{388--419},<br />
+&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Anonymous&nbsp;Traitor&nbsp;Tracing:&nbsp;How&nbsp;to&nbsp;Embed&nbsp;Arbitrary<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Information&nbsp;in&nbsp;a&nbsp;Key},<br />
+&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9666},<br />
+&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Multiparty Key Exchange, Efficient Traitor Tracing, and More from Indistinguishability Obfuscation<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://crypto.stanford.edu/~dabo/">Dan Boneh</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/crypto2014/">CRYPTO 2014</a>, <a href="https://www.springer.com/journal/453">Algorithmica</a><b> (Invited to Special Issue on Algorithmic Tools in Cryptography)</b></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2013/642.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/BZ14.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-6" onclick="doOpen=true;">
+In this work, we show how to use indistinguishability obfuscation (iO) to build 
+multiparty key exchange, efficient broadcast encryption, and efficient traitor 
+tracing.  Our schemes enjoy several interesting properties that have not been 
+achievable before:<br><br>
+&bull; Our multiparty non-interactive key exchange protocol does not require a trusted 
+setup.  Moreover, the size of the published value from each user is independent of the 
+total number of users.<br><br>
+&bull; Our broadcast encryption schemes support <i>distributed</i> setup, where users 
+choose their own secret keys rather than be given secret keys by a trusted entity. 
+The broadcast ciphertext size is <i>independent</i> of the number of users.<br><br>
+&bull; Our traitor tracing system is fully collusion resistant with short ciphertexts, 
+secret keys, and public key.  Ciphertext size is logarithmic in the number of users 
+and secret key size is independent of the number of users.  Our public key size is 
+polylogarithmic in the number of users. The recent functional encryption system of 
+Garg, Gentry, Halevi, Raykova, Sahai, and Waters also leads to a traitor tracing 
+scheme with similar ciphertext and secret key size, but the construction in this paper 
+is simpler and more direct. These constructions resolve an open problem relating to 
+differential privacy.<br><br>
+&bull; Generalizing our traitor tracing system gives a private broadcast encryption 
+scheme (where broadcast ciphertexts reveal minimal information about the recipient 
+set) with optimal size ciphertext.<br><br>
+Several of our proofs of security introduce new tools for proving security using 
+indistinguishability obfuscation.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-6" onclick="doOpen=true;">
+@inproceedings{C:BonZha14,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dan&nbsp;Boneh&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2014,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Juan&nbsp;A.&nbsp;Garay&nbsp;and&nbsp;Rosario&nbsp;Gennaro},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{480--499},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Multiparty&nbsp;Key&nbsp;Exchange,&nbsp;Efficient&nbsp;Traitor&nbsp;Tracing,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;More&nbsp;from&nbsp;Indistinguishability&nbsp;Obfuscation},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{8616},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2014}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+</table>
+
+    </div>
+  </body>
+</html>

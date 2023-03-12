@@ -1,0 +1,1755 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Publications - Quantum</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body onclick="openMarked()">
+  	<div id="container">
+      <nav>
+  <ul class="nav">
+    <li class="nav"><a href="index.html" class="home">Mark Zhandry</a></li>
+    <li class="nav"><a href="pubs.all.html" class="other">Publications</a></li>
+    <li class="nav"><a href="talks.html" class="other">Talks</a></li>
+    <li class="nav"><a href="teaching.html" class="other">Teaching</a></li>
+    <li class="nav"><a href="personal.html" class="other">Personal</a></li>
+  </ul>
+</nav>
+      <nav>
+  <ul class="navpub">
+    <li class="navpub">
+    <a href="pubs.all.html" style="white-space:nowrap">All</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.bsm.html" style="white-space:nowrap">Bounded Storage Model</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.math.html" style="white-space:nowrap">Crypto Math</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.idealized.html" style="white-space:nowrap">Idealized Models</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.obfuscation.html" style="white-space:nowrap">Obfuscation</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.ppe.html" style="white-space:nowrap">Property Preserving Encryption</a>
+   </li>
+    <li class="navpub">
+    Quantum
+   </li>
+    <li class="navpub">
+    <a href="pubs.traitor.html" style="white-space:nowrap">Traitor Tracing</a>
+   </li>
+  </ul>
+</nav>
+<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><img src="assets/images/quantum.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;">Quantum computers harnesses the strange features of quantum mechanics, such as
+superpositions, entanglement, etc. <b>Post-Quantum Cryptography</b> aims 
+to secure cryptosystems against the enhanced power of such computers. On the other 
+hand, <b>Quantum Cryptography</b> uses quantum computing to achieve 
+never-before-possible cryptographic functionalities, such as programs that cannot be 
+copied.
+</td></tr></table><br>
+
+
+
+
+<table style="border-spacing: 0px; width: 100%;">
+
+<tr><td style="width: 100%">Commitments to Quantum States<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://people.eecs.berkeley.edu/~gunn/">Sam Gunn</a></span>, <span style="white-space:nowrap"><a href="https://nathanju.com">Nathan Ju</a></span>, <span style="white-space:nowrap"><a href="http://fermima.com">Fermi Ma</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="http://acm-stoc.org/stoc2023/">STOC 2023</a>, <a href="https://indico.cern.ch/event/1175020/">QIP 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2022/1358.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-1" onclick="doOpen=true;">
+What does it mean to commit to a quantum state? In this work, we propose a simple 
+answer: a commitment to quantum messages is binding if, after the commit phase, the 
+committed state is hidden from the sender`s view. We accompany this new definition 
+with several instantiations. We build the first non-interactive succinct quantum state 
+commitments, which can be seen as an analogue of collision-resistant hashing for 
+quantum messages. We also show that hiding quantum state commitments (QSCs) are 
+implied by any commitment scheme for classical messages. All of our constructions can 
+be based on quantum-cryptographic assumptions that are implied by but are potentially 
+weaker than one-way functions.<br><br>
+Commitments to quantum states open the door to many new cryptographic possibilities. 
+Our flagship application of a succinct QSC is a quantum-communication version of 
+Kilian`s succinct arguments for any language that has quantum PCPs with constant 
+error and polylogarithmic locality. Plugging in the PCP theorem, this yields succinct 
+arguments for NP under significantly weaker assumptions than required classically; 
+moreover, if the quantum PCP conjecture holds, this extends to QMA. At the heart of 
+our security proof is a new rewinding technique for extracting quantum information.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
+@inproceedings{STOC:GJMZ22,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Sam&nbsp;Gunn&nbsp;and&nbsp;Nathan&nbsp;Ju&nbsp;and&nbsp;Fermi&nbsp;Ma&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{STOC&nbsp;2023},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\url{https://eprint.iacr.org/2022/1358}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Commitments&nbsp;to&nbsp;Quantum&nbsp;States},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2023}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Another Round of Breaking and Making Quantum Money: How to Not Build It from Lattices, and More<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~jiahui/">Jiahui Liu</a></span>, <span style="white-space:nowrap">Hart Montgomery</span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2023/">EUROCRYPT 2023</a>, <a href="https://indico.cern.ch/event/1175020/">QIP 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2022/1620.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
+Public verification of quantum money has been one of the central objects in quantum 
+cryptography ever since Wiesner's pioneering idea of using quantum mechanics to 
+construct banknotes against counterfeiting. So far, we do not know any 
+publicly-verifiable quantum money scheme that is provably secure from standard 
+assumptions.<br><br>In this work, we provide both negative and positive results for 
+publicly verifiable quantum money.<br><br>
+&bull; In the first part, we give a general theorem, showing that a certain natural 
+class of quantum money schemes from lattices cannot be secure. We use this theorem to 
+break the recent quantum money scheme of Khesin, Lu, and Shor.<br><br>
+&bull; In the second part, we propose a framework for building quantum money and 
+quantum lightning we call invariant money which abstracts some of the ideas of quantum 
+money from knots by Farhi et al.(ITCS'12). In addition to formalizing this framework, 
+we provide concrete hard computational problems loosely inspired by classical 
+knowledge-of-exponent assumptions, whose hardness would imply the security of quantum 
+lightning, a strengthening of quantum money where not even the bank can duplicate 
+banknotes. <br><br>
+&bull; We discuss potential instantiations of our framework, including an oracle 
+construction using cryptographic group actions and instantiations from rerandomizable 
+functional encryption, isogenies over elliptic curves, and knots.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
+@inproceedings{EC:LiuMonZha23,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiahui&nbsp;Liu&nbsp;and&nbsp;Hart&nbsp;Montgomery&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{EUROCRYPT&nbsp;2023},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\url{https://eprint.iacr.org/2022/1620}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Another&nbsp;Round&nbsp;of&nbsp;Breaking&nbsp;and&nbsp;Making&nbsp;Quantum&nbsp;Money:&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How&nbsp;to&nbsp;Not&nbsp;Build&nbsp;It&nbsp;from&nbsp;Lattices,&nbsp;and&nbsp;More},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2023}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">A Lower Bound on the Length of Signatures Based on Group Actions and Generic Isogenies<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://crypto.stanford.edu/~dabo/">Dan Boneh</a></span>, <span style="white-space:nowrap"><a href="https://www.guan.io">Jiaxin Guan</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2023/">EUROCRYPT 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2023/250.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
+We give the first black box lower bound for isogeny-based protocols that can be 
+described as group actions. We show that, for a large class of signature schemes 
+making black box use of a (potentially non-abelian) group action, the signature length 
+must be &Omega;(&lambda;<sup>2</sup>/\log&lambda;). Our class of signatures 
+generalizes all known signatures that derive security exclusively from the group 
+action, and our lower bound matches the state of the art, showing that the signature 
+length cannot be improved without deviating from the group action framework.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+@inproceedings{EC:BonGuaZha23,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiahui&nbsp;Liu&nbsp;and&nbsp;Hart&nbsp;Montgomery&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{EUROCRYPT&nbsp;2023},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{A&nbsp;Lower&nbsp;Bound&nbsp;on&nbsp;the&nbsp;Length&nbsp;of&nbsp;Signatures&nbsp;Based&nbsp;on&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Group&nbsp;Actions&nbsp;and&nbsp;Generic&nbsp;Isogenies},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2023}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">A Computational Separation Between Quantum No-cloning and No-teleportation<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.cs.princeton.edu/~bnehoran/">Barak Nehoran</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://indico.cern.ch/event/1175020/">QIP 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://arxiv.org/abs/2302.01858"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
+Two of the fundamental no-go theorems of quantum information are the no-cloning 
+theorem (that it is impossible to make copies of general quantum states) and the 
+no-teleportation theorem (the prohibition on sending quantum states over classical 
+channels without pre-shared entanglement). They are known to be equivalent, in the 
+sense that a collection of quantum states is clonable if and only if it is 
+teleportable.<br><br>
+Our main result suggests that this is not the case when computational efficiency is 
+considered. We give a collection of quantum states and oracles relative to which these 
+states are efficiently clonable but not efficiently teleportable. Given that the 
+opposite scenario is impossible (states that can be teleported can always trivially be 
+cloned), this gives the most complete oracle separation possible between these two 
+important no-go properties.<br><br>
+In doing so, we introduce a related quantum no-go property, reconstructibility, which 
+refers to the ability to construct a quantum state from a uniquely identifying 
+classical description. We show the stronger result of a collection of quantum states 
+that are efficiently clonable but not efficiently reconstructible. This novel no-go 
+property only exists in relation to computational efficiency, as it is trivial for 
+unbounded computation. It thus opens up the possibility of further computational no-go 
+properties that have not yet been studied because they do not exist outside the 
+computational context.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
+@misc{NehZha22,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Barak&nbsp;Nehoran&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{A&nbsp;Computational&nbsp;Separation&nbsp;Between&nbsp;Quantum&nbsp;No-cloning&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;No-teleportation},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\url{https://arxiv.org/abs/2302.01858}}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Full Quantum Equivalence of Group Action DLog and CDH, and More<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Hart Montgomery</span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://asiacrypt.iacr.org/2022/">ASIACRYPT 2022</a><b> (Best Paper)</b></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2022/1135.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-5" onclick="doOpen=true;">
+Cryptographic group actions are a relaxation of standard cryptographic groups that 
+have less structure. This lack of structure allows them to be plausibly quantum 
+resistant despite Shor's algorithm, while still having a number of applications. The 
+most famous example of group actions are built from isogenies on elliptic curves.
+<br><br>Our main result is that CDH for abelian group actions is quantumly 
+<i>equivalent</i> to discrete log. Galbraith et al. (Mathematical Cryptology) 
+previously showed <i>perfectly</i> solving CDH to be equivalent to discrete log 
+quantumly; our result works for any non-negligible advantage. We also explore several 
+other questions about group action and isogeny protocols.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-5" onclick="doOpen=true;">
+@inproceedings{AC:MonZha22,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Hart&nbsp;Montgomery&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ASIACRYPT~2022,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Shweta&nbsp;Agrawal&nbsp;and&nbsp;Dongdai&nbsp;Lin},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{3--32},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Full&nbsp;Quantum&nbsp;Equivalence&nbsp;of&nbsp;Group&nbsp;Action&nbsp;{DLog}&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CDH},&nbsp;and&nbsp;More},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13791},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Collusion-Resistant Copy-Protection for Watermarkable Functionalities<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~jiahui/">Jiahui Liu</a></span>, <span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span>, <span style="white-space:nowrap"><a href="https://www.bu.edu/cs/profiles/luowen-qian/">Luowen Qian</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2022/">TCC 2022</a>, <a href="https://indico.cern.ch/event/1175020/">QIP 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2022/1429.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-6" onclick="doOpen=true;">
+Copy-protection is the task of encoding a program into a quantum state to prevent 
+illegal duplications. A line of recent works studied copy-protection schemes under 
+"1 -> 2 attacks": the adversary receiving one program copy can not produce two valid 
+copies. However, under most circumstances, vendors need to sell more than one copy of 
+a program and still ensure that no duplicates can be generated. In this work, we 
+initiate the study of collusion-resistant copy-protection in the plain model. Our 
+results are twofold:<br><br>
+&bull; For the first time, we show that all major watermarkable functionalities can be 
+copy-protected (including unclonable decryption, digital signatures, and PRFs). Among 
+these, copy-protection of digital signature schemes is not known before. The 
+feasibility of copy-protecting all watermarkable functionalities is an open question 
+raised by Aaronson et al. (CRYPTO' 21)<br><br>
+&bull; We make all the above schemes k bounded collusion-resistant for any polynomial 
+k, giving the first bounded collusion-resistant copy-protection for various 
+functionalities in the plain model.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-6" onclick="doOpen=true;">
+@inproceedings{TCC:LLQZ22,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiahui&nbsp;Liu&nbsp;and&nbsp;Qipeng&nbsp;Liu&nbsp;and&nbsp;Luowen&nbsp;Qian&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2022,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Eike&nbsp;Kiltz&nbsp;and&nbsp;Vinod&nbsp;Vaikuntanathan},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{294--323},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Collusion&nbsp;Resistant&nbsp;Copy-Protection&nbsp;for&nbsp;Watermarkable<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Functionalities},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13747},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Verifiable Quantum Advantage without Structure<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/takashiyamakawa">Takashi Yamakawa</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://focs2022.eecs.berkeley.edu">FOCS 2022</a>, <a href="https://indico.cern.ch/event/1175020/">QIP 2023</a><b> (Plenary Talk)</b></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2022/434.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-7" onclick="doOpen=true;">
+We show the following hold, unconditionally unless otherwise stated, relative to a 
+random oracle with probability 1:<br><br>
+&bull; There are NP <i>search</i> problems solvable by BQP machines but not BPP 
+machines.<br><br>
+&bull; There exist functions that are one-way, and even collision resistant, against 
+classical adversaries but are easily inverted quantumly. Similar separations hold for 
+digital signatures and CPA-secure public key encryption (the latter requiring the 
+assumption of a classically CPA-secure encryption scheme). Interestingly, the 
+separation does not necessarily extend to the case of other cryptographic objects 
+such as PRGs.<br><br>
+&bull; There are unconditional publicly verifiable proofs of quantumness with the 
+minimal rounds of interaction: for uniform adversaries, the proofs are 
+non-interactive, whereas for non-uniform adversaries the proofs are two message 
+public coin.<br><br>
+&bull; Our results do not appear to contradict the Aaronson-Ambanis conjecture. 
+Assuming this conjecture, there exist publicly verifiable certifiable randomness, 
+again with the minimal rounds of interaction.<br><br>
+By replacing the random oracle with a concrete cryptographic hash function such as 
+SHA2, we obtain plausible Minicrypt instantiations of the above results. Previous 
+analogous results all required substantial structure, either in terms of highly 
+structured oracles and/or algebraic assumptions in Cryptomania and beyond. 
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-7" onclick="doOpen=true;">
+@inproceedings{FOCS:YamZha22,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Takashi&nbsp;Yamakawa&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{63rd&nbsp;FOCS},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oct&nbsp;#&nbsp;{~/~}&nbsp;#&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{69--74},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{IEEE}&nbsp;Computer&nbsp;Society&nbsp;Press},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Verifiable&nbsp;Quantum&nbsp;Advantage&nbsp;without&nbsp;Structure},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">On the Feasibility of Unclonable Encryption, and More<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/site/prabhanjanva/">Prabhanjan Ananth</a></span>, <span style="white-space:nowrap">Fatih Kaleoglu</span>, <span style="white-space:nowrap">Xingjian Li</span>, <span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2022/">CRYPTO 2022</a>, <a href="https://indico.cern.ch/event/1175020/">QIP 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2022/884.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-8'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-8'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-8" onclick="doOpen=true;">
+Unclonable encryption, first introduced by Broadbent and Lord (TQC'20), is a one-time 
+encryption scheme with the following security guarantee: any non-local adversary 
+(A, B, C) cannot simultaneously distinguish encryptions of two equal length messages. 
+This notion is termed as unclonable indistinguishability. Prior works focused on 
+achieving a weaker notion of unclonable encryption, where we required that any 
+non-local adversary (A, B, C) cannot simultaneously recover the entire message m. 
+Seemingly innocuous, understanding the feasibility of encryption schemes satisfying 
+unclonable indistinguishability (even for 1-bit messages) has remained elusive. We 
+make progress towards establishing the feasibility of unclonable encryption. <br><br>
+&bull;  We show that encryption schemes satisfying unclonable indistinguishability 
+exist unconditionally in the quantum random oracle model. <br><br>
+&bull; Towards understanding the necessity of oracles, we present a negative result 
+stipulating that a large class of encryption schemes cannot satisfy unclonable 
+indistinguishability. <br><br>
+&bull; Finally, we also establish the feasibility of another closely related 
+primitive: copy-protection for single-bit output point functions. Prior works only 
+established the feasibility of copy-protection for multi-bit output point functions or 
+they achieved constant security error for single-bit output point functions.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-8" onclick="doOpen=true;">
+@inproceedings{C:AKLLZ22,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Prabhanjan&nbsp;Ananth&nbsp;and&nbsp;Fatih&nbsp;Kaleoglu&nbsp;and&nbsp;Xingjian&nbsp;Li&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2022,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yevgeniy&nbsp;Dodis&nbsp;and&nbsp;Thomas&nbsp;Shrimpton},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{212--241},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{On&nbsp;the&nbsp;Feasibility&nbsp;of&nbsp;Unclonable&nbsp;Encryption,&nbsp;and&nbsp;More},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13508},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">New Constructions of Collapsing Hashes<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2022/">CRYPTO 2022</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2022/678.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z22c.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=fUh0Y_PU1BA"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-9" onclick="doOpen=true;">
+Collapsing is the preferred post-quantum security notion for hash functions, needed to 
+lift many classical results to the quantum setting. Unfortunately, the only existing 
+standard-model proofs of collapsing hashes require LWE. We construct the first 
+collapsing hashes from the quantum hardness of any one of the following problems:
+<br><br>
+&bull;  LPN in a variety of low noise or high-hardness regimes, essentially matching 
+what is known for collision resistance from LPN.<br><br>
+&bull; Finding cycles on certain exponentially-large expander graphs, such as those 
+arising from isogenies on elliptic curves.<br><br>
+&bull; The "optimal" hardness of finding collisions in <i>any</i> hash function.
+<br><br>
+&bull; The <i>polynomial</i> hardness of finding collisions, assuming a certain 
+plausible regularity condition on the hash.<br><br>
+As an immediate corollary, we obtain the first statistically hiding post-quantum 
+commitments and post-quantum succinct arguments (of knowledge) under the same 
+assumptions. Our results are obtained by a general theorem which shows how to 
+construct a collapsing hash H' from a post-quantum collision-resistant hash function 
+H, regardless of whether or not H itself is collapsing, assuming H satisfies a certain 
+regularity condition we call "semi-regularity".
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-9" onclick="doOpen=true;">
+@inproceedings{C:Zhandry22c,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2022,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yevgeniy&nbsp;Dodis&nbsp;and&nbsp;Thomas&nbsp;Shrimpton},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{596--624},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{New&nbsp;Constructions&nbsp;of&nbsp;Collapsing&nbsp;Hashes},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13509},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Quantum Algorithms for Variants of Average-Case Lattice Problems via Filtering<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="http://www.chenyilei.net">Yilei Chen</a></span>, <span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2022/">EUROCRYPT 2022</a>, <a href="https://web.cvent.com/event/8adf8248-432b-499c-91e2-63b83ba3f69e/summary">QIP 2022</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2021/1093.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-10'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-10'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-10" onclick="doOpen=true;">
+We show polynomial-time quantum algorithms for the following problems:<br><br>
+&bull; Short integer solution (SIS) problem under the infinity norm, where the public 
+matrix is very wide, the modulus is a polynomially large prime, and the bound of 
+infinity norm is set to be half of the modulus minus a constant.<br><br>
+&bull; Extrapolated dihedral coset problem (EDCP) with certain parameters.<br><br>
+&bull; Learning with errors (LWE) problem given LWE-like quantum states with 
+polynomially large moduli and certain error distributions, including bounded uniform 
+distributions and Laplace distributions.<br><br>
+The SIS, EDCP, and LWE problems in their standard forms are as hard as solving lattice 
+problems in the worst case. However, the variants that we can solve are not in the 
+parameter regimes known to be as hard as solving worst-case lattice problems. Still, 
+no classical or quantum polynomial-time algorithms were known for those variants.
+<br><br>
+Our algorithms for variants of SIS and EDCP use the existing quantum reductions from 
+those problems to LWE, or more precisely, to the problem of solving LWE given LWE-like 
+quantum states. Our main contributions are introducing a filtering technique and 
+solving LWE given LWE-like quantum states with interesting parameters.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-10" onclick="doOpen=true;">
+@inproceedings{EC:CheLiuZha22,<br />
+&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yilei&nbsp;Chen&nbsp;and&nbsp;Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2022,&nbsp;Part~III},<br />
+&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Orr&nbsp;Dunkelman&nbsp;and&nbsp;Stefan&nbsp;Dziembowski},<br />
+&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may&nbsp;#&nbsp;{~/~}&nbsp;#&nbsp;jun,<br />
+&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{372--401},<br />
+&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Quantum&nbsp;Algorithms&nbsp;for&nbsp;Variants&nbsp;of&nbsp;Average-Case<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lattice&nbsp;Problems&nbsp;via&nbsp;Filtering},<br />
+&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13277},<br />
+&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022},<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Post-Quantum Succinct Arguments: Breaking the Quantum Rewinding Barrier<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="http://people.eecs.berkeley.edu/~alexch/">Alessandro Chiesa</a></span>, <span style="white-space:nowrap"><a href="http://fermima.com">Fermi Ma</a></span>, <span style="white-space:nowrap"><a href="https://spooner.cc">Nicholas Spooner</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://focs2021.cs.colorado.edu">FOCS 2021</a>, <a href="http://2021.qcrypt.net">QCRYPT 2021</a>, <a href="https://web.cvent.com/event/8adf8248-432b-499c-91e2-63b83ba3f69e/summary">QIP 2022</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2021/334.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-11" onclick="doOpen=true;">
+We prove that Kilian's four-message succinct argument system is post-quantum secure 
+in the standard model when instantiated with any probabilistically checkable proof and 
+any collapsing hash function (which in turn exist based on the post-quantum hardness 
+of Learning with Errors).<br><br>At the heart of our proof is a new 
+"measure-and-repair" quantum rewinding procedure that achieves asymptotically optimal 
+knowledge error.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-11" onclick="doOpen=true;">
+@inproceedings{FOCS:CMSZ21,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Alessandro&nbsp;Chiesa&nbsp;and&nbsp;Fermi&nbsp;Ma&nbsp;and&nbsp;Nicholas&nbsp;Spooner&nbsp;and&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{62nd&nbsp;FOCS},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Post-Quantum&nbsp;Succinct&nbsp;Arguments:&nbsp;Breaking&nbsp;the&nbsp;Quantum&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rewinding&nbsp;Barrier},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{49-58},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{IEEE}&nbsp;Computer&nbsp;Society},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{feb}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Franchised Quantum Money<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="http://people.eecs.berkeley.edu/~bhaskarr/">Bhaskar Roberts</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://asiacrypt.iacr.org/2021/">ASIACRYPT 2021</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2021/1410.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-12'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-12'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-12" onclick="doOpen=true;">
+Quantum computers, which harness the power of quantum physics, offer the potential for 
+new kinds of security. For instance, classical bits can be copied, but quantum bits, 
+in general, cannot. As a result, there is interest in creating uncounterfeitable 
+quantum money, in which a set of qubits can be spent as money but cannot be 
+duplicated. However existing constructions of quantum money are limited: the 
+verification key, which is used to verify that a banknote was honestly generated, can 
+also be used to create counterfeit banknotes. Recent attempts have tried to allow 
+public key verification, where any untrusted user, even a would-be counterfeiter, can 
+verify the banknotes. However, despite many attempts, a secure construction of 
+public-key quantum money has remained elusive.<br><br> 
+Here we introduce franchised quantum money, a new notion that is weaker than public 
+key quantum money but brings us closer to realizing it. Franchised quantum money 
+allows any untrusted user to verify the banknotes, and every user gets a unique secret 
+verification key. Further- more, we give a construction of franchised quantum money 
+and prove security assuming the quantum hardness of the short-integer solution problem 
+(SIS). This is the first construction of quantum money that allows an untrusted user 
+to verify the banknotes, and which has a proof of security based on widespread 
+assumptions. It is therefore an important step toward public key quantum money.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-12" onclick="doOpen=true;">
+@inproceedings{AC:RobZha21,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Bhaskar&nbsp;Roberts&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ASIACRYPT~2021,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mehdi&nbsp;Tibouchi&nbsp;and&nbsp;Huaxiong&nbsp;Wang},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{549--574},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Franchised&nbsp;Quantum&nbsp;Money},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13090},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2021}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Redeeming Reset Indifferentiability and Applications to Post-Quantum Security<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://asiacrypt.iacr.org/2021/">ASIACRYPT 2021</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2021/288.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-13'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-13'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z21b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=hDTp-EIlzvM&list=PLeeS-3Ml-rprSMtRpXPSREpVR7Knncg6k&index=58"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-13" onclick="doOpen=true;">
+Indifferentiability is used to analyze the security of constructions of idealized 
+objects, such as random oracles or ideal ciphers. Reset indifferentiability is a 
+strengthening of plain indifferentiability which is applicable in far more scenarios, 
+but has largely been abandoned due to significant impossibility results and a lack of 
+positive results. Our main results are: <br><br>
+&bull; Under <i>weak</i> reset indifferentiability, ideal ciphers imply (fixed size) 
+random oracles, and domain shrinkage is possible. We thus show reset 
+indifferentiability is more useful than previously thought. <br><br>
+&bull; We lift our analysis to the quantum setting, showing that ideal ciphers imply 
+random oracles under quantum indifferentiability. <br><br>
+&bull; Despite Shor's algorithm, we observe that generic groups are still meaningful 
+quantumly, showing that they are quantumly (reset) indifferentiable from ideal 
+ciphers; combined with the above, cryptographic groups yield post-quantum 
+<i>symmetric</i> key cryptography. In particular, we obtain a plausible post-quantum 
+random oracle that is a subset-product followed by two modular reductions.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-13" onclick="doOpen=true;">
+@inproceedings{AC:Zhandry21,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ASIACRYPT~2021,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mehdi&nbsp;Tibouchi&nbsp;and&nbsp;Huaxiong&nbsp;Wang},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{518--548},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Redeeming&nbsp;Reset&nbsp;Indifferentiability&nbsp;and&nbsp;Applications&nbsp;to&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Post-Quantum&nbsp;Security},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13090},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2021}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Classical vs Quantum Random Oracles<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/takashiyamakawa">Takashi Yamakawa</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2021/">EUROCRYPT 2021</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2020/1270.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-14'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-14'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-14" onclick="doOpen=true;">
+In this paper, we study relationship between security of cryptographic schemes in the 
+random oracle model (ROM) and quantum random oracle model (QROM). First, we introduce 
+a notion of a proof of quantum access to a random oracle (PoQRO), which is a protocol 
+to prove the capability to quantumly access a random oracle to a classical verifier. 
+We observe that a proof of quantumness recently proposed by Brakerski et al. (TQC '20) 
+can be seen as a PoQRO. We also give a construction of a publicly verifiable PoQRO 
+relative to a classical oracle. Based on them, we construct digital signature and 
+public key encryption schemes that are secure in the ROM but insecure in the QROM. In 
+particular, we obtain the first examples of natural cryptographic schemes that 
+separate the ROM and QROM under a standard cryptographic assumption.<br><br>
+On the other hand, we give lifting theorems from security in the ROM to that in the 
+QROM for certain types of cryptographic schemes and security notions. For example, our 
+lifting theorems are applicable to Fiat-Shamir non-interactive arguments, Fiat-Shamir 
+signatures, and Full-Domain-Hash signatures etc. We also discuss applications of our 
+lifting theorems to quantum query complexity.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-14" onclick="doOpen=true;">
+@inproceedings{EC:YamZha21,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Takashi&nbsp;Yamakawa&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2021,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Anne&nbsp;Canteaut&nbsp;and&nbsp;Fran\c{c}ois-Xavier&nbsp;Standaert},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oct,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{568--597},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Classical&nbsp;vs&nbsp;Quantum&nbsp;Random&nbsp;Oracles},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{12697},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2021}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Hidden Cosets and Applications to Unclonable Cryptography<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://andreacoladangelo.com">Andrea Coladangelo</a></span>, <span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~jiahui/">Jiahui Liu</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2021/">CRYPTO 2021</a>, <a href="https://web.cvent.com/event/8adf8248-432b-499c-91e2-63b83ba3f69e/summary">QIP 2022</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2021/946.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-15'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-15'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-15" onclick="doOpen=true;">
+In 2012, Aaronson and Christiano introduced the idea of hidden subspace states to 
+build public-key quantum money [STOC '12]. Since then, this idea has been applied to 
+realize several other cryptographic primitives which enjoy some form of unclonability. 
+In this work, we study a generalization of hidden subspace states to hidden coset 
+states. This notion was considered independently by Vidick and Zhang [Eurocrypt '21], 
+in the context of proofs of quantum knowledge from quantum money schemes. We explore 
+unclonable properties of coset states and several applications:<br><br>
+&bull; We show that, assuming indistinguishability obfuscation (iO), hidden coset 
+states possess a certain direct product hardness property, which immediately implies a 
+tokenized signature scheme in the plain model. Previously, a tokenized signature 
+scheme was known only relative to an oracle, from a work of Ben-David and Sattath 
+[QCrypt '17].<br><br>
+&bull; Combining a tokenized signature scheme with extractable witness encryption, we 
+give a construction of an unclonable decryption scheme in the plain model. The latter 
+primitive was recently proposed by Georgiou and Zhandry [ePrint '20], who gave a 
+construction relative to a classical oracle.<br><br>
+&bull; We conjecture that coset states satisfy a certain natural 
+(information-theoretic) monogamy-of-entanglement property. Assuming this conjecture is 
+true, we remove the requirement for extractable witness encryption in our unclonable 
+decryption construction, by relying instead on compute-and-compare obfuscation for the 
+class of unpredictable distributions. As potential evidence in support of the monogamy 
+conjecture, we prove a weaker version of this monogamy property, which we believe will 
+still be of independent interest.<br><br>
+&bull; Finally, we give a construction of a copy-protection scheme for pseudorandom 
+functions (PRFs) in the plain model. Our scheme is secure either assuming iO, OWF and 
+extractable witness encryption, or assuming iO, OWF, compute-and-compare obfuscation 
+for the class of unpredictable distributions, and the conjectured monogamy property 
+mentioned above. This is the first example of a copy-protection scheme with provable 
+security in the plain model for a class of functions that is not evasive.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-15" onclick="doOpen=true;">
+@inproceedings{C:CLLZ21,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Andrea&nbsp;Coladangelo&nbsp;and&nbsp;Jiahui&nbsp;Liu&nbsp;and&nbsp;Qipeng&nbsp;Liu&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2021,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Tal&nbsp;Malkin&nbsp;and&nbsp;Chris&nbsp;Peikert},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{556--584},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Hidden&nbsp;Cosets&nbsp;and&nbsp;Applications&nbsp;to&nbsp;Unclonable&nbsp;Cryptography},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{12825},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2021}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">New Approaches for Quantum Copy-Protection<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.scottaaronson.com">Scott Aaronson</a></span>, <span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~jiahui/">Jiahui Liu</a></span>, <span style="white-space:nowrap">Mark Zhandry</span> and <span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~rzzhang/">Ruizhe Zhang</a></span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2021/">CRYPTO 2021</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2020/1339.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-16'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-16'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-16" onclick="doOpen=true;">
+Quantum copy protection uses the unclonability of quantum states to construct quantum 
+software that provably cannot be pirated. Copy protection would be immensely useful, 
+but unfortunately little is known about how to achieve it in general. In this work, we 
+make progress on this goal, by giving the following results:<br><br>
+&bull; We show how to copy protect any program that cannot be learned from its 
+input/output behavior, relative to a classical oracle. This improves on Aaronson 
+[CCC'09], which achieves the same relative to a quantum oracle. By instantiating the 
+oracle with post-quantum candidate obfuscation schemes, we obtain a heuristic 
+construction of copy protection. <br><br>
+&bull; We show, roughly, that any program which can be watermarked can be copy 
+detected, a weaker version of copy protection that does not prevent copying, but 
+guarantees that any copying can be detected. Our scheme relies on the security of the 
+assumed watermarking, plus the assumed existence of public key quantum money. Our 
+construction is general, applicable to many recent watermarking schemes.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-16" onclick="doOpen=true;">
+@inproceedings{C:ALLZZ21,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Scott&nbsp;Aaronson&nbsp;and&nbsp;Jiahui&nbsp;Liu&nbsp;and&nbsp;Qipeng&nbsp;Liu&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry&nbsp;and&nbsp;Ruizhe&nbsp;Zhang},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2021,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Tal&nbsp;Malkin&nbsp;and&nbsp;Chris&nbsp;Peikert},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{526--555},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{New&nbsp;Approaches&nbsp;for&nbsp;Quantum&nbsp;Copy-Protection},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{12825},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2021}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Schr&ouml;dinger's Pirate: How To Trace a Quantum Decoder<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2020/">TCC 2020</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2020/1191.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-17'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-17'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z20b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=rwPm8YGQcf0"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-17" onclick="doOpen=true;">
+We explore the problem of traitor tracing where the pirate decoder can contain a 
+quantum state. Our main results include:<br><br>
+&bull;  We show how to overcome numerous definitional challenges to give a meaningful 
+notion of tracing for quantum decoders<br><br>
+&bull;  We give negative results, demonstrating barriers to adapting classical tracing 
+algorithms to the quantum decoder setting.<br><br>
+&bull;  On the other hand, we show how to trace quantum decoders in the setting of 
+(public key) private linear broadcast encryption, capturing a common approach to 
+traitor tracing.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-17" onclick="doOpen=true;">
+@inproceedings{TCC:Zhandry20,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2020,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Rafael&nbsp;Pass&nbsp;and&nbsp;Krzysztof&nbsp;Pietrzak},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{61--91},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{Schr{\"o}dinger}'s&nbsp;Pirate:&nbsp;How&nbsp;to&nbsp;Trace&nbsp;a&nbsp;Quantum<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Decoder},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{12552},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2020}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Unclonable Decryption Keys<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://mariosgeorgiou.github.io">Marios Georgiou</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2020/877.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-18" onclick="doOpen=true;">
+We initiate the study of encryption schemes where the decryption keys are unclonable 
+quantum objects, which we call single decryptor encryption. We give a number of 
+initial results in this area:<br><br>
+&bull; We formalize the notion of single decryptor encryption. <br><br>
+&bull; We show that secret-key single decryptor encryption is possible 
+unconditionally, in the setting where a limited number of ciphertexts are given. 
+However, given an encryption oracle, we show that unconditional security is 
+impossible. <br><br>
+&bull; We show how to use a very recent notion of one-shot signatures, together with 
+sufficiently powerful witness encryption, to achieve public key single decryptor 
+encryption. <br><br>
+&bull; We demonstrate several extensions of our scheme, achieving a number of 
+interesting properties that are not possible classically.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-18" onclick="doOpen=true;">
+@misc{EPRINT:GeoZha20,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Marios&nbsp;Georgiou&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Report&nbsp;2020/877},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\url{https://eprint.iacr.org/2020/877}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Unclonable&nbsp;Decryption&nbsp;Keys},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2020}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Quantum Immune One-Time Memories<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2020/871.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-19" onclick="doOpen=true;">
+One-time memories (OTM) are the hardware version of oblivious transfer, and are useful 
+for constructing objects that are impossible with software alone, such as one-time 
+programs. In this work, we consider attacks on OTMs where a quantum adversary can 
+leverage his physical access to the memory to mount quantum "superposition attacks" 
+against the memory. Such attacks result in significantly weakened OTMs. For example, 
+in the application to one-time programs, it may appear that such an adversary can 
+always “quantumize” the classical protocol by running it on a superposition of inputs, 
+and therefore learn superpositions of outputs of the protocol.<br><br>
+Perhaps surprisingly, we show that this intuition is false: we construct one-time 
+programs from quantum-accessible one-time memories where the view of an adversary, 
+despite making quantum queries, can be simulated by making only classical queries to 
+the ideal functionality. At the heart of our work is a method of immunizing one-time 
+memories against superposition attacks.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-19" onclick="doOpen=true;">
+@misc{EPRINT:LiuSahZha20,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Qipeng&nbsp;Liu&nbsp;and&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Report&nbsp;2020/871},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\url{https://eprint.iacr.org/2020/871}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Quantum&nbsp;Immune&nbsp;One-Time&nbsp;Memories},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2020}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">One-shot Signatures and Applications to Hybrid Quantum/Classical Authentication<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.cs.princeton.edu/~rbamos/">Ryan Amos</a></span>, <span style="white-space:nowrap"><a href="https://mariosgeorgiou.github.io">Marios Georgiou</a></span>, <span style="white-space:nowrap"><a href="https://kiayias.com">Aggelos Kiayias</a></span> and <span style="white-space:nowrap">and Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="http://acm-stoc.org/stoc2020/">STOC 2020</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2020/107.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-20'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-20'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-20" onclick="doOpen=true;">
+We define the notion of <i>one-shot signatures</i>, which are signatures where any 
+secret key can be used to sign only a single message, and then self-destructs. While 
+such signatures are of course impossible classically, we construct one-shot signatures 
+using <i>quantum no-cloning</i>. In particular, we show that such signatures exist 
+relative to a classical oracle, which we can then heuristically obfuscate using known 
+indistinguishability obfuscation schemes.<br><br>
+We show that one-shot signatures have numerous applications for hybrid 
+quantum/classical cryptographic tasks, where all communication is required to be 
+classical, but local quantum operations are allowed. Applications include one-time 
+signature tokens, quantum money with classical communication, decentralized 
+blockchain-less cryptocurrency, signature schemes with unclonable secret keys, 
+non-interactive certifiable min-entropy, and more. We thus position one-shot 
+signatures as a powerful new building block for novel quantum cryptographic protocols.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-20" onclick="doOpen=true;">
+@inproceedings{STOC:AGKZ20,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Ryan&nbsp;Amos&nbsp;and&nbsp;Marios&nbsp;Georgiou&nbsp;and&nbsp;Aggelos&nbsp;Kiayias&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{52nd&nbsp;ACM&nbsp;STOC},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Konstantin&nbsp;Makarychev&nbsp;and&nbsp;Yury&nbsp;Makarychev&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Madhur&nbsp;Tulsiani&nbsp;and&nbsp;Gautam&nbsp;Kamath&nbsp;and&nbsp;Julia&nbsp;Chuzhoy},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jun,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{255--268},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ACM}&nbsp;Press},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{One-shot&nbsp;signatures&nbsp;and&nbsp;applications&nbsp;to&nbsp;hybrid<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;quantum/classical&nbsp;authentication},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2020}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">How to Record Quantum Queries, and Applications to Quantum Indifferentiability<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2019/">CRYPTO 2019</a>, <a href="http://2019.qcrypt.net">QCRYPT 2019</a><b> (Invited)</b>, <a href="https://itcrypto.github.io/2021/">ITC 2021</a><b> (Invited Spotlight Talk)</b></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2018/276.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-21'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-21'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z19c.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=m935yaOyKX0"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-21" onclick="doOpen=true;">
+The quantum random oracle model (QROM) has become the standard model in which to prove 
+the post-quantum security of random-oracle-based constructions. Unfortunately, none of 
+the known proof techniques allow the reduction to record information about the 
+adversary's queries, a crucial feature of many classical ROM proofs, including all 
+proofs of indifferentiability for hash function domain extension. In this work, we 
+give a new QROM proof technique that overcomes this "recording barrier". Our central 
+observation is that when viewing the adversary's query and the oracle itself in the 
+Fourier domain, an oracle query switches from writing to the adversary's space to 
+writing to the oracle itself. This allows a reduction to simulate the oracle by simply 
+recording information about the adversary's query in the Fourier domain.<br><br>
+We then use this new technique to show the indifferentiability of the Merkle-Damgard 
+domain extender for hash functions. Given the threat posed by quantum computers and 
+the push toward quantum-resistant cryptosystems, our work represents an important tool 
+for efficient post-quantum cryptosystems.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-21" onclick="doOpen=true;">
+@inproceedings{C:Zhandry19,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2019,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Alexandra&nbsp;Boldyreva&nbsp;and&nbsp;Daniele&nbsp;Micciancio},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{239--268},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{How&nbsp;to&nbsp;Record&nbsp;Quantum&nbsp;Queries,&nbsp;and&nbsp;Applications&nbsp;to<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantum&nbsp;Indifferentiability},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11693},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">On Finding Quantum Multi-collisions<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2019/">EUROCRYPT 2019</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://arxiv.org/pdf/1811.05385.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-22'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-22'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-22" onclick="doOpen=true;">
+A k-collision for a compressing hash function H is a set of k distinct inputs that all 
+map to the same output. In this work, we show that for any constant k, 
+&Theta;(N<sup>(1/2)(1-1/(2^k-1))</sup>) quantum queries are both necessary and 
+sufficient to achieve a k-collision with constant probability. This improves on both 
+the best prior upper bound (Hosoyamada et al., ASIACRYPT 2017) and provides the first 
+non-trivial lower bound, completely resolving the problem.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-22" onclick="doOpen=true;">
+@inproceedings{EC:LiuZha19,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2019,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yuval&nbsp;Ishai&nbsp;and&nbsp;Vincent&nbsp;Rijmen},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{189--218},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{On&nbsp;Finding&nbsp;Quantum&nbsp;Multi-collisions},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11478},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019},<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Quantum Lightning Never Strikes the Same State Twice<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2019/">EUROCRYPT 2019</a><b> (Best Paper)</b>, <a href="https://www.springer.com/journal/00145">Journal of Cryptology</a><b> (Invited)</b></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2017/1080.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-23'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-23'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z19b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=fjumbNTZSik"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-23" onclick="doOpen=true;">
+Public key quantum money can be seen as a version of the quantum no-cloning theorem 
+that holds even when the quantum states can be verified by the adversary.  In this 
+work, investigate <i>quantum lightning</i>, a formalization of "collision-free quantum 
+money" defined by Lutomirski et al. [ICS'10], where no-cloning holds <i>even when the 
+adversary herself generates the quantum state to be cloned</i>.  We then study quantum 
+money and quantum lightning, showing the following results:<br><br>
+&bull; We demonstrate the usefulness of quantum lightning beyond quantum money by 
+showing several potential applications, such as generating random strings with a proof 
+of entropy, to completely decentralized cryptocurrency without a block-chain, where 
+transactions is instant and local.<br><br>
+&bull; We give win-win results for quantum money/lightning, showing that either 
+signatures/hash functions/commitment schemes meet very strong recently proposed 
+notions of security, or they yield quantum money or lightning.  Given the difficulty 
+in constructing public key quantum money, this gives some indication that natural 
+schemes do attain strong security guarantees.<br><br>
+&bull; We construct quantum lightning under the assumed multi-collision resistance of 
+random degree-2 systems of polynomials.  Our construction is inspired by our win-win 
+result for hash functions, and yields the first plausible standard model instantiation 
+of a <i>non-collapsing</i> collision resistant hash function.  This improves on a 
+result of Unruh [Eurocrypt'16] that requires a quantum oracle.  <br><br>
+&bull;We show that instantiating the quantum money scheme of Aaronson and Christiano 
+[STOC'12] with <i>indistinguishability obfuscation</i> that is secure against quantum 
+computers yields a secure quantum money scheme.  This construction can be seen as an 
+instance of our win-win result for signatures, giving the first separation between two 
+security notions for signatures from the literature. <br><br>
+Thus, we provide the first constructions of public key quantum money from several 
+cryptographic assumptions.  Along the way, we develop several new techniques including 
+a new precise variant of the no-cloning theorem.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-23" onclick="doOpen=true;">
+@inproceedings{EC:Zhandry19b,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2019,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yuval&nbsp;Ishai&nbsp;and&nbsp;Vincent&nbsp;Rijmen},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{408--438},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Quantum&nbsp;Lightning&nbsp;Never&nbsp;Strikes&nbsp;the&nbsp;Same&nbsp;State&nbsp;Twice},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11478},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">New Security Notions and Feasibility Results for Authentication of Quantum Data<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/sumegha-garg/home">Sumegha Garg</a></span>, <span style="white-space:nowrap"><a href="http://www.henryyuen.net">Henry Yuen</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="http://2016.qcrypt.net">QCRYPT 2016</a>, <a href="https://www.iacr.org/conferences/crypto2017/">CRYPTO 2017</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://arxiv.org/pdf/1607.07759.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-24'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-24'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-24" onclick="doOpen=true;">
+We give a new class of security definitions for authentication in the quantum setting. 
+Our definitions capture and strengthen several existing definitions, including 
+superposition attacks on classical authentication, as well as full authentication of 
+quantum data. We argue that our definitions resolve some of the shortcomings of 
+existing definitions. <br><br>
+We then give several feasibility results for our strong definitions. As a consequence, 
+we obtain several interesting results, including: <br>
+(1) the classical Carter-Wegman authentication scheme with 3-universal hashing is 
+secure against superposition attacks, as well as adversaries with quantum side 
+information; <br>
+(2) quantum authentication where the entire key can be reused if verification is 
+successful; <br>
+(3) conceptually simple constructions of quantum authentication; and <br>
+(4) a conceptually simple QKD protocol.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-24" onclick="doOpen=true;">
+@inproceedings{C:GarYueZha17,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Sumegha&nbsp;Garg&nbsp;and&nbsp;Henry&nbsp;Yuen&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2017,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jonathan&nbsp;Katz&nbsp;and&nbsp;Hovav&nbsp;Shacham},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{342--371},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{New&nbsp;Security&nbsp;Notions&nbsp;and&nbsp;Feasibility&nbsp;Results&nbsp;for<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Authentication&nbsp;of&nbsp;Quantum&nbsp;Data},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{10402},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2017}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">A Note on Quantum-Secure PRPs<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2016/1076.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-25'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-25'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-25" onclick="doOpen=true;">
+We show how to construct pseudorandom permutations (PRPs) that remain secure even if 
+the adversary can query the permutation on a quantum superposition of inputs. Such 
+PRPs are called <i>quantum-secure</i>. Our construction combines a quantum-secure 
+pseudorandom <i>function</i> together with constructions of <i>classical</i> format 
+preserving encryption. By combining known results, we obtain the first quantum-secure 
+PRP in this model whose security relies only on the existence of one-way functions. 
+Previously, to the best of the author's knowledge, quantum security of PRPs had to be 
+assumed, and there were no prior security reductions to simpler primitives, let alone 
+one-way functions.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-25" onclick="doOpen=true;">
+@misc{EPRINT:Zhandry16b,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Report&nbsp;2016/1076},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\url{https://eprint.iacr.org/2016/1076}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{A&nbsp;Note&nbsp;on&nbsp;Quantum-Secure&nbsp;{PRPs}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Quantum Oracle Classification: The Case of Group Structure<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://arxiv.org/pdf/1510.08352.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-26'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-26'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-26" onclick="doOpen=true;">
+The Quantum Oracle Classification (QOC) problem is to classify a function, given only 
+quantum black box access, into one of several classes without necessarily determining 
+the entire function. Generally, QOC captures a very wide range of problems in quantum 
+query complexity. However, relatively little is known about many of these problems.
+<br><br>
+In this work, we analyze the a subclass of the QOC problems where there is a group 
+structure. That is, suppose the range of the unknown function A is a commutative group 
+G, which induces a commutative group law over the entire function space. Then we 
+consider the case where A is drawn uniformly at random from some subgroup A of the 
+function space. Moreover, there is a homomorpism f on A, and the goal is to determine 
+f(A). This class of problems is very general, and covers several interesting cases, 
+such as oracle evaluation; polynomial interpolation, evaluation, and extrapolation; 
+and parity. These problems are important in the study of message authentication codes 
+in the quantum setting, and may have other applications.<br><br>
+We exactly characterize the quantum query complexity of every instance of QOC with 
+group structure in terms of a particular counting problem. That is, we provide an 
+algorithm for this general class of problems whose success probability is determined 
+by the solution to the counting problem, and prove its exact optimality. 
+Unfortunately, solving this counting problem in general is a non-trivial task, and we 
+resort to analyzing special cases. Our bounds unify some existing results, such as the 
+existing oracle evaluation and parity bounds. In the case of polynomial interpolation 
+and evaluation, our bounds give new results for secret sharing and information 
+theoretic message authentication codes in the quantum setting.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-26" onclick="doOpen=true;">
+@article{ARXIV:Zhandry2015,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title={Quantum&nbsp;Oracle&nbsp;Classification&nbsp;-&nbsp;The&nbsp;Case&nbsp;of&nbsp;Group&nbsp;Structure},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author={Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;journal={ArXiv},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year={2015},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume={abs/1510.08352}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Cryptography in the Age of Quantum Computers (PhD Thesis)<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+
+</table></td>
+<td style="vertical-align: top;">
+	<a href="./files/Thesis.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-27'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	
+</td><td style="vertical-align: top;">
+  <a href="files/Thesis.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-27" onclick="doOpen=true;">
+It is well established that full-fledged quantum computers, when realized, will 
+completely break many of today's cryptosystems. This looming threat has led to the 
+proposal of so-called "post-quantum" systems, namely those that appear resistant to 
+quantum attacks. We argue, however, that the attacks considered in prior works model 
+only the near future, where the attacker may be equipped with a quantum computer, but 
+the end-users implementing the protocols are still running classical devices.<br><br>
+Eventually, quantum computers will reach maturity and everyone &mdash; even the 
+end-users &mdash; will be running quantum computers.  In this event, attackers can 
+interact with the end-users over quantum channels, opening up a new set of attacks 
+that have not been considered before.  This thesis puts forth new security models and 
+new security analyses showing how to ensure security against such quantum channel 
+attacks. In particular, we re-build many core cryptographic functionalities, including 
+pseudorandom functions, encryption, digital signatures, and more, resulting in the 
+first protocols that are safe to use in a ubiquitous quantum computing world. Along 
+the way, we resolve several open problems in quantum query complexity, such as the 
+Collision Problem for random functions, the Set Equality Problem, and the Oracle 
+Interrogation Problem.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-27" onclick="doOpen=true;">
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">A Note on the Quantum Collision and Set Equality Problems<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="http://www.rintonpress.com/journals/qiconline.html">Quantum Information and Computation</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://arxiv.org/pdf/1312.1027.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-28'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-28'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-28" onclick="doOpen=true;">
+The results showing a quantum query complexity of &Theta;(N<sup>1/3</sup>) for the 
+collision problem do not apply to random functions.  The issues are two-fold.  First, 
+the &Omega;(N<sup>1/3</sup>) lower bound only applies when the range is no larger than 
+the domain, which precludes many of the cryptographically interesting applications.  
+Second, most of the results in the literature only apply to r-to-1 functions, which 
+are quite different from random functions.<br><br>
+Understanding the collision problem for random functions is of great importance to 
+cryptography, and we seek to fill the gaps of knowledge for this problem.  To that 
+end, we prove that, as expected, a quantum query complexity of 
+&Theta;(N<sup>1/3</sup>) holds for all interesting domain and range sizes. Our proofs 
+are simple, and combine existing techniques with several novel tricks to obtain the 
+desired results.<br><br>
+Using our techniques, we also give an optimal &Omega;(N<sup>1/3</sup>) lower bound for 
+the set equality problem.  This new lower bound can be used to improve the 
+relationship between classical randomized query complexity and quantum query 
+complexity for so-called permutation-symmetric functions.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-28" onclick="doOpen=true;">
+@article{CIS:Zhandry15,&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Zhandry,&nbsp;Mark},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{A&nbsp;Note&nbsp;on&nbsp;the&nbsp;Quantum&nbsp;Collision&nbsp;and&nbsp;Set&nbsp;Equality&nbsp;Problems},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2015},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;issue_date&nbsp;=&nbsp;{May&nbsp;2015},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Rinton&nbsp;Press,&nbsp;Incorporated},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;{15},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;=&nbsp;{7–8},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;journal&nbsp;=&nbsp;{Quantum&nbsp;Info.&nbsp;Comput.},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;may,&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;{557–567},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;numpages&nbsp;=&nbsp;{11}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Secure Signatures and Chosen Ciphertext Security in a Quantum Computing World<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://crypto.stanford.edu/~dabo/">Dan Boneh</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/crypto2013/">CRYPTO 2013</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2013/088.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-29'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-29'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/BZ13b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=QWBYZ0qDWyQ"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-29" onclick="doOpen=true;">
+We initiate the study of <i>quantum</i>-secure digital signatures and <i>quantum</i> 
+chosen ciphertext security. In the case of signatures, we enhance the standard chosen 
+message query model by allowing the adversary to issue <i>quantum</i> chosen message 
+queries: given a superposition of messages, the adversary receives a superposition of 
+signatures on those messages. Similarly, for encryption, we allow the adversary to 
+issue <i>quantum</i> chosen ciphertext queries: given a superposition of ciphertexts, 
+the adversary receives a superposition of their decryptions. These adversaries model a 
+natural post-quantum environment where end-users sign messages and decrypt ciphertexts 
+on a personal quantum computer. <br><br>
+We construct classical systems that remain secure when exposed to such quantum 
+queries. For signatures we construct two compilers that convert classically secure 
+signatures into signatures secure in the quantum setting and apply these compilers to 
+existing post-quantum signatures. We also show that standard constructions such as 
+Lamport one-time signatures and Merkle signatures remain secure under quantum chosen 
+message attacks, thus giving signatures whose quantum security is based on generic 
+assumptions. For encryption, we define security under quantum chosen ciphertext 
+attacks and present both public-key and symmetric-key constructions.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-29" onclick="doOpen=true;">
+@inproceedings{C:BonZha13,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dan&nbsp;Boneh&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2013,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Ran&nbsp;Canetti&nbsp;and&nbsp;Juan&nbsp;A.&nbsp;Garay},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{361--379},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Secure&nbsp;Signatures&nbsp;and&nbsp;Chosen&nbsp;Ciphertext&nbsp;Security&nbsp;in&nbsp;a<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantum&nbsp;Computing&nbsp;World},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{8043},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2013}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Quantum-Secure Message Authentication Codes<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://crypto.stanford.edu/~dabo/">Dan Boneh</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/eurocrypt2013/">EUROCRYPT 2013</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2012/606.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-30'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-30'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/BZ13a.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-30" onclick="doOpen=true;">
+We construct the first Message Authentication Codes (MACs) that are existentially 
+unforgeable against a <i>quantum</i> chosen message attack.  These chosen message 
+attacks model a quantum adversary's ability to obtain the MAC on a superposition of 
+messages of its choice.  We begin by showing that a quantum secure PRF is sufficient 
+for constructing a quantum secure MAC, a fact that is considerably harder to prove 
+than its classical analogue.  Next, we show that a variant of Carter-Wegman MACs can 
+be proven to be quantum secure. Unlike the classical settings, we present an attack 
+showing that a pair-wise independent hash family is insufficient to construct a 
+quantum secure <i>one-time</i> MAC, but we prove that a four-wise independent family 
+is sufficient for one-time security.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-30" onclick="doOpen=true;">
+@inproceedings{EC:BonZha13,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dan&nbsp;Boneh&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2013},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Thomas&nbsp;Johansson&nbsp;and&nbsp;Phong&nbsp;Q.&nbsp;Nguyen},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{592--608},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Quantum-Secure&nbsp;Message&nbsp;Authentication&nbsp;Codes},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{7881},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2013}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">How to Construct Quantum Random Functions<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="http://ieee-focs.org/focs2012/">FOCS 2012</a>, <a href="https://dl.acm.org/journal/jacm">Journal of the ACM</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2012/182.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-31'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-31'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z12b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-31" onclick="doOpen=true;">
+In the presence of a quantum adversary, there are two possible definitions of security 
+for a pseudorandom function. The first, which we call standard-security, allows the 
+adversary to be quantum, but requires queries to the function to be classical. The 
+second, quantum-security, allows the adversary to query the function on a quantum 
+superposition of inputs, thereby giving the adversary a superposition of the values of 
+the function at many inputs at once. Existing proof techniques for proving the 
+security of pseudorandom functions fail when the adversary can make quantum queries. 
+We give the first quantum-security proofs for pseudorandom functions by showing that 
+some classical constructions of pseudorandom functions are quantum-secure. Namely, we 
+show that the standard constructions of pseudorandom functions from pseudorandom 
+generators or pseudorandom synthesizers are secure, even when the adversary can make 
+quantum queries. We also show that a direct construction from lattices is 
+quantum-secure. To prove security, we develop new tools to prove the 
+indistinguishability of distributions under quantum queries.<br><br>
+In light of these positive results, one might hope that all standard-secure 
+pseudorandom functions are quantum-secure. To the contrary, we show a separation: 
+under the assumption that standard-secure pseudorandom functions exist, there are 
+pseudorandom functions secure against quantum adversaries making classical queries, 
+but insecure once the adversary can make quantum queries.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-31" onclick="doOpen=true;">
+@inproceedings{FOCS:Zhandry12,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{53rd&nbsp;FOCS},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oct,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{679--687},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{IEEE}&nbsp;Computer&nbsp;Society&nbsp;Press},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{How&nbsp;to&nbsp;Construct&nbsp;Quantum&nbsp;Random&nbsp;Functions},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2012}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Secure Identity-Based Encryption in the Quantum Random Oracle Model<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/crypto2012/">CRYPTO 2012</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2012/076.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-32'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-32'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z12a.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=ytGDMlcHLnc"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-32" onclick="doOpen=true;">
+We give the first proof of security for an identity-based encryption scheme in the 
+<i>quantum</i> random oracle model. This is the first proof of security for <i>any</i> 
+scheme in this model that requires no additional assumptions. Our techniques are quite 
+general and we use them to obtain security proofs for two random oracle hierarchical 
+identity-based encryption schemes and a random oracle signature scheme, all of which 
+have previously resisted quantum security proofs, even using additional assumptions. 
+We also explain how to remove the extra assumptions from prior quantum random oracle 
+model proofs. We accomplish these results by developing new tools for arguing that 
+quantum algorithms cannot distinguish between two oracle distributions. Using a 
+particular class of oracle distributions, so called <i>semi-constant</i> 
+distributions, we argue that the aforementioned cryptosystems are secure against 
+quantum adversaries.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-32" onclick="doOpen=true;">
+@inproceedings{C:Zhandry12,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2012},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Reihaneh&nbsp;Safavi-Naini&nbsp;and&nbsp;Ran&nbsp;Canetti},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{758--775},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Secure&nbsp;Identity-Based&nbsp;Encryption&nbsp;in&nbsp;the&nbsp;Quantum&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Random&nbsp;Oracle&nbsp;Model},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{7417},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2012}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Random Oracles in a Quantum World<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://crypto.stanford.edu/~dabo/">Dan Boneh</a></span>, <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=HxhSldcAAAAJ&hl=en">&Oumlzg&uumlr Dagdelen</a></span>, <span style="white-space:nowrap"><a href="https://sites.google.com/view/marc-fischlin/home?authuser=0">Marc Fischlin</a></span>, <span style="white-space:nowrap"><a href="https://hpi.de/lehmann/team/anja-lehmann.html">Anja Lehmann</a></span>, <span style="white-space:nowrap"><a href="https://staff.science.uva.nl/c.schaffner/index.php">Christian Schaffner</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/archive/asiacrypt2011/asiacrypt2011-index.html">ASIACRYPT 2011</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2010/428.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-33'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-33'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/BDFLSZ11.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-33" onclick="doOpen=true;">
+The interest in post-quantum cryptography &mdash; classical systems that remain 
+secure in the presence of a quantum adversary &mdash; has generated elegant proposals 
+for new cryptosystems. Some of these systems are set in the random oracle model and 
+are proven secure relative to adversaries that have classical access to the random 
+oracle. We argue that to prove post-quantum security one needs to prove security in 
+the quantum-accessible random oracle model where the adversary can query the random 
+oracle with quantum state.<br><br>
+We begin by separating the classical and quantum-accessible random oracle models by 
+presenting a scheme that is secure when the adversary is given classical access to the 
+random oracle, but is insecure when the adversary can make quantum oracle queries. We 
+then set out to develop generic conditions under which a classical random oracle proof 
+implies security in the quantum-accessible random oracle model. We introduce the 
+concept of a history-free reduction which is a category of classical random oracle 
+reductions that basically determine oracle answers independently of the history of 
+previous queries, and we prove that such reductions imply security in the quantum 
+model. We then show that certain post-quantum proposals, including ones based on 
+lattices, can be proven secure using history-free reductions and are therefore 
+postquantum secure. We conclude with a rich set of open problems in this area.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-33" onclick="doOpen=true;">
+@inproceedings{AC:BDFLSZ11,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dan&nbsp;Boneh&nbsp;and&nbsp;{\"O}zg{\"u}r&nbsp;Dagdelen&nbsp;and&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Marc&nbsp;Fischlin&nbsp;and&nbsp;Anja&nbsp;Lehmann&nbsp;and&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christian&nbsp;Schaffner&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ASIACRYPT~2011},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dong&nbsp;Hoon&nbsp;Lee&nbsp;and&nbsp;Xiaoyun&nbsp;Wang},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{41--69},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Random&nbsp;Oracles&nbsp;in&nbsp;a&nbsp;Quantum&nbsp;World},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{7073},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2011}<br />
+}
+</div>
+<br></td></tr>
+
+
+</table>
+
+    </div>
+  </body>
+</html>

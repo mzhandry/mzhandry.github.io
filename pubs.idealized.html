@@ -1,0 +1,1221 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Publications - Idealized Models</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body onclick="openMarked()">
+  	<div id="container">
+      <nav>
+  <ul class="nav">
+    <li class="nav"><a href="index.html" class="home">Mark Zhandry</a></li>
+    <li class="nav"><a href="pubs.all.html" class="other">Publications</a></li>
+    <li class="nav"><a href="talks.html" class="other">Talks</a></li>
+    <li class="nav"><a href="teaching.html" class="other">Teaching</a></li>
+    <li class="nav"><a href="personal.html" class="other">Personal</a></li>
+  </ul>
+</nav>
+      <nav>
+  <ul class="navpub">
+    <li class="navpub">
+    <a href="pubs.all.html" style="white-space:nowrap">All</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.bsm.html" style="white-space:nowrap">Bounded Storage Model</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.math.html" style="white-space:nowrap">Crypto Math</a>
+   </li>
+    <li class="navpub">
+    Idealized Models
+   </li>
+    <li class="navpub">
+    <a href="pubs.obfuscation.html" style="white-space:nowrap">Obfuscation</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.ppe.html" style="white-space:nowrap">Property Preserving Encryption</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.quantum.html" style="white-space:nowrap">Quantum</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.traitor.html" style="white-space:nowrap">Traitor Tracing</a>
+   </li>
+  </ul>
+</nav>
+<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><img src="assets/images/idealized.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;">Many of the most practical cryptosystems lack a full security proof in the standard 
+model. Nevertheless, we can gain confidence in their security by heuristically 
+treating one or more of the building blocks as an "ideal" object implemented as an 
+oracle. Prominent examples include random oracles, ideal ciphers, generic groups, etc.
+Proofs in idealized models are often very different from standard crypto proofs, 
+requiring both reductions and query complexity arguments.
+</td></tr></table><br>
+
+
+
+
+<table style="border-spacing: 0px; width: 100%;">
+
+<tr><td style="width: 100%">A Lower Bound on the Length of Signatures Based on Group Actions and Generic Isogenies<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://crypto.stanford.edu/~dabo/">Dan Boneh</a></span>, <span style="white-space:nowrap"><a href="https://www.guan.io">Jiaxin Guan</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2023/">EUROCRYPT 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2023/250.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-1" onclick="doOpen=true;">
+We give the first black box lower bound for isogeny-based protocols that can be 
+described as group actions. We show that, for a large class of signature schemes 
+making black box use of a (potentially non-abelian) group action, the signature length 
+must be &Omega;(&lambda;<sup>2</sup>/\log&lambda;). Our class of signatures 
+generalizes all known signatures that derive security exclusively from the group 
+action, and our lower bound matches the state of the art, showing that the signature 
+length cannot be improved without deviating from the group action framework.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
+@inproceedings{EC:BonGuaZha23,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiahui&nbsp;Liu&nbsp;and&nbsp;Hart&nbsp;Montgomery&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{EUROCRYPT&nbsp;2023},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{A&nbsp;Lower&nbsp;Bound&nbsp;on&nbsp;the&nbsp;Length&nbsp;of&nbsp;Signatures&nbsp;Based&nbsp;on&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Group&nbsp;Actions&nbsp;and&nbsp;Generic&nbsp;Isogenies},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2023}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Verifiable Quantum Advantage without Structure<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/takashiyamakawa">Takashi Yamakawa</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://focs2022.eecs.berkeley.edu">FOCS 2022</a>, <a href="https://indico.cern.ch/event/1175020/">QIP 2023</a><b> (Plenary Talk)</b></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2022/434.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
+We show the following hold, unconditionally unless otherwise stated, relative to a 
+random oracle with probability 1:<br><br>
+&bull; There are NP <i>search</i> problems solvable by BQP machines but not BPP 
+machines.<br><br>
+&bull; There exist functions that are one-way, and even collision resistant, against 
+classical adversaries but are easily inverted quantumly. Similar separations hold for 
+digital signatures and CPA-secure public key encryption (the latter requiring the 
+assumption of a classically CPA-secure encryption scheme). Interestingly, the 
+separation does not necessarily extend to the case of other cryptographic objects 
+such as PRGs.<br><br>
+&bull; There are unconditional publicly verifiable proofs of quantumness with the 
+minimal rounds of interaction: for uniform adversaries, the proofs are 
+non-interactive, whereas for non-uniform adversaries the proofs are two message 
+public coin.<br><br>
+&bull; Our results do not appear to contradict the Aaronson-Ambanis conjecture. 
+Assuming this conjecture, there exist publicly verifiable certifiable randomness, 
+again with the minimal rounds of interaction.<br><br>
+By replacing the random oracle with a concrete cryptographic hash function such as 
+SHA2, we obtain plausible Minicrypt instantiations of the above results. Previous 
+analogous results all required substantial structure, either in terms of highly 
+structured oracles and/or algebraic assumptions in Cryptomania and beyond. 
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
+@inproceedings{FOCS:YamZha22,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Takashi&nbsp;Yamakawa&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{63rd&nbsp;FOCS},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oct&nbsp;#&nbsp;{~/~}&nbsp;#&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{69--74},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{IEEE}&nbsp;Computer&nbsp;Society&nbsp;Press},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Verifiable&nbsp;Quantum&nbsp;Advantage&nbsp;without&nbsp;Structure},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Augmented Random Oracles<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2022/">CRYPTO 2022</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2022/783.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z22a.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=C4g32oTVFV4"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
+We propose a new paradigm for justifying the security of random oracle-based 
+protocols, which we call the Augmented Random Oracle Model (AROM). We show that the 
+AROM captures a wide range of important random oracle impossibility results. Thus a 
+proof in the AROM implies some resiliency to such impossibilities. We then consider 
+three ROM transforms which are subject to impossibilities: Fiat-Shamir (FS), 
+Fujisaki-Okamoto (FO), and Encrypt-with-Hash (EwH). We show in each case how to obtain 
+security in the AROM by strengthening the building blocks or modifying the transform.
+<br><br>Along the way, we give a couple other results. We improve the assumptions 
+needed for the FO and EwH impossibilities from indistinguishability obfuscation to 
+circularly secure LWE; we argue that our AROM still captures this improved 
+impossibility. We also demonstrate that there is no ``best possible'' hash function, 
+by giving a pair of security properties, both of which can be instantiated in the 
+standard model separately, which cannot be simultaneously satisfied by a single hash 
+function.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+@inproceedings{C:Zhandry22a,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2022,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yevgeniy&nbsp;Dodis&nbsp;and&nbsp;Thomas&nbsp;Shrimpton},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{35--65},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Augmented&nbsp;Random&nbsp;Oracles},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13509},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">To Label, or Not To Label (in Generic Groups)<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2022/">CRYPTO 2022</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2022/226.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z22b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=C4g32oTVFV4"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
+Generic groups are an important tool for analyzing the feasibility and in-feasibility 
+of group-based cryptosystems. There are two distinct wide-spread versions of generic 
+groups, Shoup's and Maurer's, the main difference being whether or not group elements 
+are given explicit labels. The two models are often treated as equivalent. In this 
+work, however, we demonstrate that the models are in fact quite different, and care is 
+needed when stating generic group results:<br><br>
+&bull; We show that numerous textbook constructions are <i>not</i> captured by Maurer, 
+but are captured by Shoup. In the other direction, any construction captured by Maurer 
+<i>is</i> captured by Shoup.<br><br>
+&bull; For constructions that exist in both models, we show that security is 
+equivalent for "single stage" games, but Shoup security is strictly stronger than 
+Maurer security for some "multi-stage" games.<br><br>
+&bull; The existing generic group un-instantiability results do not apply to Maurer. 
+We fill this gap with a new un-instantiability result.<br><br>
+&bull; We explain how the known black box separations between generic groups and 
+identity-based encryption do not fully apply to Shoup, and resolve this by providing 
+such a separation.<br><br>
+&bull; We give a new un-instantiability result for the <i>algebraic</i> group model.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
+@inproceedings{C:Zhandry22b,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2022,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yevgeniy&nbsp;Dodis&nbsp;and&nbsp;Thomas&nbsp;Shrimpton},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{66--96},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{To&nbsp;Label,&nbsp;or&nbsp;Not&nbsp;To&nbsp;Label&nbsp;(in&nbsp;Generic&nbsp;Groups)},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13509},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Redeeming Reset Indifferentiability and Applications to Post-Quantum Security<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://asiacrypt.iacr.org/2021/">ASIACRYPT 2021</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2021/288.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z21b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=hDTp-EIlzvM&list=PLeeS-3Ml-rprSMtRpXPSREpVR7Knncg6k&index=58"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-5" onclick="doOpen=true;">
+Indifferentiability is used to analyze the security of constructions of idealized 
+objects, such as random oracles or ideal ciphers. Reset indifferentiability is a 
+strengthening of plain indifferentiability which is applicable in far more scenarios, 
+but has largely been abandoned due to significant impossibility results and a lack of 
+positive results. Our main results are: <br><br>
+&bull; Under <i>weak</i> reset indifferentiability, ideal ciphers imply (fixed size) 
+random oracles, and domain shrinkage is possible. We thus show reset 
+indifferentiability is more useful than previously thought. <br><br>
+&bull; We lift our analysis to the quantum setting, showing that ideal ciphers imply 
+random oracles under quantum indifferentiability. <br><br>
+&bull; Despite Shor's algorithm, we observe that generic groups are still meaningful 
+quantumly, showing that they are quantumly (reset) indifferentiable from ideal 
+ciphers; combined with the above, cryptographic groups yield post-quantum 
+<i>symmetric</i> key cryptography. In particular, we obtain a plausible post-quantum 
+random oracle that is a subset-product followed by two modular reductions.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-5" onclick="doOpen=true;">
+@inproceedings{AC:Zhandry21,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ASIACRYPT~2021,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mehdi&nbsp;Tibouchi&nbsp;and&nbsp;Huaxiong&nbsp;Wang},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{518--548},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Redeeming&nbsp;Reset&nbsp;Indifferentiability&nbsp;and&nbsp;Applications&nbsp;to&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Post-Quantum&nbsp;Security},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13090},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2021}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Classical vs Quantum Random Oracles<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/takashiyamakawa">Takashi Yamakawa</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2021/">EUROCRYPT 2021</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2020/1270.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-6" onclick="doOpen=true;">
+In this paper, we study relationship between security of cryptographic schemes in the 
+random oracle model (ROM) and quantum random oracle model (QROM). First, we introduce 
+a notion of a proof of quantum access to a random oracle (PoQRO), which is a protocol 
+to prove the capability to quantumly access a random oracle to a classical verifier. 
+We observe that a proof of quantumness recently proposed by Brakerski et al. (TQC '20) 
+can be seen as a PoQRO. We also give a construction of a publicly verifiable PoQRO 
+relative to a classical oracle. Based on them, we construct digital signature and 
+public key encryption schemes that are secure in the ROM but insecure in the QROM. In 
+particular, we obtain the first examples of natural cryptographic schemes that 
+separate the ROM and QROM under a standard cryptographic assumption.<br><br>
+On the other hand, we give lifting theorems from security in the ROM to that in the 
+QROM for certain types of cryptographic schemes and security notions. For example, our 
+lifting theorems are applicable to Fiat-Shamir non-interactive arguments, Fiat-Shamir 
+signatures, and Full-Domain-Hash signatures etc. We also discuss applications of our 
+lifting theorems to quantum query complexity.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-6" onclick="doOpen=true;">
+@inproceedings{EC:YamZha21,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Takashi&nbsp;Yamakawa&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2021,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Anne&nbsp;Canteaut&nbsp;and&nbsp;Fran\c{c}ois-Xavier&nbsp;Standaert},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oct,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{568--597},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Classical&nbsp;vs&nbsp;Quantum&nbsp;Random&nbsp;Oracles},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{12697},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2021}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">The Relationship Between Idealized Models Under Computationally Bounded Adversaries<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span> and <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=Aa7WCBkAAAAJ&hl=zh-CN">Cong Zhang</a></span></td></tr>
+
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2021/240.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-7" onclick="doOpen=true;">
+The random oracle, generic group, and generic bilinear map models (ROM, GGM, GBM, 
+respectively) are fundamental heuristics used to justify new computational assumptions 
+and prove the security of efficient cryptosystems. While known to be invalid in some 
+contrived settings, the heuristics generally seem reasonable for real-world 
+applications.<br><br>
+In this work, we ask: <i>which heuristics are closer to reality?</i> Or conversely, 
+which heuristics are a larger leap? We answer this question through the framework of 
+computational indifferentiability, showing that the ROM is a strictly "milder" 
+heuristic than the GGM, which in turn is strictly milder than the GBM. While this may 
+seem like the expected outcome, we explain why it does not follow from prior works and 
+is not the a priori obvious conclusion. In order to prove our results, we develop new 
+ideas for proving computational indifferentiable separations.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-7" onclick="doOpen=true;">
+@misc{EPRINT:ZhaZha21,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry&nbsp;and&nbsp;Cong&nbsp;Zhang},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Report&nbsp;2021/240},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\url{https://eprint.iacr.org/2021/240}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{The&nbsp;Relationship&nbsp;Between&nbsp;Idealized&nbsp;Models&nbsp;Under&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Computationally&nbsp;Bounded&nbsp;Adversaries},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2021}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Indifferentiability for Public Key Cryptosystems<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span> and <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=Aa7WCBkAAAAJ&hl=zh-CN">Cong Zhang</a></span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2020/">CRYPTO 2020</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2019/370.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-8'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-8'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-8" onclick="doOpen=true;">
+We initiate the study of indifferentiability for public key encryption and other 
+public key primitives.  Our main results are definitions and constructions of public 
+key cryptosystems that are indifferentiable from ideal cryptosystems, in the random 
+oracle model. Cryptosystems include:<br><br>
+&bull;  Public key encryption;<br>
+&bull;  Digital signatures;<br>
+&bull;  Non-interactive key agreement.<br><br>
+Our schemes are based on standard public key assumptions.  By being indifferentiable 
+from an ideal object, our schemes satisfy any security property that can be 
+represented as a single-stage game and can be composed to operate in higher-level 
+protocols.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-8" onclick="doOpen=true;">
+@inproceedings{C:ZhaZha20,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry&nbsp;and&nbsp;Cong&nbsp;Zhang},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2020,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Daniele&nbsp;Micciancio&nbsp;and&nbsp;Thomas&nbsp;Ristenpart},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{63--93},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Indifferentiability&nbsp;for&nbsp;Public&nbsp;Key&nbsp;Cryptosystems},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{12170},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2020}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">How to Record Quantum Queries, and Applications to Quantum Indifferentiability<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2019/">CRYPTO 2019</a>, <a href="http://2019.qcrypt.net">QCRYPT 2019</a><b> (Invited)</b>, <a href="https://itcrypto.github.io/2021/">ITC 2021</a><b> (Invited Spotlight Talk)</b></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2018/276.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z19c.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=m935yaOyKX0"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-9" onclick="doOpen=true;">
+The quantum random oracle model (QROM) has become the standard model in which to prove 
+the post-quantum security of random-oracle-based constructions. Unfortunately, none of 
+the known proof techniques allow the reduction to record information about the 
+adversary's queries, a crucial feature of many classical ROM proofs, including all 
+proofs of indifferentiability for hash function domain extension. In this work, we 
+give a new QROM proof technique that overcomes this "recording barrier". Our central 
+observation is that when viewing the adversary's query and the oracle itself in the 
+Fourier domain, an oracle query switches from writing to the adversary's space to 
+writing to the oracle itself. This allows a reduction to simulate the oracle by simply 
+recording information about the adversary's query in the Fourier domain.<br><br>
+We then use this new technique to show the indifferentiability of the Merkle-Damgard 
+domain extender for hash functions. Given the threat posed by quantum computers and 
+the push toward quantum-resistant cryptosystems, our work represents an important tool 
+for efficient post-quantum cryptosystems.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-9" onclick="doOpen=true;">
+@inproceedings{C:Zhandry19,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2019,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Alexandra&nbsp;Boldyreva&nbsp;and&nbsp;Daniele&nbsp;Micciancio},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{239--268},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{How&nbsp;to&nbsp;Record&nbsp;Quantum&nbsp;Queries,&nbsp;and&nbsp;Applications&nbsp;to<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantum&nbsp;Indifferentiability},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11693},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Revisiting Post-Quantum Fiat-Shamir<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2019/">CRYPTO 2019</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2019/262.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-10'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-10'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-10" onclick="doOpen=true;">
+The Fiat-Shamir transformation is a useful approach to building non-interactive 
+arguments (of knowledge) in the random oracle model. Unfortunately, existing proof 
+techniques are incapable of proving the security of Fiat-Shamir in the quantum 
+setting. The problem stems from (1) the difficulty of quantum rewinding, and (2) the 
+inability of current techniques to adaptively program random oracles in the quantum 
+setting.<br><br>
+In this work, we show how to overcome the limitations above in many settings. In 
+particular, we give mild conditions under which Fiat-Shamir is secure in the quantum 
+setting. As an application, we show that existing lattice signatures based on 
+Fiat-Shamir are secure without any modifications.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-10" onclick="doOpen=true;">
+@inproceedings{C:LiuZha19,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2019,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Alexandra&nbsp;Boldyreva&nbsp;and&nbsp;Daniele&nbsp;Micciancio},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{326--355},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Revisiting&nbsp;Post-quantum&nbsp;{Fiat}-{Shamir}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11693},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">The Distinction Between Fixed and Random Generators in Group-Based Assumptions<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/jamesbartusek">James Bartusek</a></span>, <span style="white-space:nowrap"><a href="http://fermima.com">Fermi Ma</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2019/">CRYPTO 2019</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2019/202.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-11" onclick="doOpen=true;">
+There is surprisingly little consensus on the precise role of the generator g in 
+group-based assumptions such as DDH. Some works consider g to be a fixed part of the 
+group description, while others take it to be random. We study this subtle distinction 
+from a number of angles.<br><br>
+&bull;  In the generic group model, we demonstrate the plausibility of groups in which 
+random-generator DDH (resp. CDH) is hard but fixed-generator DDH (resp. CDH) is easy. 
+We observe that such groups have interesting cryptographic applications.<br><br>
+&bull;  We find that seemingly tight generic lower bounds for the Discrete-Log and CDH 
+problems with preprocessing (Corrigan-Gibbs and Kogan, Eurocrypt 2018) are not tight 
+in the sub-constant success probability regime if the generator is random. We resolve 
+this by proving tight lower bounds for the random generator variants; our results 
+formalize the intuition that using a random generator will reduce the effectiveness of 
+preprocessing attacks.<br><br>
+&bull;  We observe that DDH-like assumptions in which exponents are drawn from 
+low-entropy distributions are particularly sensitive to the fixed- vs. 
+random-generator distinction. Most notably, we discover that the Strong Power DDH 
+assumption of Komargodski and Yogev (Eurocrypt 2018) used for non-malleable point 
+obfuscation is in fact false precisely because it requires a fixed generator. In 
+response, we formulate an alternative fixed-generator assumption that suffices for a 
+new construction of non-malleable point obfuscation, and we prove the assumption holds 
+in the generic group model. We also give a generic group proof for the security of 
+fixed-generator, low-entropy DDH (Canetti, Crypto 1997).
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-11" onclick="doOpen=true;">
+@inproceedings{C:BarMaZha19,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{James&nbsp;Bartusek&nbsp;and&nbsp;Fermi&nbsp;Ma&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2019,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Alexandra&nbsp;Boldyreva&nbsp;and&nbsp;Daniele&nbsp;Micciancio},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{801--830},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{The&nbsp;Distinction&nbsp;Between&nbsp;Fixed&nbsp;and&nbsp;Random&nbsp;Generators<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in&nbsp;Group-Based&nbsp;Assumptions},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11693},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">On Finding Quantum Multi-collisions<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2019/">EUROCRYPT 2019</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://arxiv.org/pdf/1811.05385.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-12'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-12'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-12" onclick="doOpen=true;">
+A k-collision for a compressing hash function H is a set of k distinct inputs that all 
+map to the same output. In this work, we show that for any constant k, 
+&Theta;(N<sup>(1/2)(1-1/(2^k-1))</sup>) quantum queries are both necessary and 
+sufficient to achieve a k-collision with constant probability. This improves on both 
+the best prior upper bound (Hosoyamada et al., ASIACRYPT 2017) and provides the first 
+non-trivial lower bound, completely resolving the problem.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-12" onclick="doOpen=true;">
+@inproceedings{EC:LiuZha19,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2019,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yuval&nbsp;Ishai&nbsp;and&nbsp;Vincent&nbsp;Rijmen},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{189--218},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{On&nbsp;Finding&nbsp;Quantum&nbsp;Multi-collisions},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11478},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019},<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">New Techniques for Obfuscating Conjunctions<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/jamesbartusek">James Bartusek</a></span>, <span style="white-space:nowrap"><a href="http://tlepoint.github.io">Tancr&egrave;de Lepoint</a></span>, <span style="white-space:nowrap"><a href="http://fermima.com">Fermi Ma</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2019/">EUROCRYPT 2019</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2018/936.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-13'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-13'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-13" onclick="doOpen=true;">
+A conjunction is a function f(x<sub>1</sub>,...,x<sub>n</sub>) = &and;<sub>i &isin; 
+S</sub> l<sub>i</sub> where S &sube; [n] and each l<sub>i</sub> is x<sub>i</sub> or 
+&not; x<sub>i</sub>. Bishop et al. (CRYPTO 2018) recently proposed obfuscating 
+conjunctions by embedding them in the error positions of a noisy Reed-Solomon codeword 
+and placing the codeword in a group exponent. They prove distributional virtual black 
+box (VBB) security in the generic group model for random conjunctions where |S| &ge; 
+0.226n. While conjunction obfuscation is known from LWE, these constructions rely on 
+substantial technical machinery.<br><br>
+In this work, we conduct an extensive study of <i>simple</i> conjunction obfuscation 
+techniques.<br><br>
+&bull; We abstract the Bishop et al. scheme to obtain an equivalent yet more 
+efficient "dual" scheme that handles conjunctions over exponential size alphabets. We 
+give a significantly simpler proof of generic group security, which we combine with a 
+novel combinatorial argument to obtain distributional VBB security for |S| of <i>any 
+size</i>.<br><br>
+&bull;  If we replace the Reed-Solomon code with a <i>random binary linear code</i>, 
+we can prove security from standard LPN and avoid encoding in a group. This addresses 
+an open problem posed by Bishop et al.~to prove security of this simple approach in 
+the standard model.<br><br>
+&bull;  We give a new construction that achieves <i>information theoretic</i> 
+distributional VBB security and weak functionality preservation for |S| &ge; n - 
+n<sup>&delta;</sup> and &delta; < 1. Assuming discrete log and &delta; < 1/2, we 
+satisfy a stronger notion of functionality preservation for computationally bounded 
+adversaries while still achieving information theoretic security.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-13" onclick="doOpen=true;">
+@inproceedings{EC:BLMZ19,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{James&nbsp;Bartusek&nbsp;and&nbsp;Tancr{\'e}de&nbsp;Lepoint&nbsp;and&nbsp;Fermi&nbsp;Ma&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2019,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yuval&nbsp;Ishai&nbsp;and&nbsp;Vincent&nbsp;Rijmen},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{636--666},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{New&nbsp;Techniques&nbsp;for&nbsp;Obfuscating&nbsp;Conjunctions},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11478},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Preventing Zeroizing Attacks on GGH15<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/jamesbartusek">James Bartusek</a></span>, <span style="white-space:nowrap"><a href="http://fermima.com">Fermi Ma</a></span>, <span style="white-space:nowrap"><a href="https://www.guan.io">Jiaxin Guan</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2018/">TCC 2018</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2018/511.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-14'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-14'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-14" onclick="doOpen=true;">
+The GGH15 multilinear maps have served as the foundation for a number of cutting-edge 
+cryptographic proposals. Unfortunately, many schemes built on GGH15 have been 
+explicitly broken by so-called "zeroizing attacks," which exploit leakage from honest 
+zero-test queries. The precise settings in which zeroizing attacks are possible have 
+remained unclear. Most notably, none of the current indistinguishability obfuscation 
+(iO) candidates from GGH15 have any formal security guarantees against zeroizing 
+attacks.<br><br>
+In this work, we demonstrate that all known zeroizing attacks on GGH15 implicitly 
+construct algebraic relations between the results of zero-testing and the encoded 
+plaintext elements. We then propose a "GGH15 zeroizing model" as a new general 
+framework which greatly generalizes known attacks.<br><br>
+Our second contribution is to describe a new GGH15 variant, which we formally analyze 
+in our GGH15 zeroizing model. We then construct a new iO candidate using our 
+multilinear map, which we prove secure in the GGH15 zeroizing model. This implies 
+resistance to all known zeroizing strategies. The proof relies on the Branching 
+Program Un-Annihilatability (BPUA) Assumption of Garg et al. [TCC 16-B] (which is 
+implied by PRFs in NC^1 secure against P/Poly) and the complexity-theoretic p-Bounded 
+Speedup Hypothesis of Miles et al. [ePrint 14] (a strengthening of the Exponential 
+Time Hypothesis).
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-14" onclick="doOpen=true;">
+@inproceedings{TCC:BGMZ18,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{James&nbsp;Bartusek&nbsp;and&nbsp;Jiaxin&nbsp;Guan&nbsp;and&nbsp;Fermi&nbsp;Ma&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2018,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Amos&nbsp;Beimel&nbsp;and&nbsp;Stefan&nbsp;Dziembowski},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{544--574},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Return&nbsp;of&nbsp;{GGH15}:&nbsp;Provable&nbsp;Security&nbsp;Against<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zeroizing&nbsp;Attacks},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11240},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2018}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">The MMap Strikes Back: Obfuscation and New Multilinear Maps Immune to CLT13 Zeroizing Attacks<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="http://fermima.com">Fermi Ma</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2018/">TCC 2018</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2017/946.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-15'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-15'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-15" onclick="doOpen=true;">
+We devise the first weak multilinear map model for CLT13 multilinear maps (Coron et 
+al., CRYPTO 2013) that captures all known classical polynomial-time attacks on the 
+maps. We then show important applications of our model. First, we show that in our 
+model, several existing obfuscation and order-revealing encryption schemes, when 
+instantiated with CLT13 maps, are secure against known attacks under a mild algebraic 
+complexity assumption used in prior work. These are schemes that are actually being 
+implemented for experimentation. However, until our work, they had no rigorous 
+justification for security.<br><br>
+Next, we turn to building constant degree multilinear maps on top of CLT13 for which 
+there are no known attacks. Precisely, we prove that our scheme achieves the ideal 
+security notion for multilinear maps in our weak CLT13 model, under a much stronger 
+variant of the algebraic complexity assumption used above. Our multilinear maps do not 
+achieve the full functionality of multilinear maps as envisioned by Boneh and 
+Silverberg (Contemporary Mathematics, 2003), but do allow for re-randomization and for 
+encoding arbitrary plaintext elements.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-15" onclick="doOpen=true;">
+@inproceedings{TCC:MaZha18,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Fermi&nbsp;Ma&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2018,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Amos&nbsp;Beimel&nbsp;and&nbsp;Stefan&nbsp;Dziembowski},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{513--543},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{The&nbsp;{MMap}&nbsp;Strikes&nbsp;Back:&nbsp;Obfuscation&nbsp;and&nbsp;New<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Multilinear&nbsp;Maps&nbsp;Immune&nbsp;to&nbsp;{CLT13}&nbsp;Zeroizing&nbsp;Attacks},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11240},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2018}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Impossibility of Order-Revealing Encryption in Idealized Models<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span> and <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=Aa7WCBkAAAAJ&hl=zh-CN">Cong Zhang</a></span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2018/">TCC 2018</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2017/1001.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-16'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-16'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-16" onclick="doOpen=true;">
+An Order-Revealing Encryption (ORE) scheme gives a public procedure by which two 
+ciphertext can be compared to reveal the order of their underlying plaintexts. The 
+ideal security notion for ORE is that only the order is revealed &#8212; anything 
+else, such as the distance between plaintexts, is hidden. The only known constructions 
+of ORE achieving such ideal security are based on cryptographic multilinear maps, and 
+are currently too impractical for real-world applications. In this work, we give 
+evidence that building ORE from weaker tools may be hard. Indeed, we show black-box 
+separations between ORE and most symmetric-key primitives, as well as public key 
+encryption and anything else implied by generic groups in a black-box way. Thus, any 
+construction of ORE must either (1) achieve weaker notions of security, (2) be based 
+on more complicated cryptographic tools, or (3) require non-black-box techniques. This 
+suggests that any ORE achieving ideal security will likely be somewhat inefficient.
+<br><br>
+Central to our proof is an proof of impossibility for something we call information 
+theoretic ORE, which has connections to tournament graphs and a theorem by Erd&#337;s. 
+This impossibility proof will be useful for proving other black box separations for 
+ORE.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-16" onclick="doOpen=true;">
+@inproceedings{TCC:ZhaZha18,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry&nbsp;and&nbsp;Cong&nbsp;Zhang},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2018,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Amos&nbsp;Beimel&nbsp;and&nbsp;Stefan&nbsp;Dziembowski},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{129--158},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Impossibility&nbsp;of&nbsp;Order-Revealing&nbsp;Encryption&nbsp;in<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Idealized&nbsp;Models},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11240},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2018}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Secure Obfuscation in a Weak Multilinear Map Model<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://people.eecs.berkeley.edu/~sanjamg/">Sanjam Garg</a></span>, <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=ca">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="https://pratyay.net">Pratyay Mukherjee</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span>, <span style="white-space:nowrap"><a href="https://www.tifr.res.in/~akshayaram.srinivasan/">Akshayaram Srinivasan</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/workshops/tcc2016b/">TCC 2016-B</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2016/817.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-17'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-17'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-17" onclick="doOpen=true;">
+All known candidate indistinguishibility obfuscation (iO) schemes rely on candidate 
+multilinear maps. Until recently, the strongest proofs of security available for iO 
+candidates were in a generic model that only allows "honest" use of the multilinear 
+map. Most notably, in this model the zero-test procedure only reveals whether an 
+encoded element is 0, and nothing more.<br><br>
+However, this model is inadequate: there have been several attacks on multilinear maps 
+that exploit extra information revealed by the zero-test procedure. In particular, 
+Miles, Sahai and Zhandry [Crypto'16] recently gave a polynomial-time attack on several 
+iO candidates when instantiated with the multilinear maps of Garg, Gentry, and Halevi 
+[Eurocrypt'13], and also proposed a new "weak multilinear map model" that captures all 
+known polynomial-time attacks on GGH13.<br><br>
+In this work, we give a new iO candidate which can be seen as a small modification or 
+generalization of the original candidate of Garg, Gentry, Halevi, Raykova, Sahai, and 
+Waters [FOCS'13]. We prove its security in the weak multilinear map model, thus giving 
+the first iO candidate that is provably secure against all known polynomial-time 
+attacks on GGH13. The proof of security relies on a new assumption about the hardness 
+of computing annihilating polynomials, and we show that this assumption is implied by 
+the existence of pseudorandom functions in NC<sup>1</sup>.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-17" onclick="doOpen=true;">
+@inproceedings{TCC:GMMSSZ16,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Sanjam&nbsp;Garg&nbsp;and&nbsp;Eric&nbsp;Miles&nbsp;and&nbsp;Pratyay&nbsp;Mukherjee&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Akshayaram&nbsp;Srinivasan&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2016-B,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Martin&nbsp;Hirt&nbsp;and&nbsp;Adam&nbsp;D.&nbsp;Smith},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oct&nbsp;#&nbsp;{~/~}&nbsp;#&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{241--268},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Secure&nbsp;Obfuscation&nbsp;in&nbsp;a&nbsp;Weak&nbsp;Multilinear&nbsp;Map&nbsp;Model},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9986},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Annihilation Attacks for Multilinear Maps: Cryptanalysis of Indistinguishability Obfuscation over GGH13<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=ca">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/crypto2016/">CRYPTO 2016</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2016/147.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-18" onclick="doOpen=true;">
+In this work, we put forward a new class of polynomial-time attacks on the original 
+multilinear maps of Garg, Gentry, and Halevi (2013). Previous polynomial-time attacks 
+on GGH13 were "zeroizing" attacks that generally required the availability of 
+low-level encodings of zero. Most significantly, such zeroizing attacks were not 
+applicable to candidate indistinguishability obfuscation (iO) schemes. iO has been the 
+subject of intense study.<br><br>
+To address this gap, we introduce <i>annihilation attacks</i>, which attack 
+multilinear maps using non-linear polynomials. Annihilation attacks can work in 
+situations where there are no low-level encodings of zero. Using annihilation attacks, 
+we give the first polynomial-time cryptanalysis of candidate iO schemes over GGH13. 
+More specifically, we exhibit two simple programs that are functionally equivalent, 
+and show how to efficiently distinguish between the obfuscations of these two 
+programs.<br><br>
+Given the enormous applicability of iO, it is important to devise iO schemes that can 
+avoid attack.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-18" onclick="doOpen=true;">
+@inproceedings{C:MilSahZha16,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Eric&nbsp;Miles&nbsp;and&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2016,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Matthew&nbsp;Robshaw&nbsp;and&nbsp;Jonathan&nbsp;Katz},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{629--658},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Annihilation&nbsp;Attacks&nbsp;for&nbsp;Multilinear&nbsp;Maps:&nbsp;Cryptanalysis&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;Indistinguishability&nbsp;Obfuscation&nbsp;over&nbsp;{GGH13}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9815},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Post-Zeroizing Obfuscation: New Mathematical Tools, and the Case of Evasive Circuits<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://usa.visa.com/about-visa/visa-research/saikrishna-badrinarayanan.html">Saikrishna Badrinarayanan</a></span>, <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=ca">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/eurocrypt2016/">EUROCRYPT 2016</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="http://eprint.iacr.org/2015/167.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/BMSZ16.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-19" onclick="doOpen=true;">
+Recent devastating attacks by Cheon et al.~[Eurocrypt'15] and others have highlighted 
+significant gaps in our intuition about security in candidate multilinear map schemes, 
+and in candidate obfuscators that use them. The new attacks, and some that were 
+previously known, are typically called "zeroizing" attacks because they all crucially 
+rely on the ability of the adversary to create encodings of 0.<br><br>
+In this work, we initiate the study of <i>post-zeroizing obfuscation</i>, and we 
+present a construction for the special case of evasive functions. We show that our 
+obfuscator survives <i>all known attacks</i> on the underlying multilinear maps, by 
+proving that no encodings of 0 can be created by a generic-model adversary. Previous 
+obfuscators (for both evasive and general functions) were either analyzed in a 
+less-conservative "pre-zeroizing" model that <i>does not</i> capture recent attacks, 
+or were proved secure relative to assumptions that are now known to be false.<br><br>
+To prove security, we introduce a new technique for analyzing polynomials over 
+multilinear map encodings.  This technique shows that the types of encodings an 
+adversary can create are much more restricted than was previously known, and is a 
+crucial step toward achieving post-zeroizing security.  We also believe the technique 
+is of independent interest, as it yields efficiency improvements for existing schemes.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-19" onclick="doOpen=true;">
+@inproceedings{EC:BMSZ16,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Saikrishna&nbsp;Badrinarayanan&nbsp;and&nbsp;Eric&nbsp;Miles&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2016,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Marc&nbsp;Fischlin&nbsp;and&nbsp;Jean-S{\'{e}}bastien&nbsp;Coron},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{764--791},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Post-zeroizing&nbsp;Obfuscation:&nbsp;New&nbsp;Mathematical&nbsp;Tools,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;the&nbsp;Case&nbsp;of&nbsp;Evasive&nbsp;Circuits},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9666},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">A Note on the Quantum Collision and Set Equality Problems<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="http://www.rintonpress.com/journals/qiconline.html">Quantum Information and Computation</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://arxiv.org/pdf/1312.1027.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-20'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-20'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-20" onclick="doOpen=true;">
+The results showing a quantum query complexity of &Theta;(N<sup>1/3</sup>) for the 
+collision problem do not apply to random functions.  The issues are two-fold.  First, 
+the &Omega;(N<sup>1/3</sup>) lower bound only applies when the range is no larger than 
+the domain, which precludes many of the cryptographically interesting applications.  
+Second, most of the results in the literature only apply to r-to-1 functions, which 
+are quite different from random functions.<br><br>
+Understanding the collision problem for random functions is of great importance to 
+cryptography, and we seek to fill the gaps of knowledge for this problem.  To that 
+end, we prove that, as expected, a quantum query complexity of 
+&Theta;(N<sup>1/3</sup>) holds for all interesting domain and range sizes. Our proofs 
+are simple, and combine existing techniques with several novel tricks to obtain the 
+desired results.<br><br>
+Using our techniques, we also give an optimal &Omega;(N<sup>1/3</sup>) lower bound for 
+the set equality problem.  This new lower bound can be used to improve the 
+relationship between classical randomized query complexity and quantum query 
+complexity for so-called permutation-symmetric functions.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-20" onclick="doOpen=true;">
+@article{CIS:Zhandry15,&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Zhandry,&nbsp;Mark},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{A&nbsp;Note&nbsp;on&nbsp;the&nbsp;Quantum&nbsp;Collision&nbsp;and&nbsp;Set&nbsp;Equality&nbsp;Problems},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2015},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;issue_date&nbsp;=&nbsp;{May&nbsp;2015},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Rinton&nbsp;Press,&nbsp;Incorporated},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;{15},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;=&nbsp;{7–8},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;journal&nbsp;=&nbsp;{Quantum&nbsp;Info.&nbsp;Comput.},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;may,&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;{557–567},&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;numpages&nbsp;=&nbsp;{11}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Secure Identity-Based Encryption in the Quantum Random Oracle Model<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/crypto2012/">CRYPTO 2012</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2012/076.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-21'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-21'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z12a.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=ytGDMlcHLnc"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-21" onclick="doOpen=true;">
+We give the first proof of security for an identity-based encryption scheme in the 
+<i>quantum</i> random oracle model. This is the first proof of security for <i>any</i> 
+scheme in this model that requires no additional assumptions. Our techniques are quite 
+general and we use them to obtain security proofs for two random oracle hierarchical 
+identity-based encryption schemes and a random oracle signature scheme, all of which 
+have previously resisted quantum security proofs, even using additional assumptions. 
+We also explain how to remove the extra assumptions from prior quantum random oracle 
+model proofs. We accomplish these results by developing new tools for arguing that 
+quantum algorithms cannot distinguish between two oracle distributions. Using a 
+particular class of oracle distributions, so called <i>semi-constant</i> 
+distributions, we argue that the aforementioned cryptosystems are secure against 
+quantum adversaries.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-21" onclick="doOpen=true;">
+@inproceedings{C:Zhandry12,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2012},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Reihaneh&nbsp;Safavi-Naini&nbsp;and&nbsp;Ran&nbsp;Canetti},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{758--775},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Secure&nbsp;Identity-Based&nbsp;Encryption&nbsp;in&nbsp;the&nbsp;Quantum&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Random&nbsp;Oracle&nbsp;Model},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{7417},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2012}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Random Oracles in a Quantum World<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://crypto.stanford.edu/~dabo/">Dan Boneh</a></span>, <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=HxhSldcAAAAJ&hl=en">&Oumlzg&uumlr Dagdelen</a></span>, <span style="white-space:nowrap"><a href="https://sites.google.com/view/marc-fischlin/home?authuser=0">Marc Fischlin</a></span>, <span style="white-space:nowrap"><a href="https://hpi.de/lehmann/team/anja-lehmann.html">Anja Lehmann</a></span>, <span style="white-space:nowrap"><a href="https://staff.science.uva.nl/c.schaffner/index.php">Christian Schaffner</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/archive/asiacrypt2011/asiacrypt2011-index.html">ASIACRYPT 2011</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2010/428.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-22'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-22'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/BDFLSZ11.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-22" onclick="doOpen=true;">
+The interest in post-quantum cryptography &mdash; classical systems that remain 
+secure in the presence of a quantum adversary &mdash; has generated elegant proposals 
+for new cryptosystems. Some of these systems are set in the random oracle model and 
+are proven secure relative to adversaries that have classical access to the random 
+oracle. We argue that to prove post-quantum security one needs to prove security in 
+the quantum-accessible random oracle model where the adversary can query the random 
+oracle with quantum state.<br><br>
+We begin by separating the classical and quantum-accessible random oracle models by 
+presenting a scheme that is secure when the adversary is given classical access to the 
+random oracle, but is insecure when the adversary can make quantum oracle queries. We 
+then set out to develop generic conditions under which a classical random oracle proof 
+implies security in the quantum-accessible random oracle model. We introduce the 
+concept of a history-free reduction which is a category of classical random oracle 
+reductions that basically determine oracle answers independently of the history of 
+previous queries, and we prove that such reductions imply security in the quantum 
+model. We then show that certain post-quantum proposals, including ones based on 
+lattices, can be proven secure using history-free reductions and are therefore 
+postquantum secure. We conclude with a rich set of open problems in this area.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-22" onclick="doOpen=true;">
+@inproceedings{AC:BDFLSZ11,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dan&nbsp;Boneh&nbsp;and&nbsp;{\"O}zg{\"u}r&nbsp;Dagdelen&nbsp;and&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Marc&nbsp;Fischlin&nbsp;and&nbsp;Anja&nbsp;Lehmann&nbsp;and&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Christian&nbsp;Schaffner&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ASIACRYPT~2011},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dong&nbsp;Hoon&nbsp;Lee&nbsp;and&nbsp;Xiaoyun&nbsp;Wang},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{41--69},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Random&nbsp;Oracles&nbsp;in&nbsp;a&nbsp;Quantum&nbsp;World},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{7073},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2011}<br />
+}
+</div>
+<br></td></tr>
+
+
+</table>
+
+    </div>
+  </body>
+</html>
