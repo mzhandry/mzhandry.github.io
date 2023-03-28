@@ -58,12 +58,12 @@ functionalities, such as ciphertexts that effectively disappear after transmissi
 
 <table style="border-spacing: 0px; width: 100%;">
 
-<tr><td style="width: 100%">Incompressible Cryptography<br>
+<tr><td style="width: 100%">Somewhere Randomness Extraction and Security against Bounded-Storage Mass Surveillance<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.guan.io">Jiaxin Guan</a></span>, <span style="white-space:nowrap"><a href="http://www.ccs.neu.edu/home/wichs/">Daniel Wichs</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2022/">EUROCRYPT 2022</a></td></tr>
+
 </table></td>
 <td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2021/1679.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+	<a href="https://eprint.iacr.org/2023/409.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
 	<script>document.write("<a onclick=\"markForOpen('abstract-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
@@ -74,6 +74,61 @@ functionalities, such as ciphertexts that effectively disappear after transmissi
 	
 </td></tr><tr><td colspan="6">
 <div style="display: none;" class="collapsible" id="abstract-1" onclick="doOpen=true;">
+Consider a state-level adversary who observes and stores large amounts of encrypted 
+data from all users on the Internet, but does not have the capacity to store it all. 
+Later, it may target certain "persons of interest" in order to obtain their 
+decryption keys. We would like to guarantee that, if the adversary`s storage capacity 
+is only (say) 1% of the total encrypted data size, then even if it can later obtain 
+the decryption keys of arbitrary users, it can only learn something about the contents 
+of (roughly) 1%$ of the ciphertexts, while the rest will maintain full security. 
+This can be seen as an extension of <i>incompressible cryptography</i> (Dziembowski 
+CRYPTO '06,  Guan, Wichs and Zhandry EUROCRYPT '22) to the <i>multi-user</i> setting. 
+We provide solutions in both the symmetric key and public key setting with various 
+trade-offs in terms of computational assumptions and efficiency. <br><br>
+As the core technical tool, we study an information-theoretic problem which we refer 
+to as "somewhere randomness extraction." Suppose X<sub>1</sub>, ..., X<sub>t</sub> are 
+correlated random variables whose total joint min-entropy rate is &alpha;, but we know 
+nothing else about their individual entropies. We choose $t$ random and independent 
+seeds S<sub>1</sub>,...,S<sub>t</sub> and attempt to individually extract some small 
+amount of randomness Y<sub>i</sub> = Ext(X<sub>i</sub>;S<sub>i</sub>) from each 
+X<sub>i</sub>. We'd like to say that roughly an &alpha;-fraction of the extracted 
+outputs Y<sub>i</sub> should be indistinguishable from uniform even given all the 
+remaining extracted outputs and all the seeds. We show that this indeed holds for 
+specific extractors based on Hadamard and Reed-Muller codes. 
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
+@misc{EPRINT:GuaWicZha23,<br />
+&nbsp;&nbsp;author&nbsp;=&nbsp;{Jiaxin&nbsp;Guan&nbsp;and&nbsp;Daniel&nbsp;Wichs&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;title&nbsp;=&nbsp;{Somewhere&nbsp;Randomness&nbsp;Extraction&nbsp;and&nbsp;Security&nbsp;against&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bounded-Storage&nbsp;Mass&nbsp;Surveillance},<br />
+&nbsp;&nbsp;howpublished&nbsp;=&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Paper&nbsp;2023/409},<br />
+&nbsp;&nbsp;year&nbsp;=&nbsp;{2023},<br />
+&nbsp;&nbsp;note&nbsp;=&nbsp;{\url{https://eprint.iacr.org/2023/409}},<br />
+&nbsp;&nbsp;url&nbsp;=&nbsp;{https://eprint.iacr.org/2023/409}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Incompressible Cryptography<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.guan.io">Jiaxin Guan</a></span>, <span style="white-space:nowrap"><a href="http://www.ccs.neu.edu/home/wichs/">Daniel Wichs</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2022/">EUROCRYPT 2022</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2021/1679.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
 Incompressible encryption allows us to make the ciphertext size flexibly large and 
 ensures that an adversary learns nothing about the encrypted data, even if the 
 decryption key later leaks, unless she stores essentially the entire ciphertext. 
@@ -92,7 +147,7 @@ messages, at the cost of stronger assumptions.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
 @inproceedings{EC:GuaWicZha22,<br />
 &nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiaxin&nbsp;Guan&nbsp;and&nbsp;Daniel&nbsp;Wichs&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2022,&nbsp;Part~I},<br />
@@ -117,15 +172,15 @@ messages, at the cost of stronger assumptions.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2021/406.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
 In this work, we study disappearing cryptography in the bounded storage model. Here, a 
 component of the transmission, say a ciphertext, a digital signature, or even a 
 program, is streamed bit by bit. The stream is so large for anyone to store in its 
@@ -141,7 +196,7 @@ of computational assumptions used.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
 @inproceedings{TCC:GuaZha21,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiaxin&nbsp;Guan&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2021,&nbsp;Part~II},<br />
@@ -167,15 +222,15 @@ of computational assumptions used.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2019/507.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
 The bounded storage model promises unconditional security proofs against 
 computationally unbounded adversaries, so long as the adversary's space is bounded.  
 In this work, we develop simple new constructions of two-party key agreement, bit 
@@ -186,7 +241,7 @@ learning parities.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
 @inproceedings{EC:GuaZha19,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiaxin&nbsp;Guan&nbsp;and&nbsp;Mark&nbsp;Zhandary},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2019,&nbsp;Part~III},<br />
