@@ -59,12 +59,12 @@ assumptions?
 
 <table style="border-spacing: 0px; width: 100%;">
 
-<tr><td style="width: 100%">Collusion-Resistant Copy-Protection for Watermarkable Functionalities<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~jiahui/">Jiahui Liu</a></span>, <span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span>, <span style="white-space:nowrap"><a href="https://www.bu.edu/cs/profiles/luowen-qian/">Luowen Qian</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2022/">TCC 2022</a>, <a href="https://indico.cern.ch/event/1175020/">QIP 2023</a></td></tr>
+<tr><td style="width: 100%">Tracing Quantum State Distinguishers via Backtracking<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2023/">CRYPTO 2023</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2022/1429.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+	<a href="https://eprint.iacr.org/2023/673.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
 	<script>document.write("<a onclick=\"markForOpen('abstract-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
@@ -75,6 +75,153 @@ assumptions?
 	
 </td></tr><tr><td colspan="6">
 <div style="display: none;" class="collapsible" id="abstract-1" onclick="doOpen=true;">
+We show the following results:<br><br>
+&bull; The post-quantum equivalence of indisitnguishability obfuscation and differing 
+inputs obfuscation in the restricted setting where the outputs differ on at most a 
+polynomial number of points. Our result handles the case where the auxiliary input may 
+contain a <i>quantum state</i>; previous results could only handle classical auxiliary 
+input.<br><br>
+&bull; Bounded collusion traitor tracing from general public key encryption, where the 
+decoder is allowed to contain a quantum state. The parameters of the scheme grow 
+polynomially in the collusion bound.<br><br>
+&bull; Collusion-resistant traitor tracing with constant-size ciphertexts from general 
+public key encryption, again for quantum state decoders. The public key and secret 
+keys grow polynomially in the number of users.<br><br>
+&bull; Traitor tracing with embedded identities in the keys, again for quantum state 
+decoders, under a variety of different assumptions with different parameter size 
+trade-offs.
+<br><br>
+Traitor tracing and differing inputs obfuscation with quantum decoders / auxiliary 
+input arises naturally when considering the post-quantum security of these primitives. 
+We obtain our results by abstracting out a core algorithmic model, which we call the 
+Back One Step (BOS) model. We prove a general theorem, reducing many quantum results 
+including ours to designing \emph{classical} algorithms in the BOS model. We then 
+provide simple algorithms for the particular instances studied in this work.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
+@inproceedings{C:Zhandry23,<br />
+&nbsp;&nbsp;author&nbsp;=&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;title&nbsp;=&nbsp;{Tracing&nbsp;Quantum&nbsp;State&nbsp;Distinguishers&nbsp;via&nbsp;Backtracking},<br />
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;{CRYPTO&nbsp;2023},<br />
+&nbsp;&nbsp;year&nbsp;=&nbsp;{2023}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Security-Preserving Distributed Samplers: How to Generate any CRS in One Round without Random Oracles<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://damianoabram.github.io">Damiano Abram</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~bwaters/">Brent Waters</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2023/">CRYPTO 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
+A distributed sampler is a way for several mutually distrusting parties to 
+non-interactively generate a common reference string (CRS) that all parties trust. 
+Previous work constructs distributed samplers in the random oracle model, or in the 
+standard model with very limited security guarantees. This is no accident, as standard 
+model distributed samplers with full security were shown impossible.<br><br>
+In this work, we provide new definitions for distributed samplers which we show 
+achieve meaningful security guarantees in the standard model. In particular, our 
+notion implies that the hardness of a wide range of security games is preserved when 
+the CRS is replaced with a distributed sampler. We also show how to realize our notion 
+of distributed samplers. A core technical tool enabling our construction is a new 
+notion of single-message zero knowledge.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
+@inproceedings{C:AbrWatZha23,<br />
+&nbsp;&nbsp;author&nbsp;=&nbsp;{Damiano&nbsp;Abram&nbsp;and&nbsp;Brent&nbsp;Waters&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;title&nbsp;=&nbsp;{Security-Preserving&nbsp;Distributed&nbsp;Samplers:&nbsp;How&nbsp;to&nbsp;Generate&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;any&nbsp;CRS&nbsp;in&nbsp;One&nbsp;Round&nbsp;without&nbsp;Random&nbsp;Oracles},<br />
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;{CRYPTO&nbsp;2023},<br />
+&nbsp;&nbsp;year&nbsp;=&nbsp;{2023}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Computational Wiretap Coding from Indistinguishability Obfuscation<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.cs.technion.ac.il/~yuvali/">Yuval Ishai</a></span>, <span style="white-space:nowrap"><a href="https://sites.google.com/view/aayushjain/home">Aayush Jain</a></span>, <span style="white-space:nowrap"><a href="https://paullou.me">Paul Lou</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2023/">CRYPTO 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
+A wiretap coding scheme for a pair of noisy channels (B,E) enables Alice to reliably 
+communicate a message to Bob by sending its encoding over B, while hiding the message 
+from an adversary Eve who obtains the same encoding over E.<br><br> 
+A necessary condition for the feasibility of writeup coding is that B is not a 
+<i>degradation</i> of $\chE$, namely Eve cannot simulate Bob`s view. While 
+insufficient in the information-theoretic setting, a recent work of Ishai, Korb, Lou, 
+and Sahai (Crypto 2022) showed that the non-degradation condition <i>is</i> sufficient 
+in the computational setting, assuming idealized flavors of obfuscation. The question 
+of basing a similar feasibility result on standard cryptographic assumptions was left 
+open, even in simple special cases.<br><br>
+In this work, we settle the question for all discrete memoryless channels where the 
+(common) input alphabet of B and E is <i>binary</i>, and with arbitrary finite output 
+alphabet, under the standard assumptions that indistinguishability obfuscation and 
+injective PRGs exist. In particular, this establishes the feasibility of computational 
+wiretap coding when B is a binary symmetric channel with crossover probability p and E 
+is a binary erasure channel with erasure probability e, where e>2p.<br><br>
+On the information-theoretic side, our result builds on a new polytope 
+characterization of channel degradation for pairs of binary-input channels, which may 
+be of independent interest.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+@inproceedings{C:IJLSZ23,<br />
+&nbsp;&nbsp;author&nbsp;=&nbsp;{Yuval&nbsp;Ishai&nbsp;and&nbsp;Aayush&nbsp;Jain&nbsp;and&nbsp;Paul&nbsp;Lou&nbsp;and&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;title&nbsp;=&nbsp;{Computational&nbsp;Wiretap&nbsp;Coding&nbsp;from&nbsp;Indistinguishability&nbsp;Obfuscation},<br />
+&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;{CRYPTO&nbsp;2023},<br />
+&nbsp;&nbsp;year&nbsp;=&nbsp;{2023}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Collusion-Resistant Copy-Protection for Watermarkable Functionalities<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/jiahuiliu/">Jiahui Liu</a></span>, <span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span>, <span style="white-space:nowrap"><a href="https://cs-people.bu.edu/luowenq/">Luowen Qian</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2022/">TCC 2022</a>, <a href="https://indico.cern.ch/event/1175020/">QIP 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2022/1429.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
 Copy-protection is the task of encoding a program into a quantum state to prevent 
 illegal duplications. A line of recent works studied copy-protection schemes under 
 "1 -> 2 attacks": the adversary receiving one program copy can not produce two valid 
@@ -93,7 +240,7 @@ functionalities in the plain model.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
 @inproceedings{TCC:LLQZ22,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiahui&nbsp;Liu&nbsp;and&nbsp;Qipeng&nbsp;Liu&nbsp;and&nbsp;Luowen&nbsp;Qian&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
@@ -120,15 +267,15 @@ functionalities in the plain model.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2022/1324.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-5" onclick="doOpen=true;">
 We construct adaptively secure multiparty non-interactive key exchange (NIKE) from 
 polynomially-hard indistinguishability obfuscation and other standard assumptions. 
 This improves on all prior such protocols, which required sub-exponential hardness. 
@@ -138,7 +285,7 @@ type of constrained PRF.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-5" onclick="doOpen=true;">
 @inproceedings{TCC:KopWatZha22,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Venkata&nbsp;Koppula&nbsp;and&nbsp;Brent&nbsp;Waters&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2022,&nbsp;Part~II},<br />
@@ -163,15 +310,15 @@ type of constrained PRF.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2020/889.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-6" onclick="doOpen=true;">
 An <i>affine determinant program</i> ADP: {0,1}<sup>n</sup> &rarr; {0,1} is specified 
 by a tuple (A,B<sub>1</sub>,&hellip;,B<sub>n</sub>) of square matrices over 
 F<sub>q</sub> and a function Eval: F<sub>q</sub> &rarr; {0,1}, and is evaluated on x 
@@ -190,7 +337,7 @@ public-key encryption with near-optimal key generation.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-6" onclick="doOpen=true;">
 @inproceedings{ITCS:BIJMSZ20,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{James&nbsp;Bartusek&nbsp;and&nbsp;Yuval&nbsp;Ishai&nbsp;and&nbsp;Aayush&nbsp;Jain&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fermi&nbsp;Ma&nbsp;and&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
@@ -216,15 +363,15 @@ public-key encryption with near-optimal key generation.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2019/262.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-7" onclick="doOpen=true;">
 The Fiat-Shamir transformation is a useful approach to building non-interactive 
 arguments (of knowledge) in the random oracle model. Unfortunately, existing proof 
 techniques are incapable of proving the security of Fiat-Shamir in the quantum 
@@ -238,7 +385,7 @@ Fiat-Shamir are secure without any modifications.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-7" onclick="doOpen=true;">
 @inproceedings{C:LiuZha19,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2019,&nbsp;Part~II},<br />
@@ -263,15 +410,15 @@ Fiat-Shamir are secure without any modifications.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2019/202.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-8'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-8'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-5" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-8" onclick="doOpen=true;">
 There is surprisingly little consensus on the precise role of the generator g in 
 group-based assumptions such as DDH. Some works consider g to be a fixed part of the 
 group description, while others take it to be random. We study this subtle distinction 
@@ -297,7 +444,7 @@ fixed-generator, low-entropy DDH (Canetti, Crypto 1997).
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-5" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-8" onclick="doOpen=true;">
 @inproceedings{C:BarMaZha19,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{James&nbsp;Bartusek&nbsp;and&nbsp;Fermi&nbsp;Ma&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2019,&nbsp;Part~II},<br />
@@ -323,15 +470,15 @@ fixed-generator, low-entropy DDH (Canetti, Crypto 1997).
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2017/1080.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z19b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	<a href="https://www.youtube.com/watch?v=fjumbNTZSik"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-6" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-9" onclick="doOpen=true;">
 Public key quantum money can be seen as a version of the quantum no-cloning theorem 
 that holds even when the quantum states can be verified by the adversary.  In this 
 work, investigate <i>quantum lightning</i>, a formalization of "collision-free quantum 
@@ -363,7 +510,7 @@ a new precise variant of the no-cloning theorem.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-6" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-9" onclick="doOpen=true;">
 @inproceedings{EC:Zhandry19b,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2019,&nbsp;Part~III},<br />
@@ -388,15 +535,15 @@ a new precise variant of the no-cloning theorem.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2018/936.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-10'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-10'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-7" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-10" onclick="doOpen=true;">
 A conjunction is a function f(x<sub>1</sub>,...,x<sub>n</sub>) = &and;<sub>i &isin; 
 S</sub> l<sub>i</sub> where S &sube; [n] and each l<sub>i</sub> is x<sub>i</sub> or 
 &not; x<sub>i</sub>. Bishop et al. (CRYPTO 2018) recently proposed obfuscating 
@@ -424,7 +571,7 @@ adversaries while still achieving information theoretic security.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-7" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-10" onclick="doOpen=true;">
 @inproceedings{EC:BLMZ19,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{James&nbsp;Bartusek&nbsp;and&nbsp;Tancr{\'e}de&nbsp;Lepoint&nbsp;and&nbsp;Fermi&nbsp;Ma&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
@@ -450,15 +597,15 @@ adversaries while still achieving information theoretic security.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2018/511.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-8'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-8'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-8" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-11" onclick="doOpen=true;">
 The GGH15 multilinear maps have served as the foundation for a number of cutting-edge 
 cryptographic proposals. Unfortunately, many schemes built on GGH15 have been 
 explicitly broken by so-called "zeroizing attacks," which exploit leakage from honest 
@@ -481,7 +628,7 @@ Time Hypothesis).
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-8" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-11" onclick="doOpen=true;">
 @inproceedings{TCC:BGMZ18,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{James&nbsp;Bartusek&nbsp;and&nbsp;Jiaxin&nbsp;Guan&nbsp;and&nbsp;Fermi&nbsp;Ma&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
@@ -508,15 +655,15 @@ Time Hypothesis).
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2017/946.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-12'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-12'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-9" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-12" onclick="doOpen=true;">
 We devise the first weak multilinear map model for CLT13 multilinear maps (Coron et 
 al., CRYPTO 2013) that captures all known classical polynomial-time attacks on the 
 maps. We then show important applications of our model. First, we show that in our 
@@ -535,7 +682,7 @@ encoding arbitrary plaintext elements.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-9" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-12" onclick="doOpen=true;">
 @inproceedings{TCC:MaZha18,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Fermi&nbsp;Ma&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2018,&nbsp;Part~II},<br />
@@ -561,15 +708,15 @@ encoding arbitrary plaintext elements.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2017/209.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-10'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-13'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-10'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-13'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-10" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-13" onclick="doOpen=true;">
 There is some evidence that indistinguishability obfuscation (iO) requires either 
 exponentially many assumptions or (sub)exponentially hard assumptions, and indeed, all 
 known ways of building obfuscation suffer one of these two limitations. As such, any 
@@ -590,7 +737,7 @@ platform for obtaining more applications from polynomial hardness.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-10" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-13" onclick="doOpen=true;">
 @inproceedings{TCC:LiuZha17,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2017,&nbsp;Part~I},<br />
@@ -616,15 +763,15 @@ platform for obtaining more applications from polynomial hardness.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2016/102.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-14'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-14'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-11" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-14" onclick="doOpen=true;">
 Indistinguishability obfuscation (iO) has emerged as a surprisingly powerful notion. 
 Almost all known cryptographic primitives can be constructed from general purpose iO 
 and other minimalistic assumptions such as one-way functions. A major challenge in 
@@ -665,7 +812,7 @@ will likely be useful for future works on basing security on FE.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-11" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-14" onclick="doOpen=true;">
 @inproceedings{EC:GPSZ17,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Sanjam&nbsp;Garg&nbsp;and&nbsp;Omkant&nbsp;Pandey&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Akshayaram&nbsp;Srinivasan&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
@@ -691,15 +838,15 @@ will likely be useful for future works on basing security on FE.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2017/152.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-12'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-15'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-12'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-15'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-12" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-15" onclick="doOpen=true;">
 We define the concept of an encryptor combiner. Roughly, such a combiner takes as 
 input n public keys for a public key encryption scheme, and produces a new combined 
 public key. Anyone knowing a secret key for one of the input public keys can learn the 
@@ -723,7 +870,7 @@ target for instantiating obfuscation applications from better tools.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-12" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-15" onclick="doOpen=true;">
 @misc{EPRINT:MaZha17,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Fermi&nbsp;Ma&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Report&nbsp;2017/152},<br />
@@ -745,15 +892,15 @@ target for instantiating obfuscation applications from better tools.
 <td style="vertical-align: top;">
 	<a href="http://eprint.iacr.org/2014/507.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-13'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-16'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-13'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-16'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-13" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-16" onclick="doOpen=true;">
 The random oracle is an idealization that allows to model a hash function as an oracle 
 that will output a uniformly random string given an input.  We introduce the notion of 
 <i>universal sampler</i> scheme as a method sampling securely from <i>arbitrary</i> 
@@ -769,7 +916,7 @@ obfuscation. At the heart of our construction and proof is a new technique we ca
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-13" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-16" onclick="doOpen=true;">
 @inproceedings{AC:HJKSWZ16,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dennis&nbsp;Hofheinz&nbsp;and&nbsp;Tibor&nbsp;Jager&nbsp;and&nbsp;Dakshita&nbsp;Khurana&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Brent&nbsp;Waters&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
@@ -795,15 +942,15 @@ obfuscation. At the heart of our construction and proof is a new technique we ca
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2016/817.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-14'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-17'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-14'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-17'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-14" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-17" onclick="doOpen=true;">
 All known candidate indistinguishibility obfuscation (iO) schemes rely on candidate 
 multilinear maps. Until recently, the strongest proofs of security available for iO 
 candidates were in a generic model that only allows "honest" use of the multilinear 
@@ -825,7 +972,7 @@ the existence of pseudorandom functions in NC<sup>1</sup>.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-14" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-17" onclick="doOpen=true;">
 @inproceedings{TCC:GMMSSZ16,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Sanjam&nbsp;Garg&nbsp;and&nbsp;Eric&nbsp;Miles&nbsp;and&nbsp;Pratyay&nbsp;Mukherjee&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Akshayaram&nbsp;Srinivasan&nbsp;and<br />
@@ -845,59 +992,6 @@ the existence of pseudorandom functions in NC<sup>1</sup>.
 <br></td></tr>
 
 
-<tr><td style="width: 100%">Annihilation Attacks for Multilinear Maps: Cryptanalysis of Indistinguishability Obfuscation over GGH13<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=ca">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/crypto2016/">CRYPTO 2016</a></td></tr>
-</table></td>
-<td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2016/147.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-15'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-15'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
-</td><td style="vertical-align: top;">
-  
-</td><td style="vertical-align: top;">
-	
-</td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-15" onclick="doOpen=true;">
-In this work, we put forward a new class of polynomial-time attacks on the original 
-multilinear maps of Garg, Gentry, and Halevi (2013). Previous polynomial-time attacks 
-on GGH13 were "zeroizing" attacks that generally required the availability of 
-low-level encodings of zero. Most significantly, such zeroizing attacks were not 
-applicable to candidate indistinguishability obfuscation (iO) schemes. iO has been the 
-subject of intense study.<br><br>
-To address this gap, we introduce <i>annihilation attacks</i>, which attack 
-multilinear maps using non-linear polynomials. Annihilation attacks can work in 
-situations where there are no low-level encodings of zero. Using annihilation attacks, 
-we give the first polynomial-time cryptanalysis of candidate iO schemes over GGH13. 
-More specifically, we exhibit two simple programs that are functionally equivalent, 
-and show how to efficiently distinguish between the obfuscations of these two 
-programs.<br><br>
-Given the enormous applicability of iO, it is important to devise iO schemes that can 
-avoid attack.
-<br />
-
-</div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-15" onclick="doOpen=true;">
-@inproceedings{C:MilSahZha16,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Eric&nbsp;Miles&nbsp;and&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2016,&nbsp;Part~II},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Matthew&nbsp;Robshaw&nbsp;and&nbsp;Jonathan&nbsp;Katz},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{629--658},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Annihilation&nbsp;Attacks&nbsp;for&nbsp;Multilinear&nbsp;Maps:&nbsp;Cryptanalysis&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;Indistinguishability&nbsp;Obfuscation&nbsp;over&nbsp;{GGH13}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9815},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
-}<br />
-
-</div>
-<br></td></tr>
-
-
 <tr><td style="width: 100%">The Magic of ELFs<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/crypto2016/">CRYPTO 2016</a><b> (Early Career Award)</b>, <a href="https://www.springer.com/journal/00145">Journal of Cryptology</a><b> (Invited)</b></td></tr>
@@ -905,15 +999,15 @@ avoid attack.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2016/114.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-16'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-16'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z16b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	<a href="https://www.youtube.com/watch?v=fY6gMFauHVQ"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-16" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-18" onclick="doOpen=true;">
 We introduce the notion of an <i>Extremely Lossy Function</i> (ELF).  An ELF is a 
 family of functions with an image size that is tunable anywhere from injective to 
 having a polynomial-sized image.  Moreover, for any efficient adversary, for a 
@@ -937,7 +1031,7 @@ than prior works.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-16" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-18" onclick="doOpen=true;">
 @inproceedings{C:Zhandry16,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2016,&nbsp;Part~I},<br />
@@ -955,6 +1049,115 @@ than prior works.
 <br></td></tr>
 
 
+<tr><td style="width: 100%">Annihilation Attacks for Multilinear Maps: Cryptanalysis of Indistinguishability Obfuscation over GGH13<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=ca">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/crypto2016/">CRYPTO 2016</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2016/147.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-19" onclick="doOpen=true;">
+In this work, we put forward a new class of polynomial-time attacks on the original 
+multilinear maps of Garg, Gentry, and Halevi (2013). Previous polynomial-time attacks 
+on GGH13 were "zeroizing" attacks that generally required the availability of 
+low-level encodings of zero. Most significantly, such zeroizing attacks were not 
+applicable to candidate indistinguishability obfuscation (iO) schemes. iO has been the 
+subject of intense study.<br><br>
+To address this gap, we introduce <i>annihilation attacks</i>, which attack 
+multilinear maps using non-linear polynomials. Annihilation attacks can work in 
+situations where there are no low-level encodings of zero. Using annihilation attacks, 
+we give the first polynomial-time cryptanalysis of candidate iO schemes over GGH13. 
+More specifically, we exhibit two simple programs that are functionally equivalent, 
+and show how to efficiently distinguish between the obfuscations of these two 
+programs.<br><br>
+Given the enormous applicability of iO, it is important to devise iO schemes that can 
+avoid attack.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-19" onclick="doOpen=true;">
+@inproceedings{C:MilSahZha16,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Eric&nbsp;Miles&nbsp;and&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2016,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Matthew&nbsp;Robshaw&nbsp;and&nbsp;Jonathan&nbsp;Katz},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{629--658},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Annihilation&nbsp;Attacks&nbsp;for&nbsp;Multilinear&nbsp;Maps:&nbsp;Cryptanalysis&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;Indistinguishability&nbsp;Obfuscation&nbsp;over&nbsp;{GGH13}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9815},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Post-Zeroizing Obfuscation: New Mathematical Tools, and the Case of Evasive Circuits<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://usa.visa.com/about-visa/visa-research/saikrishna-badrinarayanan.html">Saikrishna Badrinarayanan</a></span>, <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=ca">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/eurocrypt2016/">EUROCRYPT 2016</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="http://eprint.iacr.org/2015/167.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-20'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-20'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/BMSZ16.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-20" onclick="doOpen=true;">
+Recent devastating attacks by Cheon et al.~[Eurocrypt'15] and others have highlighted 
+significant gaps in our intuition about security in candidate multilinear map schemes, 
+and in candidate obfuscators that use them. The new attacks, and some that were 
+previously known, are typically called "zeroizing" attacks because they all crucially 
+rely on the ability of the adversary to create encodings of 0.<br><br>
+In this work, we initiate the study of <i>post-zeroizing obfuscation</i>, and we 
+present a construction for the special case of evasive functions. We show that our 
+obfuscator survives <i>all known attacks</i> on the underlying multilinear maps, by 
+proving that no encodings of 0 can be created by a generic-model adversary. Previous 
+obfuscators (for both evasive and general functions) were either analyzed in a 
+less-conservative "pre-zeroizing" model that <i>does not</i> capture recent attacks, 
+or were proved secure relative to assumptions that are now known to be false.<br><br>
+To prove security, we introduce a new technique for analyzing polynomials over 
+multilinear map encodings.  This technique shows that the types of encodings an 
+adversary can create are much more restricted than was previously known, and is a 
+crucial step toward achieving post-zeroizing security.  We also believe the technique 
+is of independent interest, as it yields efficiency improvements for existing schemes.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-20" onclick="doOpen=true;">
+@inproceedings{EC:BMSZ16,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Saikrishna&nbsp;Badrinarayanan&nbsp;and&nbsp;Eric&nbsp;Miles&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2016,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Marc&nbsp;Fischlin&nbsp;and&nbsp;Jean-S{\'{e}}bastien&nbsp;Coron},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{764--791},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Post-zeroizing&nbsp;Obfuscation:&nbsp;New&nbsp;Mathematical&nbsp;Tools,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;the&nbsp;Case&nbsp;of&nbsp;Evasive&nbsp;Circuits},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9666},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
 <tr><td style="width: 100%">Anonymous Traitor Tracing: How to Embed Arbitrary Information in a Key<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.nishimaki.info">Ryo Nishimaki</a></span>, <span style="white-space:nowrap"><a href="http://www.ccs.neu.edu/home/wichs/">Daniel Wichs</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/eurocrypt2016/">EUROCRYPT 2016</a></td></tr>
@@ -962,15 +1165,15 @@ than prior works.
 <td style="vertical-align: top;">
 	<a href="http://eprint.iacr.org/2015/750.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-17'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-21'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-17'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-21'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-17" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-21" onclick="doOpen=true;">
 In a traitor tracing scheme, each user is given a different decryption key. A content 
 distributor can encrypt digital content using a public encryption key and each user in 
 the system can decrypt it using her decryption key. Even if a coalition of users 
@@ -998,7 +1201,7 @@ public-key encryption while others rely on indistinguishability obfuscation.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-17" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-21" onclick="doOpen=true;">
 @inproceedings{EC:NisWicZha16,<br />
 &nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Ryo&nbsp;Nishimaki&nbsp;and&nbsp;Daniel&nbsp;Wichs&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2016,&nbsp;Part~II},<br />
@@ -1017,55 +1220,48 @@ public-key encryption while others rely on indistinguishability obfuscation.
 <br></td></tr>
 
 
-<tr><td style="width: 100%">Post-Zeroizing Obfuscation: New Mathematical Tools, and the Case of Evasive Circuits<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://usa.visa.com/about-visa/visa-research/saikrishna-badrinarayanan.html">Saikrishna Badrinarayanan</a></span>, <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=ca">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/eurocrypt2016/">EUROCRYPT 2016</a></td></tr>
+<tr><td style="width: 100%">Order-Revealing Encryption and the Hardness of Private Learning<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://cs-people.bu.edu/mbun/">Mark Bun</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/workshops/tcc2016a/">TCC 2016-A</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
-	<a href="http://eprint.iacr.org/2015/167.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+	<a href="https://arxiv.org/pdf/1505.00388.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-22'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-22'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
-  <a href="files/BMSZ16.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+  
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-18" onclick="doOpen=true;">
-Recent devastating attacks by Cheon et al.~[Eurocrypt'15] and others have highlighted 
-significant gaps in our intuition about security in candidate multilinear map schemes, 
-and in candidate obfuscators that use them. The new attacks, and some that were 
-previously known, are typically called "zeroizing" attacks because they all crucially 
-rely on the ability of the adversary to create encodings of 0.<br><br>
-In this work, we initiate the study of <i>post-zeroizing obfuscation</i>, and we 
-present a construction for the special case of evasive functions. We show that our 
-obfuscator survives <i>all known attacks</i> on the underlying multilinear maps, by 
-proving that no encodings of 0 can be created by a generic-model adversary. Previous 
-obfuscators (for both evasive and general functions) were either analyzed in a 
-less-conservative "pre-zeroizing" model that <i>does not</i> capture recent attacks, 
-or were proved secure relative to assumptions that are now known to be false.<br><br>
-To prove security, we introduce a new technique for analyzing polynomials over 
-multilinear map encodings.  This technique shows that the types of encodings an 
-adversary can create are much more restricted than was previously known, and is a 
-crucial step toward achieving post-zeroizing security.  We also believe the technique 
-is of independent interest, as it yields efficiency improvements for existing schemes.
+<div style="display: none;" class="collapsible" id="abstract-22" onclick="doOpen=true;">
+An order-revealing encryption scheme gives a public procedure by which two ciphertexts 
+can be compared to reveal the ordering of their underlying plaintexts. We show how to 
+use order-revealing encryption to separate computationally efficient PAC learning from 
+efficient (&epsilon;,&delta;)-differentially private PAC learning. That is, we 
+construct a concept class that is efficiently PAC learnable, but for which every 
+efficient learner fails to be differentially private. This answers a question of 
+Kasiviswanathan et al. (FOCS '08, SIAM J. Comput. '11).<br><br>
+To prove our result, we give a generic transformation from an order-revealing 
+encryption scheme into one with strongly correct comparison, which enables the 
+consistent comparison of ciphertexts that are not obtained as the valid encryption of 
+any message. We believe this construction may be of independent interest.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-18" onclick="doOpen=true;">
-@inproceedings{EC:BMSZ16,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Saikrishna&nbsp;Badrinarayanan&nbsp;and&nbsp;Eric&nbsp;Miles&nbsp;and<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2016,&nbsp;Part~II},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Marc&nbsp;Fischlin&nbsp;and&nbsp;Jean-S{\'{e}}bastien&nbsp;Coron},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{764--791},<br />
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-22" onclick="doOpen=true;">
+@inproceedings{TCC:BunZha16,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Bun&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2016-A,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Eyal&nbsp;Kushilevitz&nbsp;and&nbsp;Tal&nbsp;Malkin},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jan,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{176--206},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Post-zeroizing&nbsp;Obfuscation:&nbsp;New&nbsp;Mathematical&nbsp;Tools,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;the&nbsp;Case&nbsp;of&nbsp;Evasive&nbsp;Circuits},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9666},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Order-Revealing&nbsp;Encryption&nbsp;and&nbsp;the&nbsp;Hardness&nbsp;of<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;Learning},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9562},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
 }<br />
 
@@ -1080,15 +1276,15 @@ is of independent interest, as it yields efficiency improvements for existing sc
 <td style="vertical-align: top;">
 	<a href="http://eprint.iacr.org/2015/735.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-23'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-23'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-19" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-23" onclick="doOpen=true;">
 Secret sharing is a mechanism by which a trusted dealer holding a secret "splits" a 
 secret into many "shares" and distributes the shares to a collection of parties. 
 Associated with the sharing is a monotone access structure, that specifies which 
@@ -1117,7 +1313,7 @@ secret sharing.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-19" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-23" onclick="doOpen=true;">
 @inproceedings{TCC:KomZha16,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Ilan&nbsp;Komargodski&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2016-A,&nbsp;Part~II},<br />
@@ -1136,55 +1332,6 @@ secret sharing.
 <br></td></tr>
 
 
-<tr><td style="width: 100%">Order-Revealing Encryption and the Hardness of Private Learning<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://cs-people.bu.edu/mbun/">Mark Bun</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/workshops/tcc2016a/">TCC 2016-A</a></td></tr>
-</table></td>
-<td style="vertical-align: top;">
-	<a href="https://arxiv.org/pdf/1505.00388.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-20'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-20'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
-</td><td style="vertical-align: top;">
-  
-</td><td style="vertical-align: top;">
-	
-</td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-20" onclick="doOpen=true;">
-An order-revealing encryption scheme gives a public procedure by which two ciphertexts 
-can be compared to reveal the ordering of their underlying plaintexts. We show how to 
-use order-revealing encryption to separate computationally efficient PAC learning from 
-efficient (&epsilon;,&delta;)-differentially private PAC learning. That is, we 
-construct a concept class that is efficiently PAC learnable, but for which every 
-efficient learner fails to be differentially private. This answers a question of 
-Kasiviswanathan et al. (FOCS '08, SIAM J. Comput. '11).<br><br>
-To prove our result, we give a generic transformation from an order-revealing 
-encryption scheme into one with strongly correct comparison, which enables the 
-consistent comparison of ciphertexts that are not obtained as the valid encryption of 
-any message. We believe this construction may be of independent interest.
-<br />
-
-</div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-20" onclick="doOpen=true;">
-@inproceedings{TCC:BunZha16,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Bun&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2016-A,&nbsp;Part~I},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Eyal&nbsp;Kushilevitz&nbsp;and&nbsp;Tal&nbsp;Malkin},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jan,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{176--206},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Order-Revealing&nbsp;Encryption&nbsp;and&nbsp;the&nbsp;Hardness&nbsp;of<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Private&nbsp;Learning},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9562},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
-}<br />
-
-</div>
-<br></td></tr>
-
-
 <tr><td style="width: 100%">Adaptively Secure Broadcast Encryption with Small System Parameters<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 
@@ -1192,15 +1339,15 @@ any message. We believe this construction may be of independent interest.
 <td style="vertical-align: top;">
 	<a href="http://eprint.iacr.org/2014/757.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-21'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-24'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-21'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-24'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-21" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-24" onclick="doOpen=true;">
 We build the first public-key broadcast encryption systems that simultaneously achieve 
 adaptive security against arbitrary number of colluders, have small system parameters, 
 and have security proofs that do not rely on knowledge assumptions or complexity 
@@ -1212,7 +1359,7 @@ rely on non-falsifiable knowledge assumptions.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-21" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-24" onclick="doOpen=true;">
 @misc{EPRINT:Zhandry14b,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Report&nbsp;2014/757},<br />
@@ -1233,15 +1380,15 @@ rely on non-falsifiable knowledge assumptions.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2013/642.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-22'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-25'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-22'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-25'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/BZ14.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-22" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-25" onclick="doOpen=true;">
 In this work, we show how to use indistinguishability obfuscation (iO) to build 
 multiparty key exchange, efficient broadcast encryption, and efficient traitor 
 tracing.  Our schemes enjoy several interesting properties that have not been 
@@ -1268,7 +1415,7 @@ indistinguishability obfuscation.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-22" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-25" onclick="doOpen=true;">
 @inproceedings{C:BonZha14,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dan&nbsp;Boneh&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2014,&nbsp;Part~I},<br />
@@ -1294,15 +1441,15 @@ indistinguishability obfuscation.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2013/689.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-23'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-26'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-23'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-26'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-23" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-26" onclick="doOpen=true;">
 In this paper, we study of the notion of differing-input obfuscation, introduced by 
 Barak et al. (CRYPTO 2001,JACM 2012). For any two circuits <code>C0</code> and 
 <code>C1</code>, a differing-input obfuscator <code>diO</code> guarantees that the 
@@ -1332,7 +1479,7 @@ from the weaker notion of indistinguishability obfuscation.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-23" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-26" onclick="doOpen=true;">
 @misc{EPRINT:ABGSZ13,<br />
 &nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Prabhanjan&nbsp;Ananth&nbsp;and&nbsp;Dan&nbsp;Boneh&nbsp;and&nbsp;Sanjam&nbsp;Garg&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
