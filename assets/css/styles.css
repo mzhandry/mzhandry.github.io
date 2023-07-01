@@ -1,31 +1,103 @@
-body { font-family: "Lucida Grande"; background-color: #F5F5F5; margin: 0px; text-align: center; height: 100%; padding: 0px; }
+body {
+  font-family: "Lucida Grande";
+  background-color: #F5F5F5;
+  margin: 0px;
+  text-align: center;
+  height: 100%;
+  padding: 0px;
+}
 
-#container { width: 800px; text-align: left; margin: auto; height: 100%; min-height: 100vh; padding: 0.1px 10px 0px 10px; background-color: #FFFFFF; }
+#container {
+  width: 800px;
+  text-align: left;
+  margin: auto;
+  height: 100%;
+  min-height: 100vh;
+  padding: 0.1px 10px 0px 10px;
+  background-color: #FFFFFF;
+}
 
-div.profilepic { width: 190px; height: 190px; border-radius: 50%; overflow: hidden; position: relative; }
+div.profilepic {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
 
-img.profilepic { width: 110%; margin-top: -12%; margin-left: -8%; height: auto; }
+img.profilepic {
+  width: 110%;
+  margin-top: -12%;
+  margin-left: -8%;
+  height: auto;
+}
 
-.collapsible { margin-bottom: 0px; border: 1px solid #000000; padding: 0.5em; background-color: #F5F5F5; text-align: justify; }
+.collapsible {
+  margin-bottom: 0px;
+  border: 1px solid #000000;
+  padding: 0.5em;
+  background-color: #F5F5F5;
+  text-align: justify;
+}
 
-a { text-decoration: none; color: #4577bb; }
+a {
+  text-decoration: none;
+  color: #4577bb;
+}
 
-a:hover { text-decoration-line: underline; text-decoration-style: dotted; text-decoration-color: black; text-underline-offset: 3px; }
+a:hover {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: black;
+  text-underline-offset: 3px;
+}
 
-.home { color: #505050; font-size: 28px; text-decoration: none; padding-right: 20px; }
+.home {
+  color: #505050;
+  font-size: 28px;
+  text-decoration: none;
+  padding-right: 20px;
+}
 
-.current { color: black; font-size: 20px; text-decoration: none; }
+.current {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
 
-.other { color: #707070; font-size: 20px; text-decoration: none; }
+.other {
+  color: #707070;
+  font-size: 20px;
+  text-decoration: none;
+}
 
-ul.nav { list-style-type: none; margin: 0px; padding: 30px 0px 50px 0px; }
+ul.nav {
+  list-style-type: none;
+  margin: 0px;
+  padding: 30px 0px 50px 0px;
+}
 
-li.nav { display: inline; margin: 0px; padding: 0px 23px 0px 23px; }
+li.nav {
+  display: inline;
+  margin: 0px;
+  padding: 0px 23px 0px 23px;
+}
 
-ul.navpub { list-style-type: none; padding: 0px 18px 20px 50px; margin: 0px; }
+ul.navpub {
+  list-style-type: none;
+  padding: 0px 18px 20px 50px;
+  margin: 0px;
+}
 
-li.navpub { display: inline; padding: 0px 32px 0px 0px; margin: 0px; }
+li.navpub {
+  display: inline;
+  padding: 0px 32px 0px 0px;
+  margin: 0px;
+}
 
-img.icon { height: 20px; padding: 0px 5px 0px 5px; }
+img.icon {
+  height: 20px;
+  padding: 0px 5px 0px 5px;
+}
 
 /*# sourceMappingURL=styles.css.map */
