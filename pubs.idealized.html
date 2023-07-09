@@ -24,13 +24,16 @@
     <a href="pubs.all.html" style="white-space:nowrap">All</a>
    </li>
     <li class="navpub">
+    <a href="pubs.bbi.html" style="white-space:nowrap">Black-Box Impossibilities</a>
+   </li>
+    <li class="navpub">
     <a href="pubs.bsm.html" style="white-space:nowrap">Bounded Storage Model</a>
    </li>
     <li class="navpub">
     <a href="pubs.math.html" style="white-space:nowrap">Crypto Math</a>
    </li>
     <li class="navpub">
-    Idealized Models
+    <span style="white-space:nowrap">Idealized Models</span>
    </li>
     <li class="navpub">
     <a href="pubs.obfuscation.html" style="white-space:nowrap">Obfuscation</a>
@@ -46,7 +49,16 @@
    </li>
   </ul>
 </nav>
-<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><img src="assets/images/idealized.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;">Many of the most practical cryptosystems lack a full security proof in the standard 
+<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><div class="tooltip"><img src="assets/images/idealized.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">A diagram of the Augmented Random Oracle Model (AROM). The AROM is designed to 
+capture known <i>uninstantiability</i> results that apply to idealized models, in 
+particular the random oracle model (ROM). Such uninstantiability results take the form 
+of protocols that are secure in the ROM but insecure when the random oracle is 
+replaced with any concrete function. The AROM aguments the random oracle in a way so
+as to make such protocols insecure even in the idealized model. As such, a proof of 
+security in the AROM indicates resilience to known uninstantiabilities. See 
+<a href="https://eprint.iacr.org/2022/783.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;">Many of the most practical cryptosystems lack a full security proof in the standard 
 model. Nevertheless, we can gain confidence in their security by heuristically 
 treating one or more of the building blocks as an "ideal" object implemented as an 
 oracle. Prominent examples include random oracles, ideal ciphers, generic groups, etc.

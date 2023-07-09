@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Publications - Black-Box Impossibilities</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/script.js"></script>
+  </head>
+  <body onclick="openMarked()">
+  	<div id="container">
+      <nav>
+  <ul class="nav">
+    <li class="nav"><a href="index.html" class="home">Mark Zhandry</a></li>
+    <li class="nav"><a href="pubs.all.html" class="other">Publications</a></li>
+    <li class="nav"><a href="talks.html" class="other">Talks</a></li>
+    <li class="nav"><a href="teaching.html" class="other">Teaching</a></li>
+    <li class="nav"><a href="personal.html" class="other">Personal</a></li>
+  </ul>
+</nav>
+      <nav>
+  <ul class="navpub">
+    <li class="navpub">
+    <a href="pubs.all.html" style="white-space:nowrap">All</a>
+   </li>
+    <li class="navpub">
+    <span style="white-space:nowrap">Black-Box Impossibilities</span>
+   </li>
+    <li class="navpub">
+    <a href="pubs.bsm.html" style="white-space:nowrap">Bounded Storage Model</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.math.html" style="white-space:nowrap">Crypto Math</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.idealized.html" style="white-space:nowrap">Idealized Models</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.obfuscation.html" style="white-space:nowrap">Obfuscation</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.ppe.html" style="white-space:nowrap">Property Preserving Encryption</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.quantum.html" style="white-space:nowrap">Quantum</a>
+   </li>
+    <li class="navpub">
+    <a href="pubs.traitor.html" style="white-space:nowrap">Traitor Tracing</a>
+   </li>
+  </ul>
+</nav>
+<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><div class="tooltip"><img src="assets/images/bbi.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">The smallest tournament graph in which every pair of nodes has at least one common 
+ancestor. Erdős and Sós consider the general problem of constructing tournament graphs 
+where every n nodes have a common ancestor, giving an exponential lower bound for such
+graphs. This lower bound plays a crucial role in our impossibility results for 
+constructing order-revealing encryption. See 
+<a href="https://eprint.iacr.org/2017/1001.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;">Can public key encryption be built from one-way functions? Is it just a matter of time
+before the community solves this problem, or are this problem and others like it 
+actually impossible? This question is addressed by black box impossibilities, which 
+show, relative to certain techniques, that such a result is indeed impossible. Black 
+box impossibilities help guide protocol design by showing which techniques 
+<b>won't</b> work. The proofs of such impossibilities can draw on interesting 
+mathematical tools from linear algebra, graph theory, are more.
+</td></tr></table><br>
+
+
+
+
+<table style="border-spacing: 0px; width: 100%;">
+
+<tr><td style="width: 100%">A Lower Bound on the Length of Signatures Based on Group Actions and Generic Isogenies<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://crypto.stanford.edu/~dabo/">Dan Boneh</a></span>, <span style="white-space:nowrap"><a href="https://www.guan.io">Jiaxin Guan</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2023/">EUROCRYPT 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2023/250.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-1" onclick="doOpen=true;">
+We give the first black box lower bound for isogeny-based protocols that can be 
+described as group actions. We show that, for a large class of signature schemes 
+making black box use of a (potentially non-abelian) group action, the signature length 
+must be &Omega;(&lambda;<sup>2</sup>/\log&lambda;). Our class of signatures 
+generalizes all known signatures that derive security exclusively from the group 
+action, and our lower bound matches the state of the art, showing that the signature 
+length cannot be improved without deviating from the group action framework.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
+@inproceedings{EC:BonGuaZha23,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dan&nbsp;Boneh&nbsp;and&nbsp;Jiaxin&nbsp;Guan&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2023,&nbsp;Part~V},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Carmit&nbsp;Hazay&nbsp;and&nbsp;Martijn&nbsp;Stam},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apr,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{507--531},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{A&nbsp;Lower&nbsp;Bound&nbsp;on&nbsp;the&nbsp;Length&nbsp;of&nbsp;Signatures&nbsp;Based&nbsp;on<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Group&nbsp;Actions&nbsp;and&nbsp;Generic&nbsp;Isogenies},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{14008},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2023},<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">A Computational Separation Between Quantum No-cloning and No-teleportation<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.cs.princeton.edu/~bnehoran/">Barak Nehoran</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://indico.cern.ch/event/1175020/">QIP 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://arxiv.org/abs/2302.01858"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
+Two of the fundamental no-go theorems of quantum information are the no-cloning 
+theorem (that it is impossible to make copies of general quantum states) and the 
+no-teleportation theorem (the prohibition on sending quantum states over classical 
+channels without pre-shared entanglement). They are known to be equivalent, in the 
+sense that a collection of quantum states is clonable if and only if it is 
+teleportable.<br><br>
+Our main result suggests that this is not the case when computational efficiency is 
+considered. We give a collection of quantum states and oracles relative to which these 
+states are efficiently clonable but not efficiently teleportable. Given that the 
+opposite scenario is impossible (states that can be teleported can always trivially be 
+cloned), this gives the most complete oracle separation possible between these two 
+important no-go properties.<br><br>
+In doing so, we introduce a related quantum no-go property, reconstructibility, which 
+refers to the ability to construct a quantum state from a uniquely identifying 
+classical description. We show the stronger result of a collection of quantum states 
+that are efficiently clonable but not efficiently reconstructible. This novel no-go 
+property only exists in relation to computational efficiency, as it is trivial for 
+unbounded computation. It thus opens up the possibility of further computational no-go 
+properties that have not yet been studied because they do not exist outside the 
+computational context.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
+@misc{NehZha22,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Barak&nbsp;Nehoran&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{A&nbsp;Computational&nbsp;Separation&nbsp;Between&nbsp;Quantum&nbsp;No-cloning&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;No-teleportation},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\url{https://arxiv.org/abs/2302.01858}}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">To Label, or Not To Label (in Generic Groups)<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2022/">CRYPTO 2022</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2022/226.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z22b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=C4g32oTVFV4"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
+Generic groups are an important tool for analyzing the feasibility and in-feasibility 
+of group-based cryptosystems. There are two distinct wide-spread versions of generic 
+groups, Shoup's and Maurer's, the main difference being whether or not group elements 
+are given explicit labels. The two models are often treated as equivalent. In this 
+work, however, we demonstrate that the models are in fact quite different, and care is 
+needed when stating generic group results:<br><br>
+&bull; We show that numerous textbook constructions are <i>not</i> captured by Maurer, 
+but are captured by Shoup. In the other direction, any construction captured by Maurer 
+<i>is</i> captured by Shoup.<br><br>
+&bull; For constructions that exist in both models, we show that security is 
+equivalent for "single stage" games, but Shoup security is strictly stronger than 
+Maurer security for some "multi-stage" games.<br><br>
+&bull; The existing generic group un-instantiability results do not apply to Maurer. 
+We fill this gap with a new un-instantiability result.<br><br>
+&bull; We explain how the known black box separations between generic groups and 
+identity-based encryption do not fully apply to Shoup, and resolve this by providing 
+such a separation.<br><br>
+&bull; We give a new un-instantiability result for the <i>algebraic</i> group model.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+@inproceedings{C:Zhandry22b,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2022,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yevgeniy&nbsp;Dodis&nbsp;and&nbsp;Thomas&nbsp;Shrimpton},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{66--96},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{To&nbsp;Label,&nbsp;or&nbsp;Not&nbsp;To&nbsp;Label&nbsp;(in&nbsp;Generic&nbsp;Groups)},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13509},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">The Relationship Between Idealized Models Under Computationally Bounded Adversaries<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span> and <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=Aa7WCBkAAAAJ&hl=zh-CN">Cong Zhang</a></span></td></tr>
+
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2021/240.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
+The random oracle, generic group, and generic bilinear map models (ROM, GGM, GBM, 
+respectively) are fundamental heuristics used to justify new computational assumptions 
+and prove the security of efficient cryptosystems. While known to be invalid in some 
+contrived settings, the heuristics generally seem reasonable for real-world 
+applications.<br><br>
+In this work, we ask: <i>which heuristics are closer to reality?</i> Or conversely, 
+which heuristics are a larger leap? We answer this question through the framework of 
+computational indifferentiability, showing that the ROM is a strictly "milder" 
+heuristic than the GGM, which in turn is strictly milder than the GBM. While this may 
+seem like the expected outcome, we explain why it does not follow from prior works and 
+is not the a priori obvious conclusion. In order to prove our results, we develop new 
+ideas for proving computational indifferentiable separations.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
+@misc{EPRINT:ZhaZha21,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry&nbsp;and&nbsp;Cong&nbsp;Zhang},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Report&nbsp;2021/240},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\url{https://eprint.iacr.org/2021/240}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{The&nbsp;Relationship&nbsp;Between&nbsp;Idealized&nbsp;Models&nbsp;Under&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Computationally&nbsp;Bounded&nbsp;Adversaries},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2021}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Impossibility of Order-Revealing Encryption in Idealized Models<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span> and <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=Aa7WCBkAAAAJ&hl=zh-CN">Cong Zhang</a></span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2018/">TCC 2018</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2017/1001.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-5" onclick="doOpen=true;">
+An Order-Revealing Encryption (ORE) scheme gives a public procedure by which two 
+ciphertext can be compared to reveal the order of their underlying plaintexts. The 
+ideal security notion for ORE is that only the order is revealed &#8212; anything 
+else, such as the distance between plaintexts, is hidden. The only known constructions 
+of ORE achieving such ideal security are based on cryptographic multilinear maps, and 
+are currently too impractical for real-world applications. In this work, we give 
+evidence that building ORE from weaker tools may be hard. Indeed, we show black-box 
+separations between ORE and most symmetric-key primitives, as well as public key 
+encryption and anything else implied by generic groups in a black-box way. Thus, any 
+construction of ORE must either (1) achieve weaker notions of security, (2) be based 
+on more complicated cryptographic tools, or (3) require non-black-box techniques. This 
+suggests that any ORE achieving ideal security will likely be somewhat inefficient.
+<br><br>
+Central to our proof is an proof of impossibility for something we call information 
+theoretic ORE, which has connections to tournament graphs and a theorem by Erd&#337;s. 
+This impossibility proof will be useful for proving other black box separations for 
+ORE.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-5" onclick="doOpen=true;">
+@inproceedings{TCC:ZhaZha18,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry&nbsp;and&nbsp;Cong&nbsp;Zhang},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2018,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Amos&nbsp;Beimel&nbsp;and&nbsp;Stefan&nbsp;Dziembowski},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{129--158},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Impossibility&nbsp;of&nbsp;Order-Revealing&nbsp;Encryption&nbsp;in<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Idealized&nbsp;Models},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11240},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2018}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+</table>
+
+    </div>
+  </body>
+</html>

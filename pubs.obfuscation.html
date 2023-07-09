@@ -24,6 +24,9 @@
     <a href="pubs.all.html" style="white-space:nowrap">All</a>
    </li>
     <li class="navpub">
+    <a href="pubs.bbi.html" style="white-space:nowrap">Black-Box Impossibilities</a>
+   </li>
+    <li class="navpub">
     <a href="pubs.bsm.html" style="white-space:nowrap">Bounded Storage Model</a>
    </li>
     <li class="navpub">
@@ -33,7 +36,7 @@
     <a href="pubs.idealized.html" style="white-space:nowrap">Idealized Models</a>
    </li>
     <li class="navpub">
-    Obfuscation
+    <span style="white-space:nowrap">Obfuscation</span>
    </li>
     <li class="navpub">
     <a href="pubs.ppe.html" style="white-space:nowrap">Property Preserving Encryption</a>
@@ -46,12 +49,19 @@
    </li>
   </ul>
 </nav>
-<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><img src="assets/images/obfuscation.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;">Can you hide secrets in software code? Program obfuscation aims to do exactly that. In
-addition to direct applications such as protecting intellectual property in software,
-obfuscation also has numerous applications in cryptography. In fact, it is now widely
-considered to be "Crypto Complete." Yet numerous quesitons still remain: can 
-obfuscation be made practical? Can it be based on "standard" computational 
-assumptions? 
+<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><div class="tooltip"><img src="assets/images/obfuscation.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">Our construction for obfuscating conjuctions. Assuming the conjunction is sampled from
+a sufficiently random distribution, we prove security under the LPN assumption. Along 
+the way, we prove a partial converse to a theorem of Arora and Ge, showing that LPN
+remains hard under structured noise when the number of samples is small. See 
+<a href="https://eprint.iacr.org/2018/936.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;">Can you hide secrets in software? For decades, attempts at obfuscation applied code 
+transformations such as inserting dummy operations or re-naming variables. These 
+transformations make extracting secrets harder, but not impossible. A new, stronger 
+form of obfuscation has emerged, however, that applies <i>mathematical</i> 
+transformations to software, and has the potential to make extracting secrets
+ effectively <i>impossible</i>. Obfuscation has numerous connections to cryptography 
+ and computer science generally.
 </td></tr></table><br>
 
 

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Publications - Multilinear Maps</title>
+    <title>Publications - Crypto Math</title>
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/script.js"></script>
@@ -24,10 +24,13 @@
     <a href="pubs.all.html" style="white-space:nowrap">All</a>
    </li>
     <li class="navpub">
+    <a href="pubs.bbi.html" style="white-space:nowrap">Black-Box Impossibilities</a>
+   </li>
+    <li class="navpub">
     <a href="pubs.bsm.html" style="white-space:nowrap">Bounded Storage Model</a>
    </li>
     <li class="navpub">
-    Crypto Math
+    <span style="white-space:nowrap">Crypto Math</span>
    </li>
     <li class="navpub">
     <a href="pubs.idealized.html" style="white-space:nowrap">Idealized Models</a>
@@ -46,11 +49,19 @@
    </li>
   </ul>
 </nav>
-<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><img src="assets/images/math.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;">Intractible mathematical problems are the heart of modern cryptography. Unfortunately,
+<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><div class="tooltip"><img src="assets/images/math.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">The general structure of an Affine Determinant Program (ADP): the program is specified 
+by a collection of matrices. To evaluate the program on input x, first compute the 
+linear combination of matrices, where the coefficients are the inut bits. Then take
+the determinant. We give candudate obfuscators for such programs, which can be lifted 
+to obfuscators for general programs using known techniques. We use this obfuscator to
+construct public key encryption with very fast key generation. See 
+<a href="https://eprint.iacr.org/2020/889.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;">Intractible mathematical problems are the heart of modern cryptography. Unfortunately,
 until someone proves that P&ne;NP, the intractability of such problems cannot be 
 proven unconditionally and can only be conjectured. Then how do we discover novel 
 mathematical structures, figure out how to use them, and gain confidence in their 
-security? Through extensive study, devising new applications, attacks, and 
+security? Through extensive study, development of new applications, attacks, and 
 mitigations.
 </td></tr></table><br>
 

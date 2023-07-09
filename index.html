@@ -46,43 +46,110 @@ computer science, and physics, and minored in mathematics.-->
 
 <h3><a href="pubs.all.html">Research Interests</a></h3>
 <table style="border-spacing: 0px 20px; padding: 0px 50px 0px 50px;">
-<tr><td><img src="assets/images/bsm.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.bsm.html">Bounded Storage Model</a></b></span><br>Cryptography typically models adversaries as time-bounded, but what about adversaries
+<tr><td><div class="tooltip"><img src="assets/images/bbi.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">The smallest tournament graph in which every pair of nodes has at least one common 
+ancestor. Erdős and Sós consider the general problem of constructing tournament graphs 
+where every n nodes have a common ancestor, giving an exponential lower bound for such
+graphs. This lower bound plays a crucial role in our impossibility results for 
+constructing order-revealing encryption. See 
+<a href="https://eprint.iacr.org/2017/1001.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.bbi.html">Black-Box Impossibilities</a></b></span><br>Can public key encryption be built from one-way functions? Is it just a matter of time
+before the community solves this problem, or are this problem and others like it 
+actually impossible? This question is addressed by black box impossibilities, which 
+show, relative to certain techniques, that such a result is indeed impossible. Black 
+box impossibilities help guide protocol design by showing which techniques 
+<b>won't</b> work. The proofs of such impossibilities can draw on interesting 
+mathematical tools from linear algebra, graph theory, are more.
+</td></tr><tr><td><div class="tooltip"><img src="assets/images/bsm.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">Our commitment to a bit b. By streaming the bits of our commitment in
+the correct order, the commitment can be computed and read in very low space, and 
+remains secure as long as the adversary's storage is somewhat smaller than the total
+length of the commitment. Prior commitments in the bounded storage model were rather
+complicated and required 5 messages. In contrast, our protocol is extremely simple and
+only requires a single message. See 
+<a href="https://eprint.iacr.org/2019/507.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.bsm.html">Bounded Storage Model</a></b></span><br>Cryptography typically models adversaries as time-bounded, but what about adversaries
 that are <i>space</i>-bounded? The space-bounded model allows for unconditional
 and everlasting protocols, sometimes far simpler than their time-bounded counterparts.
 If we bound time <i>and</i> space, we can also achieve never-before-possible 
 functionalities, such as ciphertexts that effectively disappear after transmission.
-</td></tr><tr><td><img src="assets/images/math.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.math.html">Crypto Math</a></b></span><br>Intractible mathematical problems are the heart of modern cryptography. Unfortunately,
+</td></tr><tr><td><div class="tooltip"><img src="assets/images/math.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">The general structure of an Affine Determinant Program (ADP): the program is specified 
+by a collection of matrices. To evaluate the program on input x, first compute the 
+linear combination of matrices, where the coefficients are the inut bits. Then take
+the determinant. We give candudate obfuscators for such programs, which can be lifted 
+to obfuscators for general programs using known techniques. We use this obfuscator to
+construct public key encryption with very fast key generation. See 
+<a href="https://eprint.iacr.org/2020/889.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.math.html">Crypto Math</a></b></span><br>Intractible mathematical problems are the heart of modern cryptography. Unfortunately,
 until someone proves that P&ne;NP, the intractability of such problems cannot be 
 proven unconditionally and can only be conjectured. Then how do we discover novel 
 mathematical structures, figure out how to use them, and gain confidence in their 
-security? Through extensive study, devising new applications, attacks, and 
+security? Through extensive study, development of new applications, attacks, and 
 mitigations.
-</td></tr><tr><td><img src="assets/images/idealized.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.idealized.html">Idealized Models</a></b></span><br>Many of the most practical cryptosystems lack a full security proof in the standard 
+</td></tr><tr><td><div class="tooltip"><img src="assets/images/idealized.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">A diagram of the Augmented Random Oracle Model (AROM). The AROM is designed to 
+capture known <i>uninstantiability</i> results that apply to idealized models, in 
+particular the random oracle model (ROM). Such uninstantiability results take the form 
+of protocols that are secure in the ROM but insecure when the random oracle is 
+replaced with any concrete function. The AROM aguments the random oracle in a way so
+as to make such protocols insecure even in the idealized model. As such, a proof of 
+security in the AROM indicates resilience to known uninstantiabilities. See 
+<a href="https://eprint.iacr.org/2022/783.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.idealized.html">Idealized Models</a></b></span><br>Many of the most practical cryptosystems lack a full security proof in the standard 
 model. Nevertheless, we can gain confidence in their security by heuristically 
 treating one or more of the building blocks as an "ideal" object implemented as an 
 oracle. Prominent examples include random oracles, ideal ciphers, generic groups, etc.
 Proofs in idealized models are often very different from standard crypto proofs, 
 requiring both reductions and query complexity arguments.
-</td></tr><tr><td><img src="assets/images/obfuscation.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.obfuscation.html">Obfuscation</a></b></span><br>Can you hide secrets in software code? Program obfuscation aims to do exactly that. In
-addition to direct applications such as protecting intellectual property in software,
-obfuscation also has numerous applications in cryptography. In fact, it is now widely
-considered to be "Crypto Complete." Yet numerous quesitons still remain: can 
-obfuscation be made practical? Can it be based on "standard" computational 
-assumptions? 
-</td></tr><tr><td><img src="assets/images/ppe.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.ppe.html">Property Preserving Encryption</a></b></span><br>Property Preserving Encryption (PPE) deliberately preserves certain relations on the 
+</td></tr><tr><td><div class="tooltip"><img src="assets/images/obfuscation.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">Our construction for obfuscating conjuctions. Assuming the conjunction is sampled from
+a sufficiently random distribution, we prove security under the LPN assumption. Along 
+the way, we prove a partial converse to a theorem of Arora and Ge, showing that LPN
+remains hard under structured noise when the number of samples is small. See 
+<a href="https://eprint.iacr.org/2018/936.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.obfuscation.html">Obfuscation</a></b></span><br>Can you hide secrets in software? For decades, attempts at obfuscation applied code 
+transformations such as inserting dummy operations or re-naming variables. These 
+transformations make extracting secrets harder, but not impossible. A new, stronger 
+form of obfuscation has emerged, however, that applies <i>mathematical</i> 
+transformations to software, and has the potential to make extracting secrets
+ effectively <i>impossible</i>. Obfuscation has numerous connections to cryptography 
+ and computer science generally.
+</td></tr><tr><td><div class="tooltip"><img src="assets/images/ppe.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">The leakage profile in our construction of practical order revealing encryption (ORE).
+Like all known practical ORE schemes, our scheme leakes more than just the order of
+plaintexts. Unlike other leakage profiles, however, this leakage is invariant under 
+multiplying all plaintexts by 2. With some additional processing, this allows us to 
+construct <i>parameter-hiding</i> ORE, which hides the scale and shift of the 
+underlying plaintext distribution. Parameter hiding is the only known semantically 
+meaningful privacy notion achieved by practical ORE schemes. See 
+<a href="https://eprint.iacr.org/2018/698.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.ppe.html">Property Preserving Encryption</a></b></span><br>Property Preserving Encryption (PPE) deliberately preserves certain relations on the 
 plaintext data (e.g. equalities in the case of deterministic encryption, or order in 
 the case of order revealing encryption). In addition to applications 
 such as encrypted databases, PPE also has other interesting connections, such as 
 security under bad randomness and differential privacy. The question 
 is then: how to reveal such information without revealing other sensitive data, and 
 what security, if any, remains.
-</td></tr><tr><td><img src="assets/images/quantum.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.quantum.html">Quantum</a></b></span><br>Quantum computers harnesses the strange features of quantum mechanics, such as
+</td></tr><tr><td><div class="tooltip"><img src="assets/images/quantum.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">Our construction of a search problem that is easy for quantum computers, but hard for 
+classical computers. Unlike other known demonstrations of "Quantum Advantage" that 
+require tools from number theory and public key cryptography, our search problem can
+be instantiated from any cryptographic hash function whose outputs are sufficiently
+"random looking." See <a href="https://eprint.iacr.org/2022/434.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.quantum.html">Quantum</a></b></span><br>Quantum computers harnesses the strange features of quantum mechanics, such as
 superpositions, entanglement, etc. <b>Post-Quantum Cryptography</b> aims 
 to secure cryptosystems against the enhanced power of such computers. On the other 
 hand, <b>Quantum Cryptography</b> uses quantum computing to achieve 
 never-before-possible cryptographic functionalities, such as programs that cannot be 
 copied.
-</td></tr><tr><td><img src="assets/images/traitor.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.traitor.html">Traitor Tracing</a></b></span><br>Traitor tracing systems seek to deter piracy by enabling content distributors to 
+</td></tr><tr><td><div class="tooltip"><img src="assets/images/traitor.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">A representation of our traitor tracing algorithm built on top of threshold broadcast 
+encryption. This tracing algorithm plays a crucial role in constructing the first 
+traitor tracing scheme from pairings with O(N<sup>1/3</sup>) sized parameters, 
+overcoming a quadratic barrier that had stood for 15 years. See 
+<a href="https://eprint.iacr.org/2020/954.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.traitor.html">Traitor Tracing</a></b></span><br>Traitor tracing systems seek to deter piracy by enabling content distributors to 
 identify the origin of pirate decryption boxes. The "usual" goal in traitor 
 tracing is to achieve the shortest ciphertexts, secret keys, and public keys possible.
 But there is also a rich set of questions beyond parameter sizes: how to embed 
@@ -131,8 +198,8 @@ computer?
 		
 		
 		
-		<span style="display:inline-block; vertical-align: top; padding: 0px 30px 0px 0px;"><a href="https://www.cfail.org/cfail2023">CFail 2023</a><br><a href="https://tcc.iacr.org/2023/">TCC 2023</a><br><a href="https://focs.computer.org/2023/">FOCS 2023</a><br><a href="https://pkc.iacr.org/2023/">PKC 2023</a><br><a href="https://qcw2022.github.io/quantum-cryptography-workshop-2022/">QCW 2022</a><br><a href="https://www.cfail.org/cfail2022">CFail 2022</a><br><a href="https://tcc.iacr.org/2022/">TCC 2022</a><br><a href="https://eurocrypt.iacr.org/2022/">EUROCRYPT 2022</a><br><a href="https://pkc.iacr.org/2022/">PKC 2022</a><br><a href="https://tcc.iacr.org/2021/">TCC 2021</a><br></span>
-		<span style="display:inline-block; vertical-align: top; padding: 0px 0px 0px 0px;"><a href="http://itcs-conf.org/itcs21/program.html">ITCS 2021</a><br><a href="https://asiacrypt.iacr.org/2020/">ASIACRYPT 2020</a><br><a href="https://itcrypto.github.io/2020/2020.html">ITC 2020</a><br><a href="https://asiacrypt.iacr.org/2019/">ASIACRYPT 2019</a><br><a href="https://crypto.iacr.org/2018/">CRYPTO 2018</a><br><a href="https://www.iacr.org/workshops/tcc2017/">TCC 2017</a><br><a href="https://eurocrypt.iacr.org/2017/">EUROCRYPT 2017</a><br><a href="https://link.springer.com/book/10.1007/978-3-319-49175-2">ICITS 2016</a><br><a href="https://link.springer.com/book/10.1007/978-3-319-17470-9">ICITS 2015</a><br></span>
+		<span style="display:inline-block; vertical-align: top; padding: 0px 30px 0px 0px;"><a href="https://eurocrypt.iacr.org/2024/">EUROCRYPT 2024</a><br><a href="https://www.cfail.org/cfail2023">CFail 2023</a><br><a href="https://tcc.iacr.org/2023/">TCC 2023</a><br><a href="https://focs.computer.org/2023/">FOCS 2023</a><br><a href="https://pkc.iacr.org/2023/">PKC 2023</a><br><a href="https://qcw2022.github.io/quantum-cryptography-workshop-2022/">QCW 2022</a><br><a href="https://www.cfail.org/cfail2022">CFail 2022</a><br><a href="https://tcc.iacr.org/2022/">TCC 2022</a><br><a href="https://eurocrypt.iacr.org/2022/">EUROCRYPT 2022</a><br><a href="https://pkc.iacr.org/2022/">PKC 2022</a><br></span>
+		<span style="display:inline-block; vertical-align: top; padding: 0px 0px 0px 0px;"><a href="https://tcc.iacr.org/2021/">TCC 2021</a><br><a href="http://itcs-conf.org/itcs21/program.html">ITCS 2021</a><br><a href="https://asiacrypt.iacr.org/2020/">ASIACRYPT 2020</a><br><a href="https://itcrypto.github.io/2020/2020.html">ITC 2020</a><br><a href="https://asiacrypt.iacr.org/2019/">ASIACRYPT 2019</a><br><a href="https://crypto.iacr.org/2018/">CRYPTO 2018</a><br><a href="https://www.iacr.org/workshops/tcc2017/">TCC 2017</a><br><a href="https://eurocrypt.iacr.org/2017/">EUROCRYPT 2017</a><br><a href="https://link.springer.com/book/10.1007/978-3-319-49175-2">ICITS 2016</a><br><a href="https://link.springer.com/book/10.1007/978-3-319-17470-9">ICITS 2015</a><br></span>
 	</span>
 </span>
     </div>

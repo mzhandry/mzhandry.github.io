@@ -24,6 +24,9 @@
     <a href="pubs.all.html" style="white-space:nowrap">All</a>
    </li>
     <li class="navpub">
+    <a href="pubs.bbi.html" style="white-space:nowrap">Black-Box Impossibilities</a>
+   </li>
+    <li class="navpub">
     <a href="pubs.bsm.html" style="white-space:nowrap">Bounded Storage Model</a>
    </li>
     <li class="navpub">
@@ -36,7 +39,7 @@
     <a href="pubs.obfuscation.html" style="white-space:nowrap">Obfuscation</a>
    </li>
     <li class="navpub">
-    Property Preserving Encryption
+    <span style="white-space:nowrap">Property Preserving Encryption</span>
    </li>
     <li class="navpub">
     <a href="pubs.quantum.html" style="white-space:nowrap">Quantum</a>
@@ -46,7 +49,16 @@
    </li>
   </ul>
 </nav>
-<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><img src="assets/images/ppe.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;">Property Preserving Encryption (PPE) deliberately preserves certain relations on the 
+<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><div class="tooltip"><img src="assets/images/ppe.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">The leakage profile in our construction of practical order revealing encryption (ORE).
+Like all known practical ORE schemes, our scheme leakes more than just the order of
+plaintexts. Unlike other leakage profiles, however, this leakage is invariant under 
+multiplying all plaintexts by 2. With some additional processing, this allows us to 
+construct <i>parameter-hiding</i> ORE, which hides the scale and shift of the 
+underlying plaintext distribution. Parameter hiding is the only known semantically 
+meaningful privacy notion achieved by practical ORE schemes. See 
+<a href="https://eprint.iacr.org/2018/698.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;">Property Preserving Encryption (PPE) deliberately preserves certain relations on the 
 plaintext data (e.g. equalities in the case of deterministic encryption, or order in 
 the case of order revealing encryption). In addition to applications 
 such as encrypted databases, PPE also has other interesting connections, such as 

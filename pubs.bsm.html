@@ -24,7 +24,10 @@
     <a href="pubs.all.html" style="white-space:nowrap">All</a>
    </li>
     <li class="navpub">
-    Bounded Storage Model
+    <a href="pubs.bbi.html" style="white-space:nowrap">Black-Box Impossibilities</a>
+   </li>
+    <li class="navpub">
+    <span style="white-space:nowrap">Bounded Storage Model</span>
    </li>
     <li class="navpub">
     <a href="pubs.math.html" style="white-space:nowrap">Crypto Math</a>
@@ -46,7 +49,15 @@
    </li>
   </ul>
 </nav>
-<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><img src="assets/images/bsm.png" width=180px style="padding: 0px 20px 0px 0px;"></td><td style="text-align: justify;">Cryptography typically models adversaries as time-bounded, but what about adversaries
+<table style="border-spacing: 0px; padding: 10px 50px 20px 50px;"><tr><td><div class="tooltip"><img src="assets/images/bsm.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">Our commitment to a bit b. By streaming the bits of our commitment in
+the correct order, the commitment can be computed and read in very low space, and 
+remains secure as long as the adversary's storage is somewhat smaller than the total
+length of the commitment. Prior commitments in the bounded storage model were rather
+complicated and required 5 messages. In contrast, our protocol is extremely simple and
+only requires a single message. See 
+<a href="https://eprint.iacr.org/2019/507.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;">Cryptography typically models adversaries as time-bounded, but what about adversaries
 that are <i>space</i>-bounded? The space-bounded model allows for unconditional
 and everlasting protocols, sometimes far simpler than their time-bounded counterparts.
 If we bound time <i>and</i> space, we can also achieve never-before-possible 
