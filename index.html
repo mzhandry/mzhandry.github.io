@@ -76,7 +76,7 @@ transformations to software, and has the potential to make extracting secrets
 capture known <i>uninstantiability</i> results that apply to idealized models, in 
 particular the random oracle model (ROM). Such uninstantiability results take the form 
 of protocols that are secure in the ROM but insecure when the random oracle is 
-replaced with any concrete function. The AROM aguments the random oracle in a way so
+replaced with any concrete function. The AROM augments the random oracle in a way so
 as to make such protocols insecure even in the idealized model. As such, a proof of 
 security in the AROM indicates resilience to known uninstantiabilities. See 
 <a href="https://eprint.iacr.org/2022/783.pdf">
@@ -101,22 +101,6 @@ proven unconditionally and can only be conjectured. Then how do we discover nove
 mathematical structures, figure out how to use them, and gain confidence in their 
 security? Through extensive study, development of new applications, attacks, and 
 mitigations.
-</td></tr><tr><td><div class="tooltip"><img src="assets/images/ppe.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">The leakage profile in our construction of practical order revealing encryption (ORE).
-Like all known practical ORE schemes, our scheme leakes more than just the order of
-plaintexts. Unlike other leakage profiles, however, this leakage is invariant under 
-multiplying all plaintexts by 2. With some additional processing, this allows us to 
-construct <i>parameter-hiding</i> ORE, which hides the scale and shift of the 
-underlying plaintext distribution. Parameter hiding is the only known semantically 
-meaningful privacy notion achieved by practical ORE schemes. See 
-<a href="https://eprint.iacr.org/2018/698.pdf">
-<img src="assets/images/file.png" title="PDF" class="icon"></a>.
-</span></div></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.ppe.html">Property Preserving Encryption</a></b></span><br>Property Preserving Encryption (PPE) deliberately preserves certain relations on the 
-plaintext data (e.g. equalities in the case of deterministic encryption, or order in 
-the case of order revealing encryption). In addition to applications 
-such as encrypted databases, PPE also has other interesting connections, such as 
-security under bad randomness and differential privacy. The question 
-is then: how to reveal such information without revealing other sensitive data, and 
-what security, if any, remains.
 </td></tr><tr><td><div class="tooltip"><img src="assets/images/traitor.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">A representation of our traitor tracing algorithm built on top of threshold broadcast 
 encryption. This tracing algorithm plays a crucial role in constructing the first 
 traitor tracing scheme from pairings with O(N<sup>1/3</sup>) sized parameters, 
@@ -144,6 +128,22 @@ show, relative to certain techniques, that such a result is indeed impossible. B
 box impossibilities help guide protocol design by showing which techniques 
 <b>won't</b> work. The proofs of such impossibilities can draw on interesting 
 mathematical tools from linear algebra, graph theory, are more.
+</td></tr><tr><td><div class="tooltip"><img src="assets/images/ppe.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">The leakage profile in our construction of practical order revealing encryption (ORE).
+Like all known practical ORE schemes, our scheme leakes more than just the order of
+plaintexts. Unlike other leakage profiles, however, this leakage is invariant under 
+multiplying all plaintexts by 2. With some additional processing, this allows us to 
+construct <i>parameter-hiding</i> ORE, which hides the scale and shift of the 
+underlying plaintext distribution. Parameter hiding is the only known semantically 
+meaningful privacy notion achieved by practical ORE schemes. See 
+<a href="https://eprint.iacr.org/2018/698.pdf">
+<img src="assets/images/file.png" title="PDF" class="icon"></a>.
+</span></div></td><td style="text-align: justify;"><span style="font-size:18px;"><b><a href="pubs.ppe.html">Property Preserving Encryption</a></b></span><br>Property Preserving Encryption (PPE) deliberately preserves certain relations on the 
+plaintext data (e.g. equalities in the case of deterministic encryption, or order in 
+the case of order revealing encryption). In addition to applications 
+such as encrypted databases, PPE also has other interesting connections, such as 
+security under bad randomness and differential privacy. The question 
+is then: how to reveal such information without revealing other sensitive data, and 
+what security, if any, remains.
 </td></tr><tr><td><div class="tooltip"><img src="assets/images/bsm.png" width=180px style="padding: 0px 20px 0px 0px;"><span class="tooltiptext">Our commitment to a bit b. By streaming the bits of our commitment in
 the correct order, the commitment can be computed and read in very low space, and 
 remains secure as long as the adversary's storage is somewhat smaller than the total
