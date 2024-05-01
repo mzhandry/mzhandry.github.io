@@ -69,12 +69,12 @@ transformations to software, and has the potential to make extracting secrets
 
 <table style="border-spacing: 0px; width: 100%;">
 
-<tr><td style="width: 100%">Security-Preserving Distributed Samplers: How to Generate any CRS in One Round without Random Oracles<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://damianoabram.github.io">Damiano Abram</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~bwaters/">Brent Waters</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2023/">CRYPTO 2023</a></td></tr>
+<tr><td style="width: 100%">Adaptive Security in SNARGs via iO and Lossy Functions<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~bwaters/">Brent Waters</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+
 </table></td>
 <td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2023/860.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+	<a href="https://eprint.iacr.org/2024/254.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
 	<script>document.write("<a onclick=\"markForOpen('abstract-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
@@ -85,30 +85,28 @@ transformations to software, and has the potential to make extracting secrets
 	
 </td></tr><tr><td colspan="6">
 <div style="display: none;" class="collapsible" id="abstract-1" onclick="doOpen=true;">
-A distributed sampler is a way for several mutually distrusting parties to 
-non-interactively generate a common reference string (CRS) that all parties trust. 
-Previous work constructs distributed samplers in the random oracle model, or in the 
-standard model with very limited security guarantees. This is no accident, as standard 
-model distributed samplers with full security were shown impossible.<br><br>
-In this work, we provide new definitions for distributed samplers which we show 
-achieve meaningful security guarantees in the standard model. In particular, our 
-notion implies that the hardness of a wide range of security games is preserved when 
-the CRS is replaced with a distributed sampler. We also show how to realize our notion 
-of distributed samplers. A core technical tool enabling our construction is a new 
-notion of single-message zero knowledge.
+We construct an adaptively sound SNARGs in the plain model with CRS relying on the 
+assumptions of (subexponential) indistinguishability obfuscation (iO), subexponential 
+one-way functions and a notion of lossy functions we call length parameterized lossy 
+functions. Length parameterized lossy functions take in separate security and input 
+length parameters and have the property that the function image size in lossy mode 
+depends only on the security parameter. We then show a novel way of constructing such 
+functions from the Learning with Errors (LWE) assumption.<br><br>Our work provides an 
+alternative path towards achieving adaptively secure SNARGs from the recent work of 
+Waters and Wu. Their work required the use of (essentially) perfectly re-randomizable 
+one way functions (in addition to obfuscation). Such functions are only currently 
+known to be realizable from assumptions such as discrete log or factoring that are 
+known to not hold in a quantum setting.
 <br />
 
 </div>
 <div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
-@InProceedings{C:AbrWatZha23,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Damiano&nbsp;Abram&nbsp;and&nbsp;Brent&nbsp;Waters&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;{Helena&nbsp;Handschuh&nbsp;and&nbsp;Anna&nbsp;Lysyanskaya},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{Security-Preserving&nbsp;Distributed&nbsp;Samplers:&nbsp;How&nbsp;to Generate&nbsp;Any&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRS&nbsp;in One&nbsp;Round&nbsp;Without&nbsp;Random&nbsp;Oracles},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Advances&nbsp;in&nbsp;Cryptology&nbsp;--&nbsp;CRYPTO&nbsp;2023},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2023},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Springer&nbsp;Nature&nbsp;Switzerland},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;{489--514},<br />
+@misc{EPRINT:WatZha24,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Brent&nbsp;Waters&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Report&nbsp;2024/254},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\url{https://eprint.iacr.org/2024/254}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Adaptive&nbsp;Security&nbsp;in&nbsp;SNARGs&nbsp;via&nbsp;iO&nbsp;and&nbsp;Lossy&nbsp;Functions},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2024}<br />
 }<br />
 
 </div>
@@ -166,6 +164,52 @@ be of independent interest.
 <br></td></tr>
 
 
+<tr><td style="width: 100%">Security-Preserving Distributed Samplers: How to Generate any CRS in One Round without Random Oracles<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://damianoabram.github.io">Damiano Abram</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~bwaters/">Brent Waters</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2023/">CRYPTO 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2023/860.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
+A distributed sampler is a way for several mutually distrusting parties to 
+non-interactively generate a common reference string (CRS) that all parties trust. 
+Previous work constructs distributed samplers in the random oracle model, or in the 
+standard model with very limited security guarantees. This is no accident, as standard 
+model distributed samplers with full security were shown impossible.<br><br>
+In this work, we provide new definitions for distributed samplers which we show 
+achieve meaningful security guarantees in the standard model. In particular, our 
+notion implies that the hardness of a wide range of security games is preserved when 
+the CRS is replaced with a distributed sampler. We also show how to realize our notion 
+of distributed samplers. A core technical tool enabling our construction is a new 
+notion of single-message zero knowledge.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+@InProceedings{C:AbrWatZha23,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Damiano&nbsp;Abram&nbsp;and&nbsp;Brent&nbsp;Waters&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;{Helena&nbsp;Handschuh&nbsp;and&nbsp;Anna&nbsp;Lysyanskaya},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{Security-Preserving&nbsp;Distributed&nbsp;Samplers:&nbsp;How&nbsp;to Generate&nbsp;Any&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRS&nbsp;in One&nbsp;Round&nbsp;Without&nbsp;Random&nbsp;Oracles},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Advances&nbsp;in&nbsp;Cryptology&nbsp;--&nbsp;CRYPTO&nbsp;2023},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2023},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Springer&nbsp;Nature&nbsp;Switzerland},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;{489--514},<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
 <tr><td style="width: 100%">Tracing Quantum State Distinguishers via Backtracking<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2023/">CRYPTO 2023</a></td></tr>
@@ -173,15 +217,15 @@ be of independent interest.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2023/673.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z23.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	<a href="https://www.youtube.com/watch?v=h6hb27qIZh8"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
 We show the following results:<br><br>
 &bull; The post-quantum equivalence of indisitnguishability obfuscation and differing 
 inputs obfuscation in the restricted setting where the outputs differ on at most a 
@@ -207,55 +251,12 @@ provide simple algorithms for the particular instances studied in this work.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
 @inproceedings{C:Zhandry23,<br />
 &nbsp;&nbsp;author&nbsp;=&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;title&nbsp;=&nbsp;{Tracing&nbsp;Quantum&nbsp;State&nbsp;Distinguishers&nbsp;via&nbsp;Backtracking},<br />
 &nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;{CRYPTO&nbsp;2023},<br />
 &nbsp;&nbsp;year&nbsp;=&nbsp;{2023}<br />
-}<br />
-
-</div>
-<br></td></tr>
-
-
-<tr><td style="width: 100%">Adaptive Multiparty NIKE<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.cse.iitd.ac.in/~koppula/">Venkata Koppula</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~bwaters/">Brent Waters</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2022/">TCC 2022</a></td></tr>
-</table></td>
-<td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2022/1324.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
-</td><td style="vertical-align: top;">
-  
-</td><td style="vertical-align: top;">
-	
-</td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
-We construct adaptively secure multiparty non-interactive key exchange (NIKE) from 
-polynomially-hard indistinguishability obfuscation and other standard assumptions. 
-This improves on all prior such protocols, which required sub-exponential hardness. 
-Along the way, we establish several compilers which simplify the task of constructing 
-new multiparty NIKE protocols, and also establish a close connection with a particular 
-type of constrained PRF.
-<br />
-
-</div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
-@inproceedings{TCC:KopWatZha22,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Venkata&nbsp;Koppula&nbsp;and&nbsp;Brent&nbsp;Waters&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2022,&nbsp;Part~II},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Eike&nbsp;Kiltz&nbsp;and&nbsp;Vinod&nbsp;Vaikuntanathan},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nov,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{244--273},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Adaptive&nbsp;Multiparty&nbsp;{NIKE}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13748},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
 }<br />
 
 </div>
@@ -316,12 +317,12 @@ functionalities in the plain model.
 <br></td></tr>
 
 
-<tr><td style="width: 100%">Affine Determinant Programs: A Framework for Obfuscation and Witness Encryption<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/jamesbartusek">James Bartusek</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.technion.ac.il/~yuvali/">Yuval Ishai</a></span>, <span style="white-space:nowrap"><a href="https://sites.google.com/view/aayushjain/home">Aayush Jain</a></span>, <span style="white-space:nowrap"><a href="http://fermima.com">Fermi Ma</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="http://itcs-conf.org/itcs20/itcs20-accepted.html">ITCS 2020</a></td></tr>
+<tr><td style="width: 100%">Adaptive Multiparty NIKE<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://web.iitd.ac.in/~kvenkata/">Venkata Koppula</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~bwaters/">Brent Waters</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2022/">TCC 2022</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2020/889.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+	<a href="https://eprint.iacr.org/2022/1324.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
 	<script>document.write("<a onclick=\"markForOpen('abstract-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
@@ -332,6 +333,49 @@ functionalities in the plain model.
 	
 </td></tr><tr><td colspan="6">
 <div style="display: none;" class="collapsible" id="abstract-6" onclick="doOpen=true;">
+We construct adaptively secure multiparty non-interactive key exchange (NIKE) from 
+polynomially-hard indistinguishability obfuscation and other standard assumptions. 
+This improves on all prior such protocols, which required sub-exponential hardness. 
+Along the way, we establish several compilers which simplify the task of constructing 
+new multiparty NIKE protocols, and also establish a close connection with a particular 
+type of constrained PRF.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-6" onclick="doOpen=true;">
+@inproceedings{TCC:KopWatZha22,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Venkata&nbsp;Koppula&nbsp;and&nbsp;Brent&nbsp;Waters&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2022,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Eike&nbsp;Kiltz&nbsp;and&nbsp;Vinod&nbsp;Vaikuntanathan},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nov,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{244--273},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Adaptive&nbsp;Multiparty&nbsp;{NIKE}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13748},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Affine Determinant Programs: A Framework for Obfuscation and Witness Encryption<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/jamesbartusek">James Bartusek</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.technion.ac.il/~yuvali/">Yuval Ishai</a></span>, <span style="white-space:nowrap"><a href="https://sites.google.com/view/aayushjain/home">Aayush Jain</a></span>, <span style="white-space:nowrap"><a href="http://fermima.com">Fermi Ma</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="http://itcs-conf.org/itcs20/itcs20-accepted.html">ITCS 2020</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2020/889.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-7" onclick="doOpen=true;">
 An <i>affine determinant program</i> ADP: {0,1}<sup>n</sup> &rarr; {0,1} is specified 
 by a tuple (A,B<sub>1</sub>,&hellip;,B<sub>n</sub>) of square matrices over 
 F<sub>q</sub> and a function Eval: F<sub>q</sub> &rarr; {0,1}, and is evaluated on x 
@@ -350,7 +394,7 @@ public-key encryption with near-optimal key generation.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-6" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-7" onclick="doOpen=true;">
 @inproceedings{ITCS:BIJMSZ20,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{James&nbsp;Bartusek&nbsp;and&nbsp;Yuval&nbsp;Ishai&nbsp;and&nbsp;Aayush&nbsp;Jain&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fermi&nbsp;Ma&nbsp;and&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
@@ -363,53 +407,6 @@ public-key encryption with near-optimal key generation.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obfuscation&nbsp;and&nbsp;Witness&nbsp;Encryption},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{151},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2020}<br />
-}<br />
-
-</div>
-<br></td></tr>
-
-
-<tr><td style="width: 100%">Revisiting Post-Quantum Fiat-Shamir<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2019/">CRYPTO 2019</a></td></tr>
-</table></td>
-<td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2019/262.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
-</td><td style="vertical-align: top;">
-  
-</td><td style="vertical-align: top;">
-	
-</td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-7" onclick="doOpen=true;">
-The Fiat-Shamir transformation is a useful approach to building non-interactive 
-arguments (of knowledge) in the random oracle model. Unfortunately, existing proof 
-techniques are incapable of proving the security of Fiat-Shamir in the quantum 
-setting. The problem stems from (1) the difficulty of quantum rewinding, and (2) the 
-inability of current techniques to adaptively program random oracles in the quantum 
-setting.<br><br>
-In this work, we show how to overcome the limitations above in many settings. In 
-particular, we give mild conditions under which Fiat-Shamir is secure in the quantum 
-setting. As an application, we show that existing lattice signatures based on 
-Fiat-Shamir are secure without any modifications.
-<br />
-
-</div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-7" onclick="doOpen=true;">
-@inproceedings{C:LiuZha19,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2019,&nbsp;Part~II},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Alexandra&nbsp;Boldyreva&nbsp;and&nbsp;Daniele&nbsp;Micciancio},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{326--355},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Revisiting&nbsp;Post-quantum&nbsp;{Fiat}-{Shamir}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11693},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
 }<br />
 
 </div>
@@ -770,7 +767,7 @@ platform for obtaining more applications from polynomial hardness.
 
 
 <tr><td style="width: 100%">Breaking the Sub-Exponential Barrier in Obfustopia<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://people.eecs.berkeley.edu/~sanjamg/">Sanjam Garg</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.stonybrook.edu/people/faculty/OmkantPandey">Omkant Pandey</a></span>, <span style="white-space:nowrap"><a href="https://www.tifr.res.in/~akshayaram.srinivasan/">Akshayaram Srinivasan</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://people.eecs.berkeley.edu/~sanjamg/">Sanjam Garg</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.stonybrook.edu/people/faculty/OmkantPandey">Omkant Pandey</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.toronto.edu/~akshayaram/">Akshayaram Srinivasan</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2017/">EUROCRYPT 2017</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
@@ -949,7 +946,7 @@ obfuscation. At the heart of our construction and proof is a new technique we ca
 
 
 <tr><td style="width: 100%">Secure Obfuscation in a Weak Multilinear Map Model<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://people.eecs.berkeley.edu/~sanjamg/">Sanjam Garg</a></span>, <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=ca">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="https://pratyay.net">Pratyay Mukherjee</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span>, <span style="white-space:nowrap"><a href="https://www.tifr.res.in/~akshayaram.srinivasan/">Akshayaram Srinivasan</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://people.eecs.berkeley.edu/~sanjamg/">Sanjam Garg</a></span>, <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=en">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="https://pratyay.net">Pratyay Mukherjee</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.toronto.edu/~akshayaram/">Akshayaram Srinivasan</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/workshops/tcc2016b/">TCC 2016-B</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
@@ -1063,7 +1060,7 @@ than prior works.
 
 
 <tr><td style="width: 100%">Annihilation Attacks for Multilinear Maps: Cryptanalysis of Indistinguishability Obfuscation over GGH13<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=ca">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=en">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/crypto2016/">CRYPTO 2016</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
@@ -1116,7 +1113,7 @@ avoid attack.
 
 
 <tr><td style="width: 100%">Post-Zeroizing Obfuscation: New Mathematical Tools, and the Case of Evasive Circuits<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://usa.visa.com/about-visa/visa-research/saikrishna-badrinarayanan.html">Saikrishna Badrinarayanan</a></span>, <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=ca">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=GCfsAJIAAAAJ&hl=en">Saikrishna Badrinarayanan</a></span>, <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=en">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/eurocrypt2016/">EUROCRYPT 2016</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
