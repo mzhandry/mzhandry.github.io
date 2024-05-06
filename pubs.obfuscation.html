@@ -71,7 +71,7 @@ transformations to software, and has the potential to make extracting secrets
 
 <tr><td style="width: 100%">Adaptive Security in SNARGs via iO and Lossy Functions<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~bwaters/">Brent Waters</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2024/">CRYPTO 2024</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2024/254.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
@@ -101,12 +101,57 @@ known to not hold in a quantum setting.
 
 </div>
 <div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
-@misc{EPRINT:WatZha24,<br />
+@misc{CRYPTO:WatZha24,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Brent&nbsp;Waters&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Report&nbsp;2024/254},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\url{https://eprint.iacr.org/2024/254}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO&nbsp;2024},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Adaptive&nbsp;Security&nbsp;in&nbsp;SNARGs&nbsp;via&nbsp;iO&nbsp;and&nbsp;Lossy&nbsp;Functions},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2024}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Security-Preserving Distributed Samplers: How to Generate any CRS in One Round without Random Oracles<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://damianoabram.github.io">Damiano Abram</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~bwaters/">Brent Waters</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2023/">CRYPTO 2023</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2023/860.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
+A distributed sampler is a way for several mutually distrusting parties to 
+non-interactively generate a common reference string (CRS) that all parties trust. 
+Previous work constructs distributed samplers in the random oracle model, or in the 
+standard model with very limited security guarantees. This is no accident, as standard 
+model distributed samplers with full security were shown impossible.<br><br>
+In this work, we provide new definitions for distributed samplers which we show 
+achieve meaningful security guarantees in the standard model. In particular, our 
+notion implies that the hardness of a wide range of security games is preserved when 
+the CRS is replaced with a distributed sampler. We also show how to realize our notion 
+of distributed samplers. A core technical tool enabling our construction is a new 
+notion of single-message zero knowledge.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
+@InProceedings{C:AbrWatZha23,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Damiano&nbsp;Abram&nbsp;and&nbsp;Brent&nbsp;Waters&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;{Helena&nbsp;Handschuh&nbsp;and&nbsp;Anna&nbsp;Lysyanskaya},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{Security-Preserving&nbsp;Distributed&nbsp;Samplers:&nbsp;How&nbsp;to Generate&nbsp;Any&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRS&nbsp;in One&nbsp;Round&nbsp;Without&nbsp;Random&nbsp;Oracles},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Advances&nbsp;in&nbsp;Cryptology&nbsp;--&nbsp;CRYPTO&nbsp;2023},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2023},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Springer&nbsp;Nature&nbsp;Switzerland},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;{489--514},<br />
 }<br />
 
 </div>
@@ -120,15 +165,15 @@ known to not hold in a quantum setting.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2023/1270.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
 A wiretap coding scheme for a pair of noisy channels (B,E) enables Alice to reliably 
 communicate a message to Bob by sending its encoding over B, while hiding the message 
 from an adversary Eve who obtains the same encoding over E.<br><br> 
@@ -151,59 +196,13 @@ be of independent interest.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
 @inproceedings{C:IJLSZ23,<br />
 &nbsp;&nbsp;author&nbsp;=&nbsp;{Yuval&nbsp;Ishai&nbsp;and&nbsp;Aayush&nbsp;Jain&nbsp;and&nbsp;Paul&nbsp;Lou&nbsp;and&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;title&nbsp;=&nbsp;{Computational&nbsp;Wiretap&nbsp;Coding&nbsp;from&nbsp;Indistinguishability&nbsp;Obfuscation},<br />
 &nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;{CRYPTO&nbsp;2023},<br />
 &nbsp;&nbsp;year&nbsp;=&nbsp;{2023}<br />
-}<br />
-
-</div>
-<br></td></tr>
-
-
-<tr><td style="width: 100%">Security-Preserving Distributed Samplers: How to Generate any CRS in One Round without Random Oracles<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://damianoabram.github.io">Damiano Abram</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.utexas.edu/~bwaters/">Brent Waters</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2023/">CRYPTO 2023</a></td></tr>
-</table></td>
-<td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2023/860.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
-</td><td style="vertical-align: top;">
-  
-</td><td style="vertical-align: top;">
-	
-</td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
-A distributed sampler is a way for several mutually distrusting parties to 
-non-interactively generate a common reference string (CRS) that all parties trust. 
-Previous work constructs distributed samplers in the random oracle model, or in the 
-standard model with very limited security guarantees. This is no accident, as standard 
-model distributed samplers with full security were shown impossible.<br><br>
-In this work, we provide new definitions for distributed samplers which we show 
-achieve meaningful security guarantees in the standard model. In particular, our 
-notion implies that the hardness of a wide range of security games is preserved when 
-the CRS is replaced with a distributed sampler. We also show how to realize our notion 
-of distributed samplers. A core technical tool enabling our construction is a new 
-notion of single-message zero knowledge.
-<br />
-
-</div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
-@InProceedings{C:AbrWatZha23,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Damiano&nbsp;Abram&nbsp;and&nbsp;Brent&nbsp;Waters&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;{Helena&nbsp;Handschuh&nbsp;and&nbsp;Anna&nbsp;Lysyanskaya},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{Security-Preserving&nbsp;Distributed&nbsp;Samplers:&nbsp;How&nbsp;to Generate&nbsp;Any&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRS&nbsp;in One&nbsp;Round&nbsp;Without&nbsp;Random&nbsp;Oracles},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Advances&nbsp;in&nbsp;Cryptology&nbsp;--&nbsp;CRYPTO&nbsp;2023},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2023},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Springer&nbsp;Nature&nbsp;Switzerland},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;{489--514},<br />
 }<br />
 
 </div>
