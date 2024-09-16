@@ -36,7 +36,7 @@
     <a href="pubs.math.html" style="white-space:nowrap">Crypto Math</a>
    </li>
     <li class="navpub">
-    <a href="pubs.traitor.html" style="white-space:nowrap">Traitor Tracing</a>
+    <a href="pubs.watermark.html" style="white-space:nowrap">Watermarking</a>
    </li>
     <li class="navpub">
     <a href="pubs.bbi.html" style="white-space:nowrap">Black-Box Impossibilities</a>
@@ -80,9 +80,9 @@ transformations to software, and has the potential to make extracting secrets
 </td><td style="vertical-align: top;">
 	<script>document.write("<a onclick=\"markForOpen('bibtex-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
-  
+  <a href="files/WZ24.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
-	
+	<a href="https://www.youtube.com/watch?v=ZBUlsWpoMRc&t=1185s"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
 <div style="display: none;" class="collapsible" id="abstract-1" onclick="doOpen=true;">
 We construct an adaptively sound SNARGs in the plain model with CRS relying on the 
@@ -143,15 +143,18 @@ notion of single-message zero knowledge.
 
 </div>
 <div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
-@InProceedings{C:AbrWatZha23,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Damiano&nbsp;Abram&nbsp;and&nbsp;Brent&nbsp;Waters&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;{Helena&nbsp;Handschuh&nbsp;and&nbsp;Anna&nbsp;Lysyanskaya},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{Security-Preserving&nbsp;Distributed&nbsp;Samplers:&nbsp;How&nbsp;to Generate&nbsp;Any&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRS&nbsp;in One&nbsp;Round&nbsp;Without&nbsp;Random&nbsp;Oracles},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Advances&nbsp;in&nbsp;Cryptology&nbsp;--&nbsp;CRYPTO&nbsp;2023},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2023},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{Springer&nbsp;Nature&nbsp;Switzerland},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;{489--514},<br />
+@inproceedings{C:AbrWatZha23,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Damiano&nbsp;Abram&nbsp;and&nbsp;Brent&nbsp;Waters&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2023,&nbsp;Part~I},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Helena&nbsp;Handschuh&nbsp;and&nbsp;Anna&nbsp;Lysyanskaya},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{489--514},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Cham},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Security-Preserving&nbsp;Distributed&nbsp;Samplers:&nbsp;How&nbsp;to&nbsp;Generate&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Any&nbsp;{CRS}&nbsp;in&nbsp;One&nbsp;Round&nbsp;Without&nbsp;Random&nbsp;Oracles},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{14081},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2023}<br />
 }<br />
 
 </div>
@@ -198,11 +201,18 @@ be of independent interest.
 </div>
 <div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
 @inproceedings{C:IJLSZ23,<br />
-&nbsp;&nbsp;author&nbsp;=&nbsp;{Yuval&nbsp;Ishai&nbsp;and&nbsp;Aayush&nbsp;Jain&nbsp;and&nbsp;Paul&nbsp;Lou&nbsp;and&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;title&nbsp;=&nbsp;{Computational&nbsp;Wiretap&nbsp;Coding&nbsp;from&nbsp;Indistinguishability&nbsp;Obfuscation},<br />
-&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;{CRYPTO&nbsp;2023},<br />
-&nbsp;&nbsp;year&nbsp;=&nbsp;{2023}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yuval&nbsp;Ishai&nbsp;and&nbsp;Aayush&nbsp;Jain&nbsp;and&nbsp;Paul&nbsp;Lou&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2023,&nbsp;Part~IV},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Helena&nbsp;Handschuh&nbsp;and&nbsp;Anna&nbsp;Lysyanskaya},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{263--293},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Cham},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Computational&nbsp;Wiretap&nbsp;Coding&nbsp;from&nbsp;Indistinguishability&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Obfuscation},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{14084},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2023}<br />
 }<br />
 
 </div>
@@ -252,10 +262,16 @@ provide simple algorithms for the particular instances studied in this work.
 </div>
 <div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
 @inproceedings{C:Zhandry23,<br />
-&nbsp;&nbsp;author&nbsp;=&nbsp;{Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;title&nbsp;=&nbsp;{Tracing&nbsp;Quantum&nbsp;State&nbsp;Distinguishers&nbsp;via&nbsp;Backtracking},<br />
-&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;{CRYPTO&nbsp;2023},<br />
-&nbsp;&nbsp;year&nbsp;=&nbsp;{2023}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2023,&nbsp;Part~V},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Helena&nbsp;Handschuh&nbsp;and&nbsp;Anna&nbsp;Lysyanskaya},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{3--36},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Cham},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Tracing&nbsp;Quantum&nbsp;State&nbsp;Distinguishers&nbsp;via&nbsp;Backtracking},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{14085},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2023}<br />
 }<br />
 
 </div>

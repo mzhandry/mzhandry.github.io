@@ -36,7 +36,7 @@
     <a href="pubs.math.html" style="white-space:nowrap">Crypto Math</a>
    </li>
     <li class="navpub">
-    <a href="pubs.traitor.html" style="white-space:nowrap">Traitor Tracing</a>
+    <a href="pubs.watermark.html" style="white-space:nowrap">Watermarking</a>
    </li>
     <li class="navpub">
     <a href="pubs.bbi.html" style="white-space:nowrap">Black-Box Impossibilities</a>
@@ -69,7 +69,7 @@ functionalities, such as ciphertexts that effectively disappear after transmissi
 
 <table style="border-spacing: 0px; width: 100%;">
 
-<tr><td style="width: 100%">Somewhere Randomness Extraction and Security against Bounded-Storage Mass Surveillance<br>
+<tr><td style="width: 100%">Multi-instance Randomness Extraction and Security against Bounded-Storage Mass Surveillance<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.guan.io">Jiaxin Guan</a></span>, <span style="white-space:nowrap"><a href="http://www.ccs.neu.edu/home/wichs/">Daniel Wichs</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2023/">TCC 2023</a></td></tr>
 </table></td>
@@ -97,12 +97,12 @@ CRYPTO '06,  Guan, Wichs and Zhandry EUROCRYPT '22) to the <i>multi-user</i> set
 We provide solutions in both the symmetric key and public key setting with various 
 trade-offs in terms of computational assumptions and efficiency. <br><br>
 As the core technical tool, we study an information-theoretic problem which we refer 
-to as "somewhere randomness extraction." Suppose X<sub>1</sub>, ..., X<sub>t</sub> are 
-correlated random variables whose total joint min-entropy rate is &alpha;, but we know 
-nothing else about their individual entropies. We choose $t$ random and independent 
-seeds S<sub>1</sub>,...,S<sub>t</sub> and attempt to individually extract some small 
-amount of randomness Y<sub>i</sub> = Ext(X<sub>i</sub>;S<sub>i</sub>) from each 
-X<sub>i</sub>. We'd like to say that roughly an &alpha;-fraction of the extracted 
+to as "milt-instance randomness extraction." Suppose X<sub>1</sub>, ..., X<sub>t</sub> 
+are correlated random variables whose total joint min-entropy rate is &alpha;, but we 
+know nothing else about their individual entropies. We choose $t$ random and 
+independent seeds S<sub>1</sub>,...,S<sub>t</sub> and attempt to individually extract 
+some small amount of randomness Y<sub>i</sub> = Ext(X<sub>i</sub>;S<sub>i</sub>) from 
+each X<sub>i</sub>. We'd like to say that roughly an &alpha;-fraction of the extracted 
 outputs Y<sub>i</sub> should be indistinguishable from uniform even given all the 
 remaining extracted outputs and all the seeds. We show that this indeed holds for 
 specific extractors based on Hadamard and Reed-Muller codes. 
@@ -111,11 +111,17 @@ specific extractors based on Hadamard and Reed-Muller codes.
 </div>
 <div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
 @inproceedings{TCC:GuaWicZha23,<br />
-&nbsp;&nbsp;author&nbsp;=&nbsp;{Jiaxin&nbsp;Guan&nbsp;and&nbsp;Daniel&nbsp;Wichs&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;title&nbsp;=&nbsp;{Somewhere&nbsp;Randomness&nbsp;Extraction&nbsp;and&nbsp;Security&nbsp;against&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bounded-Storage&nbsp;Mass&nbsp;Surveillance},<br />
-&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{Proceedings&nbsp;of&nbsp;TCC&nbsp;2023},<br />
-&nbsp;&nbsp;year&nbsp;=&nbsp;{2023}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiaxin&nbsp;Guan&nbsp;and&nbsp;Daniel&nbsp;Wichs&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2023,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Guy&nbsp;N.&nbsp;Rothblum&nbsp;and&nbsp;Hoeteck&nbsp;Wee},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nov&nbsp;#&nbsp;{~/~}&nbsp;#&nbsp;dec,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{93--122},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Cham},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Multi-instance&nbsp;Randomness&nbsp;Extraction&nbsp;and&nbsp;Security<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Against&nbsp;Bounded-Storage&nbsp;Mass&nbsp;Surveillance},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{14371},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2023}<br />
 }<br />
 
 </div>

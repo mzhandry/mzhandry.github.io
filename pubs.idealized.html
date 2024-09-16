@@ -36,7 +36,7 @@
     <a href="pubs.math.html" style="white-space:nowrap">Crypto Math</a>
    </li>
     <li class="navpub">
-    <a href="pubs.traitor.html" style="white-space:nowrap">Traitor Tracing</a>
+    <a href="pubs.watermark.html" style="white-space:nowrap">Watermarking</a>
    </li>
     <li class="navpub">
     <a href="pubs.bbi.html" style="white-space:nowrap">Black-Box Impossibilities</a>
@@ -72,7 +72,7 @@ requiring both reductions and query complexity arguments.
 <table style="border-spacing: 0px; width: 100%;">
 
 <tr><td style="width: 100%">The Relationship Between Idealized Models Under Computationally Bounded Adversaries<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=Aa7WCBkAAAAJ&hl=zh-CN">Cong Zhang</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=Aa7WCBkAAAAJ">Cong Zhang</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://asiacrypt.iacr.org/2023/">ASIACRYPT 2023</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
@@ -104,10 +104,16 @@ ideas for proving computational indifferentiable separations.
 </div>
 <div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
 @inproceedings{AC:ZhaZha23,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry&nbsp;and&nbsp;Cong&nbsp;Zhang},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ASIACRYPT&nbsp;2023},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Cong&nbsp;Zhang&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ASIACRYPT~2023,&nbsp;Part~VI},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jian&nbsp;Guo&nbsp;and&nbsp;Ron&nbsp;Steinfeld},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{390--419},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Singapore},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{The&nbsp;Relationship&nbsp;Between&nbsp;Idealized&nbsp;Models&nbsp;Under&nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Computationally&nbsp;Bounded&nbsp;Adversaries},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{14443},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2023}<br />
 }<br />
 
@@ -216,57 +222,6 @@ structured oracles and/or algebraic assumptions in Cryptomania and beyond.
 <br></td></tr>
 
 
-<tr><td style="width: 100%">Augmented Random Oracles<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2022/">CRYPTO 2022</a></td></tr>
-</table></td>
-<td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2022/783.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
-</td><td style="vertical-align: top;">
-  <a href="files/Z22a.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
-</td><td style="vertical-align: top;">
-	<a href="https://www.youtube.com/watch?v=C4g32oTVFV4"><img src="assets/images/video.png" class="icon" title="Video"></a> 
-</td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
-We propose a new paradigm for justifying the security of random oracle-based 
-protocols, which we call the Augmented Random Oracle Model (AROM). We show that the 
-AROM captures a wide range of important random oracle impossibility results. Thus a 
-proof in the AROM implies some resiliency to such impossibilities. We then consider 
-three ROM transforms which are subject to impossibilities: Fiat-Shamir (FS), 
-Fujisaki-Okamoto (FO), and Encrypt-with-Hash (EwH). We show in each case how to obtain 
-security in the AROM by strengthening the building blocks or modifying the transform.
-<br><br>Along the way, we give a couple other results. We improve the assumptions 
-needed for the FO and EwH impossibilities from indistinguishability obfuscation to 
-circularly secure LWE; we argue that our AROM still captures this improved 
-impossibility. We also demonstrate that there is no ``best possible'' hash function, 
-by giving a pair of security properties, both of which can be instantiated in the 
-standard model separately, which cannot be simultaneously satisfied by a single hash 
-function.
-<br />
-
-</div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
-@inproceedings{C:Zhandry22a,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2022,&nbsp;Part~III},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yevgeniy&nbsp;Dodis&nbsp;and&nbsp;Thomas&nbsp;Shrimpton},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{35--65},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Augmented&nbsp;Random&nbsp;Oracles},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13509},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
-}<br />
-
-</div>
-<br></td></tr>
-
-
 <tr><td style="width: 100%">To Label, or Not To Label (in Generic Groups)<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2022/">CRYPTO 2022</a></td></tr>
@@ -274,15 +229,15 @@ function.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2022/226.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z22b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
-	<a href="https://www.youtube.com/watch?v=C4g32oTVFV4"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+	<a href="https://youtu.be/C4g32oTVFV4?si=Eh0sxSxZLCYFy2gB&t=1746"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-5" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
 Generic groups are an important tool for analyzing the feasibility and in-feasibility 
 of group-based cryptosystems. There are two distinct wide-spread versions of generic 
 groups, Shoup's and Maurer's, the main difference being whether or not group elements 
@@ -304,7 +259,7 @@ such a separation.<br><br>
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-5" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
 @inproceedings{C:Zhandry22b,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2022,&nbsp;Part~III},<br />
@@ -314,6 +269,57 @@ such a separation.<br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{To&nbsp;Label,&nbsp;or&nbsp;Not&nbsp;To&nbsp;Label&nbsp;(in&nbsp;Generic&nbsp;Groups)},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13509},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Augmented Random Oracles<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2022/">CRYPTO 2022</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2022/783.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z22a.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://www.youtube.com/watch?v=C4g32oTVFV4"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-5" onclick="doOpen=true;">
+We propose a new paradigm for justifying the security of random oracle-based 
+protocols, which we call the Augmented Random Oracle Model (AROM). We show that the 
+AROM captures a wide range of important random oracle impossibility results. Thus a 
+proof in the AROM implies some resiliency to such impossibilities. We then consider 
+three ROM transforms which are subject to impossibilities: Fiat-Shamir (FS), 
+Fujisaki-Okamoto (FO), and Encrypt-with-Hash (EwH). We show in each case how to obtain 
+security in the AROM by strengthening the building blocks or modifying the transform.
+<br><br>Along the way, we give a couple other results. We improve the assumptions 
+needed for the FO and EwH impossibilities from indistinguishability obfuscation to 
+circularly secure LWE; we argue that our AROM still captures this improved 
+impossibility. We also demonstrate that there is no ``best possible'' hash function, 
+by giving a pair of security properties, both of which can be instantiated in the 
+standard model separately, which cannot be simultaneously satisfied by a single hash 
+function.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-5" onclick="doOpen=true;">
+@inproceedings{C:Zhandry22a,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2022,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yevgeniy&nbsp;Dodis&nbsp;and&nbsp;Thomas&nbsp;Shrimpton},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{35--65},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Augmented&nbsp;Random&nbsp;Oracles},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{13509},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2022}<br />
 }<br />
@@ -428,7 +434,7 @@ lifting theorems to quantum query complexity.
 
 
 <tr><td style="width: 100%">Indifferentiability for Public Key Cryptosystems<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span> and <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=Aa7WCBkAAAAJ&hl=zh-CN">Cong Zhang</a></span></td></tr>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span> and <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=Aa7WCBkAAAAJ">Cong Zhang</a></span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2020/">CRYPTO 2020</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
@@ -527,12 +533,12 @@ for efficient post-quantum cryptosystems.
 <br></td></tr>
 
 
-<tr><td style="width: 100%">Revisiting Post-Quantum Fiat-Shamir<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="width: 100%">The Distinction Between Fixed and Random Generators in Group-Based Assumptions<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/jamesbartusek">James Bartusek</a></span>, <span style="white-space:nowrap"><a href="http://fermima.com">Fermi Ma</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2019/">CRYPTO 2019</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2019/262.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+	<a href="https://eprint.iacr.org/2019/202.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
 	<script>document.write("<a onclick=\"markForOpen('abstract-10'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
@@ -543,53 +549,6 @@ for efficient post-quantum cryptosystems.
 	
 </td></tr><tr><td colspan="6">
 <div style="display: none;" class="collapsible" id="abstract-10" onclick="doOpen=true;">
-The Fiat-Shamir transformation is a useful approach to building non-interactive 
-arguments (of knowledge) in the random oracle model. Unfortunately, existing proof 
-techniques are incapable of proving the security of Fiat-Shamir in the quantum 
-setting. The problem stems from (1) the difficulty of quantum rewinding, and (2) the 
-inability of current techniques to adaptively program random oracles in the quantum 
-setting.<br><br>
-In this work, we show how to overcome the limitations above in many settings. In 
-particular, we give mild conditions under which Fiat-Shamir is secure in the quantum 
-setting. As an application, we show that existing lattice signatures based on 
-Fiat-Shamir are secure without any modifications.
-<br />
-
-</div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-10" onclick="doOpen=true;">
-@inproceedings{C:LiuZha19,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2019,&nbsp;Part~II},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Alexandra&nbsp;Boldyreva&nbsp;and&nbsp;Daniele&nbsp;Micciancio},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{326--355},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Revisiting&nbsp;Post-quantum&nbsp;{Fiat}-{Shamir}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11693},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
-}<br />
-
-</div>
-<br></td></tr>
-
-
-<tr><td style="width: 100%">The Distinction Between Fixed and Random Generators in Group-Based Assumptions<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/jamesbartusek">James Bartusek</a></span>, <span style="white-space:nowrap"><a href="http://fermima.com">Fermi Ma</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2019/">CRYPTO 2019</a></td></tr>
-</table></td>
-<td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2019/202.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
-</td><td style="vertical-align: top;">
-  
-</td><td style="vertical-align: top;">
-	
-</td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-11" onclick="doOpen=true;">
 There is surprisingly little consensus on the precise role of the generator g in 
 group-based assumptions such as DDH. Some works consider g to be a fixed part of the 
 group description, while others take it to be random. We study this subtle distinction 
@@ -615,7 +574,7 @@ fixed-generator, low-entropy DDH (Canetti, Crypto 1997).
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-11" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-10" onclick="doOpen=true;">
 @inproceedings{C:BarMaZha19,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{James&nbsp;Bartusek&nbsp;and&nbsp;Fermi&nbsp;Ma&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2019,&nbsp;Part~II},<br />
@@ -626,6 +585,53 @@ fixed-generator, low-entropy DDH (Canetti, Crypto 1997).
 &nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{The&nbsp;Distinction&nbsp;Between&nbsp;Fixed&nbsp;and&nbsp;Random&nbsp;Generators<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;in&nbsp;Group-Based&nbsp;Assumptions},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11693},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Revisiting Post-Quantum Fiat-Shamir<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/qipengliu">Qipeng Liu</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2019/">CRYPTO 2019</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2019/262.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-11" onclick="doOpen=true;">
+The Fiat-Shamir transformation is a useful approach to building non-interactive 
+arguments (of knowledge) in the random oracle model. Unfortunately, existing proof 
+techniques are incapable of proving the security of Fiat-Shamir in the quantum 
+setting. The problem stems from (1) the difficulty of quantum rewinding, and (2) the 
+inability of current techniques to adaptively program random oracles in the quantum 
+setting.<br><br>
+In this work, we show how to overcome the limitations above in many settings. In 
+particular, we give mild conditions under which Fiat-Shamir is secure in the quantum 
+setting. As an application, we show that existing lattice signatures based on 
+Fiat-Shamir are secure without any modifications.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-11" onclick="doOpen=true;">
+@inproceedings{C:LiuZha19,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2019,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Alexandra&nbsp;Boldyreva&nbsp;and&nbsp;Daniele&nbsp;Micciancio},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{326--355},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Revisiting&nbsp;Post-quantum&nbsp;{Fiat}-{Shamir}},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11693},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
 }<br />
@@ -793,7 +799,7 @@ encoding arbitrary plaintext elements.
 
 
 <tr><td style="width: 100%">Impossibility of Order-Revealing Encryption in Idealized Models<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span> and <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=Aa7WCBkAAAAJ&hl=zh-CN">Cong Zhang</a></span></td></tr>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span> and <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=Aa7WCBkAAAAJ">Cong Zhang</a></span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://tcc.iacr.org/2018/">TCC 2018</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
