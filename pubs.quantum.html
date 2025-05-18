@@ -71,12 +71,12 @@ deletion of data, programs that cannot be copied, and more.
 
 <table style="border-spacing: 0px; width: 100%;">
 
-<tr><td style="width: 100%">Translating Between the Common Haar Random State Model and the Unitary Model<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://eligoldin.com">Eli Goldin</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-
+<tr><td style="width: 100%">How to Model Unitary Oracles<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2025/">CRYPTO 2025</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2025/489.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+	
 </td><td style="vertical-align: top;">
 	<script>document.write("<a onclick=\"markForOpen('abstract-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
@@ -87,6 +87,46 @@ deletion of data, programs that cannot be copied, and more.
 	
 </td></tr><tr><td colspan="6">
 <div style="display: none;" class="collapsible" id="abstract-1" onclick="doOpen=true;">
+We make the case for modeling unitary oracles by allowing for controlled access to 
+the oracle as well as its conjugate transpose (inverse), but also its conjugate and 
+transpose. Controlling and conjugate transposes are common if even standard, but 
+conjugates and transposes appear to be non-standard. In order to justify our modeling, 
+we give several formal examples of what goes wrong or is missed when using a more 
+restrictive modeling. We also argue that our model is the ``right'' level of 
+granularity, and that other transformation likely do not correspond to efficient 
+computation. We also discuss other modeling choices, such as ancillas and 
+approximation error. 
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
+@inproceedings{C:Zha25,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{How&nbsp;to&nbsp;Model&nbsp;Unitary&nbsp;Oracles},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{CRYPTO&nbsp;2025},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2025}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Translating Between the Common Haar Random State Model and the Unitary Model<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://eligoldin.com">Eli Goldin</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2025/">CRYPTO 2025</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2025/489.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
 Black-box separations are a cornerstone of cryptography, indicating barriers to various 
 goals. A recent line of work has explored black-box separations for <i>quantum</i> 
 cryptographic primitives. Namely, a number of separations are known in the Common Haar 
@@ -102,14 +142,13 @@ model.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
-@misc{EPRINT:GolZha25,<br />
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
+@inproceedings{C:GolZha25,<br />
 &nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Eli&nbsp;Goldin&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Translating&nbsp;Between&nbsp;the&nbsp;Common&nbsp;Haar&nbsp;Random&nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State&nbsp;Model&nbsp;and&nbsp;the&nbsp;Unitary&nbsp;Model},<br />
-&nbsp;&nbsp;howpublished&nbsp;&nbsp;=&nbsp;{Cryptology&nbsp;{ePrint}&nbsp;Archive,&nbsp;Paper&nbsp;2025/489},<br />
-&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2025},<br />
-&nbsp;&nbsp;url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{https://eprint.iacr.org/2025/489}<br />
+&nbsp;&nbsp;booktitle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{CRYPTO&nbsp;2025},<br />
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2025}<br />
 }<br />
 
 </div>
@@ -118,20 +157,20 @@ model.
 
 <tr><td style="width: 100%">On One-Shot Signatures, Quantum vs Classical Binding, and Obfuscating Permutations<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.omrishmueli.com">Omri Shmueli</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2025/">CRYPTO 2025</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2025/486.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-2'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-2" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
 One-shot signatures (OSS) were defined by Amos, Georgiou, Kiayias, and Zhandry 
 (STOC'20). These allow for signing exactly one message, after which the signing key 
 self-destructs, preventing a second message from ever being signed. While such an 
@@ -158,14 +197,59 @@ obfuscating permutable PRPs gives a trapdoor one-way permutation that is <i>full
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-2" onclick="doOpen=true;">
-@misc{EPRINT:ShmZha25,<br />
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+@inproceedings{C:ShmZha25,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Omri&nbsp;Shmueli&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{On&nbsp;One-Shot&nbsp;Signatures,&nbsp;Quantum&nbsp;vs&nbsp;Classical&nbsp;Binding,&nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;Obfuscating&nbsp;Permutations},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;{Cryptology&nbsp;{ePrint}&nbsp;Archive,&nbsp;Paper&nbsp;2025/486},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2025},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;url&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{https://eprint.iacr.org/2025/486}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;&nbsp;&nbsp;=&nbsp;{CRYPTO&nbsp;2025},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2025}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Quantum State Group Actions<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://dblp.org/pid/330/3303.html">Saachi Mutreja</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2025/">CRYPTO 2025</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2024/1636.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
+Cryptographic group actions are a leading contender for post-quantum cryptography, and 
+have also been used in the development of quantum cryptographic protocols. In this 
+work, we explore quantum group actions, which consist of a group acting on a set of 
+quantum states. We show the following results:<br><br>
+&bull; In certain settings, statistical (even query bounded) security is impossible, 
+analogously to post-quantum classical group actions.<br><br>
+&bull; We construct quantum state group actions and prove that many computational 
+problems that have been proposed by cryptographers hold it. Depending on the 
+construction, our proofs are either unconditional, rely on LWE, or rely on the 
+quantum random oracle model. While our analysis does not directly apply to classical 
+group actions, we argue it gives at least a sanity check that there are no obvious 
+flaws in the post-quantum assumptions made by cryptographers.<br><br>
+&bull; Our quantum state group action allows for unifying two existing quantum money 
+schemes: those based on group actions, and those based on non-collapsing hashes. We 
+also explain how they can unify classical and quantum key distribution.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
+@inproceedings{C:MutZha25,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Saachi&nbsp;Mutreja&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{Quantum&nbsp;State&nbsp;Group&nbsp;Actions},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{CRYPTO&nbsp;2025},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2025}<br />
 }<br />
 
 </div>
@@ -179,15 +263,15 @@ obfuscating permutable PRPs gives a trapdoor one-way permutation that is <i>full
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2024/1785"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-5" onclick="doOpen=true;">
 Aaronson, Atia, and Susskind [AAS20] established that efficiently mapping between 
 quantum states |&psi;&#10217; and |&phi;&#10217; is computationally equivalent to 
 distinguishing their superpositions (|&psi;&#10217; + |&phi;&#10217;)/&radic;2 and 
@@ -228,7 +312,7 @@ candidate construction of quantum fire using a classical oracle.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-5" onclick="doOpen=true;">
 @inproceedings{STOC:BosNehZha25,<br />
 &nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{John&nbsp;Bostanci&nbsp;and&nbsp;Barak&nbsp;Nehoran&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{A&nbsp;General&nbsp;Quantum&nbsp;Duality&nbsp;for&nbsp;Representations&nbsp;of&nbsp;Groups&nbsp;&nbsp;<br />
@@ -248,15 +332,15 @@ candidate construction of quantum fire using a classical oracle.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2024/1500.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-6" onclick="doOpen=true;">
 Although one-way functions are well-established as the minimal primitive for classical 
 cryptography, a minimal primitive for quantum cryptography is still unclear. Universal 
 extrapolation, first considered by Impagliazzo and Levin (1990), is hard if and only if 
@@ -275,7 +359,7 @@ exist, and it is easy for quantum polynomial space.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-6" onclick="doOpen=true;">
 @inproceedings{EC:QiaRaiZha25,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;{Luowen&nbsp;Qian&nbsp;and&nbsp;Justin&nbsp;Raizes&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Hard&nbsp;Quantum&nbsp;Extrapolations&nbsp;in&nbsp;Quantum&nbsp;Cryptography},<br />
@@ -294,15 +378,15 @@ exist, and it is easy for quantum polynomial space.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2025/325.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-5'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
-  
+  <a href="files/Z25b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-5" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-7" onclick="doOpen=true;">
 We show a black box barrier against constructing public key quantum money from 
 obfuscation for evasive functions. As current post-quantum obfuscators based on 
 standard assumptions are all evasive, this shows a fundamental barrier to achieving 
@@ -314,7 +398,7 @@ money.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-5" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-7" onclick="doOpen=true;">
 @inproceedings{EC:Zhandry25b,<br />
 &nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{On&nbsp;Quantum&nbsp;Money&nbsp;and&nbsp;Evasive&nbsp;Obfuscation},<br />
@@ -333,15 +417,15 @@ money.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2024/1727"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-8'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-6'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-8'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-6" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-8" onclick="doOpen=true;">
 Indifferentiability is a popular cryptographic paradigm for analyzing the security of 
 ideal objects - both in a classical as well as in a quantum world. It is typically 
 stated in the form of a composable and simulation-based definition, and captures what 
@@ -359,7 +443,7 @@ sponge inversion.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-6" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-8" onclick="doOpen=true;">
 @misc{EPRINT:CarPorZha24,<br />
 &nbsp;&nbsp;author&nbsp;=&nbsp;{Joseph&nbsp;Carolan&nbsp;and&nbsp;Alexander&nbsp;Poremba&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;title&nbsp;=&nbsp;{(Quantum)&nbsp;Indifferentiability&nbsp;and&nbsp;Pre-Computation},<br />
@@ -379,15 +463,15 @@ sponge inversion.
 <td style="vertical-align: top;">
 	<a href="https://arxiv.org/abs/2411.01718"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-7'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-7" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-9" onclick="doOpen=true;">
 QMA is the class of languages that can be decided by an efficient quantum verifier 
 given a quantum witness, whereas QCMA is the class of such languages where the 
 efficient quantum verifier only is given a classical witness. A challenging 
@@ -399,105 +483,12 @@ to quantum query complexity lower bounds.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-7" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-9" onclick="doOpen=true;">
 @inproceedings{ITCS:Zhandry25,<br />
 &nbsp;&nbsp;author&nbsp;=&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;title&nbsp;=&nbsp;{Toward&nbsp;Separating&nbsp;QMA&nbsp;from&nbsp;QCMA&nbsp;with&nbsp;a&nbsp;Classical&nbsp;Oracle},<br />
 &nbsp;&nbsp;booktitle&nbsp;=&nbsp;{ITCS&nbsp;2025},<br />
 &nbsp;&nbsp;year&nbsp;=&nbsp;{2025}<br />
-}<br />
-
-</div>
-<br></td></tr>
-
-
-<tr><td style="width: 100%">Quantum State Group Actions<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://dblp.org/pid/330/3303.html">Saachi Mutreja</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-
-</table></td>
-<td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2024/1636.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-8'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-8'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
-</td><td style="vertical-align: top;">
-  
-</td><td style="vertical-align: top;">
-	
-</td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-8" onclick="doOpen=true;">
-Cryptographic group actions are a leading contender for post-quantum cryptography, and 
-have also been used in the development of quantum cryptographic protocols. In this 
-work, we explore quantum group actions, which consist of a group acting on a set of 
-quantum states. We show the following results:<br><br>
-&bull; In certain settings, statistical (even query bounded) security is impossible, 
-analogously to post-quantum classical group actions.<br><br>
-&bull; We construct quantum state group actions and prove that many computational 
-problems that have been proposed by cryptographers hold it. Depending on the 
-construction, our proofs are either unconditional, rely on LWE, or rely on the 
-quantum random oracle model. While our analysis does not directly apply to classical 
-group actions, we argue it gives at least a sanity check that there are no obvious 
-flaws in the post-quantum assumptions made by cryptographers.<br><br>
-&bull; Our quantum state group action allows for unifying two existing quantum money 
-schemes: those based on group actions, and those based on non-collapsing hashes. We 
-also explain how they can unify classical and quantum key distribution.
-<br />
-
-</div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-8" onclick="doOpen=true;">
-@misc{EPRINT:MutZha24,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Saachi&nbsp;Mutreja&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{Quantum&nbsp;State&nbsp;Group&nbsp;Actions},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Paper&nbsp;2024/1636},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2024},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;{\url{https://eprint.iacr.org/2024/1636}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;url&nbsp;=&nbsp;{https://eprint.iacr.org/2024/1636}<br />
-}<br />
-
-</div>
-<br></td></tr>
-
-
-<tr><td style="width: 100%">Quantum Money from Abelian Group Actions<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="http://itcs-conf.org/itcs24/itcs24-cfp.html">ITCS 2024</a>, <a href="https://qip2024.tw">QIP 2024</a></td></tr>
-</table></td>
-<td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2023/1097.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
-</td><td style="vertical-align: top;">
-  <a href="files/Z24a.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
-</td><td style="vertical-align: top;">
-	<a href="https://youtu.be/QEl6M5V7N8Y"><img src="assets/images/video.png" class="icon" title="Video"></a> 
-</td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-9" onclick="doOpen=true;">
-We give a construction of public key quantum money, and even a strengthened version 
-called quantum lightning, from abelian group actions, which can in turn be constructed 
-from suitable isogenies over elliptic curves. We prove security in the generic group 
-model for group actions under a plausible computational assumption, and develop a 
-general toolkit for proving quantum security in this model. Along the way, we explore 
-knowledge assumptions and algebraic group actions in the quantum setting, finding 
-significant limitations of these assumptions/models compared to generic group actions.
-<br />
-
-</div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-9" onclick="doOpen=true;">
-@InProceedings{ITCS:Zhandry24a,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;{Zhandry,&nbsp;Mark},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=	&nbsp;&nbsp;&nbsp;&nbsp;{Quantum&nbsp;Money&nbsp;from&nbsp;Abelian&nbsp;Group&nbsp;Actions},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=	{15th&nbsp;Innovations&nbsp;in&nbsp;Theoretical&nbsp;Computer&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Science&nbsp;Conference&nbsp;(ITCS&nbsp;2024)},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=	&nbsp;&nbsp;&nbsp;&nbsp;{101:1--101:23},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;{Leibniz&nbsp;International&nbsp;Proceedings&nbsp;in&nbsp;Informatics&nbsp;(LIPIcs)},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2024},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;{287},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;{Guruswami,&nbsp;Venkatesan},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=	{Schloss&nbsp;Dagstuhl&nbsp;--&nbsp;Leibniz-Zentrum&nbsp;f{\"u}r&nbsp;Informatik},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;address&nbsp;=&nbsp;&nbsp;&nbsp;{Dagstuhl,&nbsp;Germany}<br />
 }<br />
 
 </div>
@@ -553,6 +544,51 @@ intermediate measurements must significantly blow up either time or space.
 <br></td></tr>
 
 
+<tr><td style="width: 100%">Quantum Money from Abelian Group Actions<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="http://itcs-conf.org/itcs24/itcs24-cfp.html">ITCS 2024</a>, <a href="https://qip2024.tw">QIP 2024</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2023/1097.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  <a href="files/Z24a.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
+</td><td style="vertical-align: top;">
+	<a href="https://youtu.be/QEl6M5V7N8Y"><img src="assets/images/video.png" class="icon" title="Video"></a> 
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-11" onclick="doOpen=true;">
+We give a construction of public key quantum money, and even a strengthened version 
+called quantum lightning, from abelian group actions, which can in turn be constructed 
+from suitable isogenies over elliptic curves. We prove security in the generic group 
+model for group actions under a plausible computational assumption, and develop a 
+general toolkit for proving quantum security in this model. Along the way, we explore 
+knowledge assumptions and algebraic group actions in the quantum setting, finding 
+significant limitations of these assumptions/models compared to generic group actions.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-11" onclick="doOpen=true;">
+@InProceedings{ITCS:Zhandry24a,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;{Zhandry,&nbsp;Mark},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=	&nbsp;&nbsp;&nbsp;&nbsp;{Quantum&nbsp;Money&nbsp;from&nbsp;Abelian&nbsp;Group&nbsp;Actions},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=	{15th&nbsp;Innovations&nbsp;in&nbsp;Theoretical&nbsp;Computer&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Science&nbsp;Conference&nbsp;(ITCS&nbsp;2024)},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=	&nbsp;&nbsp;&nbsp;&nbsp;{101:1--101:23},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;{Leibniz&nbsp;International&nbsp;Proceedings&nbsp;in&nbsp;Informatics&nbsp;(LIPIcs)},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2024},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;{287},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;{Guruswami,&nbsp;Venkatesan},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=	{Schloss&nbsp;Dagstuhl&nbsp;--&nbsp;Leibniz-Zentrum&nbsp;f{\"u}r&nbsp;Informatik},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;address&nbsp;=&nbsp;&nbsp;&nbsp;{Dagstuhl,&nbsp;Germany}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
 <tr><td style="width: 100%">A Computational Separation Between Quantum No-cloning and No-telegraphing<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.cs.princeton.edu/~bnehoran/">Barak Nehoran</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="http://itcs-conf.org/itcs24/itcs24-cfp.html">ITCS 2024</a>, <a href="https://indico.cern.ch/event/1175020/">QIP 2023</a></td></tr>
@@ -560,15 +596,15 @@ intermediate measurements must significantly blow up either time or space.
 <td style="vertical-align: top;">
 	<a href="https://arxiv.org/abs/2302.01858"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-12'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-11'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-12'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-11" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-12" onclick="doOpen=true;">
 Two of the fundamental no-go theorems of quantum information are the no-cloning 
 theorem (that it is impossible to make copies of general quantum states) and the 
 no-teleportation theorem (the prohibition on telegraphing, or sending quantum states 
@@ -590,7 +626,7 @@ be used to protect against key exfiltration.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-11" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-12" onclick="doOpen=true;">
 @InProceedings{ITCS:NehZha24,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;{Nehoran,&nbsp;Barak&nbsp;and&nbsp;Zhandry,&nbsp;Mark},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=	&nbsp;&nbsp;&nbsp;&nbsp;{A&nbsp;Computational&nbsp;Separation&nbsp;Between&nbsp;Quantum&nbsp;<br />
@@ -617,15 +653,15 @@ be used to protect against key exfiltration.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2023/673.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-12'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-13'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-12'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-13'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z23.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	<a href="https://www.youtube.com/watch?v=h6hb27qIZh8"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-12" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-13" onclick="doOpen=true;">
 We show the following results:<br><br>
 &bull; The post-quantum equivalence of indisitnguishability obfuscation and differing 
 inputs obfuscation in the restricted setting where the outputs differ on at most a 
@@ -651,7 +687,7 @@ provide simple algorithms for the particular instances studied in this work.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-12" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-13" onclick="doOpen=true;">
 @inproceedings{C:Zhandry23,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2023,&nbsp;Part~V},<br />
@@ -676,15 +712,15 @@ provide simple algorithms for the particular instances studied in this work.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2022/1358.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-13'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-14'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-13'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-14'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-13" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-14" onclick="doOpen=true;">
 What does it mean to commit to a quantum state? In this work, we propose a simple 
 answer: a commitment to quantum messages is binding if, after the commit phase, the 
 committed state is hidden from the sender`s view. We accompany this new definition 
@@ -704,7 +740,7 @@ our security proof is a new rewinding technique for extracting quantum informati
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-13" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-14" onclick="doOpen=true;">
 @inproceedings{STOC:GJMZ22,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;{Gunn,&nbsp;Sam&nbsp;and&nbsp;Ju,&nbsp;Nathan&nbsp;and&nbsp;Ma,&nbsp;Fermi&nbsp;and&nbsp;Zhandry,&nbsp;Mark},&nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Commitments&nbsp;to&nbsp;Quantum&nbsp;States},&nbsp;<br />
@@ -728,15 +764,15 @@ our security proof is a new rewinding technique for extracting quantum informati
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2023/250.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-14'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-15'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-14'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-15'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-14" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-15" onclick="doOpen=true;">
 We give the first black box lower bound for isogeny-based protocols that can be 
 described as group actions. We show that, for a large class of signature schemes 
 making black box use of a (potentially non-abelian) group action, the signature length 
@@ -747,7 +783,7 @@ length cannot be improved without deviating from the group action framework.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-14" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-15" onclick="doOpen=true;">
 @inproceedings{EC:BonGuaZha23,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dan&nbsp;Boneh&nbsp;and&nbsp;Jiaxin&nbsp;Guan&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2023,&nbsp;Part~V},<br />
@@ -773,15 +809,15 @@ length cannot be improved without deviating from the group action framework.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2022/1620.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-15'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-16'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-15'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-16'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-15" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-16" onclick="doOpen=true;">
 Public verification of quantum money has been one of the central objects in quantum 
 cryptography ever since Wiesner's pioneering idea of using quantum mechanics to 
 construct banknotes against counterfeiting. So far, we do not know any 
@@ -804,7 +840,7 @@ functional encryption, isogenies over elliptic curves, and knots.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-15" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-16" onclick="doOpen=true;">
 @inproceedings{EC:LiuMonZha23,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiahui&nbsp;Liu&nbsp;and&nbsp;Hart&nbsp;Montgomery&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2023,&nbsp;Part~I},<br />
@@ -830,15 +866,15 @@ functional encryption, isogenies over elliptic curves, and knots.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2022/1135.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-16'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-17'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-16'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-17'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-16" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-17" onclick="doOpen=true;">
 Cryptographic group actions are a relaxation of standard cryptographic groups that 
 have less structure. This lack of structure allows them to be plausibly quantum 
 resistant despite Shor's algorithm, while still having a number of applications. The 
@@ -851,7 +887,7 @@ other questions about group action and isogeny protocols.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-16" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-17" onclick="doOpen=true;">
 @inproceedings{AC:MonZha22,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Hart&nbsp;Montgomery&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ASIACRYPT~2022,&nbsp;Part~I},<br />
@@ -877,15 +913,15 @@ other questions about group action and isogeny protocols.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2022/1429.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-17'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-17'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-17" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-18" onclick="doOpen=true;">
 Copy-protection is the task of encoding a program into a quantum state to prevent 
 illegal duplications. A line of recent works studied copy-protection schemes under 
 "1 -> 2 attacks": the adversary receiving one program copy can not produce two valid 
@@ -904,7 +940,7 @@ functionalities in the plain model.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-17" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-18" onclick="doOpen=true;">
 @inproceedings{TCC:LLQZ22,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Jiahui&nbsp;Liu&nbsp;and&nbsp;Qipeng&nbsp;Liu&nbsp;and&nbsp;Luowen&nbsp;Qian&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
@@ -931,15 +967,15 @@ functionalities in the plain model.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2022/434.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-18" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-19" onclick="doOpen=true;">
 We show the following hold, unconditionally unless otherwise stated, relative to a 
 random oracle with probability 1:<br><br>
 &bull; There are NP <i>search</i> problems solvable by BQP machines but not BPP 
@@ -964,7 +1000,7 @@ structured oracles and/or algebraic assumptions in Cryptomania and beyond.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-18" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-19" onclick="doOpen=true;">
 @inproceedings{FOCS:YamZha22,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Takashi&nbsp;Yamakawa&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{63rd&nbsp;FOCS},<br />
@@ -987,15 +1023,15 @@ structured oracles and/or algebraic assumptions in Cryptomania and beyond.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2022/884.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-20'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-20'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-19" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-20" onclick="doOpen=true;">
 Unclonable encryption, first introduced by Broadbent and Lord (TQC'20), is a one-time 
 encryption scheme with the following security guarantee: any non-local adversary 
 (A, B, C) cannot simultaneously distinguish encryptions of two equal length messages. 
@@ -1017,7 +1053,7 @@ they achieved constant security error for single-bit output point functions.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-19" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-20" onclick="doOpen=true;">
 @inproceedings{C:AKLLZ22,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Prabhanjan&nbsp;Ananth&nbsp;and&nbsp;Fatih&nbsp;Kaleoglu&nbsp;and&nbsp;Xingjian&nbsp;Li&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
@@ -1043,15 +1079,15 @@ they achieved constant security error for single-bit output point functions.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2022/678.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-20'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-21'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-20'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-21'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z22c.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	<a href="https://youtu.be/fUh0Y_PU1BA?si=cdd_BlG_kq2qkvHX&t=1888"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-20" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-21" onclick="doOpen=true;">
 Collapsing is the preferred post-quantum security notion for hash functions, needed to 
 lift many classical results to the quantum setting. Unfortunately, the only existing 
 standard-model proofs of collapsing hashes require LWE. We construct the first 
@@ -1074,7 +1110,7 @@ regularity condition we call "semi-regularity".
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-20" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-21" onclick="doOpen=true;">
 @inproceedings{C:Zhandry22c,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2022,&nbsp;Part~III},<br />
@@ -1099,15 +1135,15 @@ regularity condition we call "semi-regularity".
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2021/1093.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-21'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-22'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-21'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-22'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-21" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-22" onclick="doOpen=true;">
 We show polynomial-time quantum algorithms for the following problems:<br><br>
 &bull; Short integer solution (SIS) problem under the infinity norm, where the public 
 matrix is very wide, the modulus is a polynomially large prime, and the bound of 
@@ -1128,7 +1164,7 @@ solving LWE given LWE-like quantum states with interesting parameters.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-21" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-22" onclick="doOpen=true;">
 @inproceedings{EC:CheLiuZha22,<br />
 &nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yilei&nbsp;Chen&nbsp;and&nbsp;Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2022,&nbsp;Part~III},<br />
@@ -1154,15 +1190,15 @@ solving LWE given LWE-like quantum states with interesting parameters.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2021/334.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-22'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-23'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-22'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-23'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-22" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-23" onclick="doOpen=true;">
 We prove that Kilian's four-message succinct argument system is post-quantum secure 
 in the standard model when instantiated with any probabilistically checkable proof and 
 any collapsing hash function (which in turn exist based on the post-quantum hardness 
@@ -1172,7 +1208,7 @@ knowledge error.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-22" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-23" onclick="doOpen=true;">
 @inproceedings{FOCS:CMSZ21,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Alessandro&nbsp;Chiesa&nbsp;and&nbsp;Fermi&nbsp;Ma&nbsp;and&nbsp;Nicholas&nbsp;Spooner&nbsp;and&nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
@@ -1196,15 +1232,15 @@ knowledge error.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2021/1410.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-23'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-24'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-23'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-24'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-23" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-24" onclick="doOpen=true;">
 Quantum computers, which harness the power of quantum physics, offer the potential for 
 new kinds of security. For instance, classical bits can be copied, but quantum bits, 
 in general, cannot. As a result, there is interest in creating uncounterfeitable 
@@ -1226,7 +1262,7 @@ assumptions. It is therefore an important step toward public key quantum money.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-23" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-24" onclick="doOpen=true;">
 @inproceedings{AC:RobZha21,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Bhaskar&nbsp;Roberts&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ASIACRYPT~2021,&nbsp;Part~I},<br />
@@ -1251,15 +1287,15 @@ assumptions. It is therefore an important step toward public key quantum money.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2021/288.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-24'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-25'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-24'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-25'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z21b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	<a href="https://www.youtube.com/watch?v=hDTp-EIlzvM&list=PLeeS-3Ml-rprSMtRpXPSREpVR7Knncg6k&index=58"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-24" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-25" onclick="doOpen=true;">
 Indifferentiability is used to analyze the security of constructions of idealized 
 objects, such as random oracles or ideal ciphers. Reset indifferentiability is a 
 strengthening of plain indifferentiability which is applicable in far more scenarios, 
@@ -1278,7 +1314,7 @@ random oracle that is a subset-product followed by two modular reductions.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-24" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-25" onclick="doOpen=true;">
 @inproceedings{AC:Zhandry21,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ASIACRYPT~2021,&nbsp;Part~I},<br />
@@ -1304,15 +1340,15 @@ random oracle that is a subset-product followed by two modular reductions.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2020/1270.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-25'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-26'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-25'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-26'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-25" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-26" onclick="doOpen=true;">
 In this paper, we study relationship between security of cryptographic schemes in the 
 random oracle model (ROM) and quantum random oracle model (QROM). First, we introduce 
 a notion of a proof of quantum access to a random oracle (PoQRO), which is a protocol 
@@ -1331,7 +1367,7 @@ lifting theorems to quantum query complexity.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-25" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-26" onclick="doOpen=true;">
 @inproceedings{EC:YamZha21,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Takashi&nbsp;Yamakawa&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2021,&nbsp;Part~II},<br />
@@ -1356,15 +1392,15 @@ lifting theorems to quantum query complexity.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2021/946.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-26'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-27'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-26'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-27'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-26" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-27" onclick="doOpen=true;">
 In 2012, Aaronson and Christiano introduced the idea of hidden subspace states to 
 build public-key quantum money [STOC '12]. Since then, this idea has been applied to 
 realize several other cryptographic primitives which enjoy some form of unclonability. 
@@ -1397,7 +1433,7 @@ security in the plain model for a class of functions that is not evasive.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-26" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-27" onclick="doOpen=true;">
 @inproceedings{C:CLLZ21,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Andrea&nbsp;Coladangelo&nbsp;and&nbsp;Jiahui&nbsp;Liu&nbsp;and&nbsp;Qipeng&nbsp;Liu&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
@@ -1423,15 +1459,15 @@ security in the plain model for a class of functions that is not evasive.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2020/1339.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-27'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-28'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-27'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-28'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-27" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-28" onclick="doOpen=true;">
 Quantum copy protection uses the unclonability of quantum states to construct quantum 
 software that provably cannot be pirated. Copy protection would be immensely useful, 
 but unfortunately little is known about how to achieve it in general. In this work, we 
@@ -1449,7 +1485,7 @@ construction is general, applicable to many recent watermarking schemes.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-27" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-28" onclick="doOpen=true;">
 @inproceedings{C:ALLZZ21,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Scott&nbsp;Aaronson&nbsp;and&nbsp;Jiahui&nbsp;Liu&nbsp;and&nbsp;Qipeng&nbsp;Liu&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry&nbsp;and&nbsp;Ruizhe&nbsp;Zhang},<br />
@@ -1475,15 +1511,15 @@ construction is general, applicable to many recent watermarking schemes.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2020/1191.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-28'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-29'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-28'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-29'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z20b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	<a href="https://www.youtube.com/watch?v=rwPm8YGQcf0"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-28" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-29" onclick="doOpen=true;">
 We explore the problem of traitor tracing where the pirate decoder can contain a 
 quantum state. Our main results include:<br><br>
 &bull;  We show how to overcome numerous definitional challenges to give a meaningful 
@@ -1496,7 +1532,7 @@ traitor tracing.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-28" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-29" onclick="doOpen=true;">
 @inproceedings{TCC:Zhandry20,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{TCC~2020,&nbsp;Part~III},<br />
@@ -1522,15 +1558,15 @@ traitor tracing.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2020/877.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-29'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-30'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-29'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-30'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-29" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-30" onclick="doOpen=true;">
 We initiate the study of encryption schemes where the decryption keys are unclonable 
 quantum objects, which we call single decryptor encryption. We give a number of 
 initial results in this area:<br><br>
@@ -1547,7 +1583,7 @@ interesting properties that are not possible classically.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-29" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-30" onclick="doOpen=true;">
 @misc{EPRINT:GeoZha20,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Marios&nbsp;Georgiou&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Report&nbsp;2020/877},<br />
@@ -1567,15 +1603,15 @@ interesting properties that are not possible classically.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2020/871.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-30'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-31'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-30'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-31'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-30" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-31" onclick="doOpen=true;">
 One-time memories (OTM) are the hardware version of oblivious transfer, and are useful 
 for constructing objects that are impossible with software alone, such as one-time 
 programs. In this work, we consider attacks on OTMs where a quantum adversary can 
@@ -1592,7 +1628,7 @@ memories against superposition attacks.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-30" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-31" onclick="doOpen=true;">
 @misc{EPRINT:LiuSahZha20,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Qipeng&nbsp;Liu&nbsp;and&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Report&nbsp;2020/871},<br />
@@ -1612,15 +1648,15 @@ memories against superposition attacks.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2020/107.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-31'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-32'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-31'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-32'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-31" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-32" onclick="doOpen=true;">
 We define the notion of <i>one-shot signatures</i>, which are signatures where any 
 secret key can be used to sign only a single message, and then self-destructs. While 
 such signatures are of course impossible classically, we construct one-shot signatures 
@@ -1637,7 +1673,7 @@ signatures as a powerful new building block for novel quantum cryptographic prot
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-31" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-32" onclick="doOpen=true;">
 @inproceedings{STOC:AGKZ20,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Ryan&nbsp;Amos&nbsp;and&nbsp;Marios&nbsp;Georgiou&nbsp;and&nbsp;Aggelos&nbsp;Kiayias&nbsp;and<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
@@ -1663,15 +1699,15 @@ signatures as a powerful new building block for novel quantum cryptographic prot
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2018/276.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-32'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-33'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-32'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-33'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z19c.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	<a href="https://www.youtube.com/watch?v=m935yaOyKX0"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-32" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-33" onclick="doOpen=true;">
 The quantum random oracle model (QROM) has become the standard model in which to prove 
 the post-quantum security of random-oracle-based constructions. Unfortunately, none of 
 the known proof techniques allow the reduction to record information about the 
@@ -1689,7 +1725,7 @@ for efficient post-quantum cryptosystems.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-32" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-33" onclick="doOpen=true;">
 @inproceedings{C:Zhandry19,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2019,&nbsp;Part~II},<br />
@@ -1715,15 +1751,15 @@ for efficient post-quantum cryptosystems.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2019/262.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-33'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-34'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-33'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-34'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-33" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-34" onclick="doOpen=true;">
 The Fiat-Shamir transformation is a useful approach to building non-interactive 
 arguments (of knowledge) in the random oracle model. Unfortunately, existing proof 
 techniques are incapable of proving the security of Fiat-Shamir in the quantum 
@@ -1737,7 +1773,7 @@ Fiat-Shamir are secure without any modifications.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-33" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-34" onclick="doOpen=true;">
 @inproceedings{C:LiuZha19,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2019,&nbsp;Part~II},<br />
@@ -1762,15 +1798,15 @@ Fiat-Shamir are secure without any modifications.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2017/1080.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-34'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-35'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-34'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-35'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z19b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	<a href="https://www.youtube.com/watch?v=fjumbNTZSik"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-34" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-35" onclick="doOpen=true;">
 Public key quantum money can be seen as a version of the quantum no-cloning theorem 
 that holds even when the quantum states can be verified by the adversary.  In this 
 work, investigate <i>quantum lightning</i>, a formalization of "collision-free quantum 
@@ -1802,7 +1838,7 @@ a new precise variant of the no-cloning theorem.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-34" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-35" onclick="doOpen=true;">
 @inproceedings{EC:Zhandry19b,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2019,&nbsp;Part~III},<br />
@@ -1827,15 +1863,15 @@ a new precise variant of the no-cloning theorem.
 <td style="vertical-align: top;">
 	<a href="https://arxiv.org/pdf/1811.05385.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-35'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-36'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-35'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-36'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-35" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-36" onclick="doOpen=true;">
 A k-collision for a compressing hash function H is a set of k distinct inputs that all 
 map to the same output. In this work, we show that for any constant k, 
 &Theta;(N<sup>(1/2)(1-1/(2^k-1))</sup>) quantum queries are both necessary and 
@@ -1845,7 +1881,7 @@ non-trivial lower bound, completely resolving the problem.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-35" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-36" onclick="doOpen=true;">
 @inproceedings{EC:LiuZha19,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Qipeng&nbsp;Liu&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2019,&nbsp;Part~III},<br />
@@ -1870,15 +1906,15 @@ non-trivial lower bound, completely resolving the problem.
 <td style="vertical-align: top;">
 	<a href="https://arxiv.org/pdf/1607.07759.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-36'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-37'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-36'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-37'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-36" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-37" onclick="doOpen=true;">
 We give a new class of security definitions for authentication in the quantum setting. 
 Our definitions capture and strengthen several existing definitions, including 
 superposition attacks on classical authentication, as well as full authentication of 
@@ -1896,7 +1932,7 @@ successful; <br>
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-36" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-37" onclick="doOpen=true;">
 @inproceedings{C:GarYueZha17,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Sumegha&nbsp;Garg&nbsp;and&nbsp;Henry&nbsp;Yuen&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2017,&nbsp;Part~II},<br />
@@ -1917,20 +1953,20 @@ successful; <br>
 
 <tr><td style="width: 100%">A Note on Quantum-Secure PRPs<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-
+<tr><td style="vertical-align: top;">In </td><td><a href="https://quantum-journal.org">Quantum</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2016/1076.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-37'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-38'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-37'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-38'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-37" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-38" onclick="doOpen=true;">
 We show how to construct pseudorandom permutations (PRPs) that remain secure even if 
 the adversary can query the permutation on a quantum superposition of inputs. Such 
 PRPs are called <i>quantum-secure</i>. Our construction combines a quantum-secure 
@@ -1943,13 +1979,18 @@ one-way functions.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-37" onclick="doOpen=true;">
-@misc{EPRINT:Zhandry16b,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;howpublished&nbsp;=&nbsp;&nbsp;{Cryptology&nbsp;ePrint&nbsp;Archive,&nbsp;Report&nbsp;2016/1076},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;note&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\url{https://eprint.iacr.org/2016/1076}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{A&nbsp;Note&nbsp;on&nbsp;Quantum-Secure&nbsp;{PRPs}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-38" onclick="doOpen=true;">
+@article{Zhandry25,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{A&nbsp;{N}ote&nbsp;on&nbsp;{Q}uantum-{S}ecure&nbsp;{PRP}s},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Zhandry,&nbsp;Mark},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;journal&nbsp;=&nbsp;{{Quantum}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;issn&nbsp;=&nbsp;{2521-327X},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;{{Verein&nbsp;zur&nbsp;F{\"{o}}rderung&nbsp;des&nbsp;Open&nbsp;Access&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Publizierens&nbsp;in&nbsp;den&nbsp;Quantenwissenschaften}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;{9},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;{1696},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;apr,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2025}<br />
 }<br />
 
 </div>
@@ -1963,15 +2004,15 @@ one-way functions.
 <td style="vertical-align: top;">
 	<a href="https://arxiv.org/pdf/1510.08352.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-38'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-39'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-38'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-39'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-38" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-39" onclick="doOpen=true;">
 The Quantum Oracle Classification (QOC) problem is to classify a function, given only 
 quantum black box access, into one of several classes without necessarily determining 
 the entire function. Generally, QOC captures a very wide range of problems in quantum 
@@ -1998,7 +2039,7 @@ theoretic message authentication codes in the quantum setting.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-38" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-39" onclick="doOpen=true;">
 @article{ARXIV:Zhandry2015,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;title={Quantum&nbsp;Oracle&nbsp;Classification&nbsp;-&nbsp;The&nbsp;Case&nbsp;of&nbsp;Group&nbsp;Structure},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author={Mark&nbsp;Zhandry},<br />
@@ -2018,7 +2059,7 @@ theoretic message authentication codes in the quantum setting.
 <td style="vertical-align: top;">
 	<a href="./files/Thesis.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-39'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-40'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
 	
 </td><td style="vertical-align: top;">
@@ -2026,7 +2067,7 @@ theoretic message authentication codes in the quantum setting.
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-39" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-40" onclick="doOpen=true;">
 It is well established that full-fledged quantum computers, when realized, will 
 completely break many of today's cryptosystems. This looming threat has led to the 
 proposal of so-called "post-quantum" systems, namely those that appear resistant to 
@@ -2047,7 +2088,7 @@ Interrogation Problem.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-39" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-40" onclick="doOpen=true;">
 
 </div>
 <br></td></tr>
@@ -2060,15 +2101,15 @@ Interrogation Problem.
 <td style="vertical-align: top;">
 	<a href="https://arxiv.org/pdf/1312.1027.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-40'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-41'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-40'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-41'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-40" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-41" onclick="doOpen=true;">
 The results showing a quantum query complexity of &Theta;(N<sup>1/3</sup>) for the 
 collision problem do not apply to random functions.  The issues are two-fold.  First, 
 the &Omega;(N<sup>1/3</sup>) lower bound only applies when the range is no larger than 
@@ -2088,7 +2129,7 @@ complexity for so-called permutation-symmetric functions.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-40" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-41" onclick="doOpen=true;">
 @article{QIC:Zhandry15,&nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Zhandry,&nbsp;Mark},&nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{A&nbsp;Note&nbsp;on&nbsp;the&nbsp;Quantum&nbsp;Collision&nbsp;and&nbsp;Set&nbsp;Equality&nbsp;Problems},&nbsp;<br />
@@ -2114,15 +2155,15 @@ complexity for so-called permutation-symmetric functions.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2013/088.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-41'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-42'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-41'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-42'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/BZ13b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	<a href="https://www.youtube.com/watch?v=QWBYZ0qDWyQ"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-41" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-42" onclick="doOpen=true;">
 We initiate the study of <i>quantum</i>-secure digital signatures and <i>quantum</i> 
 chosen ciphertext security. In the case of signatures, we enhance the standard chosen 
 message query model by allowing the adversary to issue <i>quantum</i> chosen message 
@@ -2143,7 +2184,7 @@ attacks and present both public-key and symmetric-key constructions.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-41" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-42" onclick="doOpen=true;">
 @inproceedings{C:BonZha13,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dan&nbsp;Boneh&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2013,&nbsp;Part~II},<br />
@@ -2169,15 +2210,15 @@ attacks and present both public-key and symmetric-key constructions.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2012/606.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-42'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-43'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-42'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-43'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/BZ13a.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-42" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-43" onclick="doOpen=true;">
 We construct the first Message Authentication Codes (MACs) that are existentially 
 unforgeable against a <i>quantum</i> chosen message attack.  These chosen message 
 attacks model a quantum adversary's ability to obtain the MAC on a superposition of 
@@ -2191,7 +2232,7 @@ is sufficient for one-time security.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-42" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-43" onclick="doOpen=true;">
 @inproceedings{EC:BonZha13,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dan&nbsp;Boneh&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2013},<br />
@@ -2216,15 +2257,15 @@ is sufficient for one-time security.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2012/182.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-43'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-44'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-43'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-44'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z12b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-43" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-44" onclick="doOpen=true;">
 In the presence of a quantum adversary, there are two possible definitions of security 
 for a pseudorandom function. The first, which we call standard-security, allows the 
 adversary to be quantum, but requires queries to the function to be classical. The 
@@ -2247,7 +2288,7 @@ but insecure once the adversary can make quantum queries.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-43" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-44" onclick="doOpen=true;">
 @inproceedings{FOCS:Zhandry12,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{53rd&nbsp;FOCS},<br />
@@ -2269,15 +2310,15 @@ but insecure once the adversary can make quantum queries.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2012/076.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-44'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-45'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-44'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-45'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z12a.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	<a href="https://www.youtube.com/watch?v=ytGDMlcHLnc"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-44" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-45" onclick="doOpen=true;">
 We give the first proof of security for an identity-based encryption scheme in the 
 <i>quantum</i> random oracle model. This is the first proof of security for <i>any</i> 
 scheme in this model that requires no additional assumptions. Our techniques are quite 
@@ -2293,7 +2334,7 @@ quantum adversaries.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-44" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-45" onclick="doOpen=true;">
 @inproceedings{C:Zhandry12,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2012},<br />
@@ -2319,15 +2360,15 @@ quantum adversaries.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2010/428.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-45'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-46'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-45'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-46'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/BDFLSZ11.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-45" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-46" onclick="doOpen=true;">
 The interest in post-quantum cryptography &mdash; classical systems that remain 
 secure in the presence of a quantum adversary &mdash; has generated elegant proposals 
 for new cryptosystems. Some of these systems are set in the random oracle model and 
@@ -2349,7 +2390,7 @@ postquantum secure. We conclude with a rich set of open problems in this area.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-45" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-46" onclick="doOpen=true;">
 @inproceedings{AC:BDFLSZ11,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Dan&nbsp;Boneh&nbsp;and&nbsp;{\"O}zg{\"u}r&nbsp;Dagdelen&nbsp;and&nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Marc&nbsp;Fischlin&nbsp;and&nbsp;Anja&nbsp;Lehmann&nbsp;and&nbsp;<br />
