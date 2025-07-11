@@ -71,12 +71,12 @@ deletion of data, programs that cannot be copied, and more.
 
 <table style="border-spacing: 0px; width: 100%;">
 
-<tr><td style="width: 100%">How to Model Unitary Oracles<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2025/">CRYPTO 2025</a></td></tr>
+<tr><td style="width: 100%">On One-Shot Signatures, Quantum vs Classical Binding, and Obfuscating Permutations<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.omrishmueli.com">Omri Shmueli</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2025/">CRYPTO 2025</a><b> (Best Paper)</b></td></tr>
 </table></td>
 <td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2025/1072.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+	<a href="https://eprint.iacr.org/2025/486.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
 	<script>document.write("<a onclick=\"markForOpen('abstract-1'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
@@ -87,28 +87,39 @@ deletion of data, programs that cannot be copied, and more.
 	
 </td></tr><tr><td colspan="6">
 <div style="display: none;" class="collapsible" id="abstract-1" onclick="doOpen=true;">
-We make the case for modeling unitary oracles by allowing for controlled access to 
-the oracle as well as its conjugate transpose (inverse), but also its conjugate and 
-transpose. Controlling and conjugate transposes are common if even standard, but 
-conjugates and transposes appear to be non-standard. In order to justify our modeling, 
-we give several formal examples of what goes wrong or is missed when using a more 
-restrictive modeling. We also argue that our model is the ``right'' level of 
-granularity, and that other transformations likely do not correspond to efficient 
-computation. We also discuss other modeling choices, such as ancillas and 
-approximation error. <br><br>Through our exploration, we uncover interesting 
-phenomena. Examples include an attack on the recent pseudorandom unitary construction 
-of Ma and Huang (STOC'25) if used incorrectly as a <i>publicly evaluatable</i> 
-unitary, and a quantum complexity-theoretic separation that follows from a purely 
-classical separation.
+One-shot signatures (OSS) were defined by Amos, Georgiou, Kiayias, and Zhandry 
+(STOC'20). These allow for signing exactly one message, after which the signing key 
+self-destructs, preventing a second message from ever being signed. While such an 
+object is impossible classically, Amos et al observe that OSS may be possible using 
+quantum signing keys by leveraging the no-cloning principle. OSS has since become an 
+important conceptual tool with many applications in decentralized settings and for 
+quantum cryptography with classical communication. OSS are also closely related to 
+separations between classical-binding and collapse-binding for post-quantum hashing and 
+commitments. Unfortunately, the only known OSS construction due to Amos et al. was only 
+justified in a classical oracle model, and moreover their justification was ultimately 
+found to contain a fatal bug. Thus, the existence of OSS, even in a classical idealized 
+model, has remained open. <br><br>
+We give the first standard-model OSS, with provable security assuming (sub-exponential) 
+indistinguishability obfuscation (iO) and LWE. This also gives the first standard-model 
+separation between classical and collapse-binding post-quantum commitments/hashing, 
+solving a decade-old open problem. Along the way, we also give the first construction 
+with unconditional security relative to a classical oracle. To achieve our 
+standard-model construction, we develop a notion of permutable pseudorandom 
+permutations (permutable PRPs), and show how they are useful for translating oracle 
+proofs involving random permutations into obfuscation-based proofs. In particular, 
+obfuscating permutable PRPs gives a trapdoor one-way permutation that is <i>full-domain
+</i>, solving another decade-old-problem of constructing this object from 
+(sub-exponential) iO and one-way functions.
 <br />
 
 </div>
 <div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-1" onclick="doOpen=true;">
-@inproceedings{C:Zha25,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{How&nbsp;to&nbsp;Model&nbsp;Unitary&nbsp;Oracles},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{CRYPTO&nbsp;2025},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2025}<br />
+@inproceedings{C:ShmZha25,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Omri&nbsp;Shmueli&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{On&nbsp;One-Shot&nbsp;Signatures,&nbsp;Quantum&nbsp;vs&nbsp;Classical&nbsp;Binding,&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;Obfuscating&nbsp;Permutations},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;&nbsp;&nbsp;=&nbsp;{CRYPTO&nbsp;2025},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2025}<br />
 }<br />
 
 </div>
@@ -159,12 +170,12 @@ model.
 <br></td></tr>
 
 
-<tr><td style="width: 100%">On One-Shot Signatures, Quantum vs Classical Binding, and Obfuscating Permutations<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.omrishmueli.com">Omri Shmueli</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="width: 100%">How to Model Unitary Oracles<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2025/">CRYPTO 2025</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2025/486.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+	<a href="https://eprint.iacr.org/2025/1072.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
 	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
@@ -175,39 +186,28 @@ model.
 	
 </td></tr><tr><td colspan="6">
 <div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
-One-shot signatures (OSS) were defined by Amos, Georgiou, Kiayias, and Zhandry 
-(STOC'20). These allow for signing exactly one message, after which the signing key 
-self-destructs, preventing a second message from ever being signed. While such an 
-object is impossible classically, Amos et al observe that OSS may be possible using 
-quantum signing keys by leveraging the no-cloning principle. OSS has since become an 
-important conceptual tool with many applications in decentralized settings and for 
-quantum cryptography with classical communication. OSS are also closely related to 
-separations between classical-binding and collapse-binding for post-quantum hashing and 
-commitments. Unfortunately, the only known OSS construction due to Amos et al. was only 
-justified in a classical oracle model, and moreover their justification was ultimately 
-found to contain a fatal bug. Thus, the existence of OSS, even in a classical idealized 
-model, has remained open. <br><br>
-We give the first standard-model OSS, with provable security assuming (sub-exponential) 
-indistinguishability obfuscation (iO) and LWE. This also gives the first standard-model 
-separation between classical and collapse-binding post-quantum commitments/hashing, 
-solving a decade-old open problem. Along the way, we also give the first construction 
-with unconditional security relative to a classical oracle. To achieve our 
-standard-model construction, we develop a notion of permutable pseudorandom 
-permutations (permutable PRPs), and show how they are useful for translating oracle 
-proofs involving random permutations into obfuscation-based proofs. In particular, 
-obfuscating permutable PRPs gives a trapdoor one-way permutation that is <i>full-domain
-</i>, solving another decade-old-problem of constructing this object from 
-(sub-exponential) iO and one-way functions.
+We make the case for modeling unitary oracles by allowing for controlled access to 
+the oracle as well as its conjugate transpose (inverse), but also its conjugate and 
+transpose. Controlling and conjugate transposes are common if even standard, but 
+conjugates and transposes appear to be non-standard. In order to justify our modeling, 
+we give several formal examples of what goes wrong or is missed when using a more 
+restrictive modeling. We also argue that our model is the ``right'' level of 
+granularity, and that other transformations likely do not correspond to efficient 
+computation. We also discuss other modeling choices, such as ancillas and 
+approximation error. <br><br>Through our exploration, we uncover interesting 
+phenomena. Examples include an attack on the recent pseudorandom unitary construction 
+of Ma and Huang (STOC'25) if used incorrectly as a <i>publicly evaluatable</i> 
+unitary, and a quantum complexity-theoretic separation that follows from a purely 
+classical separation.
 <br />
 
 </div>
 <div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
-@inproceedings{C:ShmZha25,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Omri&nbsp;Shmueli&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{On&nbsp;One-Shot&nbsp;Signatures,&nbsp;Quantum&nbsp;vs&nbsp;Classical&nbsp;Binding,&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;Obfuscating&nbsp;Permutations},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;&nbsp;&nbsp;=&nbsp;{CRYPTO&nbsp;2025},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2025}<br />
+@inproceedings{C:Zha25,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{How&nbsp;to&nbsp;Model&nbsp;Unitary&nbsp;Oracles},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{CRYPTO&nbsp;2025},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2025}<br />
 }<br />
 
 </div>
@@ -262,7 +262,7 @@ also explain how they can unify classical and quantum key distribution.
 
 <tr><td style="width: 100%">A General Quantum Duality for Representations of Groups with Applications to Quantum Money, Lightning, and Fire<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.johnbostanci.com">John Bostanci</a></span>, <span style="white-space:nowrap"><a href="https://www.cs.princeton.edu/~bnehoran/">Barak Nehoran</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://acm-stoc.org/stoc2025/">STOC 2025</a>, <a href="https://rsvp.duke.edu/event/qip2025/summary">QIP 2025</a></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://acm-stoc.org/stoc2025/">STOC 2025</a>, <a href="https://rsvp.duke.edu/event/qip2025/summary">QIP 2025</a>, <a href="https://qcrypt.net/2025/">QCRYPT 2025</a><b> (Invited Plenary Talk)</b></td></tr>
 </table></td>
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2024/1785"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
@@ -865,7 +865,7 @@ functional encryption, isogenies over elliptic curves, and knots.
 
 <tr><td style="width: 100%">Full Quantum Equivalence of Group Action DLog and CDH, and More<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Hart Montgomery</span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://asiacrypt.iacr.org/2022/">ASIACRYPT 2022</a><b> (Best Paper)</b></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://asiacrypt.iacr.org/2022/">ASIACRYPT 2022</a><b> (Best Paper)</b>, <a href="https://www.springer.com/journal/00145">Journal of Cryptology</a><b> (Invited)</b></td></tr>
 </table></td>
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2022/1135.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
