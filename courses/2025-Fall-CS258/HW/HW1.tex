@@ -1,0 +1,126 @@
+\documentclass{article}
+\input{macros}
+
+\title{CS 258: Quantum Cryptography (Fall 2025)\\ Homework 1 (100 points)}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+
+\section{Problem 1 (20 points)}
+
+Recall that CPA security is defined using negligible functions. Informally, a function is negligible if it is smaller than any inverse polynomial. There are a few ways to define negligible functions. Here is the most common one:
+\begin{definition}\label{def:negl} A function $f:\N\rightarrow\R$ is negligible if, for any polynomial $p>0$, there exists an $N_p\in\N$ such that $|f(\lambda)|<1/p(\lambda)$ for all $\lambda\geq N_p$
+\end{definition}
+
+\paragraph{Part (a). 12 points.} Let $p>0$ be an arbitrary polynomial function, and $f,g$ be two negligible functions. Prove the following (3 points each):
+\begin{itemize}
+    \item[(i)] $f+g$ is negligible
+    \item[(ii)] $pf$ is negligible
+    \item[(iii)] $1/p-f$ is \emph{not} negligible
+    \item[(iv)] If $h(\lambda)$ is a function such that there exists an $N\in\N$ such that $|h(\lambda)|\leq |f(\lambda)|$ for all $\lambda\geq N$, then $h(\lambda)$ is also negligible. In other words, any function smaller than a negligible function is also negligible.
+\end{itemize}
+
+\paragraph{Part (b). 6 points.} For each of the following functions, decide if they are negligible or not, with a brief (informal is acceptable) explanation for why. (1 point each)
+\begin{itemize}
+    \item[(i)] $f_i(\lambda)=100\lambda\times 2^{-\lambda}$
+    \item[(ii)] $f_{ii}(\lambda)=7^{-\ln(\lambda)}$
+    \item[(iii)] $f_{iii}(\lambda)=\begin{cases}1/\lambda&\text{ if $\lambda$ is even}\\1/2^\lambda&\text{ if $\lambda$ is odd}\end{cases}$
+    \item[(iv)] $f_{iv}(\lambda)=\lambda^{-\log_2(\log_2(\log_2(\lambda)))}$
+    \item[(v)] $f_{v}(\lambda)=2^{-\sqrt{\log_2(\lambda)}}$
+    \item[(vi)] $f_{vi}(\lambda)=\lambda^{-1}-100\times 2^{-\lambda}$
+\end{itemize}
+
+\paragraph{Part (c). 2 points} Give an example of a negligible function $f$ and a \emph{non}-negligible function $g$ such that $f/g$ is non-negligible.
+
+\paragraph{OPTIONAL BONUS: Part (d). 3 points.} Let $f_1,f_2,\cdots$ be an infinite sequence of negligible functions. Define $F(\lambda)=\sum_{i=1}^\lambda f_i(\lambda)$. One might expect that, since adding negligible functions produces negligible functions, $F(\lambda)$ is negligible. However, this is in general not the case. Give a sequence of functions $f_1,f_2,\cdots$, each of which are negligible, but for which $F(\lambda)$ is non-negligible.
+
+\begin{remark}Note that by iteratively applying Problem 1.a.i, the sum of any constant number of negligible functions is negligible. However, once the number of functions becomes non-negligible, the sum is technically not guaranteed to be negligible.
+\end{remark}
+
+
+
+
+\section{Problem 2 (30 points)}
+
+Consider the following variant of CPA security for public key encryption.
+
+\begin{definition}[Public key encryption, CPA security] \label{def:cpa} For functions $q_1(\lambda),q_2(\lambda)$, a public key encryption scheme $(\gen,\enc,\dec)$ is $(q_1,q_2)$-CPA-secure if, for all probabilistic polynomial time interactive algorithms $\As$, there exists a ``negligible'' function $\epsilon(\lambda)\leq\lambda^{-\omega(1)}$ such that $|\Pr[W_0(\lambda)=1]-\Pr[W_1(\lambda)=1]|\leq\epsilon(\lambda)$, where $W_b$ is the event that $\As$ outputs 1 in the following experiment:
+\begin{itemize}
+    \item Run $(\sk,\pk)\gets\gen(1^\lambda)$, and give $\pk$ to $\As$.
+    \item $\As$ now can make a polynomial number of queries. The queries come in one of two types:
+    \begin{itemize}
+        \item {\bf Encryption Query.} Here, $\As$ sends an arbitrary message $m\in\{0,1\}^*$, and in response receives $c\gets\enc(\pk,m)$. 
+        \item {\bf Challenge Query.} Here, $\As$ sends two messages $m_0^*,m_1^*\in\{0,1\}^*$ \emph{of the same length}. In response, $\As$ receives $c\gets\enc(\pk,m_b^*)$.
+    \end{itemize}
+    The queries can happen in any order, except that the total number of encryption queries is at most $q_1(\lambda)$, and the total number of challenge queries is at most $q_2(\lambda)$. 
+    \item $\As$ outputs a bit $b'$.
+\end{itemize}
+We call $|\Pr[W_0(\lambda)=1]-\Pr[W_1(\lambda)=1]|$ the \emph{advantage} of $\As$. We say that $(\gen,\enc,\dec)$ is $(\poly,q_2)$-CPA-secure if it is $(q_1,q_2)$-CPA secure \emph{for any} polynomial $q_1$. We likewise define $(q_1,\poly)$-CPA-secure and $(\poly,\poly)$-CPA-secure.
+\end{definition}
+
+Observe that the definition we saw in class is the same as $(0,1)$-CPA-secure.
+
+\paragraph{Part (a). 5 points.} Show that \emph{any} public key encryption scheme is $(\poly,0)$-CPA secure.
+
+\paragraph{Part (b). 5 points.} Let $(\gen,\enc,\dec)$ be a $(\poly,\poly)$-CPA-secure public key encryption scheme, but which is only capable of encrypting a single bit (as opposed to arbitrary bit strings). A simple way to extend it to arbitrary bit-strings is to encrypt bit-by-bit: $\enc'(\pk,m)=(\enc(\pk,m_0),\enc(\pk,m_1),\cdots,\enc(\pk,m_\ell))$ where $m=(m_1,\cdots,m_\ell)\in\{0,1\}^\ell$. Decryption $\dec'$ is then performed piece-by-piece as well. Show that $(\gen,\enc',\dec')$ is also $(\poly,\poly)$-CPA-secure. To do so, start with any supposed adversary $\As$ for the $(\poly,\poly)$-CPA-security of $(\gen,\enc',\dec')$, and build from $\As$ an adversary $\Bs$ for the $(\poly,\poly)$-CPA-security of $(\gen,\enc,\dec)$. The advantage of $\Bs$ should be equal to the advantage of $\As$. By the $(\poly,\poly)$-CPA-security of $(\gen,\enc,\dec)$, the advantage of $\Bs$ is negligible, and thus so is the advantage of $\As$.
+
+\paragraph{Part (c). 5 points.} Show that if $(\gen,\enc,\dec)$ is $(q_1,q_2)$-CPA-secure for any polynomials $q_1,q_2$, then it is also $(q_1',q_2')$-CPA-secure, for any $q_1'(\lambda)\leq q_1(\lambda)$ and $q_2'(\lambda)\leq q_2(\lambda)$. To do so, start with any supposed adversary $\As$ for the $(q_1',q_2')$-CPA-security of $(\gen,\enc,\dec)$, and build from $\As$ an adversary $\Bs$ for the $(q_1,q_2)$-CPA-security of $(\gen,\enc,\dec)$. The advantage of $\Bs$ should be equal to the advantage of $\As$. By the $(q_1,q_2)$-CPA-security of $(\gen,\enc,\dec)$, the advantage of $\Bs$ is negligible, and thus so is the advantage of $\As$. Your proof should work for any possible polynomials $q_1,q_2,q_1',q_2'$ as long as $q_1'(\lambda)\leq q_1(\lambda)$ and $q_2'(\lambda)\leq q_2(\lambda)$. 
+
+\paragraph{Part (d). 5 points.} Show that if $(\gen,\enc,\dec)$ is $(0,q_2)$-CPA-secure, then it is $(q_1,q_2)$-CPA-secure for any polynomial $q_1$ (and in particular, that it is $(\poly,q_2)$-CPA-secure). To do so, start with any polynomial $q_1$ and any supposed adversary $\As$ for the $(q_1,q_2)$-CPA-security of $(\gen,\enc,\dec)$, and build from $\As$ an adversary $\Bs$ for the $(0,q_2)$-CPA-security of $(\gen,\enc,\dec)$. 
+
+\paragraph{Part (e). 10 points.} Show that if $(\gen,\enc,\dec)$ is $(q_1,1)$-CPA-secure, then it is $(q_1-q_2+1,q_2)$-CPA-secure for any polynomial $q_1\geq q_2$ (and in particular, that it is $(0,\poly)$-CPA-secure). To do so, you will use something called a \emph{hybrid argument}. Let $q_2$ be any polynomial and $\As$ any supposed adversary for the $(q_1-q_2+1,q_2)$-CPA-security of $(\gen,\enc,\dec)$.  Then, for $i=0,\cdots,q_2(\lambda)$, define ``hybrid experiments'' $H_i$ which are identical to the experiment in Definition~\ref{def:cpa}, except where challenge queries are answered as follows:
+\begin{itemize}
+    \item {\bf Challenge Query.} Here, $\As$ sends two messages $m_0^*,m_1^*\in\{0,1\}^*$ \emph{of the same length}. Suppose the current query is the $j$th challenge query. In response, $\As$ receives 
+    \[c\gets\begin{cases}
+        \enc(\pk,m_1^*)&\text{ if }j<i\\
+        \enc(\pk,m_b^*)&\text{ if }j=i\\
+        \enc(\pk,m_0^*)&\text{ if }j>i\end{cases}\]
+\end{itemize}
+Define $W'_i(\lambda)$ as the probability that $\As$ outputs 1 in Hybrid $H_i$. First, explain that $W'_0(\lambda)=W_0$, $W'_{q_2(\lambda)}(\lambda)=W_1$. 
+
+Next, show that for each $i=1,\cdots,q_2(\lambda)$, $|W'_i(\lambda)-W'_{i-1}(\lambda)|$ must be negligible: to do so, devise an algorithm $\Bs_i$ for the $(q_1,1)$-CPA-security of $(\gen,\enc,\dec)$, and show that the advantage of $\Bs_i$ is exactly $|W'_i(\lambda)-W'_{i-1}(\lambda)|$.
+
+Finally, use the triangle inequality to conclude that $|W_0(\lambda)-W_1(\lambda)|$ is negligible. For this, you may assume that the sum of polynomially-many negligible functions is still negligible.
+
+\begin{remark}Technically, the above proof does not work (see the bonus question Problem 1d), since summing a non-constant number of negligible functions is not necessarily negligible. However, the proof can be made to work by actually defining a single adversary $\Bs$ which chooses a random $i$ and runs $\Bs_i$. There will be a single negligible advantage function for this $\Bs$, which can be shown to be equal to the advantage of $\As$ divided by $q_2(\lambda)$. By Problem 1.a.ii, we can then conclude the advantage of $\As$ is actually negligible. This subtle issue is almost never a real problem, and is largely ignored even in serious cryptography publications since it is simpler to just consider $q_2(\lambda)$ adversaries $\Bs_i$. We will ignore it as well in this course, and simply pretend that the sum of polynomially-many negligible functions is still negligible.
+\end{remark}
+
+
+\begin{remark}Typically, $(\poly,\poly)$-CPA-secure encryption is what is actually desired in practice. Problem 2 shows that, for public key encryption, it suffices to consider the definition of CPA-security seen in class ($(0,1)$-CPA-secure), as it is equivalent to the desired notion. In this course, we will therefore largely focus on $(0,1)$-CPA-security. It also shows that it suffices to consider encryption for single-bit messages, which can then be generically extended to many bits.
+\end{remark}
+
+
+\section{Problem 3 (20 points)}
+
+It is straightforward to generalize public key encryption as defined in class as well as Definition~\ref{def:cpa} to the case of symmetric key cryptosystems. Here, there is no $\gen$, and distinct public and secret key. Instead, $\enc,\dec$ take as input a key $k\in\{0,1\}^\lambda$, and security is defined by choosing $k$ uniformly random in $\{0,1\}^\lambda$.
+
+\paragraph{Part (a). 5 points.} Recall the one-time pad discussed in class, where $\enc(k,m)=k\oplus m$ and $\dec(k,c)=k\oplus c$. Here, keys, messages, and ciphertexts are all $n$ bits for some integer $n$. Show that the one-time pad is $(0,1)$-CPA-secure as a symmetric key encryption scheme.. \emph{Hint: what is the distribution of $\enc(k,m)$ for a random choice of $k$?}
+
+
+\paragraph{Part (b). 5 points.} Show that the one-time pad is not even $(0,2)$-CPA-secure.
+
+\paragraph{Part (c). 5 points.} In Problem 2, you showed that for public key encryption, $(0,1)$-CPA-security is equivalent to $(\poly,\poly)$-CPA-security, and in particular implies $(0,2)$-CPA-security. But for the one-time pad, and therefore symmetric key encryption in general, this is not true. Explain why.
+
+\paragraph{Part (d). 5 points.} Generalize part (2) to show that any $(\enc,\dec)$ where $\enc$ is \emph{deterministic}\footnote{that is, on any key/message pair, repeated runs of $\enc$ will produce the same output} cannot be even $(0,2)$-CPA-secure. (Note that this also applies to public key encryption schemes)
+
+
+\section{Problem 4 (30 points)}
+
+For each of the following, determine the output distribution resulting from measuring the state. That is, for each possible measurement outcome, determine the probability measuring the state produces that outcome. Express all probabilities as rational numbers. (5 points each)
+
+\begin{itemize}
+    \item[(a)] $|\psi_a\rangle=\frac{3}{5}|0\rangle+\frac{4}{5}|1\rangle$.
+    \item[(b)] $|\psi_b\rangle=\frac{3}{5}|0\rangle+\frac{4}{5}e^{-i\pi/3}|1\rangle$.
+    \item[(c)] $|\psi_c\rangle=\frac{1}{2}\left(e^{i\pi/3}-e^{-i\pi/3}\right)|0\rangle+\alpha|1\rangle$. Here, $\alpha$ is the unique positive real number such that $|\psi_c\rangle$ is a valid quantum state.
+    \item[(d)] $|\psi_d\rangle=\Hm|\psi_a\rangle$.
+    \item[(e)] $|\psi_e\rangle=\Hm|\psi_b\rangle$.
+    \item[(f)] $|\psi_f\rangle=\Hm|\psi_c\rangle$.
+\end{itemize}
+
+
+\end{document}
