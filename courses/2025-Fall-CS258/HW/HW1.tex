@@ -69,7 +69,7 @@ Observe that the definition we saw in class is the same as $(0,1)$-CPA-secure.
 
 \paragraph{Part (b). 5 points.} Let $(\gen,\enc,\dec)$ be a $(\poly,\poly)$-CPA-secure public key encryption scheme, but which is only capable of encrypting a single bit (as opposed to arbitrary bit strings). A simple way to extend it to arbitrary bit-strings is to encrypt bit-by-bit: $\enc'(\pk,m)=(\enc(\pk,m_0),\enc(\pk,m_1),\cdots,\enc(\pk,m_\ell))$ where $m=(m_1,\cdots,m_\ell)\in\{0,1\}^\ell$. Decryption $\dec'$ is then performed piece-by-piece as well. Show that $(\gen,\enc',\dec')$ is also $(\poly,\poly)$-CPA-secure. To do so, start with any supposed adversary $\As$ for the $(\poly,\poly)$-CPA-security of $(\gen,\enc',\dec')$, and build from $\As$ an adversary $\Bs$ for the $(\poly,\poly)$-CPA-security of $(\gen,\enc,\dec)$. The advantage of $\Bs$ should be equal to the advantage of $\As$. By the $(\poly,\poly)$-CPA-security of $(\gen,\enc,\dec)$, the advantage of $\Bs$ is negligible, and thus so is the advantage of $\As$.
 
-\paragraph{Part (c). 5 points.} Show that if $(\gen,\enc,\dec)$ is $(q_1,q_2)$-CPA-secure for any polynomials $q_1,q_2$, then it is also $(q_1',q_2')$-CPA-secure, for any $q_1'(\lambda)\leq q_1(\lambda)$ and $q_2'(\lambda)\leq q_2(\lambda)$. To do so, start with any supposed adversary $\As$ for the $(q_1',q_2')$-CPA-security of $(\gen,\enc,\dec)$, and build from $\As$ an adversary $\Bs$ for the $(q_1,q_2)$-CPA-security of $(\gen,\enc,\dec)$. The advantage of $\Bs$ should be equal to the advantage of $\As$. By the $(q_1,q_2)$-CPA-security of $(\gen,\enc,\dec)$, the advantage of $\Bs$ is negligible, and thus so is the advantage of $\As$. Your proof should work for any possible polynomials $q_1,q_2,q_1',q_2'$ as long as $q_1'(\lambda)\leq q_1(\lambda)$ and $q_2'(\lambda)\leq q_2(\lambda)$. 
+\paragraph{Part (c). 5 points.} Show that, for any polynomials $q_1,q_2$, if $(\gen,\enc,\dec)$ is $(q_1,q_2)$-CPA-secure, then it is also $(q_1',q_2')$-CPA-secure for any $q_1'(\lambda)\leq q_1(\lambda)$ and $q_2'(\lambda)\leq q_2(\lambda)$. To do so, start with any supposed adversary $\As$ for the $(q_1',q_2')$-CPA-security of $(\gen,\enc,\dec)$, and build from $\As$ an adversary $\Bs$ for the $(q_1,q_2)$-CPA-security of $(\gen,\enc,\dec)$. The advantage of $\Bs$ should be equal to the advantage of $\As$. By the $(q_1,q_2)$-CPA-security of $(\gen,\enc,\dec)$, the advantage of $\Bs$ is negligible, and thus so is the advantage of $\As$. Your proof should work for any possible polynomials $q_1,q_2,q_1',q_2'$ as long as $q_1'(\lambda)\leq q_1(\lambda)$ and $q_2'(\lambda)\leq q_2(\lambda)$. 
 
 \paragraph{Part (d). 5 points.} Show that if $(\gen,\enc,\dec)$ is $(0,q_2)$-CPA-secure, then it is $(q_1,q_2)$-CPA-secure for any polynomial $q_1$ (and in particular, that it is $(\poly,q_2)$-CPA-secure). To do so, start with any polynomial $q_1$ and any supposed adversary $\As$ for the $(q_1,q_2)$-CPA-security of $(\gen,\enc,\dec)$, and build from $\As$ an adversary $\Bs$ for the $(0,q_2)$-CPA-security of $(\gen,\enc,\dec)$. 
 
@@ -77,8 +77,7 @@ Observe that the definition we saw in class is the same as $(0,1)$-CPA-secure.
 \begin{itemize}
     \item {\bf Challenge Query.} Here, $\As$ sends two messages $m_0^*,m_1^*\in\{0,1\}^*$ \emph{of the same length}. Suppose the current query is the $j$th challenge query. In response, $\As$ receives 
     \[c\gets\begin{cases}
-        \enc(\pk,m_1^*)&\text{ if }j<i\\
-        \enc(\pk,m_b^*)&\text{ if }j=i\\
+        \enc(\pk,m_1^*)&\text{ if }j\leq i\\
         \enc(\pk,m_0^*)&\text{ if }j>i\end{cases}\]
 \end{itemize}
 Define $W'_i(\lambda)$ as the probability that $\As$ outputs 1 in Hybrid $H_i$. First, explain that $W'_0(\lambda)=W_0$, $W'_{q_2(\lambda)}(\lambda)=W_1$. 
