@@ -1,0 +1,75 @@
+\documentclass{article}
+\input{macros}
+
+\title{CS 258: Quantum Cryptography (Fall 2025)\\ Homework 3 (100 points)}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem 1 (30 points)}
+
+In class, for a matrix $\Am\in\Z_q^{n\times m}$, $m>n$, we defined the lattices 
+\begin{align*}
+\Lambda_q^\perp(\Am)&=\{\xv\in\Z^n:\Am\cdot\xv\bmod q=0\}\\
+\Lambda_q(\Am)&=\{\xv\in\Z^n:\exists\rv\in\Z^n:\xv=\Am\cdot\rv\bmod q\}\end{align*}
+
+We said that $\Lambda_q^\perp(\Am)$ is spanned by the integer vectors in the kernel of $\Am$ as well as $q\Id$. However, this is not a basis. Likewise, $\Lambda_q(\Am)$ is spanned by the rows of $\Am$ and $q\Id$, but this is not a basis. Here, you will find explicit bases for these lattices.
+
+Assume for simplicity that the first $n$ columns of $\Am$ are linearly independent mod $q$. In general, we will always work in a regime where the some set of $n$ columns are linearly independent with overwhelming probability. If they are not the first $n$ columns, we can adjust the derivation below, but you are not required to do so.
+
+\paragraph{Part (a). 10 points.} Write $\Am=(\Am_0|\Am_1)$ where $\Am_0\in\Z_q^{n\times n}$ is full rank mod $q$. Define $\Am'=\Am_0^{-1}\Am\bmod q=(\Id,\Am_1')$ where $\Am_1'=\Am_0^{-1}\Am_1\bmod q$. Here, the inverse is taking mod $q$, so that $\Am_0^{-1}\in \Z_q^{n\times n}$; this inverse exists by assumption that $\Am_0$ is full rank mod $q$. Show that $\Lambda_q(\Am')=\Lambda_q(\Am)$ and $\Lambda_q^\perp(\Am')=\Lambda_q^\perp(\Am)$.
+
+\paragraph{Part (b). 10 points.} Show that the columns of 
+\[\left(\begin{array}{cc}q\Id_n&-\Am_1'\\0&\Id_{m-n}\end{array}\right)\]
+form a basis for $\Lambda_q^\perp(\Am)$, where $\Id_k$ is the $k\times k$ identity matrix. To do so, show that the columns of this matrix are each in $\Lambda_q^\perp(\Am)$, and that any vector $\xv\in\Lambda_q^\perp(\Am)$ can be written as an integer linear combination of the columns.
+
+\paragraph{Part (c). 10 points.} Show that the columns of
+\[\left(\begin{array}{cc}\Id_{n}&0\\(\Am_1')^T&q\Id_{m-n}\end{array}\right)\]
+form a basis for $\Lambda_q(\Am)$.
+
+
+\section{Problem 2 (30 points)}
+
+Let $\Ls\subseteq \R^n$ be a lattice, which we will assume to be full rank. The dual lattice, denoted $\Ls^*$, is defined as: \[\Ls^*=\{\xv\in\R^n:\forall \yv\in\Ls,\xv\cdot\yv\in\Z\}\]
+That is, the inner product of any vector $\xv\in\Ls^*$ with any vector $\yv\in\Ls$ is an integer.
+
+\paragraph{Part (a). 10 points} Suppose $\Ls=\Ls(\Bm)$ for some basis $\Bm\in\R^{n\times n}$ ($\Bm$ is square since $\Ls$ is assumed to be full rank). Show that $\Ls^*=\Ls(\Bm^{-T})$, where $\Bm^{-T}=(\Bm^{-1})^T=(\Bm^T)^{-1}$.
+\emph{[Hint: write any vector $\xv\in\R^n$ as $\xv=\Bm^{-T}\cdot\rv$ for a unique $\rv$, which is possible since $\Bm$ and hence $\Bm^{-T}$ is full rank. If $\rv\in\Z^n$ (meaning that $\xv\in\Ls(\Bm^{-1})$, what is the inner product of $\xv$ with the elements of $\Ls$? If $\rv\notin\Z^n$, what is the inner product of $\xv$ with the elements of $\Ls?$]}
+
+\paragraph{Part (b). 10 points} Show that $(\Ls^*)^*=\Ls$.
+
+\paragraph{Part (c). 10 points} Suppose you have a basis $\Bm$ for $\Ls$ that is ``short'', in the sense that each column of $\Bm$ has norm at most $\sigma$. Here, you will see how to solve (approximate) CVP in $\Ls^*$. 
+
+Let $\yv$ be a vector that is ``close'' to $\Ls^*$, in the sense that there exist a short vector $\ev$ such that  $\uv=\yv-\ev\in\Ls^*$. In particular, assume that $|\ev|<1/2n\sigma$. Your goal is to compute $\uv$, or equivalently $\ev$.
+
+To do so, compute $\Bm^T\yv$, and use that $\yv=\uv+\ev$. What happens if you round to the nearest integer? What happens if instead you remove the integer part (this is the same as reducing mod 1)?
+\emph{[Hint: recall that $|\av\cdot\bv|\leq |\av|\times|\bv|$]}
+
+
+
+
+
+
+
+\section{Problem 3 (40 points)}
+
+The $S|LWE\rangle$ problem ($S$ for ``state'') problem asks to compute $\sv$ from the state
+\[|\tau_\sv\rangle:=\sum_{\ev}\sqrt{\Pr[\ev\gets D^m_\sigma]}|\Am^T\cdot\sv+\ev\bmod q\rangle\]
+
+\paragraph{Part (a). 10 points.} Assume that $\ev$ in the support of $D_{\sigma}^m$ has support constrained to $\sigma m$. Also, assume that there are no vectors of norm at most $2\sigma m$ in $\Lambda_q(\Am)$. Then show that the states $|\tau_\sv\rangle$ for different $\sv\in\Z_q^n$ are orthogonal. Thus, the task of finding $\sv$ from $|\tau_\sv\rangle$ is at least information-theoretically possible.
+
+\paragraph{Part (b). 10 points} Show how to construct $|\tau_\sv\rangle$ from $\sv$ efficiently. You may assume the ability to create Gaussian-weighted superpositions $\sum_e\sqrt{\Pr[e\gets D_\sigma]}|e\rangle$, that $D_\sigma$ has support only on integers of absolute value at most $\sigma \sqrt{m}$, and that $\sigma\sqrt{m}<q/2$. 
+
+\paragraph{Part (c). 10 points.} Explain that if search LWE is easy, then $S|LWE\rangle$ is easy, for the same parameters $q,n,m,\sigma$. 
+
+
+\paragraph{Part (d). 10 points. } Show that if it is possible to solve $S|LWE\rangle$ perfectly with parameter $\sigma=q/2\gamma$, then it is possible to solve SIS with parameter $\beta=\gamma m$ (these are the same parameters we saw in class for Regev's reduction). Concretely, you may assume that the the $S|LWE\rangle$ solver is a unitary mapping $|\tau_\sv\rangle|\yv\rangle$ to $|\tau_\sv\rangle|\yv+\sv\bmod q\rangle$.
+
+For this problem, you may assume the ability to construct Gaussian-weighted superpositions of arbitrary parameter $\gamma$ such that $1\ll \gamma \ll q$, that the support of such distributions constrained to ``small'' vectors as described above, and also the ability to construct the  uniform superpositions over linear subspaces.
+
+\begin{remark}The above shows that $S|LWE\rangle$ is at least as hard as SIS, and that LWE is at least has hard as $S|LWE\rangle$. But it could be that $S|LWE\rangle$ is actually an easier problem than ordinary LWE. We know, under some loss in the parameters $n,m,q,\sigma$ that $S|LWE\rangle$ and LWE are equivalent, but we do \emph{not} know if they are equivalent for the exact same parameters.
+\end{remark}
+\end{document}
