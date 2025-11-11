@@ -1,0 +1,115 @@
+\documentclass{article}
+\input{macros}
+
+\title{CS 258: Quantum Cryptography (Fall 2025)\\ Homework 4 (100 points)}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+Recall the definition of a collapsing hash function:
+\begin{definition}A hash function $H$ is collapsing if, for all QPT adversaries $\As$, there exists a negligible function $\epsilon$ such that $|\Pr[W_0(\lambda)]-\Pr[W_1(\lambda)]|\leq\epsilon(\lambda)$, where $W_b(\lambda)$ is the event that $\As$ outputs 1 in the following:
+\begin{itemize}
+    \item $\As$ produces a state $\sum_{x,z}\alpha_{x,z}|x,z\rangle$
+    \item If $b=1$, measure $x$; if $b=0$, measure $H(x)$. Recall that ``measuring $H(x)$'' means to apply $U_H$ to write $H(x)$ into a new register, which is then measured and discarded.
+    \item Return the resulting state back to $\As$.
+    \item $\As$ outputs a guess $b'$.
+\end{itemize}
+\end{definition}
+
+\section{Problem 1 (20 points)}
+
+Show that a hash function that is collapsing is also collision resistant. \emph{[Hint: suppose toward contradiction that it is not collision-resistant. How can you take a collision and build a state that allows you to distinguish whether the input or output is measured?]}
+
+\section{Problem 2 (20 points)}
+
+Here, you will prove two facts that will be useful when we move to Problem 3.  Recall the definition of a 2-universal hash family from Lecture 3.
+\begin{definition}A family $\Hs$ of functions $h:\{0,1\}^n\rightarrow\{0,1\}^m$ is \emph{2-universal} if, for all $x,x'\in\{0,1\}^n$, $x\neq x'$, we have that $\Pr_{h\gets\Hs}[h(x)=h(x')]=2^{-m}$.\end{definition}
+
+\begin{itemize}
+    \item {\bf Part (a) 10 points.} For a 2-universal hash family $\Hs$ with $m\geq 3n$, prove that, except with probability at most $2^{-O(n)}$, $h\gets\Hs$ is injective. \emph{[Hint: use a union bound.]}
+    \item {\bf Part (b). 10 points.} Let $f_0,f_1$ be two functions over the same domain, say $\{0,1\}^n$. Suppose we have the guarantee that, for all pairs $x,x'\in\{0,1\}^n$, $f_0(x)=f_0(x')$ if and only if $f_1(x)=f_1(x')$. In other words, the pre-image sets of $f_0$ and $f_1$ are the same, even if the images might be completely different.
+
+    Let $|\psi\rangle=\sum_{x,z}\alpha_{x,z}|x,z\rangle$ be a quantum state. Consider the following two processes:
+    \begin{itemize}
+        \item[(1)] Use $U_{f_0}$ to compute $\sum_{x,z}\alpha_{x,z}|x,z,f_0(x)\rangle$, measure $f_0(x)$, and discard the result. Let $|\psi'\rangle$ be the resulting state.
+        \item[(2)] Use $U_{f_1}$ to compute $\sum_{x,z}\alpha_{x,z}|x,z,f_1(x)\rangle$, measure $f_1(x)$, and discard the result. Let $|\psi'\rangle$ be the resulting state.
+    \end{itemize}
+    Show that the distributions over $|\psi'\rangle$ in (1) and (2) are exactly the same.
+\end{itemize}
+
+
+
+
+
+
+
+
+\section{Problem 3 (40 points)}
+
+In class, we saw one way to build collapsing hash function. Here, you will explore another way using \emph{lossy functions}.
+
+\begin{definition} A lossy function is a triple of algorithms $(\geninj,\genlossy,\eval)$ such that:
+\begin{itemize}
+    \item $\geninj(1^\lambda),\genlossy(1^\lambda)$ are a PPT algorithms which each sample a key $k$.
+    \item $\eval(k,x)$ is a deterministic function which takes as input a key $k$ (from $\geninj$ or $\genlossy$) and an $x\in \{0,1\}^\lambda$. It outputs a $y$.
+\end{itemize}
+There are two correctness requirements:
+\begin{itemize}
+    \item {\sf Injectivity in injective mode}: for $k\gets\geninj(1^\lambda)$, $x\mapsto \eval(k,x)$ is injective.
+    \item {\sf Lossiness in lossy mode}: for $k\gets \genlossy(1^\lambda)$, $|\eval(k,\cdot)|\leq 2^{\lambda/3}$. Here, $|\eval(k,\cdot)|$ is the number of possible outputs of $\eval(k,x)$ as $x$ ranges over $\{0,1\}^\lambda$.
+\end{itemize}
+\end{definition}
+
+Here, the ``lossy mode'' ($k\gets\genlossy(1^\lambda)$) means that the output of $\eval(k,x)$ loses information about $x$, since there are only $2^{\lambda/3}$ outputs but $2^\lambda\gg 2^{\lambda/3}$ inputs.
+
+Notice that in the ``injective mode'' ($k\gets \geninj(1^\lambda)$, $|\eval(k,\cdot)|=2^\lambda$. Thus the injective and lossy mode functions $\eval(k,\cdot)$ are very different. However, the security of lossy functions will be that the two modes are indisitnguishable:
+
+\begin{definition}A lossy function $(\geninj,\genlossy,\eval)$ is secure if, for all QPT adversary $\As$, there exists a negligible funciton $\epsilon$ such that
+\[|\Pr[1\gets\As(k):k\gets\geninj(1^\lambda)]-\Pr[1\gets\As(k):k\gets\genlossy(1^\lambda)]|\leq\epsilon(\lambda)\]\end{definition}
+
+You will explore how to construct lossy functions in the next problem. Here, you will see how to construct a collapsing hash assuming a lossy funciton.
+
+\medskip
+
+The construction is the following: let $k\gets\genlossy(1^\lambda)$. Assume the outputs of $\eval(k,\cdot)$ lie in $\{0,1\}^\ell$. Then let $h\gets\Hs$ where $\Hs$ is a 2-universal hash family (for definition, see Lecture 3), such that $h:\{0,1\}^\ell\rightarrow\{0,1\}^{\lambda-1}$. Then define $H(x)=h(\eval(k,x))$, which takes $\lambda$ bit inputs to $\lambda-1$ bit outputs.
+
+
+Now, in the proof, we will consider 5 different experiments:
+\begin{itemize}
+    \item $W_0$: This is the case $b=0$ in the collapsing experiment, where $k\gets\genlossy(1^\lambda)$ and we measure $H(x)$.
+    \item $V_0$: Here, we sample $k\gets\genlossy(1^\lambda)$, but now we measure $\eval(k,x)$ instead of $H(x)$
+    \item $V_1$: Now we sample $k\gets\geninj(1^\lambda)$, but still measure $\eval(k,x)$.
+    \item $V_2$: We still sample $k\gets\geninj(1^\lambda)$, but now measure $x$ instead of $\eval(k,x)$.
+    \item $W_1$: Now we sample $k\gets\genlossy(1^\lambda)$, but still measure $x$. This matches the case $b=1$ in the collapsing experiment where we measure $x$.
+\end{itemize}
+\begin{itemize}
+    \item {\bf Part (a). 10 points.} Show that $|\Pr[W_0]-\Pr[V_0]|$ is negligible. \emph{[Hint: Use the facts proved in Problem 2. We can think of the function $h$ as being restricted to the set of images of $\eval(k,\cdot)$]}
+    \item {\bf Part (b). 10 points.} Show that $|\Pr[V_0]-\Pr[V_1]|$ is negligible, assuming the lossy function is secure.
+    \item {\bf Part (c). 10 points.} Show that $|\Pr[V_1]-\Pr[V_2]|$ is negligible.
+    \item {\bf Part (d). 10 points.} Show that $|\Pr[V_2]-\Pr[W_1]|$ is negligible, assuming the lossy function is secure.
+\end{itemize}
+
+Putting parts (a) through (d) together shows that $H$ is collapsing.
+
+
+
+\section{Problem 4 (20 Points)}
+
+Now we will construct a lossy function from LWE. The function is simple: the key will consist of a matrix $\Bm\in\Z_q^{\ell\times m}$ for $\ell\gg m$. Then we have that \[\eval(\Bm,\xv\in\{0,1\}^m)=\lfloor \Bm\cdot\xv\rceil_{q/4}\]
+
+$\geninj$ samples $\Bm$ uniformly, while $\genlossy$ samples $\Bm$ as $\Bm=\Sm\cdot\Am+\Em\bmod q$, where $\Am\in\Z_q^{n\times m}$ and $\Sm\in\Z_q^{\ell\times n}$ are chosen uniformly, and $\Em\in\Z^{\ell\times m}$ is sampled from the discrete Gaussian of width $\sigma$. In other words, the injective mode $\Bm$ is a random matrix, while the lossy mode $\Bm$ is close to a matrix $\Sm\Am$ of rank $n$.
+
+\begin{itemize}
+    \item {\bf Part (a). 10 points.} Prove that the security of $(\geninj,\genlossy,\eval)$, assuming the LWE assumption holds. To do so, prove that the distributions of $\Bs$ in $\geninj$ and $\genlossy$ are computational indistinguishable. This is accomplished by defining a set of hybrid experiments where the first $i$ rows of $\Bm$ are as in $\genlossy$, but the remaining $\ell-i$ rows are chosen as in $\geninj$. Show that the $i$ and $i-1$ case are indistinguishable, by LWE.
+    \item {\bf Part (b). 10 points.} Suppose $\Em$ did not exist, and $\genlossy$ sampled $\Bm$ as $\Sm\cdot\Am$. What is an upper bound on the size of the image of $\eval(\Bm,\cdot)$?
+\end{itemize}
+
+We've actually already seen that $\geninj$ is injective, for appropriately large $\ell$ (In Lecture 12, when we were trying to apply Kuperberg's algorithm to break LWE). As for showing that $\genlossy$ is lossy, the hope is that the rounding causes the output of $\eval$ to depend only on $\Sm\cdot\Am\cdot\xv$, and the rounding eliminates the part that depends on the error $\Em$. This will be true for ``most'' inputs, but unfortunately is not true in general, since some fraction of the inputs will be close to the rounding boundary, causing different outputs. With some care, however, it is possible to extend the construction above to a full lossy function.
+
+
+
+
+\end{document}
