@@ -495,68 +495,6 @@ fixed-generator, low-entropy DDH (Canetti, Crypto 1997).
 <br></td></tr>
 
 
-<tr><td style="width: 100%">New Techniques for Obfuscating Conjunctions<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/jamesbartusek">James Bartusek</a></span>, <span style="white-space:nowrap"><a href="http://tlepoint.github.io">Tancr&egrave;de Lepoint</a></span>, <span style="white-space:nowrap"><a href="http://fermima.com">Fermi Ma</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2019/">EUROCRYPT 2019</a></td></tr>
-</table></td>
-<td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2018/936.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
-</td><td style="vertical-align: top;">
-  
-</td><td style="vertical-align: top;">
-	
-</td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-9" onclick="doOpen=true;">
-A conjunction is a function f(x<sub>1</sub>,...,x<sub>n</sub>) = &and;<sub>i &isin; 
-S</sub> l<sub>i</sub> where S &sube; [n] and each l<sub>i</sub> is x<sub>i</sub> or 
-&not; x<sub>i</sub>. Bishop et al. (CRYPTO 2018) recently proposed obfuscating 
-conjunctions by embedding them in the error positions of a noisy Reed-Solomon codeword 
-and placing the codeword in a group exponent. They prove distributional virtual black 
-box (VBB) security in the generic group model for random conjunctions where |S| &ge; 
-0.226n. While conjunction obfuscation is known from LWE, these constructions rely on 
-substantial technical machinery.<br><br>
-In this work, we conduct an extensive study of <i>simple</i> conjunction obfuscation 
-techniques.<br><br>
-&bull; We abstract the Bishop et al. scheme to obtain an equivalent yet more 
-efficient "dual" scheme that handles conjunctions over exponential size alphabets. We 
-give a significantly simpler proof of generic group security, which we combine with a 
-novel combinatorial argument to obtain distributional VBB security for |S| of <i>any 
-size</i>.<br><br>
-&bull;  If we replace the Reed-Solomon code with a <i>random binary linear code</i>, 
-we can prove security from standard LPN and avoid encoding in a group. This addresses 
-an open problem posed by Bishop et al.~to prove security of this simple approach in 
-the standard model.<br><br>
-&bull;  We give a new construction that achieves <i>information theoretic</i> 
-distributional VBB security and weak functionality preservation for |S| &ge; n - 
-n<sup>&delta;</sup> and &delta; < 1. Assuming discrete log and &delta; < 1/2, we 
-satisfy a stronger notion of functionality preservation for computationally bounded 
-adversaries while still achieving information theoretic security.
-<br />
-
-</div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-9" onclick="doOpen=true;">
-@inproceedings{EC:BLMZ19,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{James&nbsp;Bartusek&nbsp;and&nbsp;Tancr{\'e}de&nbsp;Lepoint&nbsp;and&nbsp;Fermi&nbsp;Ma&nbsp;and<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2019,&nbsp;Part~III},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yuval&nbsp;Ishai&nbsp;and&nbsp;Vincent&nbsp;Rijmen},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{636--666},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{New&nbsp;Techniques&nbsp;for&nbsp;Obfuscating&nbsp;Conjunctions},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11478},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
-}<br />
-
-</div>
-<br></td></tr>
-
-
 <tr><td style="width: 100%">Quantum Lightning Never Strikes the Same State Twice<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2019/">EUROCRYPT 2019</a><b> (Best Paper)</b>, <a href="https://www.springer.com/journal/00145">Journal of Cryptology</a><b> (Invited)</b></td></tr>
@@ -564,15 +502,15 @@ adversaries while still achieving information theoretic security.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2017/1080.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-10'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-10'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-9'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z19b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	<a href="https://www.youtube.com/watch?v=fjumbNTZSik"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-10" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-9" onclick="doOpen=true;">
 Public key quantum money can be seen as a version of the quantum no-cloning theorem 
 that holds even when the quantum states can be verified by the adversary.  In this 
 work, investigate <i>quantum lightning</i>, a formalization of "collision-free quantum 
@@ -604,7 +542,7 @@ a new precise variant of the no-cloning theorem.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-10" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-9" onclick="doOpen=true;">
 @inproceedings{EC:Zhandry19b,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2019,&nbsp;Part~III},<br />
@@ -614,6 +552,68 @@ a new precise variant of the no-cloning theorem.
 &nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Quantum&nbsp;Lightning&nbsp;Never&nbsp;Strikes&nbsp;the&nbsp;Same&nbsp;State&nbsp;Twice},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11478},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">New Techniques for Obfuscating Conjunctions<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/jamesbartusek">James Bartusek</a></span>, <span style="white-space:nowrap"><a href="http://tlepoint.github.io">Tancr&egrave;de Lepoint</a></span>, <span style="white-space:nowrap"><a href="http://fermima.com">Fermi Ma</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://eurocrypt.iacr.org/2019/">EUROCRYPT 2019</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2018/936.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-10'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-10'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-10" onclick="doOpen=true;">
+A conjunction is a function f(x<sub>1</sub>,...,x<sub>n</sub>) = &and;<sub>i &isin; 
+S</sub> l<sub>i</sub> where S &sube; [n] and each l<sub>i</sub> is x<sub>i</sub> or 
+&not; x<sub>i</sub>. Bishop et al. (CRYPTO 2018) recently proposed obfuscating 
+conjunctions by embedding them in the error positions of a noisy Reed-Solomon codeword 
+and placing the codeword in a group exponent. They prove distributional virtual black 
+box (VBB) security in the generic group model for random conjunctions where |S| &ge; 
+0.226n. While conjunction obfuscation is known from LWE, these constructions rely on 
+substantial technical machinery.<br><br>
+In this work, we conduct an extensive study of <i>simple</i> conjunction obfuscation 
+techniques.<br><br>
+&bull; We abstract the Bishop et al. scheme to obtain an equivalent yet more 
+efficient "dual" scheme that handles conjunctions over exponential size alphabets. We 
+give a significantly simpler proof of generic group security, which we combine with a 
+novel combinatorial argument to obtain distributional VBB security for |S| of <i>any 
+size</i>.<br><br>
+&bull;  If we replace the Reed-Solomon code with a <i>random binary linear code</i>, 
+we can prove security from standard LPN and avoid encoding in a group. This addresses 
+an open problem posed by Bishop et al.~to prove security of this simple approach in 
+the standard model.<br><br>
+&bull;  We give a new construction that achieves <i>information theoretic</i> 
+distributional VBB security and weak functionality preservation for |S| &ge; n - 
+n<sup>&delta;</sup> and &delta; < 1. Assuming discrete log and &delta; < 1/2, we 
+satisfy a stronger notion of functionality preservation for computationally bounded 
+adversaries while still achieving information theoretic security.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-10" onclick="doOpen=true;">
+@inproceedings{EC:BLMZ19,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{James&nbsp;Bartusek&nbsp;and&nbsp;Tancr{\'e}de&nbsp;Lepoint&nbsp;and&nbsp;Fermi&nbsp;Ma&nbsp;and<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{EUROCRYPT~2019,&nbsp;Part~III},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Yuval&nbsp;Ishai&nbsp;and&nbsp;Vincent&nbsp;Rijmen},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;may,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{636--666},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{New&nbsp;Techniques&nbsp;for&nbsp;Obfuscating&nbsp;Conjunctions},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{11478},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2019}<br />
 }<br />
@@ -1024,59 +1024,6 @@ the existence of pseudorandom functions in NC<sup>1</sup>.
 <br></td></tr>
 
 
-<tr><td style="width: 100%">Annihilation Attacks for Multilinear Maps: Cryptanalysis of Indistinguishability Obfuscation over GGH13<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=en">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/crypto2016/">CRYPTO 2016</a></td></tr>
-</table></td>
-<td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2016/147.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
-</td><td style="vertical-align: top;">
-  
-</td><td style="vertical-align: top;">
-	
-</td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-18" onclick="doOpen=true;">
-In this work, we put forward a new class of polynomial-time attacks on the original 
-multilinear maps of Garg, Gentry, and Halevi (2013). Previous polynomial-time attacks 
-on GGH13 were "zeroizing" attacks that generally required the availability of 
-low-level encodings of zero. Most significantly, such zeroizing attacks were not 
-applicable to candidate indistinguishability obfuscation (iO) schemes. iO has been the 
-subject of intense study.<br><br>
-To address this gap, we introduce <i>annihilation attacks</i>, which attack 
-multilinear maps using non-linear polynomials. Annihilation attacks can work in 
-situations where there are no low-level encodings of zero. Using annihilation attacks, 
-we give the first polynomial-time cryptanalysis of candidate iO schemes over GGH13. 
-More specifically, we exhibit two simple programs that are functionally equivalent, 
-and show how to efficiently distinguish between the obfuscations of these two 
-programs.<br><br>
-Given the enormous applicability of iO, it is important to devise iO schemes that can 
-avoid attack.
-<br />
-
-</div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-18" onclick="doOpen=true;">
-@inproceedings{C:MilSahZha16,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Eric&nbsp;Miles&nbsp;and&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2016,&nbsp;Part~II},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Matthew&nbsp;Robshaw&nbsp;and&nbsp;Jonathan&nbsp;Katz},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{629--658},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Annihilation&nbsp;Attacks&nbsp;for&nbsp;Multilinear&nbsp;Maps:&nbsp;Cryptanalysis&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;Indistinguishability&nbsp;Obfuscation&nbsp;over&nbsp;{GGH13}},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9815},<br />
-&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
-}<br />
-
-</div>
-<br></td></tr>
-
-
 <tr><td style="width: 100%">The Magic of ELFs<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/crypto2016/">CRYPTO 2016</a><b> (Early Career Best Paper)</b>, <a href="https://www.springer.com/journal/00145">Journal of Cryptology</a><b> (Invited)</b></td></tr>
@@ -1084,15 +1031,15 @@ avoid attack.
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2016/114.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('abstract-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+	<script>document.write("<a onclick=\"markForOpen('bibtex-18'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
 </td><td style="vertical-align: top;">
   <a href="files/Z16b.slides.pdf"><img src="assets/images/slides.png" class="icon" title="Slides"></a> 
 </td><td style="vertical-align: top;">
 	<a href="https://www.youtube.com/watch?v=fY6gMFauHVQ"><img src="assets/images/video.png" class="icon" title="Video"></a> 
 </td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-19" onclick="doOpen=true;">
+<div style="display: none;" class="collapsible" id="abstract-18" onclick="doOpen=true;">
 We introduce the notion of an <i>Extremely Lossy Function</i> (ELF).  An ELF is a 
 family of functions with an image size that is tunable anywhere from injective to 
 having a polynomial-sized image.  Moreover, for any efficient adversary, for a 
@@ -1116,7 +1063,7 @@ than prior works.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-19" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-18" onclick="doOpen=true;">
 @inproceedings{C:Zhandry16,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2016,&nbsp;Part~I},<br />
@@ -1127,6 +1074,59 @@ than prior works.
 &nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{The&nbsp;Magic&nbsp;of&nbsp;{ELFs}},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9814},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Annihilation Attacks for Multilinear Maps: Cryptanalysis of Indistinguishability Obfuscation over GGH13<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=5dHYf1MAAAAJ&hl=en">Eric Miles</a></span>, <span style="white-space:nowrap"><a href="http://web.cs.ucla.edu/~sahai/">Amit Sahai</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://www.iacr.org/conferences/crypto2016/">CRYPTO 2016</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2016/147.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-19'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-19" onclick="doOpen=true;">
+In this work, we put forward a new class of polynomial-time attacks on the original 
+multilinear maps of Garg, Gentry, and Halevi (2013). Previous polynomial-time attacks 
+on GGH13 were "zeroizing" attacks that generally required the availability of 
+low-level encodings of zero. Most significantly, such zeroizing attacks were not 
+applicable to candidate indistinguishability obfuscation (iO) schemes. iO has been the 
+subject of intense study.<br><br>
+To address this gap, we introduce <i>annihilation attacks</i>, which attack 
+multilinear maps using non-linear polynomials. Annihilation attacks can work in 
+situations where there are no low-level encodings of zero. Using annihilation attacks, 
+we give the first polynomial-time cryptanalysis of candidate iO schemes over GGH13. 
+More specifically, we exhibit two simple programs that are functionally equivalent, 
+and show how to efficiently distinguish between the obfuscations of these two 
+programs.<br><br>
+Given the enormous applicability of iO, it is important to devise iO schemes that can 
+avoid attack.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-19" onclick="doOpen=true;">
+@inproceedings{C:MilSahZha16,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Eric&nbsp;Miles&nbsp;and&nbsp;Amit&nbsp;Sahai&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{CRYPTO~2016,&nbsp;Part~II},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;editor&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Matthew&nbsp;Robshaw&nbsp;and&nbsp;Jonathan&nbsp;Katz},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;month&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aug,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;pages&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{629--658},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;publisher&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Springer,&nbsp;Heidelberg},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;series&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{LNCS}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Annihilation&nbsp;Attacks&nbsp;for&nbsp;Multilinear&nbsp;Maps:&nbsp;Cryptanalysis&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;Indistinguishability&nbsp;Obfuscation&nbsp;over&nbsp;{GGH13}},<br />
+&nbsp;&nbsp;&nbsp;&nbsp;volume&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{9815},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{2016}<br />
 }<br />
 
