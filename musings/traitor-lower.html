@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lower Bounds for Traitor Tracing?</title>
+    <link rel="icon" type="/image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/script.js"></script>
+    <script>
+		MathJax = {
+ 		 tex: {
+		    inlineMath: {'[+]': [['$', '$']]}
+		  }
+		};
+	</script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+  </head>
+  <body onclick="openMarked()">
+  	<div id="container">
+  	  <nav>
+  <ul class="nav">
+    <li class="nav"><a href="/index.html" class="home">Mark Zhandry</a></li>
+    <li class="nav"><a href="/pubs.all.html" class="other">Publications</a></li>
+    <li class="nav"><a href="/talks.html" class="other">Talks</a></li>
+    <li class="nav"><a href="/teaching.html" class="other">Teaching</a></li>
+    <li class="nav"><a href="/musings.html" class="other">Musings</a></li>
+    <li class="nav"><a href="/personal.html" class="other">Personal</a></li>
+  </ul>
+</nav>
+      <h1>Lower Bounds for Traitor Tracing?</h1>
+
+<h2>Traitor Tracing Background</h2> 
+
+<p>Consider the following setting: a distributor broadcasts content 
+to a large number $N$ of recipients. To prevent unauthorized users from accessing the 
+broadcast, the broadcast is encrypted, and each authorized user is given a key to decrypt.
+
+<p>The question, first formally raised by 
+<a href="https://web.cs.ucla.edu/~miodrag/cs259-security/chor94tracing.pdf">Chor, Fiat, 
+Naor, and Pinkas</a> in 1994, is what to do about an authorized user who leaks their key. 
+Such a leak would allow any un-authorized user to access the broadcast. But, especially if 
+the key is a digital key, there is not much that can be done to actually stop this 
+behavior. So what can be done? Well, at least upon discovery of the leaked key, one may 
+hope to identify (or "trace") the "traitor". The ability to identify a traitor would 
+discourage leaking the key, since the traitor could then be punished. It also helps 
+mitigate the threat, since the traitor's key could be revoked.
+
+<p>It turns out to be surprisingly non-trivial to achieve such tracing in a robust way. 
+For example, a trivial system would just use a single global key $k$ for 
+encryption/decryption (or perhaps a secret/public key pair $({\sf sk},{\sf pk})$ for a 
+public key scheme). Then user $i$'s individual secret key ${\sf sk}_i$ is just $k$ 
+together with $i$: ${\sf sk}_i=(k,i)$. To trace such a key, one simply outputs $i$. But of 
+course, a traitor can easily evade tracing be deleting $i$ and just leaking the global key 
+$k$. More generally, they can try various methods to <i>obfuscate</i> their key. We want, 
+as long as the traitor produces <i>some</i> program capable of decrypting the broadcast, 
+we can trace that program to the traitor, even if the program looks nothing like an 
+original key for the system.
+
+<p>Worse, maybe multiple traitors pool their keys to create one decoder program. We want to
+be able to trace to at least one of the traitors. In the most general form, called 
+"collusion-resistant" traitor tracing, we want that even if <i>all</i> but a single user
+collude, we can identify one of the traitors, without ever accusing the single honest 
+user.
+
+<p><b>The "Baseline" Scheme.</b> A quite simple solution is to simply give each of the $N$ 
+users their own unique key ${\sf sk}_i$ for a plain encryption scheme. To broadcast a 
+message $m$, simply encrypt $m$ separately under each of the ${\sf sk}_i$, obtaining $N$ 
+individual ciphertexts $c_i$. Then the broadcast is just all of the ciphertexts together 
+$c=(c_i)_{i\in[N]}$. To trace, replace $c_i$ for $i>t$ with junk ciphertexts, and let 
+$p_t$ be the probability that the decoder decrypts successfully. For $t=N$, all $c_i$ 
+remain valid, so the decoder decrypts by assumption and therefore $p_N$ is large. For 
+$t=0$, all $c_i$ are junk, so the decoder has no hope of decrypting, meaning $p_0$ is 
+small. By the triangle inequality, there must exist a "jump": some $t$ such that $p_t$ and 
+$p_{t-1}$ are noticeably far apart. Meanwhile, if user $t$ is not a traitor, $p_t$ and 
+$p_{t-1}$ are close. This is because only difference is whether $c_t$ is valid or 
+junk, and since the decoder doesn't have ${\sf sk}_t$, it cannot tell the difference by 
+the security of the encryption scheme. Thus, a jump exists, and it must exist at a 
+traitor, allowing us to trace.
+
+<p>Of course, this solution isn't really a broadcast scheme at
+all, but effectively a point-to-point encryption method masquerading as a broadcast 
+scheme. The result is huge $O(N)$ communication by the broadcaster. A major goal for over 
+30 years has been to improve this communication cost, ideally to $O(1)$. At the same time,
+one wants to maintain small secret keys ${\sf sk}_i$. If the scheme is a public key 
+scheme, one wants the public encryption key to be small as well.
+
+<h3>Existing solutions</h3>
+
+<p>Numerous solutions have been found: Chor et al. show very efficient solutions for a small 
+number of traitors (so-called "bounded collusion" systems). However, we really want full
+collusion-resistance; going forward I will exclusively discuss collusion-resistant 
+schemes.
+
+
+<p><b>Combinatorial Schemes: </b> <a href="https://crypto.stanford.edu/~dabo/pubs/papers/const-tt.pdf">Boneh and Naor</a> 
+and independently <a href="https://www.di.ens.fr/~phan/2008_icits.pdf">Billet and Phan</a> 
+give a collusion-resistant solution with $O(1)$-sized ciphertext, but huge $O(N^2)$-sized 
+secret keys. More recently, <a href="https://eprint.iacr.org/2020/954.pdf">I showed</a> 
+how to trade off the parameters, achieving in particular $O(N^{2/3})$-sized ciphertexts 
+and public keys for full collusion-resistance. 
+
+<p>These solutions (in addition to Chor et al. and the baseline scheme) are known as 
+"combinatorial": they simply utilize a number of independent encryptions keys, give each 
+user a subset of the keys, and encrypt each message to a subset of the keys. The various 
+subsets are set up to ensure honest users can always decrypt, and tracing works still by 
+"turning off" various keys to see which keys the decoder program contains. In 
+combinatorial schemes with sub-linear ciphertext size, extracting a user's identity from 
+the key-subset information often requires interesting non-trivial algorithms. 
+
+<p>Unfortunately, the best known collusion-resistant 
+combinatorial schemes are those listed above, which all have 
+$${\sf length}(c)^2\times {\sf length}({\sf sk}_i)\geq \Omega(N^2) \label{eq:1}\tag{1}$$
+
+<p><b>Algebraic Schemes: </b>There are also a number of "algebraic" schemes that make use of 
+stronger mathematical structures to essentially compress the various key and/or ciphertext 
+components into smaller values. Using <i>pairings over elliptic curves</i>, 
+<a href="https://eprint.iacr.org/2006/045">Boneh, Sahai, and Waters</a> give a scheme with
+$O(N^{1/2})$-sized ciphertexts and $O(1)$-sized secret keys, which was more more recently
+improved by 
+<a href="https://eprint.iacr.org/2020/954.pdf">myself</a> and
+<a href="https://eprint.iacr.org/2023/256">others</a> to $O(N^{1/3})$-sized ciphertexts 
+and $O(1)$-sized secret keys. 
+
+</p>We now even have schemes achieving $O(1)$ parameters, using tools such as 
+<a href="https://eprint.iacr.org/2013/451">indistinguishability</a>
+<a href="https://eprint.iacr.org/2013/642">obfuscation</a>, 
+<a href="https://eprint.iacr.org/2018/346">lattices</a>, and even from 
+<a href="https://eprint.iacr.org/2024/867">pairings</a>. These schemes, however, are all
+quite inefficient. This is because they make use of <i>non-black-box</i> techniques 
+&mdash; essentially, they use the actual logical circuit implementing the undering 
+cryptography, processing the circuit gate-by-gate. For truly efficient traitor tracing, we 
+likely need to restrict to "black-box" use of cryptography.
+
+<p>Thus, even after over 30 years, the goal of building of truly efficient traitor tracing 
+with good  parameters remains unsolved. What I want to talk about here is whether this 
+goal may actually be <i>impossible</i>.
+
+
+
+<h2>Black-Box Lower Bounds</h2>
+
+<p>If we are having trouble building a traitor tracing system with good parameters from 
+certain tools, maybe it is because it is actually impossible. Unfortunately, actually 
+justifying such an impossibility requires care: perhaps a traitor tracing scheme can be 
+"built from" e.g. plain encryption as follows: ignore the encryption scheme completely, 
+and instead just use an optimal scheme built from, say, lattices. Such a scheme 
+intuitively fails to be a scheme built from plain encryption, but how do we formalize 
+this? More abstractly, if we want to show that it is hard/impossible to build a 
+cryptographic object $A$ from a different object $B$, how do we capture this?
+
+<p><a href="https://dl.acm.org/doi/10.1145/73007.73012">Impagliazzo and Rudich</a> were
+the first to give a blueprint for such an impossibility. They wanted to show that you 
+cannot build public key encryption (PKE) from one-way functions (OWFs). Of course, we 
+believe PKE exists (say, from factoring or lattices), and so one trivial way
+to "build" PKE from OWFs is to ignore the OWF and just use your favorite PKE scheme. What
+Impagliazzo and Rudich did was devise a pretend world where such a trivial PKE fails. 
+Namely, they imagine a world where there is a random oracle $O$ that all parties 
+(protocols and adversaries) can query. Moreover, in their world, computation is free, and 
+efficiency is instead characterized by how many queries one makes to $O$. Protocols and 
+adversaries are thus restricted to making polynomially-many queries. In this world, it is
+not hard to show that $O$ itself is a OWF. Moreover, since computation is free, all of the
+usual PKE schemes are broken. Instead, any secure cryptography must inherently use $O$. 
+Imagliazzo and Rudich show that, in this world, PKE simply does not exist. As a 
+consequence, in this world, PKE cannot be built from OWFs in a meaningful sense.
+
+<p>But what does this imaginary world tell us about the real world? It turns out that most
+constructions in cryptography are black-box, in the sense that they just query the 
+underlying cryptography on various points. Such constructions naturally "relativize" to
+the oracle world of Impagliazzo and Rudich. Hence, if there is a black-box construction of
+PKE from OWFs in the real-world, it would work just as well in the imaginary world. But 
+this is a contradiction, since it would falsely imply that PKE exists in the imaginary 
+world. As a result, an oracle impossibility like this implies that there is no black-box
+construction of PKE from OWF. For this reason, such results are often called "black-box
+impossibilities" or "black-box separations."
+
+<p>Since Impagliazzo and Rudich, numerous oracle/black-box impossibilities have been 
+shown for a variety of other cryptographic primitives. Note that a black-box impossibility 
+is not a full impossibility, as it may be possible to use non-black-box techniques that 
+are not captured by such an impossibility. Namely, non-black-box techniques typically 
+explicitly use the logical circuit of some cryptosystem and process it in a gate-by-gate 
+fashion. But if the cryptosystem is derived from some oracle $O$, no such circuit is 
+available, meaning the transformation would not work relative to $O$. However, despite not 
+fully capturing a true impossibility, black-box impossibilities rule out any black-box 
+technique, showing at least a barrier to a construction. Moreover, non-black-box 
+techniques that may circumvent the lower-bound tend to be inefficient, so such a 
+lower-bound shows a strong barrier to truly efficient constructions.
+
+
+
+<h2>A Single Black-Box Lower Bounds for Traitor Tracing</h2>
+
+<p>Now we are ready to ask our main question: <b>Can we show that the existing black-box
+constructions are optimal via a black-box lower-bound?</b> Such a black-box lower-bound 
+would consist of (1) an oracle $O$ which provides the underlying building block (say,
+plain encryption or pairings), and (2) an adversary that evades any tracing 
+mechanism relative to this oracle. The adversary is allowed to be computationally 
+inefficient, but can only make a polynomial number of queries to $O$.
+
+<p>Unfortunately, despite both traitor tracing and black-box lower-bounds having been 
+major areas of study for decades, our understanding of lower-bounds for traitor 
+tracing is extremely limited. In fact, to the best of my knowledge, there is currently 
+only <i>one</i> black-box lower bound known for traitor tracing: a work by 
+<a href="https://eprint.iacr.org/2015/1070.pdf">Tang and Zhang</a>. They show that, among
+black-box traitor tracing systems built from one-way functions (and more generally, 
+anything that can be built from one-way functions in a black-box way, such as secret key 
+encryption), we have
+$${\sf length}(c)^2\times {\sf length}({\sf sk}_i)\geq \tilde{\Omega}(N)\label{eq:2}\tag{2}$$
+
+
+<p>Here, the $\tilde{\Omega}$ hides small logarithmic factors. The first thing to notice 
+is that, while the bound in Equation \ref{eq:2} is non-trivial, it is not tight: it 
+doesn't match the combinatorial schemes, which are stuck an $\Omega(N^2)$ (Equation 
+\ref{eq:1}). Second, the result actually is not fully general &mdash; it makes an 
+assumption that the traitor tracing system satisfies a property called ${\sf IndKeys}$, 
+which roughly says that generating the various user secret keys ${\sf sk}_i$ does not 
+require running the underlying cryptographic building block.  Note that the combinatorial 
+schemes all have the ${\sf IndKeys}$ property since the secret keys are just subsets of a
+collection of random strings. But it is possible to consider schemes built from one-way 
+functions/secret key encryption that do not have this property. Moreover, none of the 
+algebraic schemes have ${\sf IndKeys}$, so any generalization of this result to, say, 
+pairings, would fail to capture even the schemes we currently have. Nevertheless, despite 
+the limitations, this result is an important milestone as it remains the <i>only</i> 
+black-box lower-bound for traitor tracing.
+
+<p><b>How the lower-bound works:</b> Tang and Zhang work in the same imaginary world as
+Impagliazzo and Rudich: we have a random oracle $O$, give everyone unbounded computation,
+and only count queries to $O$ when determining efficiency. In this world, one-way 
+functions (and secret key encryption, etc) exist. The goal of Tang and Zhang is to show 
+that very efficient traitor tracing does not.
+
+<p>The actual mechanics of the lower-bound exploit the beautiful connection between traitor 
+tracing and differential privacy. As shown by 
+<a href="https://people.seas.harvard.edu/~salil/research/sanitize-stoc09.pdf">Dwork, Naor, 
+Reingold, Rothblum, and Vadhan</a>, a traitor tracing system implies a lower-bound for a
+certain differential privacy task known as <i>data release</i>. In data release, one has 
+a database $D$ of records, and desires to output a data structure $S$ that allows for 
+approximately answering a large number of queries about the database, without revealing 
+any individual record in $D$. Queries take the form of "what fraction of the records 
+satisfy predicate $P$" for some predicate $P$. Solutions are known, but they are 
+computationally intractable, and an interesting question was whether or not an efficient 
+mechanism was possible.
+
+<p>A traitor tracing system shows that efficient data release is, in fact, impossible: the 
+records in $D$ will be all but one secret key ${\sf sk}_i$ for the traitor tracing system.
+Each query will correspond to a ciphertext, and asks what fraction of the database can 
+decrypt. A data structure $S$ allowing to answer such queries naturally gives a pirate 
+decoder built from the keys ${\sf sk}_i$. Running the tracing algorithm on the derived
+decoder would identify one of the records in the database, violating differential privacy.
+Efficiency comes into play since the tracing algorithm is only gauranteed to work against 
+efficient adversaries.
+
+<p>A goal for differential privacy is to understand how small the records in the database
+can be and how small the set of queries can be, while still having such an impossibility.
+Using this connection to traitor tracing, this translates to constructing traitor tracing
+systems with small secret keys and ciphertexts, exactly what people have been trying to
+achieve in the traitor tracing setting!
+
+<p>Tang and Zhang turn this connection on its head: in order to get a lower-bound on 
+traitor tracing, they construct a certain kind of differentially-private data release 
+mechanism. This data release mechanism is inefficient in the "real world", but efficient
+in the imaginary world: it uses unbounded computation but only makes polynomially-many
+queries to $O$. They show, in this world, that a differentially-private data release 
+mechanism is actually possible, provided the database records and/or ciphertext length are
+too small. To show this, they rely on interesting approaches from the differential privacy
+literature. Their data release mechanism implies that traitor tracing with these 
+parameters is impossible in this imaginary world, thus ruling out efficient black-box 
+traitor tracing constructions from OWFs.
+
+
+<h2>Open Questions</h2>
+
+Given that there are so few works on lower-bounds, and many settings where the current
+positive results are not optimal, there are tons of open questions in this space. I'll 
+just mention a few that immediately come to mind.
+
+
+
+
+<h3>Lower-bounds for schemes built from one-way functions?</h3>
+
+For now, we will stick to the case where the oracle $O$ is a random oracle, which captures
+schemes built from one-way functions, or anything that can be constructed in a black-box
+way from one-way functions, such as pseudorandom functions, secret key encryption, or
+even digital signatures.
+
+<p><b>Question 1: Can the lower-bound when $O$ is a random oracle be improved to match 
+known combinatorial schemes (Equation $\ref{eq:1}$)?</b>
+
+<p>The natural approach, and obvious first thing to try, would be to try to improve on 
+Tang and Zhang's data release mechanism. However, it is conceivable (at least to me) that 
+heir mechanism actually cannot be improved, while at the same time having the derived
+traitor tracing lower-bound being loose. The reason is that, while traitor tracing implies 
+differential privacy lower bounds (and by contrapositive, differential privacy 
+<i>upper</i> bounds imply traitor tracing impossibilities), the converse is not 
+necessarily true. Perhaps lower-bounding traitor tracing through differential privacy 
+simply cannot get tight bounds. Put other way, maybe Tang and Zhang's mechanism is 
+actually as good as it can be, but also there is no traitor tracing scheme better than 
+Equation $\ref{eq:1}$. In this event, a brand new approach that avoids differential 
+privacy would be needed.
+
+<p>The other possibility is that, actually Tang and Zhang's approach is optimal, not just
+for differential privacy upper bounds, but also for traitor tracing, meaning there 
+actually <i>is</i> a black-box traitor tracing scheme built from one-way functions 
+satisfying Equation $\ref{eq:2}$. Such a construction, however, would have to look very
+different from current combinatorial tracing schemes. This is because these schemes are
+based on fingerprinting codes, and the fingerprinting codes of
+<a href="https://dl.acm.org/doi/10.1145/1346330.1346335">Tardos</a> are optimal. Thus, any
+improvement would need to move away from fingerprinting codes.
+
+<p><b>Remark.</b> Technically, the optimality of Tardos codes is not fully general. The 
+reason is that the type of code needed for traitor tracing is actually something known
+as an identifiable parent property (IPP) code, which is slightly different than a 
+fingerprinting code. The two notions coincide in the regime giving the shortest-possible
+ciphertexts, but diverge in general. The optimality of Tardos codes is only justified for
+fingerprinting codes, and therefore only applies to IPP codes in the shortest-possible 
+setting. My guess is that the lower-bound actually applies to all settings of IPP codes, 
+but this needs to be proved.
+
+<p>The next question has to do with the ${\sf IndKeys}$ property, which recall was the 
+restriction that ${\sf sk}_i$ are generated independently of $O$.
+
+<p><b>Question 2: Is there a lower-bound when $O$ is a random oracle that doesn't require
+the ${\sf IndKeys}$ property? </b>
+
+<p>The lower-bound of Tang and Zhang seems tied to ${\sf IndKeys}$. Basically, the user 
+secret keys are the entries in the database, and it is important that the random oracle 
+$O$ is chosen independent of the database. 
+
+<p>Alternatively, maybe the importance of ${\sf IndKeys}$ actually suggests a way to 
+attain better tracing schemes:
+
+<p><b>Question 3: Can we construct a black-box traitor tracing scheme from one-way 
+functions with better parameters by deliberately violating  ${\sf IndKeys}$ property?</b>
+
+
+
+
+<h3>Lower bounds for schemes built from pairings?</h3>
+
+<p>Moving beyond random oracles (which model one-way functions), can we get a 
+black-box lower-bound for pairings?
+
+<p><b>Question 4: Is there <i>any</i> black-box lower-bound for pairings?</b>
+
+<p>Even though <a href="https://eprint.iacr.org/2024/867">I showed</a> that pairings give 
+traitor tracing with optimal parameters, the 
+construction is non-black-box. So it is entirely conceivable that black-box constructions
+of traitor tracing from pairings cannot improve on the $N^{1/3}$ of existing work. Despite
+having optimal answers from pairings, we would ideally like a black-box construction for
+efficiency reasons, so understanding the limits of black-box constructions is important.
+To prove a lower-bound on black-box schemes, one would work a generic model for pairings, 
+where the pairing operations are provided by an oracle, and computation outside of oracle 
+queries is free. We know the Tang-Zhang mechanism does not extend to pairings in a 
+meaningful way, since the pairing-based schemes we have do not satisfy the ${\sf IndKeys}$
+property, and moreover the black-box schemes we have already beat their bound. However, 
+maybe other differential privacy techniques can be leveraged to get <i>some</i> 
+lower-bound?
+
+
+<h3>Public vs private tracing</h3>
+
+<p>Another interesting question is the following: many traitor tracing schemes, 
+including the sub-linear combinatorial schemes, require the tracing algorithm to have a
+secret key that must be hidden to the adversary. If this tracing key is leaked, all 
+tracing guarantees are lost. Some schemes, on the other hand, allow for public tracing, 
+meaning that <i>anyone</i> can run the tracing algorithm. In particular, 
+<a href="https://eprint.iacr.org/2006/298">Boneh and Waters</a> gave a 
+black-box scheme from pairings achieving $O(N^{1/2})$-sized parameters with public 
+tracing. This remains the best pairing-based scheme with public tracing, and the only
+remotely practical one with sub-linear parameters (the other being the schemes from 
+obfuscation, which is currently horribly inefficient). A natural question is whether this
+is optimal:
+
+<p><b>Question 5: Is there a black-box lower-bound for public tracing, for either 
+one-way functions or pairings?</b>
+
+In particular, is it possible to show that, with public tracing, $\Omega(N)$-sized 
+ciphertexts are needed from one-way functions, and $\Omega(N^{1/2})$-wised ciphertexts are 
+needed from pairings?
+
+
+
+
+
+
+<br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+  	
+  	
+    </div>
+  </body>
+</html>

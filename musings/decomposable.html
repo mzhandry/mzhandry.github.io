@@ -1,0 +1,425 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Decomposable Permutations</title>
+    <link rel="icon" type="/image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/script.js"></script>
+    <script>
+		MathJax = {
+ 		 tex: {
+		    inlineMath: {'[+]': [['$', '$']]}
+		  }
+		};
+	</script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+  </head>
+  <body onclick="openMarked()">
+  	<div id="container">
+  	  <nav>
+  <ul class="nav">
+    <li class="nav"><a href="/index.html" class="home">Mark Zhandry</a></li>
+    <li class="nav"><a href="/pubs.all.html" class="other">Publications</a></li>
+    <li class="nav"><a href="/talks.html" class="other">Talks</a></li>
+    <li class="nav"><a href="/teaching.html" class="other">Teaching</a></li>
+    <li class="nav"><a href="/musings.html" class="other">Musings</a></li>
+    <li class="nav"><a href="/personal.html" class="other">Personal</a></li>
+  </ul>
+</nav>
+      <h1>Decomposable Permutations</h1>
+
+<p>Let $\sigma$ be a permutation on the numbers $\{1,2,\cdots,N\}$. Then $\sigma$ can 
+be decomposed into a sequence of transpositions
+\[\sigma=(a_1\;\;b_1)\circ (a_2\;\;b_2)\circ\cdots\circ (a_\ell\;\;b_\ell)\]
+Here, each $(a_i\;\;b_i)$ is a transposition swapping $a_i$ with $b_i$, but leaving 
+every other element in place. Each permutation $\sigma$ can be decomposed in many 
+possible ways, into sequences of varying length. But it is not hard to show that $N-1$ 
+transpositions are both necessary and sufficient in general.
+  	
+<p>Here, we ask the following complexity-theoretic question about decomposability: suppose 
+$\sigma$ is computable by small circuits. Can $\sigma$ be decomposed in such a way that, 
+for every partial product 
+\[\sigma_i=(a_1\;\;b_1)\circ (a_2\;\;b_2)\circ\cdots\circ (a_i\;\;b_i),\]
+we have that $\sigma_i$ also has small circuits?
+  	
+<p>More formally, we say a permutation is <i>$s$-computable</i> if $\sigma$ 
+is computable by circuits of size at most $s$. We will say that $\sigma$ is 
+<i>$s$-decomposable</i> if we can write $\sigma$ as a product of transpositions 
+as above such that each $\sigma_i$ is $s$-computable. The question is then:
+<br><br>
+
+<p><b>Question 1:</b> Are all $s$-computable permutations $s'$-decomposable, for 
+$s'=s^{O(1)}$?
+<br><br>
+
+<p>We will typically be interested in the regime where $s$ is poly-logarithmic in $N$.
+
+<p>Notice that all permutations are $O(N)$-decomposable, as <i>any</i> function, including 
+any of the partial products $\sigma_i$, can always be represented by circuits of size at 
+most $O(N)$. This question asks, if we start from the guarantee that $\sigma$ has small 
+circuits, can we get the size bound on partial products to also be small, albeit somewhat 
+larger than $s$?
+
+<p>At first glance, there doesn't seem any reason why $\sigma_i$ should have small 
+circuits. Even though $\sigma$ has a small circuit, a decomposition into transpositions is 
+an exponential-sized object; why should such an exponential-sized object nonetheless have
+very small circuits? Indeed, I would expect the existential decomposition above into 
+$\leq N-1$ transpositions would likely result in huge circuits. Even more, in some sense, 
+a  "random" decomposition of $\sigma$ should have large circuits. This is because we can 
+pick a random permutation $\tau$, which will require huge circuits, and decompose $\sigma$ 
+into $\sigma=\tau\circ(\tau^{-1}\circ \sigma)$ and then separately decompose $\tau$ and 
+$\tau^{-1}\circ\sigma$. Regardless of how the sub-decompositions are performed, $\tau$ 
+will be one of the partial products in the overall decomposition, meaning at least one of
+the $\sigma_i$ will be large. 
+
+<p>On the other hand, the arguments above don't rule out some special, carefully 
+constructed decomposition, of length potentially much longer than $N$, having all 
+partial products remaining small. Moreover, as discussed below, there are rich families of 
+permutations that are decomposable, which may hint that, possibly, any permutations with 
+small circuits can be decomposed into small circuits.
+
+
+
+
+<h2>Context: Public Key Encryption by Obfuscating Permutations</h2>
+
+<p>While I think the question above is very interesting and natural on its own, it may seem 
+a bit arbitrary. However, this question has a fascinating history, arising in a recent 
+(as of 2026) resolution to an old question about constructing trapdoor permutations by 
+obfuscating pseudorandom permutations. This question in turn is closely connected to the 
+development of public key cryptography.
+
+<p><b>Secret key encryption.</b> Prior to the 1970's, encryption was <i>secret key</i>,
+meaning that for Alice to securely send a message to Bob, Alice and Bob need to share a 
+secret key that only they know. The workhorse of secret key encryption is known as a 
+pseudorandom permutation (PRP), or block cipher. Alice and Bob's key describes a 
+permutation $\sigma$ and its inverse on $\{1,\cdots,N\}$ for an exponentially-large $N$. 
+$\sigma$ is applied to blocks of the message to encrypt, and $\sigma^{-1}$ is applied to
+decrypt. In order for the encryption scheme to be efficient, $\sigma$ and $\sigma^{-1}$
+must be computable by small, polynomial-sized circuits (so poly-logarithmic in $N$). The 
+outputs of $\sigma$ are "pseudorandom", which means that the ciphertext looks like 
+gibberish to anyone without the key. This usage of PRPs is not quite secure as described, 
+but standard techniques allow for making this fully secure.
+
+<p>Given a secret key encryption scheme, the question then becomes: how do Alice and Bob 
+establish this secret key in the first place, if all their communication is being listened 
+to? Historically, there would need to be an actual physical exchange of the key. But if 
+you think about how we communicate today on the web, we clearly aren't physically meeting 
+with everyone we talk to. 
+
+
+
+<p><b>Public key encryption.</b> The ground-breaking paper by 
+<a href="https://ee.stanford.edu/~hellman/publications/24.pdf">Diffie and Hellman</a> 
+in 1976 gave an answer: use <i>public key</i> cryptography. Here, when Alice wants to send 
+a message to Bob, Bob first generates a secret key ${\sf sk}$ together with an associated
+public key ${\sf pk}$. ${\sf pk}$ allows for <i>anyone</i> to encrypt to Bob, but only Bob 
+can decrypt using his secret key ${\sf sk}$. Even the adversary who sees ${\sf pk}$ can 
+encrypt, but won't be able to decrypt messages sent by Alice. Remarkably, the adversary 
+cannot decrypt Alice's messages, even though they were encrypted using the very ${\sf pk}$
+that the adversary knows! Public key encryption was actually first proposed by
+<a href="https://dl.acm.org/doi/10.1145/359460.359473">Ralph Merkle</a> while an 
+undergraduate. However, his idea didn't gain much traction (see 
+<a href="https://www.ralphmerkle.com/1974/">here</a> for a brief history of Merkle's 
+idea). It wasn't until Diffie and Hellman proposed their eponymous protocol based on 
+discrete logarithms that public key encryption got significant attention.
+
+<p> Diffie and Hellman's work also contained another proposal for how to construct public 
+key encryption, using <i>obfuscation</i>. They observed that the natural state of 
+human-written code is to be an unintelligible mess, and proposed the following encryption 
+scheme based on <i>deliberately</i> making unintelligible code. Namely, Bob chooses a key
+for a pseudorandom permutation $\sigma$. He then writes down the code to evaluate it 
+(only to evaluate $\sigma$ but not $\sigma^{-1}$), with his key hardcoded, and purposely 
+obfuscates it. Bob then sets ${\sf pk}$ to be the obfuscated code, and gives this code to 
+Alice, while setting his secret key ${\sf sk}$ to be the secret key for $\sigma$. Alice 
+can then encrypt any message she likes to Bob using this obfuscated code. But the code 
+allows <i>only</i> for evaluating $\sigma$, while evaluating $\sigma^{-1}$ for decryption 
+seems to require the secret key. Hopefully, the obfuscated code for $\sigma$ hides the 
+key. In modern terminology, the resulting concept is known as a trapdoor permutation 
+(TDP): a permutation that anyone can evaluate efficiently, but no one can invert unless 
+they have the secret key, aka trapdoor. As with PRPs, applying TDPs directly to the 
+message is not quite secure, but can be made secure with standard techniques.
+
+
+<p>Diffie and Hellman's proposal to construct TDPs by obfuscating PRPs 
+never materialized. The difficulty is that, while code can be very unintelligible, 
+actually hiding cryptographic secrets in code against a determined 
+adversary is extremely hard. While there are numerous tools available for obfuscating 
+code, they are generally techniques that don't fundamentally change how the code operates.
+Example techniques include, for example, re-naming variables, adding dummy operations, 
+unrolling loops, etc. Such transformations are more road-blocks than actual 
+cryptographically-secure obfuscation schemes, and can usually be reverse-engineered with 
+some effort. 
+
+<p>While the obfuscation-based approach didn't work out, TDPs <i>were</i> subsequently 
+realized by 
+<a href="https://publications.csail.mit.edu/lcs/pubs/pdf/MIT-LCS-TM-082.pdf">Rivest, 
+Shamir, and Adleman (RSA)</a> in 1977. Their approach uses fundamentally different ideas, 
+obtaining the trapdoor property not by obfuscation but instead by leveraging interesting
+algebraic structures related to the presumed difficulty of factoring integers. 
+
+
+
+<p><b>Enter Mathematical Obfuscation</b> Many years later in 2013, the situation changed
+dramatically. In 2013, <a href="https://eprint.iacr.org/2013/451.pdf">Garg, Gentry, 
+Halevi, Raykova, Sahai, and Waters</a> showed how to construct a new type of 
+<i>mathematical</i> obfuscation, formally called indistinguishability obfuscation (iO).
+This new type of obfuscation performs transformations on code at a fundamentally 
+mathematical level, offering much stronger security guarantees. Roughly, iO guarantees
+that two the obfuscations of two different programs that compute the same functionality
+are indistinguishable. iO turns out to be an
+incredibly powerful tool, and it was subsequently used in many applications. In
+particular, it is not hard to use iO to construct public key encryption. 
+
+<p>While iO could be used rather easily to give public key encryption, the usual way to 
+do this does <i>not</i> go through obfuscating permutations, but instead uses other 
+mechanisms. Thus, even with the advent of iO, constructing TDPs by obfuscating PRPs still 
+remained open. In a sense, the question became less important given the other ways of 
+obtaining public key encryption. However, constructing TDPs from iO remained an 
+intriguing theoretical question. Some progress was made by 
+<a href="https://eprint.iacr.org/2015/126.pdf">Bitansky, Paneth, and Wichs</a>, who 
+constructed "TDPs" from iO. However, these TDPs depart significantly from
+the original concept. In particular, the domain of the TDPs, rather than being all
+integers from $1$ to $N$, is now a quite sparse, highly structured set. Worse, it 
+is not even possible to directly generate strings in this set, and instead an extra 
+obfuscated program is provided to do this. And the program doesn't even sample uniformly
+from the domain, but only a small subset of the domain. The good news is that such TDPs 
+can nevertheless be adapted for many of the use cases, though this requires even more 
+work. 
+
+<p>On the other hand, this departure from the "clean" notion of TDPs may seem an 
+unsatisfying answer to the elegant question posed by Diffie and Hellman. Moreover, the 
+construction of (messy) TDPs doesn't actually obfuscate a PRP, but instead uses very 
+different ideas. Finally, very recently, some applications emerged in the quantum setting 
+that actually seem to require TDPs, and the TDPs must be clean. For example, in
+<a href="https://eprint.iacr.org/2022/1102.pdf">proofs of quantumness from TDPs</a>, it
+is important to be able to construct the uniform superposition over the domain of the TDP.
+This can be accomplished if the domain is just the set of $n$-bit strings. But if the 
+domain is some sparse structured set, it is not necessarily possible to construct the 
+uniform superposition over the domain (even if the domain could be efficiently sampled).
+
+
+
+
+
+
+
+<p><b>Finally, obfuscating PRPs.</b> In 2025, 
+<a href="https://eprint.iacr.org/2025/486.pdf">Omri Shmueli and I</a> finally showed how 
+to obfuscate certain PRPs to obtain a TDP. It was actually an accident: we were trying to 
+solve an entirely different problem in the quantum setting called One-Shot Signatures 
+(OSS). It turned out that the approach we were using to solve OSS needed to obfuscate 
+permutations, and the permutations needed to be "clean" for somewhat similar reasons as 
+proofs of quantumness. While we did not explicitly need clean TDPs to construct OSS, it 
+turned out that our techniques for obfuscating permutations essentially gave us  clean 
+TDPs for free.<br>
+
+<p><b>Remark:</b> To be clear, current iO schemes are extraordinarily inefficient, so we 
+don't yet have a practical way to realize TDPs or OSS via obfuscation. Efficient iO 
+remains a major open question.
+
+
+<h2>The origin of Question 1</h2>
+
+<p>The following new technique is the core of our OSS and TDP constructions. We first
+show how to construct a PRP $\tau$ where it was possible, given an integer $i$, to give 
+out code that computes either $\tau$ or $(i\;\;i+1)\circ\tau$, but it is impossible to 
+tell which from the code. We call $(i\;\;i+1)$ a neighbor swap.
+
+<p>This construction of $\tau$ itself has an interesting history un-related to 
+obfuscation or quantum, as it was based on idea coming from <i>format-preserving 
+encryption</i>, where the goal is to encrypt, say, credit card numbers into ciphertexts 
+that look like credit-card numbers. We showed how to take those techniques, and combine 
+with other interesting ideas, to achieve this simple obfuscated PRP notion. 
+
+<p>On its own, hiding whether the code runs $\sigma$ or $(i\;\;i+1)\circ\tau$ is not very
+useful. But it turns out that by further obfuscating the code using iO, we can say 
+something much stronger. Namely, let 
+\[\sigma=(i_1\;\;i_1+1)\circ (i_2\;\;i_2+1)\circ \cdots\circ (i_\ell,i_\ell+1)\] 
+be a permutation decomposed into a sequence of neighbor swaps. Then by obfuscating our PRP
+using iO, we can actually hide whether the code computes $\tau$ or $\sigma\circ\tau$. The 
+reason is that we can imagine a sequence of hybrid experiments $H_0,\cdots,H_{2\ell}$ 
+where the code in $H_j$ computes $\tau_j$, defined as
+\[\begin{aligned}\tau_{2k}&:=\left[(i_1\;\;i_1+1)\circ(i_2\;\;i_2+1)\circ\cdots\circ(i_k\;\;i_k+1)\right]\circ\tau.\\
+\tau_{2k+1}&:=\left[(i_1\;\;i_1+1)\circ(i_2\;\;i_2+1)\circ\cdots\circ(i_{k}\;\;i_{k}+1)\right]\circ\left[(i_{k+1}\;\;i_{k+1}+1)\circ\tau\right].\end{aligned}\] 
+$\tau_{2k}$ and $\tau_{2k+1}$ look very similar, except that $\tau$ has been replaced by
+$(i_{k+1}\;\;i_{k+1}+1)\circ\tau$. But the security of our $\tau$ shows that such a change in
+program can also be hidden. Then notice that $\tau_{2k+1}$ and $\tau_{2(k+1)}=\tau_{2k+2}$ 
+are equivalent permutations, except the brackets are in different locations, meaning the
+two functions are computed differently. iO therefore shows that the obfuscations of 
+$\tau_{2k+1}$ and $\tau_{2k+2}$ are indistinguishable for all $k$. Then notice that 
+Therefore, each pair of adjacent hybrids are 
+indistinguishable, and so by the triangle inequality $H_0$ and $H_{2\ell}$ &mdash; which
+are exactly the distributions distributions $\tau$ and $\sigma\circ\tau$ we care about 
+&mdash; are indistinguishable.
+
+<p>Consequently, we can secretly compose $\tau$ with <i>any</i> permutation $\sigma$
+that can be decomposed into neighbor swaps. We call such an object a "permutable PRP". But 
+of course, any permutation can be decomposed! However, an important caveat is that in 
+each $H_j$, the circuit being computed needs to remain efficient, else you could clearly 
+distinguish the experiments by just looking at run-time. This in particular means we need 
+small circuits for each partial product in the decomposition. That is, we need the 
+permutation $\sigma$ to be $s$-decomposable for very small $s$, say poly-logarithmic in 
+$N$. Notice that here I'm decomposing into neighbor swaps, whereas the definition of 
+decomposability above decomposes into arbitrary transpositions. But arbitrary 
+transpositions can be easily decomposed into neighbor swaps in a way that keeps the 
+partial products having small circuits, so both decompositions are equivalent. 
+
+<p>Our results on permutable PRPs are quite useful. Already, we show that obfuscating a 
+permutable PRP (even just for general transpositions) actually gives a secure clean TDP, 
+finally giving an answer to this nearly half-century old question. We also use these 
+permutable PRPs to solve the goal we originally set out to achieve, namely one-shot 
+signatures. Our construction also gives the first plausible post-quantum "clean" TDP, 
+which for example can be used to get 
+<a href="https://eprint.iacr.org/2022/1102.pdf">proofs of quantumness from 
+obfuscation</a>.
+
+<p>On the other hand, our results about permutable PRPs are still quite unsatisfying. We 
+prove a theorem statement showing the existence of permutable PRPs for permutations 
+$\sigma$ that are $s$-decomposable. But we first need to formally define decomposability, 
+and then give proofs that various circuits of interest are decomposable. It was already
+cumbersome (though not particularly hard) to show that the circuits used for our one-shot 
+signature construction are decomposable. Going forward, anyone wanting to use our new 
+object would have to recall these definitions, cite our results on circuit families that 
+are decomposable, and perhaps would need to show new classes of circuits are decomposable.
+
+<p>Instead, a dramatically simpler result would follow from a positive answer to the 
+following:
+
+<p><b>Question 2:</b> Does there exist a permutable PRP that is permutable for all 
+$s$-computable permutations, for any a priori bounded  $s={\sf polylog}(N)$?
+
+<p>Note that $\sigma$ having small circuits is clearly necessary for a permutable PRP. A 
+positive answer to Question 2 would mean citing a single simple theorem statement proving
+Question 2, and then showing that the desired permutation $\sigma$ is efficiently 
+computable, which is typically trivial. The most obvious way to obtain a positive answer 
+to Question 2 would be to solve Question 1 positively, from which Question 2 follows using 
+the proof above.
+
+<p><b>Remark:</b> <i>For the application to one-shot signatures, we actually need 
+something slightly stronger than decomposable: we need that all partial products
+ <b>and</b> their inverses have small circuits. This is because we employ circuits 
+ computing the permutation and its inverse. An incomparable version of Question 1
+ then asks, if a permutation and its inverse are both $s$-computable, then is the 
+ permutation <b>strongly</b> decomposable?</i>
+ 
+<p><b>Remark:</b> <i>One issue that I've largely glossed over is the number of 
+transpositions in the decomposition. Our proof has a hybrid for each transposition in 
+the decomposition, and each hybrid incurs a loss in security. In general, the number of h
+hybrids will be exponential. We can counteract the exponential loss by 
+complexity-leveraging, which involves assuming sub-exponential hardness and some playing 
+around with the security parameter. But one may be initially worried that a decomposition 
+could actually have, say, a doubly-exponential number of transpositions, which we cannot 
+handle by complexity leveraging. Fortunately, there is a rather trivial upper bound on the 
+length of a decomposition: we can assume any decomposition never has two partial products 
+that compute the same function, since if it did the in-between transpositions would 
+evaluate to the identity and could be removed from the decomposition. Since we assume each 
+partial product has a circuit of size at most $s$, and the number of of partial products
+described by those circuits has size $2^{O(s)}$. This can be handled with 
+complexity-leveraging.
+</i>
+
+
+
+
+
+<h2>So What Permutations Are Decomposabe?</h2>
+
+While we currently have no idea if all efficient permutations can be decomposed, there are
+large classes of permutations that we do know to be decomposable.<br><br>
+
+&bull; <b>Composition and tensor products of decomposable permutations</b><br><br>
+&bull; <b>Addition/multiplication mod $n$</b>. More generally, affine transformations.
+<br><br>
+&bull; <b>Involutions.</b> Or more generally, any permutation that is the disjoint product
+of cycles of polynomial length. <br><br>
+&bull; <b>Conjugations.</b> That is, $\Lambda\circ\sigma\circ\Lambda^{-1}$, where $\sigma$
+is decomposable, and $\Lambda$ is efficient (but not necessarily decomposable)<br><br>
+
+See <a href="https://eprint.iacr.org/2025/486.pdf">our paper</a> for a slightly longer 
+list. 
+
+
+
+
+
+<h2>Toward Answering Question 1</h2>
+
+<p>Decomposability seems very restrictive, but the fact that all efficient involutions are 
+decomposable hints that the class of decomposable permutations is actually quite broad. 
+Nevertheless, my guess is that the answer to Question 1 is "no". My intuition comes from
+the following. The positive results mentioned above and in our paper broadly fit into two 
+categories. The first are explicit mathematical functions such as addition/multiplication, 
+and the decomposition leveraged the mathematical structure. Such approaches seem unlikely 
+to give any general results. 
+
+<p>The second category is "black-box", in the sense that each 
+circuit computing a partial product in the decomposition simply makes queries to the 
+permutation (and potentially its inverse), but is otherwise independent of the 
+permutation. More formally, a black-box decomposition is a sequence 
+$C_0,C_1,\cdots,C_\ell$ of polynomial-sized (in $\log N$) oracle-aided circuits such 
+that: (1) each $C_i$ makes queries to $\sigma,\sigma^{-1}$, (2) $C_0^{\sigma,\sigma^{-1}}$ 
+is the identity, (3) $C_\ell^{\sigma,\sigma^{-1}}(x)=\sigma(x)$, and (4) for any 
+permutation $\sigma$, $C_i^{\sigma,\sigma^{-1}}$ and $C_{i+1}^{\sigma,\sigma^{-1}}$ differ 
+by a transposition (where the transposition potentially depends on $\sigma$). Note that, 
+if $\sigma$ is efficient, then a black-box decomposition immediately gives an efficient 
+decomposition. But a black-box decomposition is even stronger, in the sense that the decomposition 
+doesn't use any particular features of the circuit for $\sigma$.
+
+
+<p>Surprisingly, it turns out that involutions, and more generally functions 
+that are the product of small disjoint cycles, have such black-box decompositions. The 
+reason is as follows: first, we can decompose into the disjoint cycles, with cycles 
+ordered by, say, their maximum element. Each partial product of cycles has a small 
+circuit: let $t$ be the maximum element in any of the cycles. On a given input $x$, the 
+circuit applies the permutation $\sigma$ several times to explore $x$'s entire cycle, and 
+then checks that the entire cycle is at most $t$. If so, it outputs $\sigma(x)$; if the 
+cycle has any point greater than $t$, the circuits just outputs $x$. This gives a 
+decomposition into small disjoint cycles. Then we can further decompose into 
+transpositions efficiently since the cycles are small.
+
+<p>While this works for small cycles, this approach does not seem amenable to large cycles.
+First you would have to decompose into disjoint cycles, which seems difficult in a 
+black-box way if the cycles are huge. And even then, I'm not sure how to decompose
+a huge cycle into transpositions, since I cannot explore the entire cycle with just queries 
+to $\sigma$. So my guess is that, at a minimum, a positive result for general circuits 
+will need to be non-black box, which would require new ideas.
+
+<p>In the other direction, I'm not sure if proving a negative answer to Question 1 is 
+feasible either. On one hand, complexity lower-bounds (like $P$ vs $NP$ or other 
+complexity separations) are often extremely hard and well beyond the capabilities of our 
+current techniques. On the other hand, it is not clear whether Question 1 should be one of 
+these hard questions, or maybe an easy one. Maybe Question 1 can just be refuted 
+unconditionally?
+
+<p>I'll conclude with some concrete questions which may be more tractable than solving 
+Question 1 completely:
+
+
+<p><b>Question 3:</b> Can we show that there exist efficient circuits that are not 
+efficiently decomposable, based on a standard complexity theoretic conjecture
+(such as $P\neq NP$) or a cryptographic one (say, computing discrete logarithms is hard)?
+
+
+<p><b>Question 4:</b> Can we rule out <i>black-box</i> decompositions unconditionally?
+
+
+<p><b>Question 5:</b> Failing to solve Questions 3 and 4, can we rule out black-box 
+decompositions based on a standard conjecture?
+
+
+
+<br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+  	
+  	
+    </div>
+  </body>
+</html>
