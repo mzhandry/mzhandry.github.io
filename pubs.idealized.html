@@ -74,7 +74,7 @@ requiring both reductions and query complexity arguments.
 
 <tr><td style="width: 100%">Separating QMA from QCMA with a Classical Oracle<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://www.johnbostanci.com">John Bostanci</a></span>, <span style="white-space:nowrap"><a href="https://scholar.google.com/citations?user=15q0Uq8AAAAJ&hl=en&oi=ao">Jonas Haferkamp</a></span>, <span style="white-space:nowrap"><a href="https://homes.cs.washington.edu/~nirkhe/">Chinmay Nirkhe</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://acm-stoc.org/stoc2026/">STOC 2026</a><b> (Best Paper)</b></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://acm-stoc.org/stoc2026/">STOC 2026</a><b> (Best Paper)</b>, <a href=https://www.quantamagazine.org/researchers-reveal-the-power-of-quantum-proofs-20260706/>Coverage in Quanta</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
 	<a href="https://arxiv.org/abs/2511.09551"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
@@ -168,12 +168,12 @@ classical separation.
 <br></td></tr>
 
 
-<tr><td style="width: 100%">Quantum State Group Actions<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://dblp.org/pid/330/3303.html">Saachi Mutreja</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="width: 100%">Translating Between the Common Haar Random State Model and the Unitary Model<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://eligoldin.com">Eli Goldin</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
 <tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2025/">CRYPTO 2025</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2024/1636.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+	<a href="https://eprint.iacr.org/2025/489.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
 </td><td style="vertical-align: top;">
 	<script>document.write("<a onclick=\"markForOpen('abstract-3'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
 </td><td style="vertical-align: top;">
@@ -184,6 +184,50 @@ classical separation.
 	
 </td></tr><tr><td colspan="6">
 <div style="display: none;" class="collapsible" id="abstract-3" onclick="doOpen=true;">
+Black-box separations are a cornerstone of cryptography, indicating barriers to various 
+goals. A recent line of work has explored black-box separations for <i>quantum</i> 
+cryptographic primitives. Namely, a number of separations are known in the Common Haar 
+Random State (CHRS) model, though this model is not considered a complete separation, 
+but rather a starting point. A few very recent works have attempted to lift these 
+separations to a unitary separation, which are considered complete separations. 
+Unfortunately, we find significant errors in some of these lifting results.<br><br>
+We prove general conditions under which CHRS separations can be generically lifted, 
+thereby giving simple, modular, and bug-free proofs of complete unitary separations 
+between various quantum primitives. Our techniques allow for simpler proofs of existing 
+separations as well as new separations that were previously only known in the CHRS 
+model.
+<br />
+
+</div>
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+@inproceedings{C:GolZha25,<br />
+&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Eli&nbsp;Goldin&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
+&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Translating&nbsp;Between&nbsp;the&nbsp;Common&nbsp;Haar&nbsp;Random&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State&nbsp;Model&nbsp;and&nbsp;the&nbsp;Unitary&nbsp;Model},<br />
+&nbsp;&nbsp;booktitle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{CRYPTO&nbsp;2025},<br />
+&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2025}<br />
+}<br />
+
+</div>
+<br></td></tr>
+
+
+<tr><td style="width: 100%">Quantum State Group Actions<br>
+<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://dblp.org/pid/330/3303.html">Saachi Mutreja</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2025/">CRYPTO 2025</a></td></tr>
+</table></td>
+<td style="vertical-align: top;">
+	<a href="https://eprint.iacr.org/2024/1636.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
+</td><td style="vertical-align: top;">
+	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
+</td><td style="vertical-align: top;">
+  
+</td><td style="vertical-align: top;">
+	
+</td></tr><tr><td colspan="6">
+<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
 Cryptographic group actions are a leading contender for post-quantum cryptography, and 
 have also been used in the development of quantum cryptographic protocols. In this 
 work, we explore quantum group actions, which consist of a group acting on a set of 
@@ -202,56 +246,12 @@ also explain how they can unify classical and quantum key distribution.
 <br />
 
 </div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-3" onclick="doOpen=true;">
+<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
 @inproceedings{C:MutZha25,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;=&nbsp;{Saachi&nbsp;Mutreja&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;=&nbsp;{Quantum&nbsp;State&nbsp;Group&nbsp;Actions},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;booktitle&nbsp;=&nbsp;{CRYPTO&nbsp;2025},<br />
 &nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;=&nbsp;{2025}<br />
-}<br />
-
-</div>
-<br></td></tr>
-
-
-<tr><td style="width: 100%">Translating Between the Common Haar Random State Model and the Unitary Model<br>
-<table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://eligoldin.com">Eli Goldin</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://crypto.iacr.org/2025/">CRYPTO 2025</a></td></tr>
-</table></td>
-<td style="vertical-align: top;">
-	<a href="https://eprint.iacr.org/2025/489.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('abstract-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/info.png\" class=\"icon\" title=\"Abstract\"></a>");</script>
-</td><td style="vertical-align: top;">
-	<script>document.write("<a onclick=\"markForOpen('bibtex-4'); return false;\" href=\"#\" target=\"_self\"><img src=\"assets/images/quotes.png\" class=\"icon\" title=\"Bibtex\"></a>");</script>
-</td><td style="vertical-align: top;">
-  
-</td><td style="vertical-align: top;">
-	
-</td></tr><tr><td colspan="6">
-<div style="display: none;" class="collapsible" id="abstract-4" onclick="doOpen=true;">
-Black-box separations are a cornerstone of cryptography, indicating barriers to various 
-goals. A recent line of work has explored black-box separations for <i>quantum</i> 
-cryptographic primitives. Namely, a number of separations are known in the Common Haar 
-Random State (CHRS) model, though this model is not considered a complete separation, 
-but rather a starting point. A few very recent works have attempted to lift these 
-separations to a unitary separation, which are considered complete separations. 
-Unfortunately, we find significant errors in some of these lifting results.<br><br>
-We prove general conditions under which CHRS separations can be generically lifted, 
-thereby giving simple, modular, and bug-free proofs of complete unitary separations 
-between various quantum primitives. Our techniques allow for simpler proofs of existing 
-separations as well as new separations that were previously only known in the CHRS 
-model.
-<br />
-
-</div>
-<div style="display: none; font-family: 'Courier New', monospace;" class="collapsible" id="bibtex-4" onclick="doOpen=true;">
-@inproceedings{C:GolZha25,<br />
-&nbsp;&nbsp;author&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Eli&nbsp;Goldin&nbsp;and&nbsp;Mark&nbsp;Zhandry},<br />
-&nbsp;&nbsp;title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{Translating&nbsp;Between&nbsp;the&nbsp;Common&nbsp;Haar&nbsp;Random&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State&nbsp;Model&nbsp;and&nbsp;the&nbsp;Unitary&nbsp;Model},<br />
-&nbsp;&nbsp;booktitle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{CRYPTO&nbsp;2025},<br />
-&nbsp;&nbsp;year&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;{2025}<br />
 }<br />
 
 </div>
@@ -440,7 +440,7 @@ length cannot be improved without deviating from the group action framework.
 
 <tr><td style="width: 100%">Verifiable Quantum Advantage without Structure<br>
 <table style="border-spacing: 0px; color: #707070; "><tr><td style="width: 20px; vertical-align: top;">By </td><td><span style="white-space:nowrap"><a href="https://sites.google.com/view/takashiyamakawa">Takashi Yamakawa</a></span> and <span style="white-space:nowrap">Mark Zhandry</span></td></tr>
-<tr><td style="vertical-align: top;">In </td><td><a href="https://focs2022.eecs.berkeley.edu">FOCS 2022</a>, <a href="https://indico.cern.ch/event/1175020/">QIP 2023</a><b> (Plenary Talk)</b>, <a href="https://dl.acm.org/journal/jacm">Journal of the ACM</a></td></tr>
+<tr><td style="vertical-align: top;">In </td><td><a href="https://focs2022.eecs.berkeley.edu">FOCS 2022</a>, <a href="https://indico.cern.ch/event/1175020/">QIP 2023</a><b> (Plenary Talk)</b>, <a href="https://dl.acm.org/journal/jacm">Journal of the ACM</a>, <a href="https://www.quantamagazine.org/quantum-algorithms-conquer-a-new-kind-of-problem-20220711/">Coverage in Quanta</a></td></tr>
 </table></td>
 <td style="vertical-align: top;">
 	<a href="https://eprint.iacr.org/2022/434.pdf"><img src="assets/images/file.png" title="PDF" class="icon"></a> 
